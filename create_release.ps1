@@ -7,7 +7,7 @@ param (
 # Configuration
 $Username = "Lyall"
 $RepoName = "CrossWorldsFix"
-$ProxyName = "dsound.dll"
+$ProxyName = "winmm.dll"
 $Arch = "x64"
 $ZipFolder = "tmp"
 

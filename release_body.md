@@ -4,7 +4,7 @@
   
 ### Steam Deck/Linux Additional Instructions
 **You do not need to do this if you are using Windows!**
-- Open up the game properties in your launcher and add `WINEDLLOVERRIDES="dsound=n,b" %command%` to the launch options.
+- Open up the game properties in your launcher and add `WINEDLLOVERRIDES="winmm=n,b" %command%` to the launch options.
 
 ## Configuration
 - Open **`CrossWorldsFix.ini`** to adjust settings.

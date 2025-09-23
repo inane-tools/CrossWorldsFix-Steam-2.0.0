@@ -101,7 +101,7 @@ target(name)
 
     add_includedirs("src", "src/resources", "external/spdlog/include", "external/inipp", "external/safetyhook/include")
     add_headerfiles("src/**.h", "src/**.hpp")
-    add_files("src/*.cpp", "src/resources/version.rc", "external/safetyhook/src/**.cpp", "src/SDK/Basic.cpp", "src/SDK/CoreUObject_functions.cpp", "src/SDK/Engine_functions.cpp")
+    add_files("src/*.cpp", "src/resources/version.rc", "external/safetyhook/src/**.cpp", "src/SDK/Basic.cpp", "src/SDK/CoreUObject_functions.cpp", "src/SDK/Engine_functions.cpp", "src/SDK/UMG_functions.cpp")
 
     add_deps("zydis")
     add_syslinks("user32")

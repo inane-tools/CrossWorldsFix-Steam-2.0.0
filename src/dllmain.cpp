@@ -9,6 +9,8 @@
 
 #include "SDK/Basic.hpp"
 #include "SDK/Engine_classes.hpp"
+#include "SDK/UMG_classes.hpp"
+#include "SDK/WBP_Race_HUD_Player01_classes.hpp"
 
 HMODULE exeModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -39,11 +41,14 @@ float fHUDHeightOffset = 0.0f;
 bool bEnableConsole = false;
 bool bFixAspect = false;
 bool bFixHUD = false;
+bool bSpanRaceHUD = false;
 
 // Variables
 int iCurrentResX = 0;
 int iCurrentResY = 0;
 SDK::UEngine* Engine = nullptr;
+SDK::UObject* WidgetObject = nullptr;
+std::string sWidgetName;
 
 template<typename T>
 T GetConfigAndLog(inipp::Ini<char>& ini, const std::string& section, const std::string& key, T defaultValue)
@@ -147,6 +152,7 @@ void Configuration()
     bEnableConsole = GetConfigAndLog(ini, "Developer Console", "Enabled", false);
     bFixAspect = GetConfigAndLog(ini, "Fix Aspect Ratio", "Enabled", false);
     bFixHUD = GetConfigAndLog(ini, "Fix HUD", "Enabled", false);
+    bSpanRaceHUD = GetConfigAndLog(ini, "Fix HUD", "SpanRaceHUD", false);
     
     SPDLOG_INFO("----------");
 }
@@ -265,6 +271,48 @@ void HUD()
         }
         else {
             SPDLOG_ERROR("HUD: Project World To Screen: Pattern scan failed.");
+        }
+
+        // Widgets
+        std::uint8_t* UWigetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 8B ?? ?? 48 8B ?? 48 85 ?? 40 0F ?? ?? 48 ?? ?? 48 89 ?? ?? 48 8B ?? 8B ?? ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
+        if (UWigetAddToViewportScanResult) {
+            SPDLOG_INFO("HUD: Widgets: Address is {:s}+{:x}", sExeName.c_str(), UWigetAddToViewportScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+            static SafetyHookMid UWigetAddToViewportMidHook{};
+            UWigetAddToViewportMidHook = safetyhook::create_mid(UWigetAddToViewportScanResult,
+                [](SafetyHookContext& ctx) {
+                    if (!ctx.rsi) return;
+
+                    if (WidgetObject != reinterpret_cast<SDK::UObject*>(ctx.rsi)) {
+                        WidgetObject = reinterpret_cast<SDK::UObject*>(ctx.rsi);
+                        sWidgetName = WidgetObject->GetName();
+                        //SPDLOG_INFO("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
+                    }
+
+                    if (sWidgetName.contains("WBP_Race_HUD_Player01_C")) {
+                        auto hud = static_cast<SDK::UWBP_Race_HUD_Player01_C*>(WidgetObject);
+                        if (hud->WidgetTree->RootWidget->IsA(SDK::UScaleBox::StaticClass())) {
+                            auto scaleBox = static_cast<SDK::UScaleBox*>(hud->WidgetTree->RootWidget);
+                            auto sizeBox = static_cast<SDK::USizeBox*>(scaleBox->Slots[0]->Content);
+
+                            if (bSpanRaceHUD) {
+                                if (fAspectRatio > fNativeAspect) {
+                                    sizeBox->SetWidthOverride(2160.0f * fAspectRatio);
+                                    sizeBox->SetHeightOverride(2160.0f);
+                                }
+                                else if (fAspectRatio < fNativeAspect) {
+                                    sizeBox->SetWidthOverride(3840.0f);
+                                    sizeBox->SetHeightOverride(3840.0f / fAspectRatio);
+                                }
+                            }
+                          
+                            // Disable clipping so that player markers don't disappear outside 16:9 bounds
+                            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
+                        }
+                    }
+                });
+        }
+        else {
+            SPDLOG_ERROR("HUD: Widgets: Pattern scan failed.");
         }
     }
 }

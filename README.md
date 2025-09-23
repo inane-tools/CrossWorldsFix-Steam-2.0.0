@@ -15,7 +15,7 @@
 
 ## Installation  
 - Download the latest [release](../../../releases). 
-- Extract the contents of the release zip in to the game's binaries folder. (e.g. "**ssteamapps\common\SonicRacingCrossWorlds\UNION\Binaries\Win64**" for Steam)
+- Extract the contents of the release zip in to the game's binaries folder. (e.g. "**steamapps\common\SonicRacingCrossWorlds\UNION\Binaries\Win64**" for Steam)
 
 ### Steam Deck/Linux Additional Instructions
 🚩**You do not need to do this if you are using Windows!**  

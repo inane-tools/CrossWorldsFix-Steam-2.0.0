@@ -2,6 +2,12 @@
 #include "version.h"
 #include "helper.hpp"
 
+#ifdef _DEBUG
+    #define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_DEBUG
+#else
+    #define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_INFO
+#endif
+
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/rotating_file_sink.h>
 #include <inipp/inipp.h>
@@ -11,6 +17,7 @@
 #include "SDK/Engine_classes.hpp"
 #include "SDK/UMG_classes.hpp"
 #include "SDK/WBP_Race_HUD_Player01_classes.hpp"
+#include "SDK/WBP_PauseMenu_classes.hpp"
 
 HMODULE exeModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -117,7 +124,7 @@ void Logging()
         spdlog::set_default_logger(logger);
         spdlog::set_pattern("[%Y-%m-%d %H:%M:%S] [%l] %v");
         spdlog::flush_on(spdlog::level::debug);
-        spdlog::set_level(spdlog::level::info); 
+        spdlog::set_level(spdlog::level::debug); 
         
         SPDLOG_INFO("----------");
         SPDLOG_INFO("{:s} v{:s}", sFixName, sFixVersion);
@@ -284,10 +291,15 @@ void HUD()
                 [](SafetyHookContext& ctx) {
                     if (!ctx.rsi) return;
 
-                    if (WidgetObject != reinterpret_cast<SDK::UObject*>(ctx.rsi)) {
-                        WidgetObject = reinterpret_cast<SDK::UObject*>(ctx.rsi);
+                    auto obj = reinterpret_cast<SDK::UObject*>(ctx.rsi);
+
+                    if (!obj->Class || !obj->Class->Class) 
+                        return;
+
+                    if (WidgetObject != obj) {
+                        WidgetObject = obj;
                         sWidgetName = WidgetObject->GetName();
-                        //SPDLOG_INFO("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
+                        SPDLOG_DEBUG("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
                     }
 
                     if (sWidgetName.contains("WBP_Race_HUD_Player01_C")) {
@@ -308,7 +320,7 @@ void HUD()
                             }
                           
                             // Disable clipping so that player markers don't disappear outside 16:9 bounds
-                            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
+                            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);                      
                         }
                     }
                 });

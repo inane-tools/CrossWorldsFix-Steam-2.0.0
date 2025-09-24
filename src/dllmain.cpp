@@ -199,14 +199,16 @@ void UpdateOffsets()
 void CurrentResolution() 
 {
     // Get current resolution
-    std::uint8_t* CurrentResolutionScanResult = Memory::PatternScan(exeModule, "89 ?? ?? 44 89 ?? ?? 44 88 ?? ?? 0F 84 ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 8B ??");
+    std::uint8_t* CurrentResolutionScanResult = Memory::PatternScan(exeModule, "89 ?? ?? ?? 48 85 ?? 0F 84 ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 85 ?? 4C 8D ?? ??");
     if (CurrentResolutionScanResult) {
         SPDLOG_INFO("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), CurrentResolutionScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
         static SafetyHookMid CurrentResolutionMidHook{};
         CurrentResolutionMidHook = safetyhook::create_mid(CurrentResolutionScanResult,
             [](SafetyHookContext& ctx) {
-                int ResX = static_cast<int>(ctx.rax);
-                int ResY = static_cast<int>(ctx.r12);
+                if (!ctx.rdx) return;
+
+                int ResX = *reinterpret_cast<int*>(ctx.rdx + 0xA0);
+                int ResY = *reinterpret_cast<int*>(ctx.rdx + 0xA4);
   
                 if (iCurrentResX != ResX || iCurrentResY != ResY) {
                     iCurrentResX = ResX;

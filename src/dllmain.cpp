@@ -16,8 +16,10 @@
 #include "SDK/Basic.hpp"
 #include "SDK/Engine_classes.hpp"
 #include "SDK/UMG_classes.hpp"
+
 #include "SDK/WBP_Race_HUD_Player01_classes.hpp"
 #include "SDK/WBP_PauseMenu_classes.hpp"
+#include "SDK/WBP_Popup_Window_classes.hpp"
 
 HMODULE exeModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -282,12 +284,45 @@ void HUD()
             SPDLOG_ERROR("HUD: Project World To Screen: Pattern scan failed.");
         }
 
+        // Popup Window
+        std::uint8_t* CreatePopupWindowScanResult = Memory::PatternScan(exeModule, "49 8B ?? ?? 48 89 ?? ?? 41 ?? ?? ?? 00 7E ?? 49 ?? ?? ?? 41 0F ?? ?? E8 ?? ?? ?? ?? 48 8B ?? ?? 48 85 ?? 74 ??");
+        if (CreatePopupWindowScanResult) {
+            SPDLOG_INFO("HUD: Create Popup Window: Address is {:s}+{:x}", sExeName.c_str(), CreatePopupWindowScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+            static SafetyHookMid CreatePopupWindowMidHook{};
+            CreatePopupWindowMidHook = safetyhook::create_mid(CreatePopupWindowScanResult,
+                [](SafetyHookContext& ctx) {
+                    if (!ctx.rsi) return;
+
+                    auto widget = reinterpret_cast<SDK::UUserWidget*>(ctx.rsi);
+
+                    if (widget->IsA(SDK::UWBP_Popup_Window_C::StaticClass())) {
+                        auto popupWidget = static_cast<SDK::UWBP_Popup_Window_C*>(widget);
+                        auto panel = static_cast<SDK::UCanvasPanel*>(popupWidget->WidgetTree->RootWidget);      
+
+                        if (panel->Slots.IsValidIndex(2)) {
+                            auto backgroundBlurSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[2]);
+
+                            float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
+                            float heightOffset = (3840.0f / fAspectRatio - 2160.0f) / 2.0f;
+
+                            if (fAspectRatio > fNativeAspect)
+                                backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f - widthOffset, -1080.0f, 2160.0f * fAspectRatio, 2160.0f));
+                            else if (fAspectRatio < fNativeAspect)
+                                backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f, -1080.0f - heightOffset, 3840.0f, 3840.0f / fAspectRatio));
+                        }     
+                    }
+                });
+        }
+        else {
+            SPDLOG_ERROR("HUD: Create Popup Window: Pattern scan failed.");
+        }
+
         // Widgets
-        std::uint8_t* UWigetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 8B ?? ?? 48 8B ?? 48 85 ?? 40 0F ?? ?? 48 ?? ?? 48 89 ?? ?? 48 8B ?? 8B ?? ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
-        if (UWigetAddToViewportScanResult) {
-            SPDLOG_INFO("HUD: Widgets: Address is {:s}+{:x}", sExeName.c_str(), UWigetAddToViewportScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
-            static SafetyHookMid UWigetAddToViewportMidHook{};
-            UWigetAddToViewportMidHook = safetyhook::create_mid(UWigetAddToViewportScanResult,
+        std::uint8_t* UWidgetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 8B ?? ?? 48 8B ?? 48 85 ?? 40 0F ?? ?? 48 ?? ?? 48 89 ?? ?? 48 8B ?? 8B ?? ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
+        if (UWidgetAddToViewportScanResult) {
+            SPDLOG_INFO("HUD: Widgets: Address is {:s}+{:x}", sExeName.c_str(), UWidgetAddToViewportScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+            static SafetyHookMid UWidgetAddToViewportMidHook{};
+            UWidgetAddToViewportMidHook = safetyhook::create_mid(UWidgetAddToViewportScanResult,
                 [](SafetyHookContext& ctx) {
                     if (!ctx.rsi) return;
 
@@ -299,8 +334,11 @@ void HUD()
                     if (WidgetObject != obj) {
                         WidgetObject = obj;
                         sWidgetName = WidgetObject->GetName();
-                        SPDLOG_DEBUG("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
+                        SPDLOG_INFO("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
                     }
+                    
+                    float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
+                    float heightOffset = (3840.0f / fAspectRatio - 2160.0f) / 2.0f;
 
                     if (sWidgetName.contains("WBP_Race_HUD_Player01_C")) {
                         auto hud = static_cast<SDK::UWBP_Race_HUD_Player01_C*>(WidgetObject);
@@ -308,19 +346,82 @@ void HUD()
                             auto scaleBox = static_cast<SDK::UScaleBox*>(hud->WidgetTree->RootWidget);
                             auto sizeBox = static_cast<SDK::USizeBox*>(scaleBox->Slots[0]->Content);
 
-                            if (bSpanRaceHUD) {
-                                if (fAspectRatio > fNativeAspect) {
-                                    sizeBox->SetWidthOverride(2160.0f * fAspectRatio);
-                                    sizeBox->SetHeightOverride(2160.0f);
-                                }
-                                else if (fAspectRatio < fNativeAspect) {
-                                    sizeBox->SetWidthOverride(3840.0f);
-                                    sizeBox->SetHeightOverride(3840.0f / fAspectRatio);
+                            // Disable clipping so that player markers don't disappear outside 16:9 bounds
+                            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
+
+                            // Span background of pause menu
+                            if (hud->WBP_PauseMenu) {
+                                auto pauseMenu = static_cast<SDK::UWBP_PauseMenu_C*>(hud->WBP_PauseMenu);
+                                auto scaleBox = static_cast<SDK::UScaleBox*>(pauseMenu->WidgetTree->RootWidget);
+
+                                if (scaleBox->Slots[0] && scaleBox->Slots[0]->Content) {
+                                    auto panel = static_cast<SDK::UCanvasPanel*>(scaleBox->Slots[0]->Content);
+                                    panel->SetClipping(SDK::EWidgetClipping::Inherit);
+
+                                    if (panel->Slots.IsValidIndex(3)) {
+                                        auto backgroundBlurSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[2]);
+                                        auto bgBlackSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[3]);
+
+                                        if (fAspectRatio > fNativeAspect) {
+                                            backgroundBlurSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
+                                            bgBlackSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
+                                        }
+                                        else if (fAspectRatio < fNativeAspect) {
+                                            backgroundBlurSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
+                                            bgBlackSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
+                                        }
+                                    }  
                                 }
                             }
-                          
-                            // Disable clipping so that player markers don't disappear outside 16:9 bounds
-                            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);                      
+
+                            // Span racing HUD
+                            if (bSpanRaceHUD) {
+                                auto speed = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_SpeedNum;
+                                auto speedSlot = static_cast<SDK::UCanvasPanelSlot*>(speed->Slot);
+                                //(Left=40.000000,Top=0.000000,Right=100.000000,Bottom=30.000000)
+
+                                auto rank = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_Rank;
+                                auto rankSlot = static_cast<SDK::UCanvasPanelSlot*>(rank->Slot);
+                                //(Left=-20.000000,Top=40.000000,Right=100.000000,Bottom=30.000000)
+
+                                auto rsr_5rings = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_RSR_5rings_Simple;
+                                auto rsr_5ringsSlot = static_cast<SDK::UCanvasPanelSlot*>(rsr_5rings->Slot);
+                                //(Left=60.000000,Top=-20.000000,Right=100.000000,Bottom=30.000000)
+
+                                auto courseMap = (SDK::UUserWidget*)hud->WBP_Race_HUD_CourseMap;
+                                auto courseMapSlot = static_cast<SDK::UCanvasPanelSlot*>(courseMap->Slot);
+                                //(Left=200.000000,Top=-20.000000,Right=1024.000000,Bottom=1024.000000)
+
+                                auto laps = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_LAP;
+                                auto lapsSlot = static_cast<SDK::UCanvasPanelSlot*>(laps->Slot);
+                                //(Left=400.000000,Top=0.000000,Right=330.000000,Bottom=120.000000)
+
+                                auto gadgetIcons = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_GadgetIcon_Simple;
+                                auto gadgetIconsSlot = static_cast<SDK::UCanvasPanelSlot*>(gadgetIcons->Slot);
+                                //(Left=-50.000000,Top=180.000000,Right=100.000000,Bottom=30.000000)
+
+                                auto itemIcons = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_ItemIconSet_Simple;
+                                auto itemIconsSlot = static_cast<SDK::UCanvasPanelSlot*>(itemIcons->Slot);
+                                //(Left=-50.000000,Top=-100.000000,Right=100.000000,Bottom=30.000000)
+                                
+                                auto coins = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_Coin;
+                                auto coinsSlot = static_cast<SDK::UCanvasPanelSlot*>(coins->Slot);
+                                //(Left=48.000000,Top=-304.000000,Right=468.000000,Bottom=160.000000)
+
+                                if (fAspectRatio > fNativeAspect) {
+                                    // Left
+                                    lapsSlot->SetOffsets(SDK::FMargin(400.0f - widthOffset, 0.0f, 330.0f, 120.0f));
+                                    rankSlot->SetOffsets(SDK::FMargin(-20.0f - widthOffset, 40.0f, 100.0f, 30.0f));
+                                    gadgetIconsSlot->SetOffsets(SDK::FMargin(-50.0f - widthOffset, 180.0f, 100.0f, 30.0f));
+                                    itemIconsSlot->SetOffsets(SDK::FMargin(-50.0f - widthOffset, -100.0f, 100.0f, 30.0f));
+
+                                    // Right
+                                    speedSlot->SetOffsets(SDK::FMargin(40.0f + widthOffset, 0.0f, 100.0f, 30.0f));
+                                    rsr_5ringsSlot->SetOffsets(SDK::FMargin(60.0f + widthOffset, -20.0f, 100.0f, 30.0f));
+                                    courseMapSlot->SetOffsets(SDK::FMargin(200.0f + widthOffset, -20.0f, 1024.0f, 1024.0f));
+                                    coinsSlot->SetOffsets(SDK::FMargin(48.0f + widthOffset, -304.0f, 468.0f, 160.0f));
+                                }
+                            }
                         }
                     }
                 });

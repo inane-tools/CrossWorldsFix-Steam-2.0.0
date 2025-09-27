@@ -225051,6 +225051,181 @@ static_assert(alignof(ULS_FX_TravelRing_50_DeadHeat_Intro_DirectorBP_C) == 0x000
 static_assert(sizeof(ULS_FX_TravelRing_50_DeadHeat_Intro_DirectorBP_C) == 0x000050, "Wrong size on ULS_FX_TravelRing_50_DeadHeat_Intro_DirectorBP_C"); \
 static_assert(offsetof(ULS_FX_TravelRing_50_DeadHeat_Intro_DirectorBP_C, UberGraphFrame) == 0x000048, "Member 'ULS_FX_TravelRing_50_DeadHeat_Intro_DirectorBP_C::UberGraphFrame' has a wrong offset!"); \
 
+#define DUMPER7_ASSERTS_WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave \
+static_assert(alignof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave) == 0x000008, "Wrong alignment on WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave"); \
+static_assert(sizeof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave) == 0x000038, "Wrong size on WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, EntryPoint) == 0x000000, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::EntryPoint' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, CallFunc_PauseAnimation_ReturnValue) == 0x000004, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, CallFunc_PlayAnimation_ReturnValue) == 0x000018, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, CallFunc_PlayAnimation_ReturnValue_1) == 0x000020, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, CallFunc_PlayAnimation_ReturnValue_2) == 0x000028, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, CallFunc_PauseAnimation_ReturnValue_1) == 0x000030, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::CallFunc_PauseAnimation_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave, CallFunc_PauseAnimation_ReturnValue_2) == 0x000034, "Member 'WBP_Advertise_AutoSave_C_ExecuteUbergraph_WBP_Advertise_AutoSave::CallFunc_PauseAnimation_ReturnValue_2' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_UWBP_Advertise_AutoSave_C \
+static_assert(alignof(UWBP_Advertise_AutoSave_C) == 0x000008, "Wrong alignment on UWBP_Advertise_AutoSave_C"); \
+static_assert(sizeof(UWBP_Advertise_AutoSave_C) == 0x000418, "Wrong size on UWBP_Advertise_AutoSave_C"); \
+static_assert(offsetof(UWBP_Advertise_AutoSave_C, UberGraphFrame) == 0x0003E0, "Member 'UWBP_Advertise_AutoSave_C::UberGraphFrame' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_AutoSave_C, AutoSave_Out) == 0x0003E8, "Member 'UWBP_Advertise_AutoSave_C::AutoSave_Out' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_AutoSave_C, AutoSave_Loop) == 0x0003F0, "Member 'UWBP_Advertise_AutoSave_C::AutoSave_Loop' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_AutoSave_C, AutoSave_In) == 0x0003F8, "Member 'UWBP_Advertise_AutoSave_C::AutoSave_In' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_AutoSave_C, TXT_AutoSave) == 0x000400, "Member 'UWBP_Advertise_AutoSave_C::TXT_AutoSave' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_AutoSave_C, WBP_System_Sub_AutoSave) == 0x000408, "Member 'UWBP_Advertise_AutoSave_C::WBP_System_Sub_AutoSave' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_AutoSave_C, YellowLine_Left) == 0x000410, "Member 'UWBP_Advertise_AutoSave_C::YellowLine_Left' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Black_C_ExecuteUbergraph_WBP_Advertise_Black \
+static_assert(alignof(WBP_Advertise_Black_C_ExecuteUbergraph_WBP_Advertise_Black) == 0x000004, "Wrong alignment on WBP_Advertise_Black_C_ExecuteUbergraph_WBP_Advertise_Black"); \
+static_assert(sizeof(WBP_Advertise_Black_C_ExecuteUbergraph_WBP_Advertise_Black) == 0x000004, "Wrong size on WBP_Advertise_Black_C_ExecuteUbergraph_WBP_Advertise_Black"); \
+static_assert(offsetof(WBP_Advertise_Black_C_ExecuteUbergraph_WBP_Advertise_Black, EntryPoint) == 0x000000, "Member 'WBP_Advertise_Black_C_ExecuteUbergraph_WBP_Advertise_Black::EntryPoint' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_UWBP_Advertise_Black_C \
+static_assert(alignof(UWBP_Advertise_Black_C) == 0x000008, "Wrong alignment on UWBP_Advertise_Black_C"); \
+static_assert(sizeof(UWBP_Advertise_Black_C) == 0x0002F0, "Wrong size on UWBP_Advertise_Black_C"); \
+static_assert(offsetof(UWBP_Advertise_Black_C, UberGraphFrame) == 0x0002E0, "Member 'UWBP_Advertise_Black_C::UberGraphFrame' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Black_C, BG_Black) == 0x0002E8, "Member 'UWBP_Advertise_Black_C::BG_Black' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start \
+static_assert(alignof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start) == 0x000008, "Wrong alignment on WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start"); \
+static_assert(sizeof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start) == 0x000140, "Wrong size on WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, EntryPoint) == 0x000000, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::EntryPoint' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PlayAnimation_ReturnValue) == 0x000018, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PlayAnimation_ReturnValue_1) == 0x000020, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PauseAnimation_ReturnValue) == 0x000028, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PauseAnimation_ReturnValue_1) == 0x00002C, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PauseAnimation_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_GetSwitcherIndex_OutState) == 0x000030, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_GetSwitcherIndex_OutState' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PauseAnimation_ReturnValue_2) == 0x000034, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PauseAnimation_ReturnValue_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_SwitchEnum_CmpSuccess) == 0x000038, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PlayAnimation_ReturnValue_2) == 0x000040, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_IsEndLogos_LogosEnd) == 0x000048, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_IsEndLogos_LogosEnd' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PlayAnimation_ReturnValue_3) == 0x000050, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_SoundPlay_ReturnValue) == 0x000058, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_SoundPlay_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_CreateDelegate_OutputDelegate_1) == 0x00005C, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_CreateDelegate_OutputDelegate_2) == 0x00006C, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_GetSwitcherIndex_OutState_1) == 0x00007C, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_GetSwitcherIndex_OutState_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00007D, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_PlayAnimation_ReturnValue_4) == 0x000080, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_PlayAnimation_ReturnValue_4' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_GetSwitcherIndex_OutState_2) == 0x000088, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_GetSwitcherIndex_OutState_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000089, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_CreateDelegate_OutputDelegate_3) == 0x00008C, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x00009C, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_Event_MyGeometry) == 0x0000A0, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_Event_MyGeometry' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_Event_InDeltaTime) == 0x0000D8, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_Event_InDeltaTime' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x0000E0, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_SetTimerDelegate_ReturnValue_1) == 0x0000E8, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_SetTimerDelegate_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000F0, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_SetTimerDelegate_ReturnValue_2) == 0x000100, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_SetTimerDelegate_ReturnValue_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_SetTimerDelegate_ReturnValue_3) == 0x000108, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_SetTimerDelegate_ReturnValue_3' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_MakeLiteralText_ReturnValue) == 0x000110, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_GetSwitcherIndex_OutState_3) == 0x000120, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_GetSwitcherIndex_OutState_3' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000121, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, K2Node_CreateDelegate_OutputDelegate_5) == 0x000124, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x000134, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_1) == 0x000138, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_2) == 0x00013C, "Member 'WBP_Advertise_Start_C_ExecuteUbergraph_WBP_Advertise_Start::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_2' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_GetAnimationOut \
+static_assert(alignof(WBP_Advertise_Start_C_GetAnimationOut) == 0x000008, "Wrong alignment on WBP_Advertise_Start_C_GetAnimationOut"); \
+static_assert(sizeof(WBP_Advertise_Start_C_GetAnimationOut) == 0x000008, "Wrong size on WBP_Advertise_Start_C_GetAnimationOut"); \
+static_assert(offsetof(WBP_Advertise_Start_C_GetAnimationOut, OutAnimation) == 0x000000, "Member 'WBP_Advertise_Start_C_GetAnimationOut::OutAnimation' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_GetSwitcherIndex \
+static_assert(alignof(WBP_Advertise_Start_C_GetSwitcherIndex) == 0x000004, "Wrong alignment on WBP_Advertise_Start_C_GetSwitcherIndex"); \
+static_assert(sizeof(WBP_Advertise_Start_C_GetSwitcherIndex) == 0x00000C, "Wrong size on WBP_Advertise_Start_C_GetSwitcherIndex"); \
+static_assert(offsetof(WBP_Advertise_Start_C_GetSwitcherIndex, OutState) == 0x000000, "Member 'WBP_Advertise_Start_C_GetSwitcherIndex::OutState' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_GetSwitcherIndex, OutState2) == 0x000001, "Member 'WBP_Advertise_Start_C_GetSwitcherIndex::OutState2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_GetSwitcherIndex, OutState_0) == 0x000002, "Member 'WBP_Advertise_Start_C_GetSwitcherIndex::OutState_0' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_GetSwitcherIndex, CallFunc_GetActiveWidgetIndex_ReturnValue) == 0x000004, "Member 'WBP_Advertise_Start_C_GetSwitcherIndex::CallFunc_GetActiveWidgetIndex_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_GetSwitcherIndex, K2Node_SwitchInteger_CmpSuccess) == 0x000008, "Member 'WBP_Advertise_Start_C_GetSwitcherIndex::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_IsEndLogos \
+static_assert(alignof(WBP_Advertise_Start_C_IsEndLogos) == 0x000001, "Wrong alignment on WBP_Advertise_Start_C_IsEndLogos"); \
+static_assert(sizeof(WBP_Advertise_Start_C_IsEndLogos) == 0x00000F, "Wrong size on WBP_Advertise_Start_C_IsEndLogos"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, LogosEnd) == 0x000000, "Member 'WBP_Advertise_Start_C_IsEndLogos::LogosEnd' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_GetPlatform_ReturnValue) == 0x000001, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_GetPlatform_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_GetSwitcherIndex_OutState) == 0x000002, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_GetSwitcherIndex_OutState' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000003, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000004, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_IsVisibleCompanyNameMilestoneVersion_ReturnValue) == 0x000005, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_IsVisibleCompanyNameMilestoneVersion_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_IsEnableAdvertiseRatingMilestoneVersion_ReturnValue) == 0x000006, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_IsEnableAdvertiseRatingMilestoneVersion_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_IsEnableAdvertiseRatingMilestoneVersion_ReturnValue_1) == 0x000007, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_IsEnableAdvertiseRatingMilestoneVersion_ReturnValue_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_IsOfficialVersion_ReturnValue) == 0x000008, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_IsOfficialVersion_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_GetSwitcherIndex_OutState_1) == 0x000009, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_GetSwitcherIndex_OutState_1' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_GetSwitcherIndex_OutState_2) == 0x00000A, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_GetSwitcherIndex_OutState_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00000B, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x00000C, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x00000D, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_IsEndLogos, CallFunc_EqualEqual_ByteByte_ReturnValue_5) == 0x00000E, "Member 'WBP_Advertise_Start_C_IsEndLogos::CallFunc_EqualEqual_ByteByte_ReturnValue_5' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_SetLogosTime \
+static_assert(alignof(WBP_Advertise_Start_C_SetLogosTime) == 0x000008, "Wrong alignment on WBP_Advertise_Start_C_SetLogosTime"); \
+static_assert(sizeof(WBP_Advertise_Start_C_SetLogosTime) == 0x000008, "Wrong size on WBP_Advertise_Start_C_SetLogosTime"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetLogosTime, InTime) == 0x000000, "Member 'WBP_Advertise_Start_C_SetLogosTime::InTime' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_SetNextLogoState \
+static_assert(alignof(WBP_Advertise_Start_C_SetNextLogoState) == 0x000001, "Wrong alignment on WBP_Advertise_Start_C_SetNextLogoState"); \
+static_assert(sizeof(WBP_Advertise_Start_C_SetNextLogoState) == 0x000007, "Wrong size on WBP_Advertise_Start_C_SetNextLogoState"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetNextLogoState, CallFunc_GetPlatform_ReturnValue) == 0x000000, "Member 'WBP_Advertise_Start_C_SetNextLogoState::CallFunc_GetPlatform_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetNextLogoState, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'WBP_Advertise_Start_C_SetNextLogoState::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetNextLogoState, CallFunc_IsVisibleCompanyNameMilestoneVersion_ReturnValue) == 0x000002, "Member 'WBP_Advertise_Start_C_SetNextLogoState::CallFunc_IsVisibleCompanyNameMilestoneVersion_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetNextLogoState, CallFunc_IsEnableAdvertiseRatingMilestoneVersion_ReturnValue) == 0x000003, "Member 'WBP_Advertise_Start_C_SetNextLogoState::CallFunc_IsEnableAdvertiseRatingMilestoneVersion_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetNextLogoState, CallFunc_IsOfficialVersion_ReturnValue) == 0x000004, "Member 'WBP_Advertise_Start_C_SetNextLogoState::CallFunc_IsOfficialVersion_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetNextLogoState, CallFunc_GetSwitcherIndex_OutState) == 0x000005, "Member 'WBP_Advertise_Start_C_SetNextLogoState::CallFunc_GetSwitcherIndex_OutState' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetNextLogoState, K2Node_SwitchEnum_CmpSuccess) == 0x000006, "Member 'WBP_Advertise_Start_C_SetNextLogoState::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_SetSEGALogoTexture \
+static_assert(alignof(WBP_Advertise_Start_C_SetSEGALogoTexture) == 0x000001, "Wrong alignment on WBP_Advertise_Start_C_SetSEGALogoTexture"); \
+static_assert(sizeof(WBP_Advertise_Start_C_SetSEGALogoTexture) == 0x000002, "Wrong size on WBP_Advertise_Start_C_SetSEGALogoTexture"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetSEGALogoTexture, CallFunc_GetTextLang_ReturnValue) == 0x000000, "Member 'WBP_Advertise_Start_C_SetSEGALogoTexture::CallFunc_GetTextLang_ReturnValue' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetSEGALogoTexture, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'WBP_Advertise_Start_C_SetSEGALogoTexture::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_SetSwitcherIndex \
+static_assert(alignof(WBP_Advertise_Start_C_SetSwitcherIndex) == 0x000001, "Wrong alignment on WBP_Advertise_Start_C_SetSwitcherIndex"); \
+static_assert(sizeof(WBP_Advertise_Start_C_SetSwitcherIndex) == 0x000002, "Wrong size on WBP_Advertise_Start_C_SetSwitcherIndex"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetSwitcherIndex, AdvertiseState) == 0x000000, "Member 'WBP_Advertise_Start_C_SetSwitcherIndex::AdvertiseState' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_SetSwitcherIndex, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'WBP_Advertise_Start_C_SetSwitcherIndex::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_WBP_Advertise_Start_C_Tick \
+static_assert(alignof(WBP_Advertise_Start_C_Tick) == 0x000004, "Wrong alignment on WBP_Advertise_Start_C_Tick"); \
+static_assert(sizeof(WBP_Advertise_Start_C_Tick) == 0x00003C, "Wrong size on WBP_Advertise_Start_C_Tick"); \
+static_assert(offsetof(WBP_Advertise_Start_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_Advertise_Start_C_Tick::MyGeometry' has a wrong offset!"); \
+static_assert(offsetof(WBP_Advertise_Start_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_Advertise_Start_C_Tick::InDeltaTime' has a wrong offset!"); \
+
+#define DUMPER7_ASSERTS_UWBP_Advertise_Start_C \
+static_assert(alignof(UWBP_Advertise_Start_C) == 0x000008, "Wrong alignment on UWBP_Advertise_Start_C"); \
+static_assert(sizeof(UWBP_Advertise_Start_C) == 0x0004E0, "Wrong size on UWBP_Advertise_Start_C"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, UberGraphFrame) == 0x0003E0, "Member 'UWBP_Advertise_Start_C::UberGraphFrame' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, Out) == 0x0003E8, "Member 'UWBP_Advertise_Start_C::Out' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, Loop) == 0x0003F0, "Member 'UWBP_Advertise_Start_C::Loop' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, In) == 0x0003F8, "Member 'UWBP_Advertise_Start_C::In' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, Adv_01) == 0x000400, "Member 'UWBP_Advertise_Start_C::Adv_01' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, BG_Black) == 0x000408, "Member 'UWBP_Advertise_Start_C::BG_Black' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, BG_Black_03) == 0x000410, "Member 'UWBP_Advertise_Start_C::BG_Black_03' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, BG_Black_05) == 0x000418, "Member 'UWBP_Advertise_Start_C::BG_Black_05' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, BG_Black_06) == 0x000420, "Member 'UWBP_Advertise_Start_C::BG_Black_06' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, BG_Black_08) == 0x000428, "Member 'UWBP_Advertise_Start_C::BG_Black_08' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, CanvasPanel) == 0x000430, "Member 'UWBP_Advertise_Start_C::CanvasPanel' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, DMY_photosensitivity) == 0x000438, "Member 'UWBP_Advertise_Start_C::DMY_photosensitivity' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, DMY_SegaLogo) == 0x000440, "Member 'UWBP_Advertise_Start_C::DMY_SegaLogo' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, DMY_SegaLogo_US) == 0x000448, "Member 'UWBP_Advertise_Start_C::DMY_SegaLogo_US' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, ESRB_Logo) == 0x000450, "Member 'UWBP_Advertise_Start_C::ESRB_Logo' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, ESRB_Logo_1) == 0x000458, "Member 'UWBP_Advertise_Start_C::ESRB_Logo_1' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, RightsLogo) == 0x000460, "Member 'UWBP_Advertise_Start_C::RightsLogo' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, TXT_Ad) == 0x000468, "Member 'UWBP_Advertise_Start_C::TXT_Ad' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, UE_Logo) == 0x000470, "Member 'UWBP_Advertise_Start_C::UE_Logo' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, USK_Logo) == 0x000478, "Member 'UWBP_Advertise_Start_C::USK_Logo' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, USK_Logo_1) == 0x000480, "Member 'UWBP_Advertise_Start_C::USK_Logo_1' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, WBP_SonicLogo_Movie) == 0x000488, "Member 'UWBP_Advertise_Start_C::WBP_SonicLogo_Movie' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, WidgetSwitcher_Rating) == 0x000490, "Member 'UWBP_Advertise_Start_C::WidgetSwitcher_Rating' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, WS_Adv_Image) == 0x000498, "Member 'UWBP_Advertise_Start_C::WS_Adv_Image' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, ActiveWidgetIndex) == 0x0004A0, "Member 'UWBP_Advertise_Start_C::ActiveWidgetIndex' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, WaitTimerLogoHandle) == 0x0004A8, "Member 'UWBP_Advertise_Start_C::WaitTimerLogoHandle' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, FinishedLogosOutAnimation) == 0x0004B0, "Member 'UWBP_Advertise_Start_C::FinishedLogosOutAnimation' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, LogosTimer) == 0x0004C0, "Member 'UWBP_Advertise_Start_C::LogosTimer' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, WaitTimerDisableInputHandle) == 0x0004C8, "Member 'UWBP_Advertise_Start_C::WaitTimerDisableInputHandle' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, SkipDisableTime) == 0x0004D0, "Member 'UWBP_Advertise_Start_C::SkipDisableTime' has a wrong offset!"); \
+static_assert(offsetof(UWBP_Advertise_Start_C, StrapTime) == 0x0004D8, "Member 'UWBP_Advertise_Start_C::StrapTime' has a wrong offset!"); \
 
 }
 

@@ -1,12 +1,12 @@
 # CrossWorldsFix
 [![Patreon-Button](.github/images/Patreon-Button.png)](https://www.patreon.com/Wintermance) [![ko-fi](.github/images/Kofi-Button.svg)](https://ko-fi.com/W7W01UAI9)
 
-**CrossWorldsFix** is an ASI plugin for **Sonic Racing: CrossWorlds** that adds ultrawide/narrower support.
+**CrossWorldsFix** is an ASI plugin for **Sonic Racing: CrossWorlds** that adds ultrawide/narrower support and more.
 
 ## Features
 
 ### General
-- Enable the console.
+- Enable the developer console.
 
 ### Ultrawide/Narrower
 - Support for ultrawide/narrower aspect ratios.

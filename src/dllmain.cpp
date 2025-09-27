@@ -334,9 +334,9 @@ void HUD()
                     if (WidgetObject != obj) {
                         WidgetObject = obj;
                         sWidgetName = WidgetObject->GetName();
-                        SPDLOG_INFO("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
+                        SPDLOG_DEBUG("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
                     }
-                    
+
                     float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
                     float heightOffset = (3840.0f / fAspectRatio - 2160.0f) / 2.0f;
 
@@ -420,6 +420,19 @@ void HUD()
                                     rsr_5ringsSlot->SetOffsets(SDK::FMargin(60.0f + widthOffset, -20.0f, 100.0f, 30.0f));
                                     courseMapSlot->SetOffsets(SDK::FMargin(200.0f + widthOffset, -20.0f, 1024.0f, 1024.0f));
                                     coinsSlot->SetOffsets(SDK::FMargin(48.0f + widthOffset, -304.0f, 468.0f, 160.0f));
+                                }
+                                else if (fAspectRatio < fNativeAspect) {
+                                    // Top
+                                    itemIconsSlot->SetOffsets(SDK::FMargin(-50.0f, -100.0f - heightOffset, 100.0f, 30.0f));
+                                    rsr_5ringsSlot->SetOffsets(SDK::FMargin(60.0f, -20.0f - heightOffset, 100.0f, 30.0f));
+
+                                    // Bottom
+                                    courseMapSlot->SetOffsets(SDK::FMargin(200.0f, -20.0f + heightOffset, 1024.0f, 1024.0f));
+                                    coinsSlot->SetOffsets(SDK::FMargin(48.0f, -304.0f + heightOffset, 468.0f, 160.0f));
+                                    gadgetIconsSlot->SetOffsets(SDK::FMargin(-50.0f, 180.0f + heightOffset, 100.0f, 30.0f));
+                                    lapsSlot->SetOffsets(SDK::FMargin(400.0f, 0.0f + heightOffset, 330.0f, 120.0f));
+                                    rankSlot->SetOffsets(SDK::FMargin(-20.0f, 40.0f + heightOffset, 100.0f, 30.0f));
+                                    speedSlot->SetOffsets(SDK::FMargin(40.0f, 0.0f + heightOffset, 100.0f, 30.0f));
                                 }
                             }
                         }

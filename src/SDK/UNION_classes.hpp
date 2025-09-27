@@ -279,7 +279,7 @@ DUMPER7_ASSERTS_UMachineEffectComponent;
 
 // Class UNION.AdvertiseWidget
 // 0x0008 (0x03E0 - 0x03D8)
-class UAdvertiseWidget final : public UUnionUISceneBase
+class UAdvertiseWidget : public UUnionUISceneBase
 {
 public:
 	class UImage*                                 Controller_Info;                                   // 0x03D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -161,7 +161,7 @@ void Configuration()
     bEnableConsole = GetConfigAndLog(ini, "Developer Console", "Enabled", false);
     bFixAspect = GetConfigAndLog(ini, "Fix Aspect Ratio", "Enabled", false);
     bFixHUD = GetConfigAndLog(ini, "Fix HUD", "Enabled", false);
-    bSpanRaceHUD = GetConfigAndLog(ini, "Fix HUD", "SpanRaceHUD", false);
+    bSpanRaceHUD = GetConfigAndLog(ini, "Span Racing HUD", "Enabled", false);
     
     SPDLOG_INFO("----------");
 }
@@ -181,10 +181,11 @@ void UpdateOffsets()
     }
 
     // AppendString
-    std::uint8_t* AppendStringScanResult = Memory::PatternScan(exeModule, "48 89 ?? ?? ?? 48 89 ?? ?? ?? ?? 48 83 ?? ?? 80 3D ?? ?? ?? ?? 00 48 8B F2 8B ?? 48 8B ??");
+    std::uint8_t* AppendStringScanResult = Memory::PatternScan(exeModule, "48 8D ?? ?? ?? 48 89 ?? ?? ?? E8 ?? ?? ?? ?? 83 ?? ?? ?? 00 48 8D ?? ?? ?? ?? ?? 41 ?? 01 00 00 00 48 8B ??");
     if (AppendStringScanResult) {
         SPDLOG_INFO("Offsets: AppendString: Address is {:s}+{:x}", sExeName, AppendStringScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
-        SDK::Offsets::AppendString = static_cast<UC::uint32>(AppendStringScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+        std::uint8_t* AppendStringAddr = Memory::GetRelativeAddr(AppendStringScanResult + 0xB);
+        SDK::Offsets::AppendString = static_cast<UC::uint32>(AppendStringAddr - reinterpret_cast<std::uint8_t*>(exeModule));
         SPDLOG_INFO("Offsets: AppendString: 0x{:x}", SDK::Offsets::AppendString);
     }
     else {
@@ -235,27 +236,35 @@ void AspectRatioFOV()
 {
     if (bFixAspect) 
     {
-        // Aspect Ratio / FOV
-        std::uint8_t* AspectRatioFOVScanResult = Memory::PatternScan(exeModule, "F3 0F ?? ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ?? 0F ?? ?? ?? ?? ?? ?? 33 ?? ?? 83 ?? 01");
-        if (AspectRatioFOVScanResult) {
-            SPDLOG_INFO("Aspect Ratio/FOV: Address is {:s}+{:x}", sExeName.c_str(), AspectRatioFOVScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
-            static SafetyHookMid FOVMidHook{};
-            FOVMidHook = safetyhook::create_mid(AspectRatioFOVScanResult,
+        // AspectRatioAxisConstraint
+        std::uint8_t* AspectRatioAxisConstraintScanResult = Memory::PatternScan(exeModule, "48 ?? ?? ?? ?? 00 00 4C ?? ?? 4D ?? ?? E8 ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ??");
+        if (AspectRatioAxisConstraintScanResult) {
+            SPDLOG_INFO("Aspect Ratio: FOV Axis Constraint: Address is {:s}+{:x}", sExeName.c_str(), AspectRatioAxisConstraintScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+            static SafetyHookMid AspectRatioAxisConstraintMidHook{};
+            AspectRatioAxisConstraintMidHook = safetyhook::create_mid(AspectRatioAxisConstraintScanResult,
                 [](SafetyHookContext& ctx) {
                     if (fAspectRatio > fNativeAspect)
-                        ctx.xmm0.f32[0] = atanf(tanf(ctx.xmm0.f32[0] * (fPi / 360)) / fNativeAspect * fAspectRatio) * (360 / fPi);
-                });
-
-            static SafetyHookMid AspectRatioMidHook{};
-            AspectRatioMidHook = safetyhook::create_mid(AspectRatioFOVScanResult + 0xB,
-                [](SafetyHookContext& ctx) {
-                    ctx.rax = static_cast<uintptr_t>(std::bit_cast<uint32_t>(fAspectRatio));
+                        ctx.rdx = 0;
                 });
         }
         else {
-            SPDLOG_ERROR("Aspect Ratio/FOV: Pattern scan failed.");
+            SPDLOG_ERROR("Aspect Ratio: FOV Axis Constraint: Pattern scan failed.");
         } 
-    }  
+
+        // bConstrainAspectRatio
+        std::uint8_t* ConstrainAspectRatioScanResult = Memory::PatternScan(exeModule, "89 ?? ?? 0F B6 ?? ?? ?? ?? ?? D1 ?? 33 ?? 83 ?? 02 33 ?? 89 ?? ??");
+        if (ConstrainAspectRatioScanResult) {
+            SPDLOG_INFO("Aspect Ratio: Cutscenes: Address is {:s}+{:x}", sExeName.c_str(), ConstrainAspectRatioScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+            static SafetyHookMid ConstrainAspectRatioMidHook{};
+            ConstrainAspectRatioMidHook = safetyhook::create_mid(ConstrainAspectRatioScanResult,
+                [](SafetyHookContext& ctx) {
+                    ctx.rcx = 0;
+                });
+        }
+        else {
+            SPDLOG_ERROR("Aspect Ratio: Constrain Aspect Ratio: Pattern scan failed.");
+        }   
+    }
 }
 
 void HUD()
@@ -316,7 +325,10 @@ void HUD()
         else {
             SPDLOG_ERROR("HUD: Create Popup Window: Pattern scan failed.");
         }
+    }
 
+    if (bFixHUD || bSpanRaceHUD) 
+    {
         // Widgets
         std::uint8_t* UWidgetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 8B ?? ?? 48 8B ?? 48 85 ?? 40 0F ?? ?? 48 ?? ?? 48 89 ?? ?? 48 8B ?? 8B ?? ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
         if (UWidgetAddToViewportScanResult) {
@@ -343,34 +355,37 @@ void HUD()
                     if (sWidgetName.contains("WBP_Race_HUD_Player01_C")) {
                         auto hud = static_cast<SDK::UWBP_Race_HUD_Player01_C*>(WidgetObject);
                         if (hud->WidgetTree->RootWidget->IsA(SDK::UScaleBox::StaticClass())) {
-                            auto scaleBox = static_cast<SDK::UScaleBox*>(hud->WidgetTree->RootWidget);
-                            auto sizeBox = static_cast<SDK::USizeBox*>(scaleBox->Slots[0]->Content);
+                            // Fix HUD issues
+                            if (bFixHUD) {
+                                auto scaleBox = static_cast<SDK::UScaleBox*>(hud->WidgetTree->RootWidget);
+                                auto sizeBox = static_cast<SDK::USizeBox*>(scaleBox->Slots[0]->Content);
 
-                            // Disable clipping so that player markers don't disappear outside 16:9 bounds
-                            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
+                                // Disable clipping so that player markers don't disappear outside 16:9 bounds
+                                sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
 
-                            // Span background of pause menu
-                            if (hud->WBP_PauseMenu) {
-                                auto pauseMenu = static_cast<SDK::UWBP_PauseMenu_C*>(hud->WBP_PauseMenu);
-                                auto scaleBox = static_cast<SDK::UScaleBox*>(pauseMenu->WidgetTree->RootWidget);
+                                // Span background of pause menu
+                                if (hud->WBP_PauseMenu) {
+                                    auto pauseMenu = static_cast<SDK::UWBP_PauseMenu_C*>(hud->WBP_PauseMenu);
+                                    auto scaleBox = static_cast<SDK::UScaleBox*>(pauseMenu->WidgetTree->RootWidget);
 
-                                if (scaleBox->Slots[0] && scaleBox->Slots[0]->Content) {
-                                    auto panel = static_cast<SDK::UCanvasPanel*>(scaleBox->Slots[0]->Content);
-                                    panel->SetClipping(SDK::EWidgetClipping::Inherit);
+                                    if (scaleBox->Slots[0] && scaleBox->Slots[0]->Content) {
+                                        auto panel = static_cast<SDK::UCanvasPanel*>(scaleBox->Slots[0]->Content);
+                                        panel->SetClipping(SDK::EWidgetClipping::Inherit);
 
-                                    if (panel->Slots.IsValidIndex(3)) {
-                                        auto backgroundBlurSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[2]);
-                                        auto bgBlackSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[3]);
+                                        if (panel->Slots.IsValidIndex(3)) {
+                                            auto backgroundBlurSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[2]);
+                                            auto bgBlackSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[3]);
 
-                                        if (fAspectRatio > fNativeAspect) {
-                                            backgroundBlurSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
-                                            bgBlackSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
-                                        }
-                                        else if (fAspectRatio < fNativeAspect) {
-                                            backgroundBlurSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
-                                            bgBlackSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
-                                        }
-                                    }  
+                                            if (fAspectRatio > fNativeAspect) {
+                                                backgroundBlurSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
+                                                bgBlackSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
+                                            }
+                                            else if (fAspectRatio < fNativeAspect) {
+                                                backgroundBlurSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
+                                                bgBlackSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
+                                            }
+                                        }  
+                                    }
                                 }
                             }
 
@@ -408,6 +423,9 @@ void HUD()
                                 auto coinsSlot = static_cast<SDK::UCanvasPanelSlot*>(coins->Slot);
                                 //(Left=48.000000,Top=-304.000000,Right=468.000000,Bottom=160.000000)
 
+                                auto timeTrial = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_TimeTrial_Time;
+                                auto timeTrialSlot = static_cast<SDK::UVerticalBoxSlot*>(timeTrial->Slot);
+
                                 if (fAspectRatio > fNativeAspect) {
                                     // Left
                                     lapsSlot->SetOffsets(SDK::FMargin(400.0f - widthOffset, 0.0f, 330.0f, 120.0f));
@@ -420,6 +438,7 @@ void HUD()
                                     rsr_5ringsSlot->SetOffsets(SDK::FMargin(60.0f + widthOffset, -20.0f, 100.0f, 30.0f));
                                     courseMapSlot->SetOffsets(SDK::FMargin(200.0f + widthOffset, -20.0f, 1024.0f, 1024.0f));
                                     coinsSlot->SetOffsets(SDK::FMargin(48.0f + widthOffset, -304.0f, 468.0f, 160.0f));
+                                    timeTrialSlot->SetHorizontalAlignment(SDK::EHorizontalAlignment::HAlign_Right);
                                 }
                                 else if (fAspectRatio < fNativeAspect) {
                                     // Top

@@ -26,11 +26,11 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_TravelRingMainEnterSpawner_C;    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void SetTravelRingState(uint8 TravelRingState_0);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void PostSpawnSequenceActor();
 	void ExecuteUbergraph_BP_TravelRingMainEnterSpawner(int32 EntryPoint);
+	void PostSpawnSequenceActor();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void SetTravelRingState(uint8 TravelRingState_0);
 
 public:
 	static class UClass* StaticClass()

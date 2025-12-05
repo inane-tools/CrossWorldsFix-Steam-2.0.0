@@ -23,23 +23,13 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ClassSelect_Sub_TimeTrial_Medal_C_ExecuteUbergraph_WBP_ClassSelect_Sub_TimeTrial_Medal;
 
-// Function WBP_ClassSelect_Sub_TimeTrial_Medal.WBP_ClassSelect_Sub_TimeTrial_Medal_C.SetTimeTrialDLCMedalCount
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_ClassSelect_Sub_TimeTrial_Medal_C_SetTimeTrialDLCMedalCount final
-{
-public:
-	int32                                         DLCMedalCount;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         DLCMedalMax;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ClassSelect_Sub_TimeTrial_Medal_C_SetTimeTrialDLCMedalCount;
-
 // Function WBP_ClassSelect_Sub_TimeTrial_Medal.WBP_ClassSelect_Sub_TimeTrial_Medal_C.SetTimeTrialMedalCount
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_ClassSelect_Sub_TimeTrial_Medal_C_SetTimeTrialMedalCount final
 {
 public:
-	int32                                         NormalMedalCount;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NormalMedalMax;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MedalCount;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MedalMax;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0018(0x0010)()
 };

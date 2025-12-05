@@ -19,11 +19,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_EndMenu_UserReport_Sub_RankingTable.WBP_EndMenu_UserReport_Sub_RankingTable_C
-// 0x0008 (0x06C8 - 0x06C0)
+// 0x0008 (0x06B8 - 0x06B0)
 class UWBP_EndMenu_UserReport_Sub_RankingTable_C final : public URaceEndMenuUserReportPlayerButtonWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void OnLoaded_56904B9545857B027A39888EF535E5A7(class UObject* Loaded);

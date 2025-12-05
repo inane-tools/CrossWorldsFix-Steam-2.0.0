@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "MediaIOCore_structs.hpp"
+#include "OpenColorIO_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "OpenColorIO_structs.hpp"
 #include "MediaAssets_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "ImageWriteQueue_structs.hpp"
 
 
@@ -32,7 +32,7 @@ public:
 	bool                                          bFramelock;                                        // 0x00A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaIOSampleEvaluationType                  EvaluationType;                                    // 0x00A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A3[0x5];                                       // 0x00A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVideoDeinterlacer*                     Deinterlacer;                                      // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVideoDeinterlacer*                     Deinterlacer;                                      // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	EMediaIOInterlaceFieldOrder                   InterlaceFieldOrder;                               // 0x00B0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideSourceEncoding;                           // 0x00B1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaIOCoreSourceEncoding                    OverrideSourceEncoding;                            // 0x00B2(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -144,7 +144,7 @@ class UMediaCapture : public UObject
 public:
 	TMulticastInlineDelegate<void()>              OnStateChanged;                                    // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x28];                                      // 0x0038(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMediaOutput*                           MediaOutput;                                       // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMediaOutput*                           MediaOutput;                                       // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_68[0x238];                                     // 0x0068(0x0238)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

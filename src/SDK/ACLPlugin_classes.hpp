@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ACLPlugin_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "ACLPlugin_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -114,7 +114,7 @@ DUMPER7_ASSERTS_UAnimBoneCompressionCodec_ACLCustom;
 class UAnimBoneCompressionCodec_ACLDatabase final : public UAnimBoneCompressionCodec_ACLBase
 {
 public:
-	class UAnimationCompressionLibraryDatabase*   DatabaseAsset;                                     // 0x0038(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimationCompressionLibraryDatabase*   DatabaseAsset;                                     // 0x0038(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

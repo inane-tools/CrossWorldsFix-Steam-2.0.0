@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_VATBreakObjectBase_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnPlayBreakEvent();
 	void ExecuteUbergraph_BP_ChipVATBreakObject(int32 EntryPoint);
+	void OnPlayBreakEvent();
 
 public:
 	static class UClass* StaticClass()

@@ -53,11 +53,12 @@ public:
 	void CustomEvent_GadgetPlateRunkUp();
 	void CustomEvent_RewardWidget_Close();
 	void ExecuteUbergraph_BP_RaceGadgetPlateSequence(int32 EntryPoint);
-	void IsGadgetSlotMax(int32 TotalCount, bool* NewParam);
+	void IsGadgetSlotMax(int32 TotalCount, bool* newParam);
 	void IsGadgetSlotMax_PlateId(EGadgetPlateId InGadgetPlateId, bool* Result);
 	void OnFinalize();
 	void OnInitialize();
 	void Retry_GadgetLvUpWindow();
+	void SetGadgetPlateWidget(class UWBP_EndMenu_GudgetLv_Window_C* Widget);
 
 public:
 	static class UClass* StaticClass()

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_RaceMasterDataAccessor.BP_RaceMasterDataAccessor_C
-// 0x0008 (0x0150 - 0x0148)
+// 0x0008 (0x0160 - 0x0158)
 class UBP_RaceMasterDataAccessor_C final : public URaceMasterDataAccessor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0148(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0158(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_RaceMasterDataAccessor(int32 EntryPoint);

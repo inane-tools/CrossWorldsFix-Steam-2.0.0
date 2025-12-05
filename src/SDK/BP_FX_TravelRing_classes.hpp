@@ -45,26 +45,26 @@ public:
 	double                                        Particle_Rotate_X;                                 // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void SetRotation();
-	void SetRingSize();
-	void SetParticle_Wide();
-	void SetParticle_SpawnRange();
-	void SetParticle_Rotate();
-	void SetMultiPlayer();
-	void SetFXVisible(bool bVisible);
-	void SetCheeringFXAnother_Lv2();
-	void SetAttentionMark_HiddenInGame(bool HiddenInGame);
-	void Set_Ring_Material();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_FX_TravelRing(int32 EntryPoint);
-	void Nine9_SetAttention(bool Right);
-	void Nine2_Set_FX_Normal_Exit(bool BeginPlay);
-	void Nine1_SetFX_AnotherExit();
-	void Nine0_SetFX_AnotherEnter();
-	void Zero6_Sequencer_6JustBeforeOn_effect();
 	void Zero3_Sequencer_3Confirm_effect();
+	void Zero6_Sequencer_6JustBeforeOn_effect();
+	void Nine0_SetFX_AnotherEnter();
+	void Nine1_SetFX_AnotherExit();
+	void Nine2_Set_FX_Normal_Exit(bool BeginPlay);
+	void Nine9_SetAttention(bool Right);
+	void ExecuteUbergraph_BP_FX_TravelRing(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void Set_Ring_Material();
+	void SetAttentionMark_HiddenInGame(bool HiddenInGame);
+	void SetCheeringFXAnother_Lv2();
+	void SetFXVisible(bool bVisible);
+	void SetMultiPlayer();
+	void SetParticle_Rotate();
+	void SetParticle_SpawnRange();
+	void SetParticle_Wide();
+	void SetRingSize();
+	void SetRotation();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

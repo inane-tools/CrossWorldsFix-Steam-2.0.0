@@ -382,7 +382,7 @@ DUMPER7_ASSERTS_IMovieSceneEasingFunction;
 class UMovieSceneEntitySystem : public UObject
 {
 public:
-	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -532,7 +532,7 @@ DUMPER7_ASSERTS_UMovieSceneChannelOverrideContainer;
 class UMovieSceneSectionChannelOverrideRegistry final : public UObject
 {
 public:
-	TMap<class FName, class UMovieSceneChannelOverrideContainer*> Overrides;                         // 0x0028(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class FName, class UMovieSceneChannelOverrideContainer*> Overrides;                         // 0x0028(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -992,7 +992,7 @@ public:
 	TWeakObjectPtr<class UObject>                 WeakAnimatedObject;                                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bIsRootTrackInstance;                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneEntitySystemLinker*          PrivateLinker;                                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneEntitySystemLinker*          PrivateLinker;                                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	TArray<struct FMovieSceneTrackInstanceInput>  Inputs;                                            // 0x0040(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
@@ -1039,7 +1039,7 @@ DUMPER7_ASSERTS_UMovieSceneTrackInstanceInstantiator;
 class UMovieSceneTrackInstanceSystem final : public UMovieSceneEntitySystem
 {
 public:
-	class UMovieSceneTrackInstanceInstantiator*   Instantiator;                                      // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneTrackInstanceInstantiator*   Instantiator;                                      // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1123,7 +1123,7 @@ class UMovieSceneEasingExternalCurve final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            Curve;                                             // 0x0030(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            Curve;                                             // 0x0030(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1220,8 +1220,8 @@ public:
 	TArray<struct FMovieScenePossessable>         Possessables;                                      // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<struct FMovieSceneBinding>             ObjectBindings;                                    // 0x0080(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TMap<class FName, struct FMovieSceneObjectBindingIDs> BindingGroups;                             // 0x0090(0x0050)(NativeAccessSpecifierPrivate)
-	TArray<class UMovieSceneTrack*>               Tracks;                                            // 0x00E0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UMovieSceneTrack*                       CameraCutTrack;                                    // 0x00F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneTrack*>               Tracks;                                            // 0x00E0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UMovieSceneTrack*                       CameraCutTrack;                                    // 0x00F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	struct FMovieSceneFrameRange                  SelectionRange;                                    // 0x00F8(0x0010)(NoDestructor, NativeAccessSpecifierPrivate)
 	struct FMovieSceneFrameRange                  PlaybackRange;                                     // 0x0108(0x0010)(NoDestructor, NativeAccessSpecifierPrivate)
 	struct FFrameRate                             TickResolution;                                    // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -1303,8 +1303,8 @@ public:
 	uint8                                         Pad_28[0x4];                                       // 0x0028(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   FolderName;                                        // 0x002C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneFolder*>              ChildFolders;                                      // 0x0038(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UMovieSceneTrack*>               ChildTracks;                                       // 0x0048(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneFolder*>              ChildFolders;                                      // 0x0038(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	TArray<class UMovieSceneTrack*>               ChildTracks;                                       // 0x0048(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	TArray<class FString>                         ChildObjectBindingStrings;                         // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_68[0x10];                                      // 0x0068(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -1478,7 +1478,7 @@ DUMPER7_ASSERTS_UMovieSceneSection;
 class UMovieSceneSequence : public UMovieSceneSignedObject
 {
 public:
-	class UMovieSceneCompiledData*                CompiledData;                                      // 0x0058(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneCompiledData*                CompiledData;                                      // 0x0058(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	EMovieSceneCompletionMode                     DefaultCompletionMode;                             // 0x0060(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bParentContextsAreSignificant;                     // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bPlayableDirectly;                                 // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -1523,7 +1523,7 @@ public:
 	uint8                                         Pad_289[0x3];                                      // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bReversePlayback : 1;                              // 0x028C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         Pad_28D[0x3];                                      // 0x028D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneSequence*                    Sequence;                                          // 0x0290(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0290(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	struct FFrameNumber                           StartTime;                                         // 0x0298(0x0004)(Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         DurationFrames;                                    // 0x029C(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         DurationSubFrames;                                 // 0x02A0(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -1535,7 +1535,7 @@ public:
 	uint8                                         Pad_2F8[0x8C];                                     // 0x02F8(0x008C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneSequenceReplProperties      NetSyncProps;                                      // 0x0384(0x0014)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
 	TScriptInterface<class IMovieScenePlaybackClient> PlaybackClient;                                // 0x0398(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMovieSceneSequenceTickManager*         TickManager;                                       // 0x03A8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieSceneSequenceTickManager*         TickManager;                                       // 0x03A8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_3B0[0xB0];                                     // 0x03B0(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1728,7 +1728,7 @@ public:
 	float                                         PrerollTime_MovieSceneSubSection;                  // 0x0128(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         NetworkMask;                                       // 0x012C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_12D[0x3];                                      // 0x012D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneSequence*                    SubSequence;                                       // 0x0130(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieSceneSequence*                    SubSequence;                                       // 0x0130(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	void SetSequence(class UMovieSceneSequence* Sequence);
@@ -1759,7 +1759,7 @@ public:
 	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bHighPassFilter;                                   // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1802,7 +1802,7 @@ DUMPER7_ASSERTS_UTestMovieSceneSection;
 class UTestMovieSceneSequence final : public UMovieSceneSequence
 {
 public:
-	class UMovieScene*                            MovieScene;                                        // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScene*                            MovieScene;                                        // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1825,7 +1825,7 @@ DUMPER7_ASSERTS_UTestMovieSceneSequence;
 class UMovieSceneSubTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1848,7 +1848,7 @@ DUMPER7_ASSERTS_UMovieSceneSubTrack;
 class UTestMovieSceneSubTrack final : public UMovieSceneSubTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1891,7 +1891,7 @@ DUMPER7_ASSERTS_UTestMovieSceneSubSection;
 class UTestMovieSceneEvalHookTrack final : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1938,7 +1938,7 @@ class UMovieSceneBindingLifetimeTrack final : public UMovieSceneTrack
 {
 public:
 	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1961,7 +1961,7 @@ DUMPER7_ASSERTS_UMovieSceneBindingLifetimeTrack;
 class UMovieSceneSpawnTrack final : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	struct FGuid                                  ObjectGuid;                                        // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:

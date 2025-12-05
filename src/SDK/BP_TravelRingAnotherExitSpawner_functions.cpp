@@ -17,23 +17,37 @@
 namespace SDK
 {
 
-// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.SetTravelRingState
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherExitSpawner
+// (Final, UbergraphFunction)
 // Parameters:
-// uint8                                   TravelRingState_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TravelRingAnotherExitSpawner_C::SetTravelRingState(uint8 TravelRingState_0)
+void ABP_TravelRingAnotherExitSpawner_C::ExecuteUbergraph_BP_TravelRingAnotherExitSpawner(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingAnotherExitSpawner_C", "SetTravelRingState");
+		Func = Class->GetFunction("BP_TravelRingAnotherExitSpawner_C", "ExecuteUbergraph_BP_TravelRingAnotherExitSpawner");
 
-	Params::BP_TravelRingAnotherExitSpawner_C_SetTravelRingState Parms{};
+	Params::BP_TravelRingAnotherExitSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherExitSpawner Parms{};
 
-	Parms.TravelRingState_0 = TravelRingState_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.PostSpawnSequenceActor
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void ABP_TravelRingAnotherExitSpawner_C::PostSpawnSequenceActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TravelRingAnotherExitSpawner_C", "PostSpawnSequenceActor");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,35 +71,21 @@ void ABP_TravelRingAnotherExitSpawner_C::SetReturnEffectVisibility(bool Visibili
 }
 
 
-// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.PostSpawnSequenceActor
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void ABP_TravelRingAnotherExitSpawner_C::PostSpawnSequenceActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingAnotherExitSpawner_C", "PostSpawnSequenceActor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherExitSpawner
-// (Final, UbergraphFunction)
+// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.SetTravelRingState
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   TravelRingState_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TravelRingAnotherExitSpawner_C::ExecuteUbergraph_BP_TravelRingAnotherExitSpawner(int32 EntryPoint)
+void ABP_TravelRingAnotherExitSpawner_C::SetTravelRingState(uint8 TravelRingState_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingAnotherExitSpawner_C", "ExecuteUbergraph_BP_TravelRingAnotherExitSpawner");
+		Func = Class->GetFunction("BP_TravelRingAnotherExitSpawner_C", "SetTravelRingState");
 
-	Params::BP_TravelRingAnotherExitSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherExitSpawner Parms{};
+	Params::BP_TravelRingAnotherExitSpawner_C_SetTravelRingState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.TravelRingState_0 = TravelRingState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

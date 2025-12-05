@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "GeometryCache_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "GeometryCache_structs.hpp"
 #include "Niagara_structs.hpp"
 #include "Niagara_classes.hpp"
 
@@ -27,10 +27,10 @@ class UGeometryCache final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             Materials;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             Materials;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<class FName>                           MaterialSlotNames;                                 // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UGeometryCacheTrack*>            Tracks;                                            // 0x0050(0x0010)(Edit, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0060(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UGeometryCacheTrack*>            Tracks;                                            // 0x0050(0x0010)(Edit, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0060(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         StartFrame;                                        // 0x0078(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         EndFrame;                                          // 0x007C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -57,7 +57,7 @@ DUMPER7_ASSERTS_UGeometryCache;
 class AGeometryCacheActor final : public AActor
 {
 public:
-	class UGeometryCacheComponent*                GeometryCacheComponent;                            // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UGeometryCacheComponent*                GeometryCacheComponent;                            // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	class UGeometryCacheComponent* GetGeometryCacheComponent() const;
@@ -153,7 +153,7 @@ DUMPER7_ASSERTS_UGeometryCacheCodecV1;
 class UGeometryCacheComponent final : public UMeshComponent
 {
 public:
-	class UGeometryCache*                         GeometryCache;                                     // 0x0550(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryCache*                         GeometryCache;                                     // 0x0550(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bRunning;                                          // 0x0558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bLooping;                                          // 0x0559(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bExtrapolateFrames;                                // 0x055A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -274,7 +274,7 @@ DUMPER7_ASSERTS_UGeometryCacheTrack_FlipbookAnimation;
 class UGeometryCacheTrackStreamable final : public UGeometryCacheTrack
 {
 public:
-	class UGeometryCacheCodecBase*                Codec;                                             // 0x0058(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryCacheCodecBase*                Codec;                                             // 0x0058(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_60[0x60];                                      // 0x0060(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StartSampleTime;                                   // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_C4[0xC];                                       // 0x00C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])

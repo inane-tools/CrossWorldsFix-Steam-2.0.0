@@ -12,8 +12,8 @@
 
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
+#include "UNION_classes.hpp"
 
 
 namespace SDK

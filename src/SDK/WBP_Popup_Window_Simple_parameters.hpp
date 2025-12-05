@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function WBP_Popup_Window_Simple.WBP_Popup_Window_Simple_C.ExecuteUbergraph_WBP_Popup_Window_Simple
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct WBP_Popup_Window_Simple_C_ExecuteUbergraph_WBP_Popup_Window_Simple final
 {
 public:
@@ -38,27 +38,26 @@ public:
 	int32                                         K2Node_Event_BtnIconIndex;                         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_BtnIconType;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   K2Node_Event_BtnText;                              // 0x0040(0x0010)(ConstParm)
-	class FText                                   K2Node_Event_Text_2;                               // 0x0050(0x0010)(ConstParm)
-	class FText                                   K2Node_Event_InText;                               // 0x0060(0x0010)(ConstParm)
-	const class UTexture2D*                       K2Node_Event_Texture2D;                            // 0x0070(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_InButtonIndex;                        // 0x0078(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_Index;                                // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_Btn01IconIndex;                       // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_Btn02IconIndex;                       // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPopupWindowButtonType                        K2Node_Event_ButtonType;                           // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPopupWindowType                              K2Node_Event_WindowType;                           // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Event_Text_1;                               // 0x0090(0x0010)(ConstParm)
-	class FText                                   K2Node_Event_Text;                                 // 0x00A0(0x0010)(ConstParm)
-	bool                                          K2Node_Event_Attension;                            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWBP_Popup_Sub_Btn_Standard_C*>  K2Node_MakeArray_Array;                            // 0x00B8(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_Popup_Sub_Btn_Standard_C*          CallFunc_Array_Get_Item;                           // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_InText;                               // 0x0050(0x0010)(ConstParm)
+	const class UTexture2D*                       K2Node_Event_Texture2D;                            // 0x0060(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_InButtonIndex;                        // 0x0068(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_Index;                                // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_Btn01IconIndex;                       // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_Btn02IconIndex;                       // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPopupWindowButtonType                        K2Node_Event_ButtonType;                           // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPopupWindowType                              K2Node_Event_WindowType;                           // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Event_Text_1;                               // 0x0080(0x0010)(ConstParm)
+	class FText                                   K2Node_Event_Text;                                 // 0x0090(0x0010)(ConstParm)
+	bool                                          K2Node_Event_Attension;                            // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_Popup_Sub_Btn_Standard_C*>  K2Node_MakeArray_Array;                            // 0x00A8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_Popup_Sub_Btn_Standard_C*          CallFunc_Array_Get_Item;                           // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Popup_Window_Simple_C_ExecuteUbergraph_WBP_Popup_Window_Simple;
 
@@ -181,15 +180,6 @@ public:
 	class FText                                   BtnText;                                           // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_Popup_Window_Simple_C_SetFooterMenuBtn;
-
-// Function WBP_Popup_Window_Simple.WBP_Popup_Window_Simple_C.SetFooterTextMessege
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Popup_Window_Simple_C_SetFooterTextMessege final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_Popup_Window_Simple_C_SetFooterTextMessege;
 
 // Function WBP_Popup_Window_Simple.WBP_Popup_Window_Simple_C.SetImageButtonSelectText
 // 0x0010 (0x0010 - 0x0000)

@@ -17,6 +17,80 @@
 namespace SDK::Params
 {
 
+// Function InterchangeEngine.InterchangeFilePickerBase.ScriptedFilePickerForTranslatorAssetType
+// 0x0048 (0x0048 - 0x0000)
+struct InterchangeFilePickerBase_ScriptedFilePickerForTranslatorAssetType final
+{
+public:
+	EInterchangeTranslatorAssetType               TranslatorAssetType;                               // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInterchangeFilePickerParameters       Parameters;                                        // 0x0008(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         OutFilenames;                                      // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeFilePickerBase_ScriptedFilePickerForTranslatorAssetType;
+
+// Function InterchangeEngine.InterchangeFilePickerBase.ScriptedFilePickerForTranslatorType
+// 0x0048 (0x0048 - 0x0000)
+struct InterchangeFilePickerBase_ScriptedFilePickerForTranslatorType final
+{
+public:
+	EInterchangeTranslatorType                    TranslatorType;                                    // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInterchangeFilePickerParameters       Parameters;                                        // 0x0008(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         OutFilenames;                                      // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeFilePickerBase_ScriptedFilePickerForTranslatorType;
+
+// Function InterchangeEngine.InterchangePipelineConfigurationBase.ScriptedShowPipelineConfigurationDialog
+// 0x0040 (0x0040 - 0x0000)
+struct InterchangePipelineConfigurationBase_ScriptedShowPipelineConfigurationDialog final
+{
+public:
+	TArray<struct FInterchangeStackInfo>          PipelineStacks;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UInterchangePipelineBase*>       OutPipelines;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UInterchangeSourceData*                 SourceData;                                        // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeTranslatorBase*             Translator;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangePipelineConfigurationDialogResult ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangePipelineConfigurationBase_ScriptedShowPipelineConfigurationDialog;
+
+// Function InterchangeEngine.InterchangePipelineConfigurationBase.ScriptedShowReimportPipelineConfigurationDialog
+// 0x0048 (0x0048 - 0x0000)
+struct InterchangePipelineConfigurationBase_ScriptedShowReimportPipelineConfigurationDialog final
+{
+public:
+	TArray<struct FInterchangeStackInfo>          PipelineStacks;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UInterchangePipelineBase*>       OutPipelines;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UInterchangeSourceData*                 SourceData;                                        // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeTranslatorBase*             Translator;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReimportAsset;                                     // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangePipelineConfigurationDialogResult ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangePipelineConfigurationBase_ScriptedShowReimportPipelineConfigurationDialog;
+
+// Function InterchangeEngine.InterchangePipelineConfigurationBase.ScriptedShowScenePipelineConfigurationDialog
+// 0x0040 (0x0040 - 0x0000)
+struct InterchangePipelineConfigurationBase_ScriptedShowScenePipelineConfigurationDialog final
+{
+public:
+	TArray<struct FInterchangeStackInfo>          PipelineStacks;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UInterchangePipelineBase*>       OutPipelines;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UInterchangeSourceData*                 SourceData;                                        // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeTranslatorBase*             Translator;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangePipelineConfigurationDialogResult ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangePipelineConfigurationBase_ScriptedShowScenePipelineConfigurationDialog;
+
 // Function InterchangeEngine.InterchangeAssetImportData.GetNodeContainer
 // 0x0008 (0x0008 - 0x0000)
 struct InterchangeAssetImportData_GetNodeContainer final
@@ -126,80 +200,6 @@ public:
 	class UInterchangeTranslatorSettings*         TranslatorSettings;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InterchangeAssetImportData_SetTranslatorSettings;
-
-// Function InterchangeEngine.InterchangeFilePickerBase.ScriptedFilePickerForTranslatorAssetType
-// 0x0048 (0x0048 - 0x0000)
-struct InterchangeFilePickerBase_ScriptedFilePickerForTranslatorAssetType final
-{
-public:
-	EInterchangeTranslatorAssetType               TranslatorAssetType;                               // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInterchangeFilePickerParameters       Parameters;                                        // 0x0008(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
-	TArray<class FString>                         OutFilenames;                                      // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeFilePickerBase_ScriptedFilePickerForTranslatorAssetType;
-
-// Function InterchangeEngine.InterchangeFilePickerBase.ScriptedFilePickerForTranslatorType
-// 0x0048 (0x0048 - 0x0000)
-struct InterchangeFilePickerBase_ScriptedFilePickerForTranslatorType final
-{
-public:
-	EInterchangeTranslatorType                    TranslatorType;                                    // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInterchangeFilePickerParameters       Parameters;                                        // 0x0008(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
-	TArray<class FString>                         OutFilenames;                                      // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeFilePickerBase_ScriptedFilePickerForTranslatorType;
-
-// Function InterchangeEngine.InterchangePipelineConfigurationBase.ScriptedShowPipelineConfigurationDialog
-// 0x0040 (0x0040 - 0x0000)
-struct InterchangePipelineConfigurationBase_ScriptedShowPipelineConfigurationDialog final
-{
-public:
-	TArray<struct FInterchangeStackInfo>          PipelineStacks;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UInterchangePipelineBase*>       OutPipelines;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UInterchangeSourceData*                 SourceData;                                        // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeTranslatorBase*             Translator;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangePipelineConfigurationDialogResult ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangePipelineConfigurationBase_ScriptedShowPipelineConfigurationDialog;
-
-// Function InterchangeEngine.InterchangePipelineConfigurationBase.ScriptedShowReimportPipelineConfigurationDialog
-// 0x0048 (0x0048 - 0x0000)
-struct InterchangePipelineConfigurationBase_ScriptedShowReimportPipelineConfigurationDialog final
-{
-public:
-	TArray<struct FInterchangeStackInfo>          PipelineStacks;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UInterchangePipelineBase*>       OutPipelines;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UInterchangeSourceData*                 SourceData;                                        // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeTranslatorBase*             Translator;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                ReimportAsset;                                     // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangePipelineConfigurationDialogResult ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangePipelineConfigurationBase_ScriptedShowReimportPipelineConfigurationDialog;
-
-// Function InterchangeEngine.InterchangePipelineConfigurationBase.ScriptedShowScenePipelineConfigurationDialog
-// 0x0040 (0x0040 - 0x0000)
-struct InterchangePipelineConfigurationBase_ScriptedShowScenePipelineConfigurationDialog final
-{
-public:
-	TArray<struct FInterchangeStackInfo>          PipelineStacks;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UInterchangePipelineBase*>       OutPipelines;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UInterchangeSourceData*                 SourceData;                                        // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeTranslatorBase*             Translator;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangePipelineConfigurationDialogResult ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangePipelineConfigurationBase_ScriptedShowScenePipelineConfigurationDialog;
 
 // Function InterchangeEngine.InterchangePipelineStackOverride.AddBlueprintPipeline
 // 0x0008 (0x0008 - 0x0000)

@@ -27,7 +27,7 @@ public:
 	class UWBP_Race_HUD_Sub_Rank_C*               WBP_Race_HUD_Sub_Rank;                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetIcon(EDriverId NewParam);
+	void SetIcon(EDriverId newParam);
 	void SetRank(int32 NewRank);
 
 public:

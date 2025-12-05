@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "Slate_structs.hpp"
 #include "Engine_structs.hpp"
@@ -113,11 +113,11 @@ class UWidget : public UVisual
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelSlot*                             Slot;                                              // 0x0030(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, TextExportTransient, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPanelSlot*                             Slot;                                              // 0x0030(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, TextExportTransient, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TDelegate<void()>                             bIsEnabledDelegate;                                // 0x0038(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ToolTipText;                                       // 0x0048(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TDelegate<void()>                             ToolTipTextDelegate;                               // 0x0058(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidget*                                ToolTipWidget;                                     // 0x0068(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidget*                                ToolTipWidget;                                     // 0x0068(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TDelegate<void()>                             ToolTipWidgetDelegate;                             // 0x0070(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void()>                             VisibilityDelegate;                                // 0x0080(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWidgetTransform                       RenderTransform;                                   // 0x0090(0x0038)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
@@ -135,10 +135,10 @@ public:
 	float                                         RenderOpacity;                                     // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EWidgetPixelSnapping                          PixelSnapping;                                     // 0x00E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USlateAccessibleWidgetData*             AccessibleWidgetData;                              // 0x00E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UWidgetNavigation*                      Navigation;                                        // 0x00F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USlateAccessibleWidgetData*             AccessibleWidgetData;                              // 0x00E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UWidgetNavigation*                      Navigation;                                        // 0x00F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_F8[0x50];                                      // 0x00F8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UPropertyBinding*>               NativeBindings;                                    // 0x0148(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UPropertyBinding*>               NativeBindings;                                    // 0x0148(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_158[0x20];                                     // 0x0158(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -235,12 +235,12 @@ public:
 	uint8                                         bStopAction : 1;                                   // 0x021C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_21D[0x3];                                      // 0x021D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FQueuedWidgetAnimationTransition> QueuedWidgetAnimationTransitions;                // 0x0220(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<class UUMGSequencePlayer*>             ActiveSequencePlayers;                             // 0x0230(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
-	class UUMGSequenceTickManager*                AnimationTickManager;                              // 0x0240(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UUMGSequencePlayer*>             StoppedSequencePlayers;                            // 0x0248(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UUMGSequencePlayer*>             ActiveSequencePlayers;                             // 0x0230(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class UUMGSequenceTickManager*                AnimationTickManager;                              // 0x0240(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UUMGSequencePlayer*>             StoppedSequencePlayers;                            // 0x0248(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<struct FNamedSlotBinding>              NamedSlotBindings;                                 // 0x0258(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<class UUserWidgetExtension*>           Extensions;                                        // 0x0268(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UWidgetTree*                            WidgetTree;                                        // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, TextExportTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UUserWidgetExtension*>           Extensions;                                        // 0x0268(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UWidgetTree*                            WidgetTree;                                        // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, TextExportTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         bHasScriptImplementedTick : 1;                     // 0x0280(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bHasScriptImplementedPaint : 1;                    // 0x0280(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_281[0x17];                                     // 0x0281(0x0017)(Fixing Size After Last Property [ Dumper-7 ])
@@ -248,7 +248,7 @@ public:
 	uint8                                         Pad_299[0x3];                                      // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWidgetChild                           DesiredFocusWidget;                                // 0x029C(0x0010)(Edit, DisableEditOnInstance, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInputComponent*                        InputComponent;                                    // 0x02B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInputComponent*                        InputComponent;                                    // 0x02B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	TArray<struct FAnimationEventBinding>         AnimationCallbacks;                                // 0x02B8(0x0010)(ZeroConstructor, Transient, DuplicateTransient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2C8[0x18];                                     // 0x02C8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -413,8 +413,8 @@ DUMPER7_ASSERTS_UCircularThrobber;
 class UPanelSlot : public UVisual
 {
 public:
-	class UPanelWidget*                           Parent;                                            // 0x0028(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidget*                                Content;                                           // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPanelWidget*                           Parent;                                            // 0x0028(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UWidget*                                Content;                                           // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -471,7 +471,7 @@ class UComboBox final : public UWidget
 public:
 	uint8                                         Pad_178[0x8];                                      // 0x0178(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScrollBarStyle                        ScrollBarStyle;                                    // 0x0180(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        Items;                                             // 0x08F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        Items;                                             // 0x08F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	TDelegate<void(class UObject* Item)>          OnGenerateWidgetEvent;                             // 0x0900(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsFocusable;                                      // 0x0910(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_911[0x1F];                                     // 0x0911(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -550,7 +550,7 @@ DUMPER7_ASSERTS_UListViewBase;
 class UPanelWidget : public UWidget
 {
 public:
-	TArray<class UPanelSlot*>                     Slots;                                             // 0x0178(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UPanelSlot*>                     Slots;                                             // 0x0178(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -623,7 +623,7 @@ public:
 	bool                                          bIsFocusable;                                      // 0x0BD4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bReturnFocusToSelection;                           // 0x0BD5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_BD6[0x2];                                      // 0x0BD6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UObject*>                        ListItems;                                         // 0x0BD8(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UObject*>                        ListItems;                                         // 0x0BD8(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_BE8[0x10];                                     // 0x0BE8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         HorizontalEntrySpacing;                            // 0x0BF8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         VerticalEntrySpacing;                              // 0x0BFC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -868,8 +868,8 @@ class UWidgetTree final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                RootWidget;                                        // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, class UWidget*>             NamedSlotBindings;                                 // 0x0038(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	class UWidget*                                RootWidget;                                        // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TMap<class FName, class UWidget*>             NamedSlotBindings;                                 // 0x0038(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1181,7 +1181,7 @@ class UUMGSequencePlayer final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x1E8];                                     // 0x0028(0x01E8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidgetAnimation*                       Animation;                                         // 0x0210(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UWidgetAnimation*                       Animation;                                         // 0x0210(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance;                           // 0x0220(0x0020)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_240[0x80];                                     // 0x0240(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -1213,7 +1213,7 @@ class UUMGSequenceTickManager final : public UObject
 {
 public:
 	TMap<TWeakObjectPtr<class UUserWidget>, struct FSequenceTickManagerWidgetData> WeakUserWidgetData; // 0x0028(0x0050)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0078(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0078(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_80[0x40];                                      // 0x0080(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1237,7 +1237,7 @@ DUMPER7_ASSERTS_UUMGSequenceTickManager;
 class UWidgetAnimation final : public UMovieSceneSequence
 {
 public:
-	class UMovieScene*                            MovieScene;                                        // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScene*                            MovieScene;                                        // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<struct FWidgetAnimationBinding>        AnimationBindings;                                 // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bLegacyFinishOnStop;                               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -2754,8 +2754,8 @@ public:
 	struct FMargin                                AreaPadding;                                       // 0x043C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(class UExpandableArea* Area, bool bIsExpanded)> OnExpansionChanged; // 0x0450(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UWidget*                                HeaderContent;                                     // 0x0460(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidget*                                BodyContent;                                       // 0x0468(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWidget*                                HeaderContent;                                     // 0x0460(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidget*                                BodyContent;                                       // 0x0468(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_470[0x10];                                     // 0x0470(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -3388,7 +3388,7 @@ public:
 	int32                                         Phase;                                             // 0x0194(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PhaseCount;                                        // 0x0198(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     EffectMaterial;                                    // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     EffectMaterial;                                    // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	class FName                                   TextureParameter;                                  // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_1B0[0x10];                                     // 0x01B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -3423,7 +3423,7 @@ class URichTextBlock : public UTextLayoutWidget
 {
 public:
 	class FText                                   Text;                                              // 0x01A0(0x0010)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	class UDataTable*                             TextStyleSet;                                      // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDataTable*                             TextStyleSet;                                      // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	TArray<TSubclassOf<class URichTextBlockDecorator>> DecoratorClasses;                             // 0x01B8(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	bool                                          bOverrideDefaultStyle;                             // 0x01C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -3433,7 +3433,7 @@ public:
 	ETextOverflowPolicy                           TextOverflowPolicy;                                // 0x0515(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_516[0xA];                                      // 0x0516(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTextBlockStyle                        DefaultTextStyle;                                  // 0x0520(0x0340)(Transient, Protected, NativeAccessSpecifierProtected)
-	TArray<class URichTextBlockDecorator*>        InstanceDecorators;                                // 0x0860(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class URichTextBlockDecorator*>        InstanceDecorators;                                // 0x0860(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_870[0x20];                                     // 0x0870(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -3500,7 +3500,7 @@ DUMPER7_ASSERTS_URichTextBlockDecorator;
 class URichTextBlockImageDecorator : public URichTextBlockDecorator
 {
 public:
-	class UDataTable*                             ImageSet;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDataTable*                             ImageSet;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -4298,7 +4298,7 @@ public:
 	EWindowVisibility                             WindowVisibility;                                  // 0x059A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bApplyGammaCorrection;                             // 0x059B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_59C[0x4];                                      // 0x059C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULocalPlayer*                           OwnerPlayer;                                       // 0x05A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ULocalPlayer*                           OwnerPlayer;                                       // 0x05A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	struct FLinearColor                           BackgroundColor;                                   // 0x05A8(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FLinearColor                           TintColorAndOpacity;                               // 0x05B8(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         OpacityFromTexture;                                // 0x05C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -4306,15 +4306,15 @@ public:
 	bool                                          bIsTwoSided;                                       // 0x05CD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          TickWhenOffscreen;                                 // 0x05CE(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_5CF[0x1];                                      // 0x05CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             BodySetup;                                         // 0x05D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     TranslucentMaterial;                               // 0x05D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     TranslucentMaterial_OneSided;                      // 0x05E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     OpaqueMaterial;                                    // 0x05E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     OpaqueMaterial_OneSided;                           // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     MaskedMaterial;                                    // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     MaskedMaterial_OneSided;                           // 0x0600(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0608(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInstanceDynamic*               MaterialInstance;                                  // 0x0610(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBodySetup*                             BodySetup;                                         // 0x05D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     TranslucentMaterial;                               // 0x05D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     TranslucentMaterial_OneSided;                      // 0x05E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     OpaqueMaterial;                                    // 0x05E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     OpaqueMaterial_OneSided;                           // 0x05F0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     MaskedMaterial;                                    // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     MaskedMaterial_OneSided;                           // 0x0600(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0608(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInstanceDynamic*               MaterialInstance;                                  // 0x0610(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	bool                                          bAddedToScreen;                                    // 0x0618(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bEditTimeUsable;                                   // 0x0619(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_61A[0x2];                                      // 0x061A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
@@ -4325,7 +4325,7 @@ public:
 	float                                         CylinderArcAngle;                                  // 0x062C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ETickMode                                     TickMode;                                          // 0x0630(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_631[0x2F];                                     // 0x0631(0x002F)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            Widget;                                            // 0x0660(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UUserWidget*                            Widget;                                            // 0x0660(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_668[0x28];                                     // 0x0668(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -4408,7 +4408,7 @@ public:
 	struct FHitResult                             CustomHitResult;                                   // 0x02F8(0x00F8)(Transient, IsPlainOldData, NoDestructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	struct FVector2D                              LocalHitLocation;                                  // 0x03F0(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector2D                              LastLocalHitLocation;                              // 0x0400(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetComponent*                       HoveredWidgetComponent;                            // 0x0410(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWidgetComponent*                       HoveredWidgetComponent;                            // 0x0410(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	struct FHitResult                             LastHitResult;                                     // 0x0418(0x00F8)(Transient, IsPlainOldData, NoDestructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	bool                                          bIsHoveredWidgetInteractable;                      // 0x0510(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsHoveredWidgetFocusable;                         // 0x0511(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -4551,8 +4551,8 @@ class UDragDropOperation final : public UObject
 {
 public:
 	class FString                                 Tag;                                               // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Payload;                                           // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidget*                                DefaultDragVisual;                                 // 0x0040(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Payload;                                           // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UWidget*                                DefaultDragVisual;                                 // 0x0040(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	EDragPivot                                    Pivot;                                             // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Offset;                                            // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4626,7 +4626,7 @@ class USlateVectorArtData final : public UObject
 public:
 	TArray<struct FSlateMeshVertex>               VertexData;                                        // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<uint32>                                IndexData;                                         // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class UMaterialInterface*                     Material;                                          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInterface*                     Material;                                          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	struct FVector2D                              ExtentMin;                                         // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector2D                              ExtentMax;                                         // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -4651,13 +4651,13 @@ DUMPER7_ASSERTS_USlateVectorArtData;
 class UWidgetBlueprintGeneratedClass final : public UBlueprintGeneratedClass
 {
 public:
-	class UWidgetTree*                            WidgetTree;                                        // 0x0360(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UWidgetBlueprintGeneratedClassExtension*> Extensions;                               // 0x0368(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class UWidgetTree*                            WidgetTree;                                        // 0x0360(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	TArray<class UWidgetBlueprintGeneratedClassExtension*> Extensions;                               // 0x0368(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         bClassRequiresNativeTick : 1;                      // 0x0378(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
 	uint8                                         bCanCallInitializedWithoutPlayerContext : 1;       // 0x0378(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FDelegateRuntimeBinding>        Bindings;                                          // 0x0380(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UWidgetAnimation*>               Animations;                                        // 0x0390(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UWidgetAnimation*>               Animations;                                        // 0x0390(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<class FName>                           NamedSlots;                                        // 0x03A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FName>                           AvailableNamedSlots;                               // 0x03B0(0x0010)(ZeroConstructor, AssetRegistrySearchable, NativeAccessSpecifierPublic)
 	TArray<class FName>                           InstanceNamedSlots;                                // 0x03C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)

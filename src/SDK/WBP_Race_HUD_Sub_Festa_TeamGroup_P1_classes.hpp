@@ -40,7 +40,7 @@ public:
 	void SetBaseColor(const struct FLinearColor& Color);
 	void SetRight(bool IsRight);
 	void SetRightStart();
-	void SetSingle(bool IsSingle);
+	void SetSingle(bool isSingle);
 	void SetTeamMemberNum(int32 MemberNum);
 
 public:

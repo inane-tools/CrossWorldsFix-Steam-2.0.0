@@ -35,7 +35,7 @@ DUMPER7_ASSERTS_ABP_HoldTripleKingWhiteBoost_C_IsSkipInState;
 struct ABP_HoldTripleKingWhiteBoost_C_GetBlendTime final
 {
 public:
-	double                                        NewParam;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        newParam;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ABP_HoldTripleKingWhiteBoost_C_GetBlendTime;
 

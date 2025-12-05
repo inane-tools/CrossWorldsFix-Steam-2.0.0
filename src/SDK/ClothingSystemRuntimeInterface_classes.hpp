@@ -130,7 +130,7 @@ DUMPER7_ASSERTS_UClothingInteractor;
 class UClothingSimulationInteractor : public UObject
 {
 public:
-	TMap<class FName, class UClothingInteractor*> ClothingInteractors;                               // 0x0028(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FName, class UClothingInteractor*> ClothingInteractors;                               // 0x0028(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_78[0x18];                                      // 0x0078(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

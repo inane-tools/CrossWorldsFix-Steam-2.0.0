@@ -41,6 +41,7 @@ public:
 public:
 	void BPStart();
 	void ExecuteUbergraph_BP_RaceResultSequence(int32 EntryPoint);
+	void GetGroupRaceResultWidget(class UWBP_GroupResult_C** Widget);
 	void OnFinalize();
 	void OnInitialize();
 	void OnInitStateExit();

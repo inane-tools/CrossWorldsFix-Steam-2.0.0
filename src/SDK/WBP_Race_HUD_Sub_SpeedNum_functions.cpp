@@ -137,9 +137,9 @@ void UWBP_Race_HUD_Sub_SpeedNum_C::SetSpeedKMPH(int32 SpeedKMPH)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Speed                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  newParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Race_HUD_Sub_SpeedNum_C::SetSpeedScale(int32 Speed, int32* NewParam)
+void UWBP_Race_HUD_Sub_SpeedNum_C::SetSpeedScale(int32 Speed, int32* newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -152,8 +152,8 @@ void UWBP_Race_HUD_Sub_SpeedNum_C::SetSpeedScale(int32 Speed, int32* NewParam)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
+	if (newParam != nullptr)
+		*newParam = Parms.newParam;
 }
 
 }

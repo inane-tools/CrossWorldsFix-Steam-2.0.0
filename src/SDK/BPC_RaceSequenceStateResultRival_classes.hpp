@@ -12,16 +12,16 @@
 
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UnionUI_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "UnionUI_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateResultRival.BPC_RaceSequenceStateResultRival_C
-// 0x0070 (0x01B0 - 0x0140)
+// 0x0078 (0x01B8 - 0x0140)
 class UBPC_RaceSequenceStateResultRival_C final : public URaceSequenceStateResultRival
 {
 public:
@@ -43,6 +43,7 @@ public:
 	double                                        SkipDelaySeconds;                                  // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        RivalSelectSkipSeconds;                            // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        RivalSelectAutoCloseSeconds;                       // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AUnionStaticMeshActor*                  CameraOffsetActor;                                 // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyRivalLevel();

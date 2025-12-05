@@ -21,77 +21,160 @@
 namespace SDK::Params
 {
 
-// Function UnionRun.HeadButtTrexAnimInstance.GetIsAppear
+// Function UnionRun.UnionCourseObjectBase.GetObjectPlacementType
 // 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_GetIsAppear final
+struct UnionCourseObjectBase_GetObjectPlacementType final
+{
+public:
+	EObjectPlacementType                          ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCourseObjectBase_GetObjectPlacementType;
+
+// Function UnionRun.UnionCourseObjectBase.GetPatternRandomId
+// 0x0004 (0x0004 - 0x0000)
+struct UnionCourseObjectBase_GetPatternRandomId final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCourseObjectBase_GetPatternRandomId;
+
+// Function UnionRun.UnionCourseObjectBase.SetDomainIndex
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCourseObjectBase_SetDomainIndex final
+{
+public:
+	EDomainIndex                                  Index_0;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCourseObjectBase_SetDomainIndex;
+
+// Function UnionRun.UnionCourseObjectBase.SetDomainNumber
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCourseObjectBase_SetDomainNumber final
+{
+public:
+	EDomainNumber                                 Number;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCourseObjectBase_SetDomainNumber;
+
+// Function UnionRun.UnionCourseObjectBase.SetPatternRandomId
+// 0x0004 (0x0004 - 0x0000)
+struct UnionCourseObjectBase_SetPatternRandomId final
+{
+public:
+	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCourseObjectBase_SetPatternRandomId;
+
+// Function UnionRun.UnionCourseObjectBase.SetRandomObjectType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCourseObjectBase_SetRandomObjectType final
+{
+public:
+	ERandomObjType                                Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCourseObjectBase_SetRandomObjectType;
+
+// Function UnionRun.UnionCourseObjectBase.GetDomainNumber
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCourseObjectBase_GetDomainNumber final
+{
+public:
+	EDomainNumber                                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCourseObjectBase_GetDomainNumber;
+
+// Function UnionRun.ObakeAnimInstance.GetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct ObakeAnimInstance_GetIsAttack final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsAppear;
+DUMPER7_ASSERTS_ObakeAnimInstance_GetIsAttack;
 
-// Function UnionRun.HeadButtTrexAnimInstance.GetIsAttack
+// Function UnionRun.ObakeAnimInstance.GetIsIdle
 // 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_GetIsAttack final
+struct ObakeAnimInstance_GetIsIdle final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsAttack;
+DUMPER7_ASSERTS_ObakeAnimInstance_GetIsIdle;
 
-// Function UnionRun.HeadButtTrexAnimInstance.GetIsDamage
+// Function UnionRun.ObakeAnimInstance.SetIsAttack
 // 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_GetIsDamage final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsDamage;
-
-// Function UnionRun.HeadButtTrexAnimInstance.GetIsMirror
-// 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_GetIsMirror final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsMirror;
-
-// Function UnionRun.HeadButtTrexAnimInstance.SetIsAppear
-// 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_SetIsAppear final
+struct ObakeAnimInstance_SetIsAttack final
 {
 public:
 	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsAppear;
+DUMPER7_ASSERTS_ObakeAnimInstance_SetIsAttack;
 
-// Function UnionRun.HeadButtTrexAnimInstance.SetIsAttack
+// Function UnionRun.ObakeAnimInstance.SetIsIdle
 // 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_SetIsAttack final
+struct ObakeAnimInstance_SetIsIdle final
 {
 public:
 	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsAttack;
+DUMPER7_ASSERTS_ObakeAnimInstance_SetIsIdle;
 
-// Function UnionRun.HeadButtTrexAnimInstance.SetIsDamage
-// 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_SetIsDamage final
+// Function UnionRun.RaceUISubRuleCount.GetCount
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubRuleCount_GetCount final
 {
 public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsDamage;
+DUMPER7_ASSERTS_RaceUISubRuleCount_GetCount;
 
-// Function UnionRun.HeadButtTrexAnimInstance.SetIsMirror
-// 0x0001 (0x0001 - 0x0000)
-struct HeadButtTrexAnimInstance_SetIsMirror final
+// Function UnionRun.RaceUISubRuleCount.GetGroupRaceBonusData
+// 0x0070 (0x0070 - 0x0000)
+struct RaceUISubRuleCount_GetGroupRaceBonusData final
 {
 public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMenuGroupRaceBonusData                ReturnValue;                                       // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsMirror;
+DUMPER7_ASSERTS_RaceUISubRuleCount_GetGroupRaceBonusData;
+
+// Function UnionRun.RaceUISubRuleCount.SetNewCount
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubRuleCount_SetNewCount final
+{
+public:
+	int32                                         NewCuont;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubRuleCount_SetNewCount;
+
+// Function UnionRun.RaceUISubRuleCount.UpdateRuleCountImpl
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubRuleCount_UpdateRuleCountImpl final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubRuleCount_UpdateRuleCountImpl;
+
+// Function UnionRun.AsuraAnimInstance.SetAsuraState
+// 0x0001 (0x0001 - 0x0000)
+struct AsuraAnimInstance_SetAsuraState final
+{
+public:
+	EAsuraState                                   State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AsuraAnimInstance_SetAsuraState;
+
+// Function UnionRun.AsuraAnimInstance.IsAsuraState
+// 0x0002 (0x0002 - 0x0000)
+struct AsuraAnimInstance_IsAsuraState final
+{
+public:
+	EAsuraState                                   State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AsuraAnimInstance_IsAsuraState;
 
 // Function UnionRun.AttackReplyInterface.NotifyAttackFailed
 // 0x0028 (0x0028 - 0x0000)
@@ -165,173 +248,17 @@ public:
 };
 DUMPER7_ASSERTS_AttackReplyInterface_NotifyAttackTimeElapsed;
 
-// Function UnionRun.UnionRacerFunction.GetDistance
-// 0x0038 (0x0038 - 0x0000)
-struct UnionRacerFunction_GetDistance final
+// Function UnionRun.RaceUISubItemSummonButton.SetSummonInputKey
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubItemSummonButton_SetSummonInputKey final
 {
 public:
-	struct FVector                                Pos1;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Pos2;                                              // 0x0018(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsKeyboard;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PlayerControllerIndex;                             // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRacerFunction_GetDistance;
-
-// Function UnionRun.UnionRacerFunction.GetRacerGroupIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacerFunction_GetRacerGroupIndex final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacerFunction_GetRacerGroupIndex;
-
-// Function UnionRun.UnionRacerFunction.GetRacerIndexByDriverID
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacerFunction_GetRacerIndexByDriverID final
-{
-public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacerFunction_GetRacerIndexByDriverID;
-
-// Function UnionRun.UnionRacerFunction.GetRacerIndexByPlayerID
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacerFunction_GetRacerIndexByPlayerID final
-{
-public:
-	int32                                         PlayerId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacerFunction_GetRacerIndexByPlayerID;
-
-// Function UnionRun.UnionRacerFunction.GetRankingSkipInterval
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacerFunction_GetRankingSkipInterval final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacerFunction_GetRankingSkipInterval;
-
-// Function UnionRun.UnionRacerFunction.GetRankUpGaugeSpeed
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacerFunction_GetRankUpGaugeSpeed final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacerFunction_GetRankUpGaugeSpeed;
-
-// Function UnionRun.UnionRacerFunction.GetUnionRacers
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacerFunction_GetUnionRacers final
-{
-public:
-	class UUnionRacers*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacerFunction_GetUnionRacers;
-
-// Function UnionRun.UnionRacerFunction.IsInScreen
-// 0x0028 (0x0028 - 0x0000)
-struct UnionRacerFunction_IsInScreen final
-{
-public:
-	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Position;                                          // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRacerFunction_IsInScreen;
-
-// Function UnionRun.UnionRacerFunction.IsSameGroup
-// 0x000C (0x000C - 0x0000)
-struct UnionRacerFunction_IsSameGroup final
-{
-public:
-	int32                                         InRacerIndexA;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InRacerIndexB;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRacerFunction_IsSameGroup;
-
-// Function UnionRun.UnionCourseObjectBase.GetObjectPlacementType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCourseObjectBase_GetObjectPlacementType final
-{
-public:
-	EObjectPlacementType                          ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCourseObjectBase_GetObjectPlacementType;
-
-// Function UnionRun.UnionCourseObjectBase.GetPatternRandomId
-// 0x0004 (0x0004 - 0x0000)
-struct UnionCourseObjectBase_GetPatternRandomId final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCourseObjectBase_GetPatternRandomId;
-
-// Function UnionRun.UnionCourseObjectBase.SetDomainIndex
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCourseObjectBase_SetDomainIndex final
-{
-public:
-	EDomainIndex                                  Index_0;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCourseObjectBase_SetDomainIndex;
-
-// Function UnionRun.UnionCourseObjectBase.SetDomainNumber
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCourseObjectBase_SetDomainNumber final
-{
-public:
-	EDomainNumber                                 Number;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCourseObjectBase_SetDomainNumber;
-
-// Function UnionRun.UnionCourseObjectBase.SetPatternRandomId
-// 0x0004 (0x0004 - 0x0000)
-struct UnionCourseObjectBase_SetPatternRandomId final
-{
-public:
-	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCourseObjectBase_SetPatternRandomId;
-
-// Function UnionRun.UnionCourseObjectBase.SetRandomObjectType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCourseObjectBase_SetRandomObjectType final
-{
-public:
-	ERandomObjType                                Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCourseObjectBase_SetRandomObjectType;
-
-// Function UnionRun.UnionCourseObjectBase.GetDomainNumber
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCourseObjectBase_GetDomainNumber final
-{
-public:
-	EDomainNumber                                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCourseObjectBase_GetDomainNumber;
-
-// Function UnionRun.UnionUcccLibrary.GetUserUcccParamData
-// 0x0028 (0x0028 - 0x0000)
-struct UnionUcccLibrary_GetUserUcccParamData final
-{
-public:
-	int32                                         OnlineRacerIndex;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCommon_UserCheatParamData             ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUcccLibrary_GetUserUcccParamData;
+DUMPER7_ASSERTS_RaceUISubItemSummonButton_SetSummonInputKey;
 
 // Function UnionRun.BoostPadObject.OnVATUpdate
 // 0x0018 (0x0018 - 0x0000)
@@ -362,6 +289,15 @@ public:
 	float                                         Rate;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BoostPadObject_SetGateScaleRate;
+
+// Function UnionRun.ItemBlackBombBaseObject.OnTriggerConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemBlackBombBaseObject_OnTriggerConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemBlackBombBaseObject_OnTriggerConflict;
 
 // Function UnionRun.BPFL_UnionRunTuningUtil.GetHoverBaseHeight
 // 0x0008 (0x0008 - 0x0000)
@@ -491,6 +427,24 @@ public:
 };
 DUMPER7_ASSERTS_BreakObjectBase_IsBroken;
 
+// Function UnionRun.ReplayMoveCameraCollision.OnCollisionBaseHit
+// 0x0060 (0x0060 - 0x0000)
+struct ReplayMoveCameraCollision_OnCollisionBaseHit final
+{
+public:
+	struct FCollisionHitInfo                      Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ReplayMoveCameraCollision_OnCollisionBaseHit;
+
+// Function UnionRun.ReplayMoveCameraCollision.SetCameraData
+// 0x0018 (0x0018 - 0x0000)
+struct ReplayMoveCameraCollision_SetCameraData final
+{
+public:
+	struct FVector                                NewBoxSize;                                        // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ReplayMoveCameraCollision_SetCameraData;
+
 // Function UnionRun.BtDebugDispActor.Execute_AreaDataBlockDisp
 // 0x0010 (0x0010 - 0x0000)
 struct BtDebugDispActor_Execute_AreaDataBlockDisp final
@@ -571,6 +525,210 @@ public:
 	TArray<class FString>                         args;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BtDebugDispActor_Execute_RayCast;
+
+// Function UnionRun.RaceUISubTeamHUD.ExecChangeRank
+// 0x0010 (0x0010 - 0x0000)
+struct RaceUISubTeamHUD_ExecChangeRank final
+{
+public:
+	int32                                         PanelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     DriverId;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsDispPlayer;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Rank;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubTeamHUD_ExecChangeRank;
+
+// Function UnionRun.RaceUISubTeamHUD.ExecPlayChangeRank
+// 0x0010 (0x0010 - 0x0000)
+struct RaceUISubTeamHUD_ExecPlayChangeRank final
+{
+public:
+	int32                                         PanelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     DriverId;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsDispPlayer;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Rank;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubTeamHUD_ExecPlayChangeRank;
+
+// Function UnionRun.RaceUISubTeamHUD.ExecSetRankOnly
+// 0x000C (0x000C - 0x0000)
+struct RaceUISubTeamHUD_ExecSetRankOnly final
+{
+public:
+	int32                                         PanelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubTeamHUD_ExecSetRankOnly;
+
+// Function UnionRun.RaceUISubTeamHUD.GetTeamRankRough
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubTeamHUD_GetTeamRankRough final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTeamHUD_GetTeamRankRough;
+
+// Function UnionRun.RaceUISubTeamHUD.SetTeamRank
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubTeamHUD_SetTeamRank final
+{
+public:
+	int32                                         TeamRank;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTeamHUD_SetTeamRank;
+
+// Function UnionRun.RaceUISubTeamHUD.UpdateCharaRank
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubTeamHUD_UpdateCharaRank final
+{
+public:
+	bool                                          IsForce;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTeamHUD_UpdateCharaRank;
+
+// Function UnionRun.BubbleItemBox.HitRacer
+// 0x0004 (0x0004 - 0x0000)
+struct BubbleItemBox_HitRacer final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_HitRacer;
+
+// Function UnionRun.BubbleItemBox.OnChangeItemBox
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleItemBox_OnChangeItemBox final
+{
+public:
+	EItemBoxType                                  ItemBoxType_0;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_OnChangeItemBox;
+
+// Function UnionRun.BubbleItemBox.OnHitRacer
+// 0x0004 (0x0004 - 0x0000)
+struct BubbleItemBox_OnHitRacer final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_OnHitRacer;
+
+// Function UnionRun.BubbleItemBox.OnPlayForceFeedback
+// 0x0004 (0x0004 - 0x0000)
+struct BubbleItemBox_OnPlayForceFeedback final
+{
+public:
+	int32                                         LocalPlayerIndex;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_OnPlayForceFeedback;
+
+// Function UnionRun.BubbleItemBox.SetisReset
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleItemBox_SetisReset final
+{
+public:
+	bool                                          newParam;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_SetisReset;
+
+// Function UnionRun.BubbleItemBox.SetItemBoxType
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleItemBox_SetItemBoxType final
+{
+public:
+	EItemBoxType                                  Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_SetItemBoxType;
+
+// Function UnionRun.BubbleItemBox.SetItemBoxTypeEx
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleItemBox_SetItemBoxTypeEx final
+{
+public:
+	EItemBoxType                                  Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_SetItemBoxTypeEx;
+
+// Function UnionRun.BubbleItemBox.SetVisibleEnable
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleItemBox_SetVisibleEnable final
+{
+public:
+	bool                                          IsEnable;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_SetVisibleEnable;
+
+// Function UnionRun.BubbleItemBox.Update
+// 0x0004 (0x0004 - 0x0000)
+struct BubbleItemBox_Update final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_Update;
+
+// Function UnionRun.BubbleItemBox.GetSoundPan
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleItemBox_GetSoundPan final
+{
+public:
+	ESoundPan                                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleItemBox_GetSoundPan;
+
+// Function UnionRun.BubbleRing.HitRacer
+// 0x0004 (0x0004 - 0x0000)
+struct BubbleRing_HitRacer final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleRing_HitRacer;
+
+// Function UnionRun.BubbleRing.SetisReset
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleRing_SetisReset final
+{
+public:
+	bool                                          newParam;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleRing_SetisReset;
+
+// Function UnionRun.BubbleRing.SetRingType
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleRing_SetRingType final
+{
+public:
+	EPackageRingType                              Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleRing_SetRingType;
+
+// Function UnionRun.BubbleRing.SetRingTypeEx
+// 0x0001 (0x0001 - 0x0000)
+struct BubbleRing_SetRingTypeEx final
+{
+public:
+	EPackageRingType                              Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleRing_SetRingTypeEx;
+
+// Function UnionRun.BubbleRing.Update
+// 0x0004 (0x0004 - 0x0000)
+struct BubbleRing_Update final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BubbleRing_Update;
 
 // Function UnionRun.CameraCollision.SetCameraData
 // 0x0028 (0x0028 - 0x0000)
@@ -750,6 +908,42 @@ public:
 	TArray<class FString>                         args;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CheatPerformance_Execute_RaceTestConfig_SetAutoUnrealInsights;
+
+// Function UnionRun.UnionCameraBase.IsCurrentViewTarget
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCameraBase_IsCurrentViewTarget final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCameraBase_IsCurrentViewTarget;
+
+// Function UnionRun.UnionCameraBase.IsInBlending
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCameraBase_IsInBlending final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCameraBase_IsInBlending;
+
+// Function UnionRun.UnionCameraBase.RequestEndCamera
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCameraBase_RequestEndCamera final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCameraBase_RequestEndCamera;
+
+// Function UnionRun.UnionCameraBase.RequestStartCamera
+// 0x0001 (0x0001 - 0x0000)
+struct UnionCameraBase_RequestStartCamera final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCameraBase_RequestStartCamera;
 
 // Function UnionRun.CheatRaceCommon.EnableSplitScreen
 // 0x0001 (0x0001 - 0x0000)
@@ -950,6 +1144,115 @@ public:
 };
 DUMPER7_ASSERTS_CollisionBaseComponent_IsCollisionEnabled;
 
+// Function UnionRun.RaceUISubBtnGuide.GetControllerType
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubBtnGuide_GetControllerType final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsNotSetKey;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBtnGuidePlatFormController                   ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetControllerType;
+
+// Function UnionRun.RaceUISubBtnGuide.GetUseItemKey
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubBtnGuide_GetUseItemKey final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetUseItemKey;
+
+// Function UnionRun.RaceUISubBtnGuide.SetUseItemKey
+// 0x0018 (0x0018 - 0x0000)
+struct RaceUISubBtnGuide_SetUseItemKey final
+{
+public:
+	struct FKey                                   UseItemKey;                                        // 0x0000(0x0018)(ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_SetUseItemKey;
+
+// Function UnionRun.RaceUISubBtnGuide.GetFlightGuideKey
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubBtnGuide_GetFlightGuideKey final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuggestUpInput;                                   // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetFlightGuideKey;
+
+// Function UnionRun.RaceUISubBtnGuide.GetKeyDisplayName
+// 0x0030 (0x0030 - 0x0000)
+struct RaceUISubBtnGuide_GetKeyDisplayName final
+{
+public:
+	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PlayerControllerIndex;                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetKeyDisplayName;
+
+// Function UnionRun.RaceUISubBtnGuide.GetMouseButtonIndex
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubBtnGuide_GetMouseButtonIndex final
+{
+public:
+	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetMouseButtonIndex;
+
+// Function UnionRun.RaceUISubBtnGuide.GetReleaseEffectKey
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubBtnGuide_GetReleaseEffectKey final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetReleaseEffectKey;
+
+// Function UnionRun.RaceUISubBtnGuide.GetSteerKey
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubBtnGuide_GetSteerKey final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SteerNo;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetSteerKey;
+
+// Function UnionRun.RaceUISubBtnGuide.GetUseItemKeyPC
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubBtnGuide_GetUseItemKeyPC final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_GetUseItemKeyPC;
+
+// Function UnionRun.RaceUISubBtnGuide.IsKeyboard
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubBtnGuide_IsKeyboard final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubBtnGuide_IsKeyboard;
+
 // Function UnionRun.CollisionMessageInterface.NotifyTriggerConflict
 // 0x0060 (0x0060 - 0x0000)
 struct CollisionMessageInterface_NotifyTriggerConflict final
@@ -958,35 +1261,6 @@ public:
 	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CollisionMessageInterface_NotifyTriggerConflict;
-
-// Function UnionRun.UnionRaceInfoInterface.NoticeChangeCountDownEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceInfoInterface_NoticeChangeCountDownEvent final
-{
-public:
-	int32                                         InNewValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InOldValue;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceInfoInterface_NoticeChangeCountDownEvent;
-
-// Function UnionRun.UnionRaceInfoInterface.NoticeChangeRaceStateEvent
-// 0x0002 (0x0002 - 0x0000)
-struct UnionRaceInfoInterface_NoticeChangeRaceStateEvent final
-{
-public:
-	ERaceInfoStateType                            InNewState;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERaceInfoStateType                            InOldState;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceInfoInterface_NoticeChangeRaceStateEvent;
-
-// Function UnionRun.UnionRaceInfoInterface.SetRaceInfo
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceInfoInterface_SetRaceInfo final
-{
-public:
-	class UUnionRaceInfo*                         InRaceInfo;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceInfoInterface_SetRaceInfo;
 
 // Function UnionRun.CourseSequenceActorSpawner.GetSpawnActor
 // 0x0010 (0x0010 - 0x0000)
@@ -1008,75 +1282,171 @@ public:
 };
 DUMPER7_ASSERTS_CourseSequenceActorSpawner_SetSize;
 
-// Function UnionRun.UnionRaceUIResultRedStarRings.GetOtherResultRedStarRingAcquisitionType
-// 0x0018 (0x0018 - 0x0000)
-struct UnionRaceUIResultRedStarRings_GetOtherResultRedStarRingAcquisitionType final
+// Function UnionRun.KingBoomBooProjectile.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct KingBoomBooProjectile_OnTriggerColliderConflict final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<ERedStarRingAcquisitionType>           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetOtherResultRedStarRingAcquisitionType;
+DUMPER7_ASSERTS_KingBoomBooProjectile_OnTriggerColliderConflict;
 
-// Function UnionRun.UnionRaceUIResultRedStarRings.GetRaceRedStarRingAcquisitionType
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUIResultRedStarRings_GetRaceRedStarRingAcquisitionType final
-{
-public:
-	TArray<ERedStarRingAcquisitionType>           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetRaceRedStarRingAcquisitionType;
-
-// Function UnionRun.UnionRaceUIResultRedStarRings.GetResultRedStarRingAcquisitionType
-// 0x0018 (0x0018 - 0x0000)
-struct UnionRaceUIResultRedStarRings_GetResultRedStarRingAcquisitionType final
-{
-public:
-	EStageId                                      InStageId;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<ERedStarRingAcquisitionType>           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetResultRedStarRingAcquisitionType;
-
-// Function UnionRun.UnionRaceUIResultRedStarRings.GetResultRedStarRingAllGetType
-// 0x0018 (0x0018 - 0x0000)
-struct UnionRaceUIResultRedStarRings_GetResultRedStarRingAllGetType final
-{
-public:
-	TArray<ERedStarRingAcquisitionType>           AcquisitionType;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         PlayerIndex;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERedstarRingAllGetType                        ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetResultRedStarRingAllGetType;
-
-// Function UnionRun.UnionRaceUIResultRedStarRings.InitRings
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUIResultRedStarRings_InitRings final
-{
-public:
-	TArray<bool>                                  Rings;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_InitRings;
-
-// Function UnionRun.UnionRaceUIResultRedStarRings.PickUpRing
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.GetIsPhase1Attack
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUIResultRedStarRings_PickUpRing final
+struct DarkGaiaPhoenixAnimInstance_GetIsPhase1Attack final
 {
 public:
-	uint8                                         RingIndex;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_PickUpRing;
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_GetIsPhase1Attack;
 
-// Function UnionRun.UnionRaceUIResultRedStarRings.SetRedStarRingsRef
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUIResultRedStarRings_SetRedStarRingsRef final
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.GetIsPhase2Move
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_GetIsPhase2Move final
 {
 public:
-	TArray<class UUnionRaceUIResultRedStarRing*>  Rings;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_SetRedStarRingsRef;
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_GetIsPhase2Move;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.GetIsPhase3Attack
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_GetIsPhase3Attack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_GetIsPhase3Attack;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.GetIsPhase3Mirror
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_GetIsPhase3Mirror final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_GetIsPhase3Mirror;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.GetIsPhase3Move
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_GetIsPhase3Move final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_GetIsPhase3Move;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.SetIsPhase1Attack
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_SetIsPhase1Attack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_SetIsPhase1Attack;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.SetIsPhase2Move
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_SetIsPhase2Move final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_SetIsPhase2Move;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.SetIsPhase3Attack
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_SetIsPhase3Attack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_SetIsPhase3Attack;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.SetIsPhase3Mirror
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_SetIsPhase3Mirror final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_SetIsPhase3Mirror;
+
+// Function UnionRun.DarkGaiaPhoenixAnimInstance.SetIsPhase3Move
+// 0x0001 (0x0001 - 0x0000)
+struct DarkGaiaPhoenixAnimInstance_SetIsPhase3Move final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DarkGaiaPhoenixAnimInstance_SetIsPhase3Move;
+
+// Function UnionRun.DeathEggAnimInstance.IsPunchState
+// 0x0002 (0x0002 - 0x0000)
+struct DeathEggAnimInstance_IsPunchState final
+{
+public:
+	EDeathEggState                                State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DeathEggAnimInstance_IsPunchState;
+
+// Function UnionRun.RaceUISubHitInfo.SetCharaIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubHitInfo_SetCharaIndex final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsRival;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubHitInfo_SetCharaIndex;
+
+// Function UnionRun.RaceUISubHitInfo.SetGroupColorMaterial
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubHitInfo_SetGroupColorMaterial final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubHitInfo_SetGroupColorMaterial;
+
+// Function UnionRun.RaceUISubHitInfo.SetLocalPlayerColorMaterial
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubHitInfo_SetLocalPlayerColorMaterial final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubHitInfo_SetLocalPlayerColorMaterial;
+
+// Function UnionRun.RaceUISubHitInfo.SetLostItemIdIndex_Implement
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubHitInfo_SetLostItemIdIndex_Implement final
+{
+public:
+	int32                                         InItemIdIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubHitInfo_SetLostItemIdIndex_Implement;
+
+// Function UnionRun.RaceUISubHitInfo.SetPlatformIcon
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubHitInfo_SetPlatformIcon final
+{
+public:
+	ECrossplayPlatform                            Platform;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubHitInfo_SetPlatformIcon;
+
+// Function UnionRun.RaceUISubHitInfo.SwitchBaseUI
+// 0x0002 (0x0002 - 0x0000)
+struct RaceUISubHitInfo_SwitchBaseUI final
+{
+public:
+	bool                                          IsRival;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsPowerRival;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubHitInfo_SwitchBaseUI;
 
 // Function UnionRun.DroppedRingFactory.OnPlayDroppedRingSound_DAMAGE_01
 // 0x0001 (0x0001 - 0x0000)
@@ -1123,14 +1493,14 @@ public:
 };
 DUMPER7_ASSERTS_DroppedRingFactory_OnPlayDroppedRingSound_Small;
 
-// Function UnionRun.ItemOmochaoObject.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemOmochaoObject_OnTriggerColliderConflict final
+// Function UnionRun.RaceObjectSkeletal.SetBodySkeletalMesh
+// 0x0008 (0x0008 - 0x0000)
+struct RaceObjectSkeletal_SetBodySkeletalMesh final
 {
 public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          NewSkeletalMesh;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemOmochaoObject_OnTriggerColliderConflict;
+DUMPER7_ASSERTS_RaceObjectSkeletal_SetBodySkeletalMesh;
 
 // Function UnionRun.DroppedRingObject.HitRacer
 // 0x0004 (0x0004 - 0x0000)
@@ -1141,23 +1511,197 @@ public:
 };
 DUMPER7_ASSERTS_DroppedRingObject_HitRacer;
 
-// Function UnionRun.UnionRaceHitInfoGroup.SetItemIdIndex_Impl
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceHitInfoGroup_SetItemIdIndex_Impl final
+// Function UnionRun.EggChaserAnimInstance.GetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_GetIsAttack final
 {
 public:
-	int32                                         InItemIdIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceHitInfoGroup_SetItemIdIndex_Impl;
+DUMPER7_ASSERTS_EggChaserAnimInstance_GetIsAttack;
 
-// Function UnionRun.UnionRaceHitInfoGroup.UpdateHitInfoGroup
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceHitInfoGroup_UpdateHitInfoGroup final
+// Function UnionRun.EggChaserAnimInstance.GetIsAttackReady
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_GetIsAttackReady final
 {
 public:
-	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceHitInfoGroup_UpdateHitInfoGroup;
+DUMPER7_ASSERTS_EggChaserAnimInstance_GetIsAttackReady;
+
+// Function UnionRun.EggChaserAnimInstance.GetIsFly
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_GetIsFly final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_GetIsFly;
+
+// Function UnionRun.EggChaserAnimInstance.GetIsFlyToWait
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_GetIsFlyToWait final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_GetIsFlyToWait;
+
+// Function UnionRun.EggChaserAnimInstance.GetIsPhase3Move
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_GetIsPhase3Move final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_GetIsPhase3Move;
+
+// Function UnionRun.EggChaserAnimInstance.GetIsWaitToFly
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_GetIsWaitToFly final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_GetIsWaitToFly;
+
+// Function UnionRun.EggChaserAnimInstance.SetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_SetIsAttack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_SetIsAttack;
+
+// Function UnionRun.EggChaserAnimInstance.SetIsAttackReady
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_SetIsAttackReady final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_SetIsAttackReady;
+
+// Function UnionRun.EggChaserAnimInstance.SetIsFly
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_SetIsFly final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_SetIsFly;
+
+// Function UnionRun.EggChaserAnimInstance.SetIsFlyToWait
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_SetIsFlyToWait final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_SetIsFlyToWait;
+
+// Function UnionRun.EggChaserAnimInstance.SetIsWait
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_SetIsWait final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_SetIsWait;
+
+// Function UnionRun.EggChaserAnimInstance.SetIsWaitToFly
+// 0x0001 (0x0001 - 0x0000)
+struct EggChaserAnimInstance_SetIsWaitToFly final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggChaserAnimInstance_SetIsWaitToFly;
+
+// Function UnionRun.GimmickBubble.BubbleIdleMoveUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickBubble_BubbleIdleMoveUpdate final
+{
+public:
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBubble_BubbleIdleMoveUpdate;
+
+// Function UnionRun.GimmickBubble.BubbleScaleUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickBubble_BubbleScaleUpdate final
+{
+public:
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBubble_BubbleScaleUpdate;
+
+// Function UnionRun.GimmickBubble.ForceSetDomainNumber
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickBubble_ForceSetDomainNumber final
+{
+public:
+	EDomainNumber                                 Number;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBubble_ForceSetDomainNumber;
+
+// Function UnionRun.GimmickBubble.ForceUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickBubble_ForceUpdate final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBubble_ForceUpdate;
+
+// Function UnionRun.GimmickBubble.ManualUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickBubble_ManualUpdate final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBubble_ManualUpdate;
+
+// Function UnionRun.GimmickBubble.OnGetBonusItem
+// 0x0008 (0x0008 - 0x0000)
+struct GimmickBubble_OnGetBonusItem final
+{
+public:
+	EBubbleBonusType                              BonusType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RacerIndex;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBubble_OnGetBonusItem;
+
+// Function UnionRun.GimmickBubble.SetVisivleBonusItemType
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickBubble_SetVisivleBonusItemType final
+{
+public:
+	EBubbleBonusType                              BonusType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBubble_SetVisivleBonusItemType;
+
+// Function UnionRun.EggDragoonAnimInstance.IsAttackState
+// 0x0002 (0x0002 - 0x0000)
+struct EggDragoonAnimInstance_IsAttackState final
+{
+public:
+	EEggDragoonState                              State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggDragoonAnimInstance_IsAttackState;
+
+// Function UnionRun.EggDragoonAnimInstance.IsStateActivate
+// 0x0001 (0x0001 - 0x0000)
+struct EggDragoonAnimInstance_IsStateActivate final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EggDragoonAnimInstance_IsStateActivate;
 
 // Function UnionRun.EnemyAmbushTrex.HitRacer
 // 0x0004 (0x0004 - 0x0000)
@@ -1168,100 +1712,216 @@ public:
 };
 DUMPER7_ASSERTS_EnemyAmbushTrex_HitRacer;
 
-// Function UnionRun.UnionRunDebugPacketReplay.GetOnlineRaceReplayData
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRunDebugPacketReplay_GetOnlineRaceReplayData final
-{
-public:
-	TArray<uint8>                                 Data;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRunDebugPacketReplay_GetOnlineRaceReplayData;
-
-// Function UnionRun.UnionRunDebugPacketReplay.LoadOnlineRaceReplay
-// 0x0268 (0x0268 - 0x0000)
-struct UnionRunDebugPacketReplay_LoadOnlineRaceReplay final
-{
-public:
-	struct FOnlineRaceReplay                      RaceReplayData;                                    // 0x0000(0x0260)(Parm, OutParm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0260(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRunDebugPacketReplay_LoadOnlineRaceReplay;
-
-// Function UnionRun.UnionRunDebugPacketReplay.SetOnlineRaceReplay
-// 0x0260 (0x0260 - 0x0000)
-struct UnionRunDebugPacketReplay_SetOnlineRaceReplay final
-{
-public:
-	struct FOnlineRaceReplay                      RaceReplayData;                                    // 0x0000(0x0260)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRunDebugPacketReplay_SetOnlineRaceReplay;
-
-// Function UnionRun.UnionCameraBase.IsCurrentViewTarget
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCameraBase_IsCurrentViewTarget final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCameraBase_IsCurrentViewTarget;
-
-// Function UnionRun.UnionCameraBase.IsInBlending
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCameraBase_IsInBlending final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCameraBase_IsInBlending;
-
-// Function UnionRun.UnionCameraBase.RequestEndCamera
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCameraBase_RequestEndCamera final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCameraBase_RequestEndCamera;
-
-// Function UnionRun.UnionCameraBase.RequestStartCamera
-// 0x0001 (0x0001 - 0x0000)
-struct UnionCameraBase_RequestStartCamera final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCameraBase_RequestStartCamera;
-
-// Function UnionRun.RaceUITutorialControllerKey.GetTutorialKey
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUITutorialControllerKey_GetTutorialKey final
-{
-public:
-	ETutorialAction                               tutorialAction;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUITutorialControllerKey_GetTutorialKey;
-
-// Function UnionRun.RaceUITutorialControllerKey.UpdateHintIndex
+// Function UnionRun.GimmickManipulatedVehicle.DebugUpdateIdleMove
 // 0x0004 (0x0004 - 0x0000)
-struct RaceUITutorialControllerKey_UpdateHintIndex final
+struct GimmickManipulatedVehicle_DebugUpdateIdleMove final
 {
 public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUITutorialControllerKey_UpdateHintIndex;
+DUMPER7_ASSERTS_GimmickManipulatedVehicle_DebugUpdateIdleMove;
 
-// Function UnionRun.RaceUITutorialControllerKey.UpdateTutorialIndex
+// Function UnionRun.EnemyAttackStoneStatue.MovePositionUpdate
 // 0x0004 (0x0004 - 0x0000)
-struct RaceUITutorialControllerKey_UpdateTutorialIndex final
+struct EnemyAttackStoneStatue_MovePositionUpdate final
 {
 public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUITutorialControllerKey_UpdateTutorialIndex;
+DUMPER7_ASSERTS_EnemyAttackStoneStatue_MovePositionUpdate;
+
+// Function UnionRun.EnemyAttackStoneStatue.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct EnemyAttackStoneStatue_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyAttackStoneStatue_OnTriggerColliderConflict;
+
+// Function UnionRun.EnemyBigTrain.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct EnemyBigTrain_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyBigTrain_OnTriggerColliderConflict;
+
+// Function UnionRun.EnemyBigTrain.OnTriggerColliderConflictSteamAttack
+// 0x0060 (0x0060 - 0x0000)
+struct EnemyBigTrain_OnTriggerColliderConflictSteamAttack final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyBigTrain_OnTriggerColliderConflictSteamAttack;
+
+// Function UnionRun.EnemyDarkGaiaPhoenixPhase3.ActivateAttackEffect
+// 0x0002 (0x0002 - 0x0000)
+struct EnemyDarkGaiaPhoenixPhase3_ActivateAttackEffect final
+{
+public:
+	bool                                          IsRight;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          isMirrer;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyDarkGaiaPhoenixPhase3_ActivateAttackEffect;
+
+// Function UnionRun.EnemyDarkGaiaPhoenixPhase3.WingAttack
+// 0x0002 (0x0002 - 0x0000)
+struct EnemyDarkGaiaPhoenixPhase3_WingAttack final
+{
+public:
+	bool                                          IsRight;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          isMirrer;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyDarkGaiaPhoenixPhase3_WingAttack;
+
+// Function UnionRun.EnemyEggChaser.StartAttack
+// 0x0001 (0x0001 - 0x0000)
+struct EnemyEggChaser_StartAttack final
+{
+public:
+	bool                                          IsEnable;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyEggChaser_StartAttack;
+
+// Function UnionRun.GimmickBakubaku.GetIsFlinching
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickBakubaku_GetIsFlinching final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBakubaku_GetIsFlinching;
+
+// Function UnionRun.EnemyMoai.MovePositionUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct EnemyMoai_MovePositionUpdate final
+{
+public:
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyMoai_MovePositionUpdate;
+
+// Function UnionRun.EnemyMoai.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct EnemyMoai_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyMoai_OnTriggerColliderConflict;
+
+// Function UnionRun.EnemyMoaiFinalLap.MovePositionUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct EnemyMoaiFinalLap_MovePositionUpdate final
+{
+public:
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyMoaiFinalLap_MovePositionUpdate;
+
+// Function UnionRun.EnemyMoaiFinalLap.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct EnemyMoaiFinalLap_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyMoaiFinalLap_OnTriggerColliderConflict;
+
+// Function UnionRun.GimmickRingDropper.DropRings
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickRingDropper_DropRings final
+{
+public:
+	int32                                         DropRingCount;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickRingDropper_DropRings;
+
+// Function UnionRun.VATBreakObjectBase.OnVATUpdate
+// 0x0018 (0x0018 - 0x0000)
+struct VATBreakObjectBase_OnVATUpdate final
+{
+public:
+	class UUnionVATMeshComponent*                 VATComponent;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUnionVATSequenceInfo                  SequenceInfo;                                      // 0x0008(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_VATBreakObjectBase_OnVATUpdate;
+
+// Function UnionRun.VATBreakObjectBase.GetBreakSpeedType
+// 0x0001 (0x0001 - 0x0000)
+struct VATBreakObjectBase_GetBreakSpeedType final
+{
+public:
+	EBreakSpeedType                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VATBreakObjectBase_GetBreakSpeedType;
+
+// Function UnionRun.EnemyShipPaddle.MovePositionUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct EnemyShipPaddle_MovePositionUpdate final
+{
+public:
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyShipPaddle_MovePositionUpdate;
+
+// Function UnionRun.GimmckEventCollision.SetEventId
+// 0x0001 (0x0001 - 0x0000)
+struct GimmckEventCollision_SetEventId final
+{
+public:
+	EUnionEventId                                 EventId;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmckEventCollision_SetEventId;
+
+// Function UnionRun.EnemySmallTrain.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct EnemySmallTrain_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemySmallTrain_OnTriggerColliderConflict;
+
+// Function UnionRun.EnemySnake.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct EnemySnake_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemySnake_OnTriggerColliderConflict;
+
+// Function UnionRun.EnemySquidDestination.EditorUpdatePathLocation
+// 0x0028 (0x0028 - 0x0000)
+struct EnemySquidDestination_EditorUpdatePathLocation final
+{
+public:
+	TSoftObjectPtr<class AActor>                  SplineActor;                                       // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemySquidDestination_EditorUpdatePathLocation;
+
+// Function UnionRun.EnemyStoneStatue.MovePositionUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct EnemyStoneStatue_MovePositionUpdate final
+{
+public:
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyStoneStatue_MovePositionUpdate;
+
+// Function UnionRun.EnemyStoneStatue.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct EnemyStoneStatue_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnemyStoneStatue_OnTriggerColliderConflict;
 
 // Function UnionRun.EnemyTentacle.TimelineStep
 // 0x0004 (0x0004 - 0x0000)
@@ -1271,6 +1931,989 @@ public:
 	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_EnemyTentacle_TimelineStep;
+
+// Function UnionRun.Enemy_Extnd04_Enemy04001Anim.IsAnimState
+// 0x0002 (0x0002 - 0x0000)
+struct Enemy_Extnd04_Enemy04001Anim_IsAnimState final
+{
+public:
+	EEnemy04001State                              State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd04_Enemy04001Anim_IsAnimState;
+
+// Function UnionRun.Enemy_Extnd06_Object_06001.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct Enemy_Extnd06_Object_06001_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd06_Object_06001_OnTriggerColliderConflict;
+
+// Function UnionRun.Enemy_Extnd09_Enemy09001_Attack.IsAttacking
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_Extnd09_Enemy09001_Attack_IsAttacking final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09001_Attack_IsAttacking;
+
+// Function UnionRun.Enemy_Extnd09_Enemy09001_Attack.IsDamaged
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_Extnd09_Enemy09001_Attack_IsDamaged final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09001_Attack_IsDamaged;
+
+// Function UnionRun.Enemy_Extnd09_Enemy09001_Move.IsDamaged
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_Extnd09_Enemy09001_Move_IsDamaged final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09001_Move_IsDamaged;
+
+// Function UnionRun.Enemy_Extnd09_Enemy09001_Move.IsMoving
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_Extnd09_Enemy09001_Move_IsMoving final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09001_Move_IsMoving;
+
+// Function UnionRun.Enemy_Extnd09_Enemy09002.IsDefensive
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_Extnd09_Enemy09002_IsDefensive final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09002_IsDefensive;
+
+// Function UnionRun.NalAnimInstance.IsTakeDamageMotion
+// 0x0001 (0x0001 - 0x0000)
+struct NalAnimInstance_IsTakeDamageMotion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NalAnimInstance_IsTakeDamageMotion;
+
+// Function UnionRun.Enemy_Extnd09_Enemy09003.GetAnimMoveTime
+// 0x0004 (0x0004 - 0x0000)
+struct Enemy_Extnd09_Enemy09003_GetAnimMoveTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09003_GetAnimMoveTime;
+
+// Function UnionRun.Enemy_Extnd09_Enemy09003.IsDamaged
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_Extnd09_Enemy09003_IsDamaged final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09003_IsDamaged;
+
+// Function UnionRun.Extnd08_Enemy08001AnimInstance.SetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct Extnd08_Enemy08001AnimInstance_SetIsAttack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Extnd08_Enemy08001AnimInstance_SetIsAttack;
+
+// Function UnionRun.Extnd08_Enemy08001AnimInstance.SetIsIdle
+// 0x0001 (0x0001 - 0x0000)
+struct Extnd08_Enemy08001AnimInstance_SetIsIdle final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Extnd08_Enemy08001AnimInstance_SetIsIdle;
+
+// Function UnionRun.GimmickWaterfall.OnCarHitEvent
+// 0x0018 (0x0018 - 0x0000)
+struct GimmickWaterfall_OnCarHitEvent final
+{
+public:
+	struct FVector                                HitLocation;                                       // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickWaterfall_OnCarHitEvent;
+
+// Function UnionRun.FlowerTentacleAnimInstance.GetIIsAppear
+// 0x0001 (0x0001 - 0x0000)
+struct FlowerTentacleAnimInstance_GetIIsAppear final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FlowerTentacleAnimInstance_GetIIsAppear;
+
+// Function UnionRun.FlowerTentacleAnimInstance.GetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct FlowerTentacleAnimInstance_GetIsAttack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FlowerTentacleAnimInstance_GetIsAttack;
+
+// Function UnionRun.FlowerTentacleAnimInstance.GetIsDisappear
+// 0x0001 (0x0001 - 0x0000)
+struct FlowerTentacleAnimInstance_GetIsDisappear final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FlowerTentacleAnimInstance_GetIsDisappear;
+
+// Function UnionRun.FlowerTentacleAnimInstance.SetIsAppear
+// 0x0001 (0x0001 - 0x0000)
+struct FlowerTentacleAnimInstance_SetIsAppear final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FlowerTentacleAnimInstance_SetIsAppear;
+
+// Function UnionRun.FlowerTentacleAnimInstance.SetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct FlowerTentacleAnimInstance_SetIsAttack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FlowerTentacleAnimInstance_SetIsAttack;
+
+// Function UnionRun.FlowerTentacleAnimInstance.SetIsDisappear
+// 0x0001 (0x0001 - 0x0000)
+struct FlowerTentacleAnimInstance_SetIsDisappear final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FlowerTentacleAnimInstance_SetIsDisappear;
+
+// Function UnionRun.FossilTrexAnimInstance.GetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct FossilTrexAnimInstance_GetIsAttack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FossilTrexAnimInstance_GetIsAttack;
+
+// Function UnionRun.FossilTrexAnimInstance.GetIsTYpeB
+// 0x0001 (0x0001 - 0x0000)
+struct FossilTrexAnimInstance_GetIsTYpeB final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FossilTrexAnimInstance_GetIsTYpeB;
+
+// Function UnionRun.FossilTrexAnimInstance.SetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct FossilTrexAnimInstance_SetIsAttack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FossilTrexAnimInstance_SetIsAttack;
+
+// Function UnionRun.FossilTrexAnimInstance.SetIsDamage
+// 0x0001 (0x0001 - 0x0000)
+struct FossilTrexAnimInstance_SetIsDamage final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FossilTrexAnimInstance_SetIsDamage;
+
+// Function UnionRun.FossilTrexAnimInstance.SetIsTypeB
+// 0x0001 (0x0001 - 0x0000)
+struct FossilTrexAnimInstance_SetIsTypeB final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FossilTrexAnimInstance_SetIsTypeB;
+
+// Function UnionRun.GimmickBigBakubaku.InitStaticBody
+// 0x0010 (0x0010 - 0x0000)
+struct GimmickBigBakubaku_InitStaticBody final
+{
+public:
+	const class UGimmickStaticBodyComponent*      StaticBody;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketName;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBigBakubaku_InitStaticBody;
+
+// Function UnionRun.PackageRingObject.HitRacer
+// 0x0004 (0x0004 - 0x0000)
+struct PackageRingObject_HitRacer final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PackageRingObject_HitRacer;
+
+// Function UnionRun.PackageRingObject.SetRingType
+// 0x0001 (0x0001 - 0x0000)
+struct PackageRingObject_SetRingType final
+{
+public:
+	EPackageRingType                              Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PackageRingObject_SetRingType;
+
+// Function UnionRun.ItemOmochaoObject.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemOmochaoObject_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemOmochaoObject_OnTriggerColliderConflict;
+
+// Function UnionRun.GimmickStatueBeam.SetAttackEnable
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickStatueBeam_SetAttackEnable final
+{
+public:
+	bool                                          IsEnable;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStatueBeam_SetAttackEnable;
+
+// Function UnionRun.GadgetBoatJumpSplashPeformance.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct GadgetBoatJumpSplashPeformance_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GadgetBoatJumpSplashPeformance_OnTriggerColliderConflict;
+
+// Function UnionRun.UnionDebugStringSubsystem.Draw
+// 0x0010 (0x0010 - 0x0000)
+struct UnionDebugStringSubsystem_Draw final
+{
+public:
+	class UCanvas*                                InCanvas;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APlayerController*                      InPC;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionDebugStringSubsystem_Draw;
+
+// Function UnionRun.UnionDebugStringSubsystem.PrintDebugString
+// 0x0028 (0x0028 - 0x0000)
+struct UnionDebugStringSubsystem_PrintDebugString final
+{
+public:
+	struct FDebugPrintStringStruct                DebugString;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionDebugStringSubsystem_PrintDebugString;
+
+// Function UnionRun.UnionDebugStringSubsystem.SetDebugStringVisibleFlag
+// 0x0001 (0x0001 - 0x0000)
+struct UnionDebugStringSubsystem_SetDebugStringVisibleFlag final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionDebugStringSubsystem_SetDebugStringVisibleFlag;
+
+// Function UnionRun.UnionGroupInfoInterface.NoticeCompletedChargeGroupEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionGroupInfoInterface_NoticeCompletedChargeGroupEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETeamBoostType                                TeamBoostType;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionGroupInfoInterface_NoticeCompletedChargeGroupEvent;
+
+// Function UnionRun.ItemVioletVoidObject.IsMeshAnimEating
+// 0x0001 (0x0001 - 0x0000)
+struct ItemVioletVoidObject_IsMeshAnimEating final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemVioletVoidObject_IsMeshAnimEating;
+
+// Function UnionRun.ItemVioletVoidObject.IsMeshAnimInSleep
+// 0x0001 (0x0001 - 0x0000)
+struct ItemVioletVoidObject_IsMeshAnimInSleep final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemVioletVoidObject_IsMeshAnimInSleep;
+
+// Function UnionRun.ItemVioletVoidObject.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemVioletVoidObject_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemVioletVoidObject_OnTriggerColliderConflict;
+
+// Function UnionRun.ItemVioletVoidObject.PlaySE
+// 0x0008 (0x0008 - 0x0000)
+struct ItemVioletVoidObject_PlaySE final
+{
+public:
+	class FName                                   SEName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemVioletVoidObject_PlaySE;
+
+// Function UnionRun.ItemVioletVoidObject.RequestMeshAnimAppearance
+// 0x0001 (0x0001 - 0x0000)
+struct ItemVioletVoidObject_RequestMeshAnimAppearance final
+{
+public:
+	bool                                          bAppearance;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemVioletVoidObject_RequestMeshAnimAppearance;
+
+// Function UnionRun.UnionCameraModifierPostEffect.SetCameraPostEffectParameter
+// 0x0010 (0x0010 - 0x0000)
+struct UnionCameraModifierPostEffect_SetCameraPostEffectParameter final
+{
+public:
+	EUnionCameraModifierPostEffectType            EffectType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ParameterName;                                     // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionCameraModifierPostEffect_SetCameraPostEffectParameter;
+
+// Function UnionRun.GimmickStaticBodyComponent.SetCameraId
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickStaticBodyComponent_SetCameraId final
+{
+public:
+	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetCameraId;
+
+// Function UnionRun.GimmickStaticBodyComponent.SetIgnoreItemInvincibleWall
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickStaticBodyComponent_SetIgnoreItemInvincibleWall final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetIgnoreItemInvincibleWall;
+
+// Function UnionRun.GimmickStaticBodyComponent.SetParamId
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickStaticBodyComponent_SetParamId final
+{
+public:
+	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetParamId;
+
+// Function UnionRun.GimmickStaticBodyComponent.SetPostProcessEffectType
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickStaticBodyComponent_SetPostProcessEffectType final
+{
+public:
+	EUnionRacePostProcessEffectType               Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetPostProcessEffectType;
+
+// Function UnionRun.GimmickStaticBodyComponent.SetResultCameraType
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickStaticBodyComponent_SetResultCameraType final
+{
+public:
+	EResultCameraProductionType                   Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetResultCameraType;
+
+// Function UnionRun.GimmickStaticBodyComponent.SetSurfaceFlag
+// 0x001F (0x001F - 0x0000)
+struct GimmickStaticBodyComponent_SetSurfaceFlag final
+{
+public:
+	struct FUnionSurfaceFlag                      flag;                                              // 0x0000(0x001F)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetSurfaceFlag;
+
+// Function UnionRun.GimmickStaticBodyComponent.SetSurfaceType
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickStaticBodyComponent_SetSurfaceType final
+{
+public:
+	EUnionSurfaceType                             Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetSurfaceType;
+
+// Function UnionRun.UnionItemSkeletalMeshContainer.OnBeginItem
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemSkeletalMeshContainer_OnBeginItem final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionItemSkeletalMeshContainer_OnBeginItem;
+
+// Function UnionRun.Gimmick_Extnd05_Enemy04004.IsDamaged
+// 0x0001 (0x0001 - 0x0000)
+struct Gimmick_Extnd05_Enemy04004_IsDamaged final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_Gimmick_Extnd05_Enemy04004_IsDamaged;
+
+// Function UnionRun.GadgetMessageInterface.GadgetNotifyAttack
+// 0x0070 (0x0070 - 0x0000)
+struct GadgetMessageInterface_GadgetNotifyAttack final
+{
+public:
+	struct FGadgetNotifyAttackInfo                Info;                                              // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GadgetMessageInterface_GadgetNotifyAttack;
+
+// Function UnionRun.GadgetMessageInterface.GadgetNotifyMessage
+// 0x0008 (0x0008 - 0x0000)
+struct GadgetMessageInterface_GadgetNotifyMessage final
+{
+public:
+	class FName                                   Message;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GadgetMessageInterface_GadgetNotifyMessage;
+
+// Function UnionRun.GimmickTriggerMotionBase.GetPlayRate
+// 0x0008 (0x0008 - 0x0000)
+struct GimmickTriggerMotionBase_GetPlayRate final
+{
+public:
+	ETriggerMotionState                           State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickTriggerMotionBase_GetPlayRate;
+
+// Function UnionRun.GimmickTriggerMotionBase.GetTriggerMotionType
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickTriggerMotionBase_GetTriggerMotionType final
+{
+public:
+	ETriggerMotionType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickTriggerMotionBase_GetTriggerMotionType;
+
+// Function UnionRun.GimmickTriggerMotionBase.IsPlayIdle
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickTriggerMotionBase_IsPlayIdle final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickTriggerMotionBase_IsPlayIdle;
+
+// Function UnionRun.GimmickTriggerMotionBase.IsPlayOneShot
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickTriggerMotionBase_IsPlayOneShot final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickTriggerMotionBase_IsPlayOneShot;
+
+// Function UnionRun.GimmickTriggerMotionBase.IsTriggered
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickTriggerMotionBase_IsTriggered final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickTriggerMotionBase_IsTriggered;
+
+// Function UnionRun.GimmickTriggerMotionVAT.OnVATSequence
+// 0x0018 (0x0018 - 0x0000)
+struct GimmickTriggerMotionVAT_OnVATSequence final
+{
+public:
+	class UUnionVATMeshComponent*                 VATMeshComponent;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUnionVATSequenceInfo                  SequenceInfo;                                      // 0x0008(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GimmickTriggerMotionVAT_OnVATSequence;
+
+// Function UnionRun.GimmickBingoBall.SetCollisionSocketName
+// 0x0008 (0x0008 - 0x0000)
+struct GimmickBingoBall_SetCollisionSocketName final
+{
+public:
+	class FName                                   NewName;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBingoBall_SetCollisionSocketName;
+
+// Function UnionRun.GimmickBollard.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct GimmickBollard_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickBollard_OnTriggerColliderConflict;
+
+// Function UnionRun.GimmickCannonBoo.OnVATFrameFunction
+// 0x0018 (0x0018 - 0x0000)
+struct GimmickCannonBoo_OnVATFrameFunction final
+{
+public:
+	class UUnionVATMeshComponent*                 VATMeshComponent;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUnionVATSequenceInfo                  SequenceInfo;                                      // 0x0008(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GimmickCannonBoo_OnVATFrameFunction;
+
+// Function UnionRun.GimmickCrab.IsMovingLeft
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickCrab_IsMovingLeft final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickCrab_IsMovingLeft;
+
+// Function UnionRun.GimmickEggChaserController.StartAttack
+// 0x0001 (0x0001 - 0x0000)
+struct GimmickEggChaserController_StartAttack final
+{
+public:
+	bool                                          isRightObject;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickEggChaserController_StartAttack;
+
+// Function UnionRun.GimmickFracturedRock.OnPlayAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct GimmickFracturedRock_OnPlayAnimation final
+{
+public:
+	float                                         displayFram;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         globalPieceScaleMultiplier;                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickFracturedRock_OnPlayAnimation;
+
+// Function UnionRun.GimmickLightBall.RayIdleMoveUpdate
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickLightBall_RayIdleMoveUpdate final
+{
+public:
+	float                                         Ratio;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickLightBall_RayIdleMoveUpdate;
+
+// Function UnionRun.GimmickMessageInterface.NotifyStartGimmickEvent
+// 0x000C (0x000C - 0x0000)
+struct GimmickMessageInterface_NotifyStartGimmickEvent final
+{
+public:
+	EStageId                                      StageId;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         EventId;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickMessageInterface_NotifyStartGimmickEvent;
+
+// Function UnionRun.GimmickRollingRock.InitStaticBodyComponent
+// 0x0010 (0x0010 - 0x0000)
+struct GimmickRollingRock_InitStaticBodyComponent final
+{
+public:
+	class UStaticBodyComponent*                   StaticBodyComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GimmickRollingRock_InitStaticBodyComponent;
+
+// Function UnionRun.GimmickRollingRock.UpdateRotation
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickRollingRock_UpdateRotation final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickRollingRock_UpdateRotation;
+
+// Function UnionRun.GimmickSwingBall.CalcBaseSwingRotation
+// 0x0030 (0x0030 - 0x0000)
+struct GimmickSwingBall_CalcBaseSwingRotation final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwingPeriod;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwingInitialPhase;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickSwingBall_CalcBaseSwingRotation;
+
+// Function UnionRun.GimmickSwingBall.CalcHitSwingRotation
+// 0x0030 (0x0030 - 0x0000)
+struct GimmickSwingBall_CalcHitSwingRotation final
+{
+public:
+	float                                         HitSwingAmplitude;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HitSwingPhase;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickSwingBall_CalcHitSwingRotation;
+
+// Function UnionRun.GimmickSwingBall.CalcNewHitSwingPhase
+// 0x0010 (0x0010 - 0x0000)
+struct GimmickSwingBall_CalcNewHitSwingPhase final
+{
+public:
+	float                                         OldPhase;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OldAmplitude;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewAmplitude;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickSwingBall_CalcNewHitSwingPhase;
+
+// Function UnionRun.GimmickThornBall.GetHitSpeedRatio
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickThornBall_GetHitSpeedRatio final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickThornBall_GetHitSpeedRatio;
+
+// Function UnionRun.GimmickTriggerMotionAnimInstance.NativeUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct GimmickTriggerMotionAnimInstance_NativeUpdateAnimation final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GimmickTriggerMotionAnimInstance_NativeUpdateAnimation;
+
+// Function UnionRun.GUNHunterAnimInstance.SetIsAttackCharge
+// 0x0001 (0x0001 - 0x0000)
+struct GUNHunterAnimInstance_SetIsAttackCharge final
+{
+public:
+	bool                                          isChange;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GUNHunterAnimInstance_SetIsAttackCharge;
+
+// Function UnionRun.GUNHunterAnimInstance.SetIsDead
+// 0x0001 (0x0001 - 0x0000)
+struct GUNHunterAnimInstance_SetIsDead final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GUNHunterAnimInstance_SetIsDead;
+
+// Function UnionRun.GUNHunterAnimInstance.IsShootState
+// 0x0003 (0x0003 - 0x0000)
+struct GUNHunterAnimInstance_IsShootState final
+{
+public:
+	EGUNHunterShootState                          State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          isDown;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GUNHunterAnimInstance_IsShootState;
+
+// Function UnionRun.GUNHunterAnimInstance.IsStartMotion
+// 0x0002 (0x0002 - 0x0000)
+struct GUNHunterAnimInstance_IsStartMotion final
+{
+public:
+	EGUNHunterStartType                           Motion;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GUNHunterAnimInstance_IsStartMotion;
+
+// Function UnionRun.HeadButtTrexAnimInstance.GetIsAppear
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_GetIsAppear final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsAppear;
+
+// Function UnionRun.HeadButtTrexAnimInstance.GetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_GetIsAttack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsAttack;
+
+// Function UnionRun.HeadButtTrexAnimInstance.GetIsDamage
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_GetIsDamage final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsDamage;
+
+// Function UnionRun.HeadButtTrexAnimInstance.GetIsMirror
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_GetIsMirror final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_GetIsMirror;
+
+// Function UnionRun.HeadButtTrexAnimInstance.SetIsAppear
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_SetIsAppear final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsAppear;
+
+// Function UnionRun.HeadButtTrexAnimInstance.SetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_SetIsAttack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsAttack;
+
+// Function UnionRun.HeadButtTrexAnimInstance.SetIsDamage
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_SetIsDamage final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsDamage;
+
+// Function UnionRun.HeadButtTrexAnimInstance.SetIsMirror
+// 0x0001 (0x0001 - 0x0000)
+struct HeadButtTrexAnimInstance_SetIsMirror final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HeadButtTrexAnimInstance_SetIsMirror;
+
+// Function UnionRun.RespotObject.UpdateRespotMatrix
+// 0x0060 (0x0060 - 0x0000)
+struct RespotObject_UpdateRespotMatrix final
+{
+public:
+	struct FTransform                             NewTransform;                                      // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RespotObject_UpdateRespotMatrix;
+
+// Function UnionRun.SimpleTravelRingObject.GetTransformRingType
+// 0x0001 (0x0001 - 0x0000)
+struct SimpleTravelRingObject_GetTransformRingType final
+{
+public:
+	ETransformRingType                            ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SimpleTravelRingObject_GetTransformRingType;
+
+// Function UnionRun.SimpleTravelRingObject.GetTravelRingSizeType
+// 0x0001 (0x0001 - 0x0000)
+struct SimpleTravelRingObject_GetTravelRingSizeType final
+{
+public:
+	ETravelRingSizeType                           ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SimpleTravelRingObject_GetTravelRingSizeType;
+
+// Function UnionRun.SimpleTravelRingObject.GetTravelRingType
+// 0x0001 (0x0001 - 0x0000)
+struct SimpleTravelRingObject_GetTravelRingType final
+{
+public:
+	ETravelRingType                               ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SimpleTravelRingObject_GetTravelRingType;
+
+// Function UnionRun.SimpleTravelRingObject.SetTransformRingType
+// 0x0001 (0x0001 - 0x0000)
+struct SimpleTravelRingObject_SetTransformRingType final
+{
+public:
+	ETransformRingType                            Type;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SimpleTravelRingObject_SetTransformRingType;
+
+// Function UnionRun.SimpleTravelRingObject.SetTravelRingSizeType
+// 0x0001 (0x0001 - 0x0000)
+struct SimpleTravelRingObject_SetTravelRingSizeType final
+{
+public:
+	ETravelRingSizeType                           Type;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SimpleTravelRingObject_SetTravelRingSizeType;
+
+// Function UnionRun.SimpleTravelRingObject.SetTravelRingType
+// 0x0001 (0x0001 - 0x0000)
+struct SimpleTravelRingObject_SetTravelRingType final
+{
+public:
+	ETravelRingType                               Type;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SimpleTravelRingObject_SetTravelRingType;
+
+// Function UnionRun.TireMark.AddPoint3D
+// 0x0060 (0x0060 - 0x0000)
+struct TireMark_AddPoint3D final
+{
+public:
+	struct FVector                                Position;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Normal;                                            // 0x0018(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Side;                                              // 0x0030(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Density;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 Color;                                             // 0x004C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              OffsetUV;                                          // 0x0050(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TireMark_AddPoint3D;
+
+// Function UnionRun.TireMark.GetTireMarkMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct TireMark_GetTireMarkMaterial final
+{
+public:
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TireMark_GetTireMarkMaterial;
+
+// Function UnionRun.TireMark.SetTireMarkMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct TireMark_SetTireMarkMaterial final
+{
+public:
+	class UMaterialInterface*                     MaterialInterface;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TireMark_SetTireMarkMaterial;
+
+// Function UnionRun.SnakeAnimInstance.GetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct SnakeAnimInstance_GetIsAttack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SnakeAnimInstance_GetIsAttack;
+
+// Function UnionRun.SnakeAnimInstance.GetIsDamage
+// 0x0001 (0x0001 - 0x0000)
+struct SnakeAnimInstance_GetIsDamage final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SnakeAnimInstance_GetIsDamage;
+
+// Function UnionRun.SnakeAnimInstance.GetIsIdle
+// 0x0001 (0x0001 - 0x0000)
+struct SnakeAnimInstance_GetIsIdle final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SnakeAnimInstance_GetIsIdle;
+
+// Function UnionRun.SnakeAnimInstance.SetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct SnakeAnimInstance_SetIsAttack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SnakeAnimInstance_SetIsAttack;
+
+// Function UnionRun.SnakeAnimInstance.SetIsDamage
+// 0x0001 (0x0001 - 0x0000)
+struct SnakeAnimInstance_SetIsDamage final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SnakeAnimInstance_SetIsDamage;
+
+// Function UnionRun.SnakeAnimInstance.SetIsIdle
+// 0x0001 (0x0001 - 0x0000)
+struct SnakeAnimInstance_SetIsIdle final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SnakeAnimInstance_SetIsIdle;
+
+// Function UnionRun.ItemBodyCutObject.OnTriggerConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemBodyCutObject_OnTriggerConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemBodyCutObject_OnTriggerConflict;
+
+// Function UnionRun.SummonRingAnimInstance.GetIsExit
+// 0x0001 (0x0001 - 0x0000)
+struct SummonRingAnimInstance_GetIsExit final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SummonRingAnimInstance_GetIsExit;
+
+// Function UnionRun.SummonRingAnimInstance.GetIsStart
+// 0x0001 (0x0001 - 0x0000)
+struct SummonRingAnimInstance_GetIsStart final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SummonRingAnimInstance_GetIsStart;
+
+// Function UnionRun.SummonRingAnimInstance.SetIsExit
+// 0x0001 (0x0001 - 0x0000)
+struct SummonRingAnimInstance_SetIsExit final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SummonRingAnimInstance_SetIsExit;
+
+// Function UnionRun.SummonRingAnimInstance.SetIsStart
+// 0x0001 (0x0001 - 0x0000)
+struct SummonRingAnimInstance_SetIsStart final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SummonRingAnimInstance_SetIsStart;
 
 // Function UnionRun.ItemBoxObject.OnChangeItemBox
 // 0x0001 (0x0001 - 0x0000)
@@ -1326,1148 +2969,866 @@ public:
 };
 DUMPER7_ASSERTS_ItemBoxObject_GetSoundPan;
 
-// Function UnionRun.Enemy_Extnd09_Enemy09001_Attack.IsAttacking
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_Extnd09_Enemy09001_Attack_IsAttacking final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09001_Attack_IsAttacking;
-
-// Function UnionRun.Enemy_Extnd09_Enemy09001_Attack.IsDamaged
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_Extnd09_Enemy09001_Attack_IsDamaged final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09001_Attack_IsDamaged;
-
-// Function UnionRun.UnionRaceUI.AddAttackItemObject_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_AddAttackItemObject_Implementation final
-{
-public:
-	class UObject*                                InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_AddAttackItemObject_Implementation;
-
-// Function UnionRun.UnionRaceUI.ChangePlayerConntrollerForPauseMenu
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceUI_ChangePlayerConntrollerForPauseMenu final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_ChangePlayerConntrollerForPauseMenu;
-
-// Function UnionRun.UnionRaceUI.DbgDrawTeamGaugeData
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceUI_DbgDrawTeamGaugeData final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_DbgDrawTeamGaugeData;
-
-// Function UnionRun.UnionRaceUI.DbgDrawTeamGaugeRate
-// 0x0014 (0x0014 - 0x0000)
-struct UnionRaceUI_DbgDrawTeamGaugeRate final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TransChargeRate;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalChargeRate;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GaugePercent;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsForce;                                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsBoost;                                           // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_DbgDrawTeamGaugeRate;
-
-// Function UnionRun.UnionRaceUI.FireAirTrickInfo_Implementation
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_FireAirTrickInfo_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SuccessBonusCount;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_FireAirTrickInfo_Implementation;
-
-// Function UnionRun.UnionRaceUI.FireCourseMapCharaSpin_Implementation
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceUI_FireCourseMapCharaSpin_Implementation final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_FireCourseMapCharaSpin_Implementation;
-
-// Function UnionRun.UnionRaceUI.FireInOutAnim
-// 0x0014 (0x0014 - 0x0000)
-struct UnionRaceUI_FireInOutAnim final
-{
-public:
-	bool                                          bin;                                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             OnAnimationEndEvent;                               // 0x0004(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_FireInOutAnim;
-
-// Function UnionRun.UnionRaceUI.GetItemHoldCount
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_GetItemHoldCount final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsMain;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetItemHoldCount;
-
-// Function UnionRun.UnionRaceUI.GetItemHoldCount_New
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_GetItemHoldCount_New final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetItemHoldCount_New;
-
-// Function UnionRun.UnionRaceUI.GetItemIconsState
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_GetItemIconsState final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUnionRaceHUDItemIconsState                   OutState;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetItemIconsState;
-
-// Function UnionRun.UnionRaceUI.GetItemPackageRingCount
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_GetItemPackageRingCount final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsMain;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetItemPackageRingCount;
-
-// Function UnionRun.UnionRaceUI.GetItemPackageRingCount_New
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_GetItemPackageRingCount_New final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetItemPackageRingCount_New;
-
-// Function UnionRun.UnionRaceUI.GetRedStarRings_Implementation
+// Function UnionRun.ItemCountDownComponent.InitializeCountDown
 // 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUI_GetRedStarRings_Implementation final
+struct ItemCountDownComponent_InitializeCountDown final
 {
 public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionRaceUIResultRedStarRings*         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReset;                                            // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UnionRaceUI_GetRedStarRings_Implementation;
+DUMPER7_ASSERTS_ItemCountDownComponent_InitializeCountDown;
 
-// Function UnionRun.UnionRaceUI.GetReturnDashButtonObject_Implementation
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUI_GetReturnDashButtonObject_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetReturnDashButtonObject_Implementation;
-
-// Function UnionRun.UnionRaceUI.GetStartDashButtonObject_Implementation
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUI_GetStartDashButtonObject_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetStartDashButtonObject_Implementation;
-
-// Function UnionRun.UnionRaceUI.GetTimeTiralGadgetPresetData
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUI_GetTimeTiralGadgetPresetData final
-{
-public:
-	struct FUserGadgetPresetData                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_GetTimeTiralGadgetPresetData;
-
-// Function UnionRun.UnionRaceUI.GetWarningBeltVisible_Implementation
+// Function UnionRun.ItemCountDownComponent.ResetTargetParameter
 // 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_GetWarningBeltVisible_Implementation final
+struct ItemCountDownComponent_ResetTargetParameter final
 {
 public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUI_GetWarningBeltVisible_Implementation;
+DUMPER7_ASSERTS_ItemCountDownComponent_ResetTargetParameter;
 
-// Function UnionRun.UnionRaceUI.IsBehindCurrentCamera
-// 0x0028 (0x0028 - 0x0000)
-struct UnionRaceUI_IsBehindCurrentCamera final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                WorldLocation;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_IsBehindCurrentCamera;
-
-// Function UnionRun.UnionRaceUI.IsDebugAimingHidden
+// Function UnionRun.TrainAnimInstance.GetIsDamage
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_IsDebugAimingHidden final
+struct TrainAnimInstance_GetIsDamage final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUI_IsDebugAimingHidden;
+DUMPER7_ASSERTS_TrainAnimInstance_GetIsDamage;
 
-// Function UnionRun.UnionRaceUI.IsDebugBoostHidden
+// Function UnionRun.TrainAnimInstance.GetIsMove
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_IsDebugBoostHidden final
+struct TrainAnimInstance_GetIsMove final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUI_IsDebugBoostHidden;
+DUMPER7_ASSERTS_TrainAnimInstance_GetIsMove;
 
-// Function UnionRun.UnionRaceUI.IsDebugGuideButtonHidden
+// Function UnionRun.TrainAnimInstance.SetIsDamage
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_IsDebugGuideButtonHidden final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_IsDebugGuideButtonHidden;
-
-// Function UnionRun.UnionRaceUI.IsGhostOnline
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_IsGhostOnline final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_IsGhostOnline;
-
-// Function UnionRun.UnionRaceUI.IsPlayingReplay
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_IsPlayingReplay final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_IsPlayingReplay;
-
-// Function UnionRun.UnionRaceUI.IsPubCameraPlayRace
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_IsPubCameraPlayRace final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_IsPubCameraPlayRace;
-
-// Function UnionRun.UnionRaceUI.IsViewGhostReplay
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_IsViewGhostReplay final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_IsViewGhostReplay;
-
-// Function UnionRun.UnionRaceUI.NotifyIrregularInfiniteItem
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceUI_NotifyIrregularInfiniteItem final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_NotifyIrregularInfiniteItem;
-
-// Function UnionRun.UnionRaceUI.OnPackageRingEffectFinished
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_OnPackageRingEffectFinished final
-{
-public:
-	class APackageRingEffect*                     EffectActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_OnPackageRingEffectFinished;
-
-// Function UnionRun.UnionRaceUI.OnPackageRingEffectSoundStart
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_OnPackageRingEffectSoundStart final
-{
-public:
-	class APackageRingEffect*                     EffectActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_OnPackageRingEffectSoundStart;
-
-// Function UnionRun.UnionRaceUI.RemoveAttackInfoWidget_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_RemoveAttackInfoWidget_Implementation final
-{
-public:
-	class UObject*                                InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_RemoveAttackInfoWidget_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetAfterHomingAimTargetedUIVisible_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetAfterHomingAimTargetedUIVisible_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetAfterHomingAimTargetedUIVisible_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetAfterHomingAimUIVisible_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetAfterHomingAimUIVisible_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetAfterHomingAimUIVisible_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetAimingUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetAimingUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetAimingUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetAirTrickUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetAirTrickUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetAirTrickUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetBeforeHomingAimTargetedUIVisible_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetBeforeHomingAimTargetedUIVisible_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetBeforeHomingAimTargetedUIVisible_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetBeforeHomingAimUIVisible_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetBeforeHomingAimUIVisible_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetBeforeHomingAimUIVisible_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetBoostUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetBoostUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetBoostUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetCharaHeadUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetCharaHeadUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetCharaHeadUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetCourseMapCharaSpin
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceUI_SetCourseMapCharaSpin final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetCourseMapCharaSpin;
-
-// Function UnionRun.UnionRaceUI.SetCourseMapUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetCourseMapUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetCourseMapUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetDebugAimingHidden
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetDebugAimingHidden final
+struct TrainAnimInstance_SetIsDamage final
 {
 public:
 	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUI_SetDebugAimingHidden;
+DUMPER7_ASSERTS_TrainAnimInstance_SetIsDamage;
 
-// Function UnionRun.UnionRaceUI.SetDebugBoostHidden
+// Function UnionRun.TrainAnimInstance.SetIsMove
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetDebugBoostHidden final
+struct TrainAnimInstance_SetIsMove final
 {
 public:
 	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUI_SetDebugBoostHidden;
+DUMPER7_ASSERTS_TrainAnimInstance_SetIsMove;
 
-// Function UnionRun.UnionRaceUI.SetDebugGuideButtonHidden
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsGift
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetDebugGuideButtonHidden final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetDebugGuideButtonHidden;
-
-// Function UnionRun.UnionRaceUI.SetDebugItemWarningHidden
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetDebugItemWarningHidden final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetDebugItemWarningHidden;
-
-// Function UnionRun.UnionRaceUI.SetGadgetIconUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetGadgetIconUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetGadgetIconUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetGuideButtonUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetGuideButtonUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetGuideButtonUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetHitInfoUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetHitInfoUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetHitInfoUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetItemIconsState
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetItemIconsState final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUnionRaceHUDItemIconsState                   InState;                                           // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetItemIconsState;
-
-// Function UnionRun.UnionRaceUI.SetItemIconUIVisible
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_SetItemIconUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PlayerControllerIndex;                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlagOnly;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetItemIconUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetItemIconUIVisibleAll
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetItemIconUIVisibleAll final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetItemIconUIVisibleAll;
-
-// Function UnionRun.UnionRaceUI.SetItemWarningUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetItemWarningUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetItemWarningUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetLapUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetLapUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetLapUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetRaceMinimapRef_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetRaceMinimapRef_Implementation final
-{
-public:
-	class UUnionRaceMinimap*                      InRaceMinimap;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRaceMinimapRef_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetRacerApproachInfo
-// 0x0018 (0x0018 - 0x0000)
-struct UnionRaceUI_SetRacerApproachInfo final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class URaceUISubApproachWarning*>      ApproachInfo;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRacerApproachInfo;
-
-// Function UnionRun.UnionRaceUI.SetRacerIndex_Implementation
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_SetRacerIndex_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InRacerIndex;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsLocalPlayer;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRacerIndex_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetRaceUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetRaceUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRaceUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetRankUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetRankUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRankUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetRedStarRingUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetRedStarRingUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRedStarRingUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetReturnDashSetting_Implementation
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceUI_SetReturnDashSetting_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Pivot;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Range;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashSetting_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetReturnDashUIGaugeRate_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetReturnDashUIGaugeRate_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GaugeRate;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashUIGaugeRate_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetReturnDashUIVisible_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetReturnDashUIVisible_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashUIVisible_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetReturnDashUIVisibleWithAnim_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetReturnDashUIVisibleWithAnim_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashUIVisibleWithAnim_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetRingUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetRingUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRingUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetRivalStartUI_Implementation
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceUI_SetRivalStartUI_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionRacerStatusObject*                RivalStatusObj;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetRivalStartUI_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetSpeedNumUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetSpeedNumUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetSpeedNumUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetStartDashButtonUIVisible
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetStartDashButtonUIVisible final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetStartDashButtonUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetStartDashParamSetting_Implementation
-// 0x0034 (0x0034 - 0x0000)
-struct UnionRaceUI_SetStartDashParamSetting_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUnionRaceStartDashParam               InStartDashParam;                                  // 0x0004(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetStartDashParamSetting_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetStartUIGaugeRate_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetStartUIGaugeRate_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GaugeRate;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetStartUIGaugeRate_Implementation;
-
-// Function UnionRun.UnionRaceUI.SetTeamRankUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetTeamRankUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetTeamRankUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetTextBalloonUIVisible
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRaceUI_SetTextBalloonUIVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetTextBalloonUIVisible;
-
-// Function UnionRun.UnionRaceUI.SetWarningBeltVisible_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_SetWarningBeltVisible_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_SetWarningBeltVisible_Implementation;
-
-// Function UnionRun.UnionRaceUI.UpdateAttackInfoPosition
-// 0x0018 (0x0018 - 0x0000)
-struct UnionRaceUI_UpdateAttackInfoPosition final
-{
-public:
-	class UUserWidget*                            InAttackWidget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidget*                                InHUDWarningArea;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InPosRate;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateAttackInfoPosition;
-
-// Function UnionRun.UnionRaceUI.UpdateByHoldItemInfo_Implementation
-// 0x0088 (0x0088 - 0x0000)
-struct UnionRaceUI_UpdateByHoldItemInfo_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHoldItemInfo                          InItemInfo;                                        // 0x0008(0x0080)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateByHoldItemInfo_Implementation;
-
-// Function UnionRun.UnionRaceUI.UpdateByRacers_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_UpdateByRacers_Implementation final
-{
-public:
-	class UUnionRacers*                           InRacers;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateByRacers_Implementation;
-
-// Function UnionRun.UnionRaceUI.UpdateHomingAimLocation_Implementation
-// 0x0020 (0x0020 - 0x0000)
-struct UnionRaceUI_UpdateHomingAimLocation_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                AimLocation;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateHomingAimLocation_Implementation;
-
-// Function UnionRun.UnionRaceUI.UpdateHomingAimTargetedLocation_Implementation
-// 0x0020 (0x0020 - 0x0000)
-struct UnionRaceUI_UpdateHomingAimTargetedLocation_Implementation final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PlayerLocation;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateHomingAimTargetedLocation_Implementation;
-
-// Function UnionRun.UnionRaceUI.UpdateIrregularInfiniteItem
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceUI_UpdateIrregularInfiniteItem final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateIrregularInfiniteItem;
-
-// Function UnionRun.UnionRaceUI.UpdateIsComSetting
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_UpdateIsComSetting final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsCom;                                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateIsComSetting;
-
-// Function UnionRun.UnionRaceUI.UpdateMinimapIconByRacers_Implementation
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_UpdateMinimapIconByRacers_Implementation final
-{
-public:
-	class UUnionRacers*                           InRacers;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateMinimapIconByRacers_Implementation;
-
-// Function UnionRun.UnionRaceUI.UpdateRaceHUD
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceUI_UpdateRaceHUD final
-{
-public:
-	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceUI_UpdateRaceHUD;
-
-// Function UnionRun.UnionRaceUI.IsLocalPlayer
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUI_IsLocalPlayer final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceUI_IsLocalPlayer;
-
-// Function UnionRun.Enemy_Extnd09_Enemy09002.IsDefensive
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_Extnd09_Enemy09002_IsDefensive final
+struct ItemDarkChaoAnimInstance_GetIsGift final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_Enemy_Extnd09_Enemy09002_IsDefensive;
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsGift;
 
-// Function UnionRun.RaceUISubLap.InitializeLapCount
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubLap_InitializeLapCount final
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsIdle
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_GetIsIdle final
 {
 public:
-	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubLap_InitializeLapCount;
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsIdle;
 
-// Function UnionRun.RaceUISubLap.SetCurrentLap
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsSteal
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_GetIsSteal final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsSteal;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrow
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_GetIsThrow final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrow;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrowHit
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_GetIsThrowHit final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrowHit;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrowMissBound
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_GetIsThrowMissBound final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrowMissBound;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrowMissFall
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_GetIsThrowMissFall final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrowMissFall;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.GetIsUse
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_GetIsUse final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsUse;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.GetThrowAnimController
 // 0x0004 (0x0004 - 0x0000)
-struct RaceUISubLap_SetCurrentLap final
+struct ItemDarkChaoAnimInstance_GetThrowAnimController final
 {
 public:
-	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubLap_SetCurrentLap;
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetThrowAnimController;
 
-// Function UnionRun.RaceUISubLap.SetCurrentLapMID
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubLap_SetCurrentLapMID final
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsGift
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsGift final
 {
 public:
-	class UMaterialInstanceDynamic*               Mid;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubLap_SetCurrentLapMID;
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsGift;
 
-// Function UnionRun.RaceUISubLap.SetMaxLap
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsIdle
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsIdle final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsIdle;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsSteal
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsSteal final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsSteal;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrow
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsThrow final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrow;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrowHit
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsThrowHit final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrowHit;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrowMissBound
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsThrowMissBound final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrowMissBound;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrowMissFall
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsThrowMissFall final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrowMissFall;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.SetIsUse
+// 0x0001 (0x0001 - 0x0000)
+struct ItemDarkChaoAnimInstance_SetIsUse final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsUse;
+
+// Function UnionRun.ItemDarkChaoAnimInstance.SetThrowAnimController
 // 0x0004 (0x0004 - 0x0000)
-struct RaceUISubLap_SetMaxLap final
+struct ItemDarkChaoAnimInstance_SetThrowAnimController final
 {
 public:
-	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubLap_SetMaxLap;
+DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetThrowAnimController;
 
-// Function UnionRun.RaceUISubLap.SetMaxLapMID
+// Function UnionRun.ItemExtnd09Object.OnStartMoveProjectile
 // 0x0008 (0x0008 - 0x0000)
-struct RaceUISubLap_SetMaxLapMID final
+struct ItemExtnd09Object_OnStartMoveProjectile final
 {
 public:
-	class UMaterialInstanceDynamic*               Mid;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class AItemExtnd09Projectile*           projectile;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubLap_SetMaxLapMID;
+DUMPER7_ASSERTS_ItemExtnd09Object_OnStartMoveProjectile;
 
-// Function UnionRun.RaceUISubLap.UpdateLapCount
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubLap_UpdateLapCount final
-{
-public:
-	float                                         InDelta;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubLap_UpdateLapCount;
-
-// Function UnionRun.GadgetBoatJumpSplashPeformance.OnTriggerColliderConflict
+// Function UnionRun.ItemExtnd09Projectile.OnTriggerColliderConflict
 // 0x0060 (0x0060 - 0x0000)
-struct GadgetBoatJumpSplashPeformance_OnTriggerColliderConflict final
+struct ItemExtnd09Projectile_OnTriggerColliderConflict final
 {
 public:
 	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GadgetBoatJumpSplashPeformance_OnTriggerColliderConflict;
+DUMPER7_ASSERTS_ItemExtnd09Projectile_OnTriggerColliderConflict;
 
-// Function UnionRun.RaceUISubTimeTrialTime.SetTargetTime
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubTimeTrialTime_SetTargetTime final
+// Function UnionRun.ItemHomingPunchObject.EventHitRacer
+// 0x0004 (0x0004 - 0x0000)
+struct ItemHomingPunchObject_EventHitRacer final
 {
 public:
-	class URichTextBlock*                         TargetTextBlock;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   TargetName;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	int32                                         TargetTime;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsClockCount;                                      // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         HitRacerIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubTimeTrialTime_SetTargetTime;
+DUMPER7_ASSERTS_ItemHomingPunchObject_EventHitRacer;
 
-// Function UnionRun.RaceUISubTimeTrialTime.SetTargetTime4Best
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubTimeTrialTime_SetTargetTime4Best final
+// Function UnionRun.ItemHomingPunchObject.OnPlayDamegeSound
+// 0x0001 (0x0001 - 0x0000)
+struct ItemHomingPunchObject_OnPlayDamegeSound final
 {
 public:
-	class URichTextBlock*                         TargetTextBlock;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESoundPan                                     SoundPan;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubTimeTrialTime_SetTargetTime4Best;
+DUMPER7_ASSERTS_ItemHomingPunchObject_OnPlayDamegeSound;
 
-// Function UnionRun.RaceUISubTimeTrialTime.UpdateLapTime
-// 0x0028 (0x0028 - 0x0000)
-struct RaceUISubTimeTrialTime_UpdateLapTime final
-{
-public:
-	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsBestLap;                                         // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRaceUITimeTrialTime                   ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTimeTrialTime_UpdateLapTime;
-
-// Function UnionRun.ItemBlackBombBaseObject.OnTriggerConflict
+// Function UnionRun.ItemHomingPunchObject.OnTriggerColliderConflict
 // 0x0060 (0x0060 - 0x0000)
-struct ItemBlackBombBaseObject_OnTriggerConflict final
+struct ItemHomingPunchObject_OnTriggerColliderConflict final
 {
 public:
 	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemBlackBombBaseObject_OnTriggerConflict;
+DUMPER7_ASSERTS_ItemHomingPunchObject_OnTriggerColliderConflict;
 
-// Function UnionRun.UnionRaceSituationObject.IsFootCutting
+// Function UnionRun.ItemMagnetObject.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemMagnetObject_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMagnetObject_OnTriggerColliderConflict;
+
+// Function UnionRun.ItemMessageInterface.CalIsInWithinPlaneArea
+// 0x0020 (0x0020 - 0x0000)
+struct ItemMessageInterface_CalIsInWithinPlaneArea final
+{
+public:
+	struct FVector                                Position;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ItemMessageInterface_CalIsInWithinPlaneArea;
+
+// Function UnionRun.ItemMessageInterface.ConfirmAbsorbOject
+// 0x0160 (0x0160 - 0x0000)
+struct ItemMessageInterface_ConfirmAbsorbOject final
+{
+public:
+	struct FAbsorbedObjectInfo                    Info;                                              // 0x0000(0x0150)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0150(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0xF];                                      // 0x0151(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ItemMessageInterface_ConfirmAbsorbOject;
+
+// Function UnionRun.ItemMessageInterface.GetItemActiveTime
+// 0x0004 (0x0004 - 0x0000)
+struct ItemMessageInterface_GetItemActiveTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetItemActiveTime;
+
+// Function UnionRun.ItemMessageInterface.GetItemDomainNumber
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceSituationObject_IsFootCutting final
+struct ItemMessageInterface_GetItemDomainNumber final
+{
+public:
+	EDomainNumber                                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetItemDomainNumber;
+
+// Function UnionRun.ItemMessageInterface.GetItemHolderRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct ItemMessageInterface_GetItemHolderRacerIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetItemHolderRacerIndex;
+
+// Function UnionRun.ItemMessageInterface.GetItemPathTransform
+// 0x0060 (0x0060 - 0x0000)
+struct ItemMessageInterface_GetItemPathTransform final
+{
+public:
+	struct FTransform                             ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetItemPathTransform;
+
+// Function UnionRun.ItemMessageInterface.GetItemThrowDirection
+// 0x0001 (0x0001 - 0x0000)
+struct ItemMessageInterface_GetItemThrowDirection final
+{
+public:
+	EItemThrowDirection                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetItemThrowDirection;
+
+// Function UnionRun.ItemMessageInterface.GetItemType
+// 0x0001 (0x0001 - 0x0000)
+struct ItemMessageInterface_GetItemType final
+{
+public:
+	EItemId                                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetItemType;
+
+// Function UnionRun.ItemMessageInterface.GetItemUniqueID
+// 0x0004 (0x0004 - 0x0000)
+struct ItemMessageInterface_GetItemUniqueID final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetItemUniqueID;
+
+// Function UnionRun.ItemMessageInterface.GetTrapItemOnGroundTime
+// 0x0004 (0x0004 - 0x0000)
+struct ItemMessageInterface_GetTrapItemOnGroundTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_GetTrapItemOnGroundTime;
+
+// Function UnionRun.ItemMessageInterface.IsItemPathRouteForm
+// 0x0008 (0x0008 - 0x0000)
+struct ItemMessageInterface_IsItemPathRouteForm final
+{
+public:
+	int32                                         Type;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ItemMessageInterface_IsItemPathRouteForm;
+
+// Function UnionRun.ItemMessageInterface.IsItemPathType
+// 0x0008 (0x0008 - 0x0000)
+struct ItemMessageInterface_IsItemPathType final
+{
+public:
+	int32                                         Type;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ItemMessageInterface_IsItemPathType;
+
+// Function UnionRun.ItemMessageInterface.IsWarpTarget
+// 0x0008 (0x0008 - 0x0000)
+struct ItemMessageInterface_IsWarpTarget final
+{
+public:
+	int32                                         WarpRingAttacRacerIndex;                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ItemMessageInterface_IsWarpTarget;
+
+// Function UnionRun.ItemMessageInterface.NotifyAbsorbOject
+// 0x0018 (0x0018 - 0x0000)
+struct ItemMessageInterface_NotifyAbsorbOject final
+{
+public:
+	struct FAbsorberInfo                          Info;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_NotifyAbsorbOject;
+
+// Function UnionRun.ItemMessageInterface.NotifyCyanLaserMoveInfo
+// 0x0170 (0x0170 - 0x0000)
+struct ItemMessageInterface_NotifyCyanLaserMoveInfo final
+{
+public:
+	struct FCyanLaserMoveInfo                     Info;                                              // 0x0000(0x0170)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_NotifyCyanLaserMoveInfo;
+
+// Function UnionRun.ItemMessageInterface.NotifyWarpRingMoveInfo
+// 0x00F0 (0x00F0 - 0x0000)
+struct ItemMessageInterface_NotifyWarpRingMoveInfo final
+{
+public:
+	struct FWarpRingMoveInfo                      Info;                                              // 0x0000(0x00F0)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_NotifyWarpRingMoveInfo;
+
+// Function UnionRun.ItemMessageInterface.NotifyWarpTargetBegin
+// 0x0008 (0x0008 - 0x0000)
+struct ItemMessageInterface_NotifyWarpTargetBegin final
+{
+public:
+	int32                                         WarpRingAttacRacerIndex;                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ItemMessageInterface_NotifyWarpTargetBegin;
+
+// Function UnionRun.ItemMessageInterface.NotifyWarpTargetEnd
+// 0x0004 (0x0004 - 0x0000)
+struct ItemMessageInterface_NotifyWarpTargetEnd final
+{
+public:
+	int32                                         WarpRingAttacRacerIndex;                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemMessageInterface_NotifyWarpTargetEnd;
+
+// Function UnionRun.ItemPerformanceInterface.GetAttachedRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct ItemPerformanceInterface_GetAttachedRacerIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemPerformanceInterface_GetAttachedRacerIndex;
+
+// Function UnionRun.ItemPerformanceInterface.GetPerformanceObjectType
+// 0x0001 (0x0001 - 0x0000)
+struct ItemPerformanceInterface_GetPerformanceObjectType final
+{
+public:
+	EPerformanceObjectType                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemPerformanceInterface_GetPerformanceObjectType;
+
+// Function UnionRun.ItemPerformanceInterface.GetStatusInfoID
+// 0x0008 (0x0008 - 0x0000)
+struct ItemPerformanceInterface_GetStatusInfoID final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemPerformanceInterface_GetStatusInfoID;
+
+// Function UnionRun.ItemPerformanceInterface.IsPerformanceObjectInAlart
+// 0x0001 (0x0001 - 0x0000)
+struct ItemPerformanceInterface_IsPerformanceObjectInAlart final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_IsFootCutting;
+DUMPER7_ASSERTS_ItemPerformanceInterface_IsPerformanceObjectInAlart;
 
-// Function UnionRun.UnionRaceSituationObject.IsTeamEnergyCharging
+// Function UnionRun.ItemRocketPunchObject.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemRocketPunchObject_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemRocketPunchObject_OnTriggerColliderConflict;
+
+// Function UnionRun.ItemSlicerObject.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemSlicerObject_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemSlicerObject_OnTriggerColliderConflict;
+
+// Function UnionRun.ItemSplashProjectile.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemSplashProjectile_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemSplashProjectile_OnTriggerColliderConflict;
+
+// Function UnionRun.ItemThornBallObject.GetHitSpeedRatio
+// 0x0004 (0x0004 - 0x0000)
+struct ItemThornBallObject_GetHitSpeedRatio final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemThornBallObject_GetHitSpeedRatio;
+
+// Function UnionRun.ItemThornBallObject.OnPlayBreakEffect
+// 0x0004 (0x0004 - 0x0000)
+struct ItemThornBallObject_OnPlayBreakEffect final
+{
+public:
+	float                                         Scale;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemThornBallObject_OnPlayBreakEffect;
+
+// Function UnionRun.ItemThornBallObject.OnPlayDamegeSound
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceSituationObject_IsTeamEnergyCharging final
+struct ItemThornBallObject_OnPlayDamegeSound final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESoundPan                                     SoundPan;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_IsTeamEnergyCharging;
+DUMPER7_ASSERTS_ItemThornBallObject_OnPlayDamegeSound;
 
-// Function UnionRun.UnionRaceSituationObject.SetFollowingDistDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetFollowingDistDiff final
+// Function UnionRun.ItemThornBallObject.OnPlayLandingSound
+// 0x0001 (0x0001 - 0x0000)
+struct ItemThornBallObject_OnPlayLandingSound final
 {
 public:
-	float                                         followingDistance;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          waterFlag;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetFollowingDistDiff;
+DUMPER7_ASSERTS_ItemThornBallObject_OnPlayLandingSound;
 
-// Function UnionRun.UnionRaceSituationObject.SetFollowingRacerIndex
+// Function UnionRun.ItemThornBallObject.OnTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemThornBallObject_OnTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemThornBallObject_OnTriggerColliderConflict;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeChangeThrowDirectionEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeChangeThrowDirectionEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemThrowDirection                           ThrowType;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeChangeThrowDirectionEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeClearItemEvent
 // 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetFollowingRacerIndex final
+struct UnionItemInfoInterface_NoticeClearItemEvent final
 {
 public:
 	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetFollowingRacerIndex;
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeClearItemEvent;
 
-// Function UnionRun.UnionRaceSituationObject.SetFollowingRatioDiff
+// Function UnionRun.UnionItemInfoInterface.NoticeDecreaseUsableTimesEvent
 // 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetFollowingRatioDiff final
-{
-public:
-	float                                         followingDistance;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetFollowingRatioDiff;
-
-// Function UnionRun.UnionRaceSituationObject.SetLeadingDistDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetLeadingDistDiff final
-{
-public:
-	float                                         leadingDistance;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetLeadingDistDiff;
-
-// Function UnionRun.UnionRaceSituationObject.SetLeadingRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetLeadingRacerIndex final
+struct UnionItemInfoInterface_NoticeDecreaseUsableTimesEvent final
 {
 public:
 	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetLeadingRacerIndex;
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeDecreaseUsableTimesEvent;
 
-// Function UnionRun.UnionRaceSituationObject.SetLeadingRatioDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetLeadingRatioDiff final
+// Function UnionRun.UnionItemInfoInterface.NoticeEndIrregularCharging
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeEndIrregularCharging final
 {
 public:
-	float                                         leadingDistance;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetLeadingRatioDiff;
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeEndIrregularCharging;
 
-// Function UnionRun.UnionRaceSituationObject.SetOddNumRankSeconds
+// Function UnionRun.UnionItemInfoInterface.NoticeEndItemEvent
 // 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetOddNumRankSeconds final
+struct UnionItemInfoInterface_NoticeEndItemEvent final
 {
 public:
-	float                                         oddNumRankSeconds_0;                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetOddNumRankSeconds;
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeEndItemEvent;
 
-// Function UnionRun.UnionRaceSituationObject.SetPrevRank
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetPrevRank final
+// Function UnionRun.UnionItemInfoInterface.NoticeEndLostItemEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeEndLostItemEvent final
 {
 public:
-	int32                                         Rank_0;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemInfoType                                 ItemInfoType;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetPrevRank;
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeEndLostItemEvent;
 
-// Function UnionRun.UnionRaceSituationObject.SetRank
+// Function UnionRun.UnionItemInfoInterface.NoticeExchangeIrregularHoldItem
 // 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetRank final
+struct UnionItemInfoInterface_NoticeExchangeIrregularHoldItem final
 {
 public:
-	int32                                         Rank_0;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetRank;
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeExchangeIrregularHoldItem;
 
-// Function UnionRun.UnionRaceSituationObject.SetRivalDistDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_SetRivalDistDiff final
+// Function UnionRun.UnionItemInfoInterface.NoticeHoldItemEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeHoldItemEvent final
 {
 public:
-	float                                         rivalDistDiff_0;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemThrowDirection                           DefaultThrowDirection;                             // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGadgetLuckyItem;                                  // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetRivalDistDiff;
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeHoldItemEvent;
 
-// Function UnionRun.UnionRaceSituationObject.SetTeamEnergyCharging
+// Function UnionRun.UnionItemInfoInterface.NoticeItemStockTradeEvent
+// 0x000C (0x000C - 0x0000)
+struct UnionItemInfoInterface_NoticeItemStockTradeEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FItemSet                               PrevItemSet;                                       // 0x0004(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FItemSet                               NewItemSet;                                        // 0x0007(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeItemStockTradeEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeRefreshEvent
+// 0x0004 (0x0004 - 0x0000)
+struct UnionItemInfoInterface_NoticeRefreshEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeRefreshEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeResultLotteryItemEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeResultLotteryItemEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeResultLotteryItemEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeStartIrregularCharging
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeStartIrregularCharging final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartIrregularCharging;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeStartLostItemEvent
+// 0x000C (0x000C - 0x0000)
+struct UnionItemInfoInterface_NoticeStartLostItemEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemInfoType                                 ItemInfoType;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LostItemCount;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartLostItemEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeStartLotteryItemEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeStartLotteryItemEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartLotteryItemEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeStartLotterySpecificItemEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeStartLotterySpecificItemEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartLotterySpecificItemEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeStartShuffleItemEvent
+// 0x0004 (0x0004 - 0x0000)
+struct UnionItemInfoInterface_NoticeStartShuffleItemEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartShuffleItemEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeTakePackageRingEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeTakePackageRingEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InRingNum;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeTakePackageRingEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeUpgradeEvent
+// 0x0004 (0x0004 - 0x0000)
+struct UnionItemInfoInterface_NoticeUpgradeEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeUpgradeEvent;
+
+// Function UnionRun.UnionItemInfoInterface.NoticeUseItemEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionItemInfoInterface_NoticeUseItemEvent final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemThrowDirection                           ThrowType;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeUseItemEvent;
+
+// Function UnionRun.ItemWarpRingObject.OnHitTriggerColliderConflict
+// 0x0060 (0x0060 - 0x0000)
+struct ItemWarpRingObject_OnHitTriggerColliderConflict final
+{
+public:
+	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ItemWarpRingObject_OnHitTriggerColliderConflict;
+
+// Function UnionRun.UnionFlightCourseDebugDisp.SetUseAssistLength
 // 0x0001 (0x0001 - 0x0000)
-struct UnionRaceSituationObject_SetTeamEnergyCharging final
+struct UnionFlightCourseDebugDisp_SetUseAssistLength final
 {
 public:
-	bool                                          bCharging;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_SetTeamEnergyCharging;
+DUMPER7_ASSERTS_UnionFlightCourseDebugDisp_SetUseAssistLength;
 
-// Function UnionRun.UnionRaceSituationObject.GetFollowingDistDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetFollowingDistDiff final
+// Function UnionRun.UnionMiscFunction.ContainsLevel
+// 0x0020 (0x0020 - 0x0000)
+struct UnionMiscFunction_ContainsLevel final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LevelName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetFollowingDistDiff;
+DUMPER7_ASSERTS_UnionMiscFunction_ContainsLevel;
 
-// Function UnionRun.UnionRaceSituationObject.GetFollowingRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetFollowingRacerIndex final
+// Function UnionRun.UnionMiscFunction.GetCourseEditorStageAssetDir
+// 0x0018 (0x0018 - 0x0000)
+struct UnionMiscFunction_GetCourseEditorStageAssetDir final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetFollowingRacerIndex;
+DUMPER7_ASSERTS_UnionMiscFunction_GetCourseEditorStageAssetDir;
 
-// Function UnionRun.UnionRaceSituationObject.GetFollowingRatioDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetFollowingRatioDiff final
+// Function UnionRun.UnionMiscFunction.GetStageAssetDir
+// 0x0018 (0x0018 - 0x0000)
+struct UnionMiscFunction_GetStageAssetDir final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetFollowingRatioDiff;
+DUMPER7_ASSERTS_UnionMiscFunction_GetStageAssetDir;
 
-// Function UnionRun.UnionRaceSituationObject.GetLeadingDistDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetLeadingDistDiff final
+// Function UnionRun.UnionMiscFunction.GetStageAssetFilenameTrunk
+// 0x0018 (0x0018 - 0x0000)
+struct UnionMiscFunction_GetStageAssetFilenameTrunk final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetLeadingDistDiff;
+DUMPER7_ASSERTS_UnionMiscFunction_GetStageAssetFilenameTrunk;
 
-// Function UnionRun.UnionRaceSituationObject.GetLeadingRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetLeadingRacerIndex final
+// Function UnionRun.UnionMiscFunction.LoadComPathAssetByFilePath
+// 0x0020 (0x0020 - 0x0000)
+struct UnionMiscFunction_LoadComPathAssetByFilePath final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionComPathBinaryDataAsset*           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetLeadingRacerIndex;
+DUMPER7_ASSERTS_UnionMiscFunction_LoadComPathAssetByFilePath;
 
-// Function UnionRun.UnionRaceSituationObject.GetLeadingRatioDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetLeadingRatioDiff final
+// Function UnionRun.UnionMiscFunction.LoadCourseCollisionAssetByFilePath
+// 0x0020 (0x0020 - 0x0000)
+struct UnionMiscFunction_LoadCourseCollisionAssetByFilePath final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionBtCollisionBinaryAsset*           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetLeadingRatioDiff;
+DUMPER7_ASSERTS_UnionMiscFunction_LoadCourseCollisionAssetByFilePath;
 
-// Function UnionRun.UnionRaceSituationObject.GetOddNumRankSeconds
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetOddNumRankSeconds final
+// Function UnionRun.UnionMiscFunction.LoadCourseNavigationAssetByFilePath
+// 0x0020 (0x0020 - 0x0000)
+struct UnionMiscFunction_LoadCourseNavigationAssetByFilePath final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionNavigationBinaryDataAsset*        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetOddNumRankSeconds;
+DUMPER7_ASSERTS_UnionMiscFunction_LoadCourseNavigationAssetByFilePath;
 
-// Function UnionRun.UnionRaceSituationObject.GetPrevRank
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetPrevRank final
+// Function UnionRun.UnionMiscFunction.LoadRunPathAssetByFilePath
+// 0x0020 (0x0020 - 0x0000)
+struct UnionMiscFunction_LoadRunPathAssetByFilePath final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionRunPathBinaryDataAsset*           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetPrevRank;
-
-// Function UnionRun.UnionRaceSituationObject.GetRank
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetRank final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetRank;
-
-// Function UnionRun.UnionRaceSituationObject.GetRivalDistDiff
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceSituationObject_GetRivalDistDiff final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceSituationObject_GetRivalDistDiff;
+DUMPER7_ASSERTS_UnionMiscFunction_LoadRunPathAssetByFilePath;
 
 // Function UnionRun.KingBoomBooAnimInstance.GetIsAttack
 // 0x0001 (0x0001 - 0x0000)
@@ -2577,55 +3938,3126 @@ public:
 };
 DUMPER7_ASSERTS_KingBoomBooAnimInstance_SetIsStart;
 
-// Function UnionRun.UnionRaceUIFestaReward.GetEMachineId
+// Function UnionRun.UnionNavMarker.GetUseSplineActor
+// 0x0028 (0x0028 - 0x0000)
+struct UnionNavMarker_GetUseSplineActor final
+{
+public:
+	TSoftObjectPtr<class AActor>                  ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetUseSplineActor;
+
+// Function UnionRun.UnionNavMarker.IsFinalLapOnly
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_IsFinalLapOnly final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_IsFinalLapOnly;
+
+// Function UnionRun.UnionNavMarker.SetIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionNavMarker_SetIndex final
+{
+public:
+	int32                                         NewIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetIndex;
+
+// Function UnionRun.UnionNavMarker.SetIsAnother
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_SetIsAnother final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetIsAnother;
+
+// Function UnionRun.UnionNavMarker.SetLapType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_SetLapType final
+{
+public:
+	ENavMarkerLapType                             NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetLapType;
+
+// Function UnionRun.UnionNavMarker.SetSplineOnPosition
+// 0x0004 (0x0004 - 0x0000)
+struct UnionNavMarker_SetSplineOnPosition final
+{
+public:
+	int32                                         InPosition;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetSplineOnPosition;
+
+// Function UnionRun.UnionNavMarker.SetTransformRingType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_SetTransformRingType final
+{
+public:
+	ETransformRingType                            TransformType;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetTransformRingType;
+
+// Function UnionRun.UnionNavMarker.SetType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_SetType final
+{
+public:
+	EUnionNavMarkerType                           NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetType;
+
+// Function UnionRun.UnionNavMarker.SetUseSplineActor
+// 0x0028 (0x0028 - 0x0000)
+struct UnionNavMarker_SetUseSplineActor final
+{
+public:
+	TSoftObjectPtr<class AActor>                  InUseSplineActor;                                  // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetUseSplineActor;
+
+// Function UnionRun.UnionNavMarker.SetUseSplineLength
+// 0x0004 (0x0004 - 0x0000)
+struct UnionNavMarker_SetUseSplineLength final
+{
+public:
+	float                                         InLength;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_SetUseSplineLength;
+
+// Function UnionRun.UnionNavMarker.GetIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionNavMarker_GetIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetIndex;
+
+// Function UnionRun.UnionNavMarker.GetLapType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_GetLapType final
+{
+public:
+	ENavMarkerLapType                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetLapType;
+
+// Function UnionRun.UnionNavMarker.GetSplineOnPosition
+// 0x0004 (0x0004 - 0x0000)
+struct UnionNavMarker_GetSplineOnPosition final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetSplineOnPosition;
+
+// Function UnionRun.UnionNavMarker.GetTransformRingType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_GetTransformRingType final
+{
+public:
+	ETransformRingType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetTransformRingType;
+
+// Function UnionRun.UnionNavMarker.GetType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_GetType final
+{
+public:
+	EUnionNavMarkerType                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetType;
+
+// Function UnionRun.UnionNavMarker.GetUnionSplineComponent
 // 0x0008 (0x0008 - 0x0000)
-struct UnionRaceUIFestaReward_GetEMachineId final
+struct UnionNavMarker_GetUnionSplineComponent final
+{
+public:
+	class UUnionSplineComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetUnionSplineComponent;
+
+// Function UnionRun.UnionNavMarker.GetUseSplineLength
+// 0x0004 (0x0004 - 0x0000)
+struct UnionNavMarker_GetUseSplineLength final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_GetUseSplineLength;
+
+// Function UnionRun.UnionNavMarker.IsAnother
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_IsAnother final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_IsAnother;
+
+// Function UnionRun.UnionNavMarker.IsInvalid
+// 0x0001 (0x0001 - 0x0000)
+struct UnionNavMarker_IsInvalid final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionNavMarker_IsInvalid;
+
+// Function UnionRun.PauseManager.SetGamePaused
+// 0x0008 (0x0008 - 0x0000)
+struct PauseManager_SetGamePaused final
+{
+public:
+	bool                                          Paused;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RacerIndex;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PauseManager_SetGamePaused;
+
+// Function UnionRun.PauseManager.SetGamePauseOwnerRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct PauseManager_SetGamePauseOwnerRacerIndex final
 {
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMachineId                                    ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PauseManager_SetGamePauseOwnerRacerIndex;
+
+// Function UnionRun.PauseManager.SetIsOnlineMode
+// 0x0001 (0x0001 - 0x0000)
+struct PauseManager_SetIsOnlineMode final
+{
+public:
+	bool                                          IsOnlineMode;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PauseManager_SetIsOnlineMode;
+
+// Function UnionRun.PauseManager.GetGamePauseOwnerRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct PauseManager_GetGamePauseOwnerRacerIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PauseManager_GetGamePauseOwnerRacerIndex;
+
+// Function UnionRun.PauseManager.IsGamePaused
+// 0x0001 (0x0001 - 0x0000)
+struct PauseManager_IsGamePaused final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PauseManager_IsGamePaused;
+
+// Function UnionRun.PauseManager.IsGamePauseOwnerGoaled
+// 0x0001 (0x0001 - 0x0000)
+struct PauseManager_IsGamePauseOwnerGoaled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PauseManager_IsGamePauseOwnerGoaled;
+
+// Function UnionRun.PauseManager.IsOnlineMode
+// 0x0001 (0x0001 - 0x0000)
+struct PauseManager_IsOnlineMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PauseManager_IsOnlineMode;
+
+// Function UnionRun.UnionRaceHitInfoGroup.SetItemIdIndex_Impl
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceHitInfoGroup_SetItemIdIndex_Impl final
+{
+public:
+	int32                                         InItemIdIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceHitInfoGroup_SetItemIdIndex_Impl;
+
+// Function UnionRun.UnionRaceHitInfoGroup.UpdateHitInfoGroup
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceHitInfoGroup_UpdateHitInfoGroup final
+{
+public:
+	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceHitInfoGroup_UpdateHitInfoGroup;
+
+// Function UnionRun.RaceLogUtil.GetRacerLapInfo
+// 0x0018 (0x0018 - 0x0000)
+struct RaceLogUtil_GetRacerLapInfo final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceLogUtil_GetRacerLapInfo;
+
+// Function UnionRun.RaceLogUtil.GetRacerStatusInfo
+// 0x0018 (0x0018 - 0x0000)
+struct RaceLogUtil_GetRacerStatusInfo final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceLogUtil_GetRacerStatusInfo;
+
+// Function UnionRun.RaceLogUtil.PrintRaceLog
+// 0x0028 (0x0028 - 0x0000)
+struct RaceLogUtil_PrintRaceLog final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 str;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 at;                                                // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceLogUtil_PrintRaceLog;
+
+// Function UnionRun.RaceLogUtil.PrintRunLog
+// 0x0028 (0x0028 - 0x0000)
+struct RaceLogUtil_PrintRunLog final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 str;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 at;                                                // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceLogUtil_PrintRunLog;
+
+// Function UnionRun.RaceLogUtil.PrintWarpLog
+// 0x0028 (0x0028 - 0x0000)
+struct RaceLogUtil_PrintWarpLog final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 str;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 at;                                                // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceLogUtil_PrintWarpLog;
+
+// Function UnionRun.RacerReactionManager.ForcePlayVoice
+// 0x00A8 (0x00A8 - 0x0000)
+struct RacerReactionManager_ForcePlayVoice final
+{
+public:
+	struct FRacerReactionVoice                    ReactionVoice;                                     // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x00A0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinimumCoolTime;                                   // 0x00A4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RacerReactionManager_ForcePlayVoice;
+
+// Function UnionRun.RacerReactionManager.SoundPlayIrregularInfoDod
+// 0x00B0 (0x00B0 - 0x0000)
+struct RacerReactionManager_SoundPlayIrregularInfoDod final
+{
+public:
+	struct FRacerReactionVoice                    ReactionVoice;                                     // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x00A0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinimumCoolTime;                                   // 0x00A4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x00A8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RacerReactionManager_SoundPlayIrregularInfoDod;
+
+// Function UnionRun.RaceTestUtils.EndAutoCsvProfile
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_EndAutoCsvProfile final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_EndAutoCsvProfile;
+
+// Function UnionRun.RaceTestUtils.EndAutoKibana
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_EndAutoKibana final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_EndAutoKibana;
+
+// Function UnionRun.RaceTestUtils.EndAutoProfileGpu
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_EndAutoProfileGpu final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_EndAutoProfileGpu;
+
+// Function UnionRun.RaceTestUtils.EndAutoUnrealInsights
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_EndAutoUnrealInsights final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_EndAutoUnrealInsights;
+
+// Function UnionRun.RaceTestUtils.EndRaceLoadTest
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_EndRaceLoadTest final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_EndRaceLoadTest;
+
+// Function UnionRun.RaceTestUtils.EndRaceTest
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_EndRaceTest final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_EndRaceTest;
+
+// Function UnionRun.RaceTestUtils.GetAutoCsvProfileModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetAutoCsvProfileModeFlag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetAutoCsvProfileModeFlag;
+
+// Function UnionRun.RaceTestUtils.GetAutoDebugKibanaModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetAutoDebugKibanaModeFlag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetAutoDebugKibanaModeFlag;
+
+// Function UnionRun.RaceTestUtils.GetAutoDetailKibanaModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetAutoDetailKibanaModeFlag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetAutoDetailKibanaModeFlag;
+
+// Function UnionRun.RaceTestUtils.GetAutoKibanaModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetAutoKibanaModeFlag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetAutoKibanaModeFlag;
+
+// Function UnionRun.RaceTestUtils.GetAutoProfileGpuModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetAutoProfileGpuModeFlag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetAutoProfileGpuModeFlag;
+
+// Function UnionRun.RaceTestUtils.GetAutoUnrealInsightsModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetAutoUnrealInsightsModeFlag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetAutoUnrealInsightsModeFlag;
+
+// Function UnionRun.RaceTestUtils.GetCumstomRaceTestConfig
+// 0x0010 (0x0010 - 0x0000)
+struct RaceTestUtils_GetCumstomRaceTestConfig final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetCumstomRaceTestConfig;
+
+// Function UnionRun.RaceTestUtils.GetNoHitItemPhysiceLayerMask
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_GetNoHitItemPhysiceLayerMask final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetNoHitItemPhysiceLayerMask;
+
+// Function UnionRun.RaceTestUtils.GetOverrideCamera
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetOverrideCamera final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCamera;
+
+// Function UnionRun.RaceTestUtils.GetOverrideCameraElevation
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverrideCameraElevation final
+{
+public:
+	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UnionRaceUIFestaReward_GetEMachineId;
+DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraElevation;
 
-// Function UnionRun.UnionRaceUIFestaReward.GetRacerContributionList
-// 0x0018 (0x0018 - 0x0000)
-struct UnionRaceUIFestaReward_GetRacerContributionList final
+// Function UnionRun.RaceTestUtils.GetOverrideCameraOffset
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverrideCameraOffset final
 {
 public:
-	int32                                         InPlayerRacerIndex;                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Offset;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraOffset;
+
+// Function UnionRun.RaceTestUtils.GetOverrideCameraTargetY
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverrideCameraTargetY final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraTargetY;
+
+// Function UnionRun.RaceTestUtils.GetOverrideCameraTargetZ
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverrideCameraTargetZ final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraTargetZ;
+
+// Function UnionRun.RaceTestUtils.GetOverrideCameraVFov
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverrideCameraVFov final
+{
+public:
+	float                                         VFov;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraVFov;
+
+// Function UnionRun.RaceTestUtils.GetOverridePathCamera
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetOverridePathCamera final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCamera;
+
+// Function UnionRun.RaceTestUtils.GetOverridePathCameraElevation
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverridePathCameraElevation final
+{
+public:
+	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraElevation;
+
+// Function UnionRun.RaceTestUtils.GetOverridePathCameraOffset
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverridePathCameraOffset final
+{
+public:
+	float                                         Offset;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraOffset;
+
+// Function UnionRun.RaceTestUtils.GetOverridePathCameraTargetY
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverridePathCameraTargetY final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraTargetY;
+
+// Function UnionRun.RaceTestUtils.GetOverridePathCameraTargetZ
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverridePathCameraTargetZ final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraTargetZ;
+
+// Function UnionRun.RaceTestUtils.GetOverridePathCameraVFov
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetOverridePathCameraVFov final
+{
+public:
+	float                                         VFov;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraVFov;
+
+// Function UnionRun.RaceTestUtils.GetRaceLoadTestMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_GetRaceLoadTestMode final
+{
+public:
+	ERaceLoadTestMode                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetRaceLoadTestMode;
+
+// Function UnionRun.RaceTestUtils.GetRacerSetting
+// 0x0030 (0x0030 - 0x0000)
+struct RaceTestUtils_GetRacerSetting final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFestaRacerContribution>        OutFestaRacerContribution;                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FRaceTestRacerSetting                  Setting;                                           // 0x0008(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UnionRaceUIFestaReward_GetRacerContributionList;
+DUMPER7_ASSERTS_RaceTestUtils_GetRacerSetting;
 
-// Function UnionRun.UnionRaceUIFestaReward.GetUpdatePoint
+// Function UnionRun.RaceTestUtils.GetRaceTestConfig
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetRaceTestConfig final
+{
+public:
+	const class URaceTestConfig*                  ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetRaceTestConfig;
+
+// Function UnionRun.RaceTestUtils.GetRaceTestConfigAccess
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetRaceTestConfigAccess final
+{
+public:
+	class URaceTestConfig*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetRaceTestConfigAccess;
+
+// Function UnionRun.RaceTestUtils.GetRaceTestItemTableAsset
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_GetRaceTestItemTableAsset final
+{
+public:
+	const class UDataTable*                       ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetRaceTestItemTableAsset;
+
+// Function UnionRun.RaceTestUtils.GetScreenNum
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_GetScreenNum final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetScreenNum;
+
+// Function UnionRun.RaceTestUtils.GetTagNameToDestroyActor
+// 0x0010 (0x0010 - 0x0000)
+struct RaceTestUtils_GetTagNameToDestroyActor final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_GetTagNameToDestroyActor;
+
+// Function UnionRun.RaceTestUtils.IsAutoCsvProfileMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsAutoCsvProfileMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsAutoCsvProfileMode;
+
+// Function UnionRun.RaceTestUtils.IsAutoDebugKibanaMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsAutoDebugKibanaMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsAutoDebugKibanaMode;
+
+// Function UnionRun.RaceTestUtils.IsAutoDetailKibanaMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsAutoDetailKibanaMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsAutoDetailKibanaMode;
+
+// Function UnionRun.RaceTestUtils.IsAutoKibanaMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsAutoKibanaMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsAutoKibanaMode;
+
+// Function UnionRun.RaceTestUtils.IsAutoProfileGpuMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsAutoProfileGpuMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsAutoProfileGpuMode;
+
+// Function UnionRun.RaceTestUtils.IsAutoUnrealInsightsMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsAutoUnrealInsightsMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsAutoUnrealInsightsMode;
+
+// Function UnionRun.RaceTestUtils.IsDisabledGameHighLoading
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsDisabledGameHighLoading final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsDisabledGameHighLoading;
+
+// Function UnionRun.RaceTestUtils.IsEnableItemTableSynchro
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsEnableItemTableSynchro final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsEnableItemTableSynchro;
+
+// Function UnionRun.RaceTestUtils.IsFinalRaceLoadTest
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsFinalRaceLoadTest final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsFinalRaceLoadTest;
+
+// Function UnionRun.RaceTestUtils.IsForceComRun
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_IsForceComRun final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsForceComRun;
+
+// Function UnionRun.RaceTestUtils.IsNoBgmMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsNoBgmMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsNoBgmMode;
+
+// Function UnionRun.RaceTestUtils.IsNoCourseObject
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsNoCourseObject final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsNoCourseObject;
+
+// Function UnionRun.RaceTestUtils.IsNoGimmickObject
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsNoGimmickObject final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsNoGimmickObject;
+
+// Function UnionRun.RaceTestUtils.IsNoHudMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsNoHudMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsNoHudMode;
+
+// Function UnionRun.RaceTestUtils.IsPathCameraPawnMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsPathCameraPawnMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsPathCameraPawnMode;
+
+// Function UnionRun.RaceTestUtils.IsPerformanceTestRun
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_IsPerformanceTestRun final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsPerformanceTestRun;
+
+// Function UnionRun.RaceTestUtils.IsRaceLoadAutoTestMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsRaceLoadAutoTestMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsRaceLoadAutoTestMode;
+
+// Function UnionRun.RaceTestUtils.IsRaceTestMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsRaceTestMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsRaceTestMode;
+
+// Function UnionRun.RaceTestUtils.IsUseItemTable
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsUseItemTable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsUseItemTable;
+
+// Function UnionRun.RaceTestUtils.OverrideDebugMenuRaceLoadTestMode
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_OverrideDebugMenuRaceLoadTestMode final
+{
+public:
+	int32                                         Mode;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_OverrideDebugMenuRaceLoadTestMode;
+
+// Function UnionRun.RaceTestUtils.SaveRaceLoadAutoTestResult
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SaveRaceLoadAutoTestResult final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SaveRaceLoadAutoTestResult;
+
+// Function UnionRun.RaceTestUtils.SetAutoCsvProfileModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetAutoCsvProfileModeFlag final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetAutoCsvProfileModeFlag;
+
+// Function UnionRun.RaceTestUtils.SetAutoDebugKibanaModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetAutoDebugKibanaModeFlag final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetAutoDebugKibanaModeFlag;
+
+// Function UnionRun.RaceTestUtils.SetAutoDetailKibanaModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetAutoDetailKibanaModeFlag final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetAutoDetailKibanaModeFlag;
+
+// Function UnionRun.RaceTestUtils.SetAutoKibanaModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetAutoKibanaModeFlag final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetAutoKibanaModeFlag;
+
+// Function UnionRun.RaceTestUtils.SetAutoProfileGpuModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetAutoProfileGpuModeFlag final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetAutoProfileGpuModeFlag;
+
+// Function UnionRun.RaceTestUtils.SetAutoUnrealInsightsModeFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetAutoUnrealInsightsModeFlag final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetAutoUnrealInsightsModeFlag;
+
+// Function UnionRun.RaceTestUtils.SetCustomRaceTestConfig
+// 0x0010 (0x0010 - 0x0000)
+struct RaceTestUtils_SetCustomRaceTestConfig final
+{
+public:
+	class FString                                 RaceTestConfig;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetCustomRaceTestConfig;
+
+// Function UnionRun.RaceTestUtils.SetDrivingCount
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetDrivingCount final
+{
+public:
+	int32                                         DrivingCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetDrivingCount;
+
+// Function UnionRun.RaceTestUtils.SetLoadingTime
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetLoadingTime final
+{
+public:
+	float                                         LoadingTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetLoadingTime;
+
+// Function UnionRun.RaceTestUtils.SetOverrideCamera
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetOverrideCamera final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCamera;
+
+// Function UnionRun.RaceTestUtils.SetOverrideCameraElevation
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverrideCameraElevation final
+{
+public:
+	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraElevation;
+
+// Function UnionRun.RaceTestUtils.SetOverrideCameraOffset
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverrideCameraOffset final
+{
+public:
+	float                                         Offset;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraOffset;
+
+// Function UnionRun.RaceTestUtils.SetOverrideCameraTargetY
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverrideCameraTargetY final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraTargetY;
+
+// Function UnionRun.RaceTestUtils.SetOverrideCameraTargetZ
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverrideCameraTargetZ final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraTargetZ;
+
+// Function UnionRun.RaceTestUtils.SetOverrideCameraVFov
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverrideCameraVFov final
+{
+public:
+	float                                         VFov;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraVFov;
+
+// Function UnionRun.RaceTestUtils.SetOverridePathCamera
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetOverridePathCamera final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCamera;
+
+// Function UnionRun.RaceTestUtils.SetOverridePathCameraElevation
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverridePathCameraElevation final
+{
+public:
+	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraElevation;
+
+// Function UnionRun.RaceTestUtils.SetOverridePathCameraOffset
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverridePathCameraOffset final
+{
+public:
+	float                                         Offset;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraOffset;
+
+// Function UnionRun.RaceTestUtils.SetOverridePathCameraTargetY
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverridePathCameraTargetY final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraTargetY;
+
+// Function UnionRun.RaceTestUtils.SetOverridePathCameraTargetZ
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverridePathCameraTargetZ final
+{
+public:
+	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraTargetZ;
+
+// Function UnionRun.RaceTestUtils.SetOverridePathCameraVFov
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetOverridePathCameraVFov final
+{
+public:
+	float                                         VFov;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraVFov;
+
+// Function UnionRun.RaceTestUtils.SetPathCameraPawnMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_SetPathCameraPawnMode final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetPathCameraPawnMode;
+
+// Function UnionRun.RaceTestUtils.SetRaceLoadTestCountMax
+// 0x0004 (0x0004 - 0x0000)
+struct RaceTestUtils_SetRaceLoadTestCountMax final
+{
+public:
+	int32                                         Count;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetRaceLoadTestCountMax;
+
+// Function UnionRun.RaceTestUtils.SetTagNameToDestroyActor
+// 0x0010 (0x0010 - 0x0000)
+struct RaceTestUtils_SetTagNameToDestroyActor final
+{
+public:
+	class FString                                 TagName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_SetTagNameToDestroyActor;
+
+// Function UnionRun.RaceTestUtils.StartAutoCsvProfile
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_StartAutoCsvProfile final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_StartAutoCsvProfile;
+
+// Function UnionRun.RaceTestUtils.StartAutoKibana
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_StartAutoKibana final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_StartAutoKibana;
+
+// Function UnionRun.RaceTestUtils.StartAutoProfileGpu
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_StartAutoProfileGpu final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_StartAutoProfileGpu;
+
+// Function UnionRun.RaceTestUtils.StartAutoUnrealInsights
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_StartAutoUnrealInsights final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_StartAutoUnrealInsights;
+
+// Function UnionRun.RaceTestUtils.StartRaceLoadTest
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_StartRaceLoadTest final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_StartRaceLoadTest;
+
+// Function UnionRun.RaceTestUtils.StartRaceTest
+// 0x0008 (0x0008 - 0x0000)
+struct RaceTestUtils_StartRaceTest final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_StartRaceTest;
+
+// Function UnionRun.RaceTestUtils.TickProfileGpuAndScreenshot
+// 0x0010 (0x0010 - 0x0000)
+struct RaceTestUtils_TickProfileGpuAndScreenshot final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      PC;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_TickProfileGpuAndScreenshot;
+
+// Function UnionRun.RaceTestUtils.UpdateRaceLoadAutoTest
+// 0x0018 (0x0018 - 0x0000)
+struct RaceTestUtils_UpdateRaceLoadAutoTest final
+{
+public:
+	TArray<EStageId>                              OpenStageIDs;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceTestUtils_UpdateRaceLoadAutoTest;
+
+// Function UnionRun.RaceTestUtils.IsCustomRaceTestAutoConfigMode
+// 0x0001 (0x0001 - 0x0000)
+struct RaceTestUtils_IsCustomRaceTestAutoConfigMode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceTestUtils_IsCustomRaceTestAutoConfigMode;
+
+// Function UnionRun.UnionRaceInfoInterface.NoticeChangeCountDownEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceInfoInterface_NoticeChangeCountDownEvent final
+{
+public:
+	int32                                         InNewValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InOldValue;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceInfoInterface_NoticeChangeCountDownEvent;
+
+// Function UnionRun.UnionRaceInfoInterface.NoticeChangeRaceStateEvent
+// 0x0002 (0x0002 - 0x0000)
+struct UnionRaceInfoInterface_NoticeChangeRaceStateEvent final
+{
+public:
+	ERaceInfoStateType                            InNewState;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERaceInfoStateType                            InOldState;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceInfoInterface_NoticeChangeRaceStateEvent;
+
+// Function UnionRun.UnionRaceInfoInterface.SetRaceInfo
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceInfoInterface_SetRaceInfo final
+{
+public:
+	class UUnionRaceInfo*                         InRaceInfo;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceInfoInterface_SetRaceInfo;
+
+// Function UnionRun.RaceUISubAiming.ReStartAimingUseBeforeSound
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubAiming_ReStartAimingUseBeforeSound final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubAiming_ReStartAimingUseBeforeSound;
+
+// Function UnionRun.RaceUISubAiming.SetRaceHUD
+// 0x0010 (0x0010 - 0x0000)
+struct RaceUISubAiming_SetRaceHUD final
+{
+public:
+	class UUnionRaceUI*                           inRaceHud;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         localPlayerNum;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubAiming_SetRaceHUD;
+
+// Function UnionRun.RaceUISubAiming.StopSound
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubAiming_StopSound final
+{
+public:
+	bool                                          bPause;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubAiming_StopSound;
+
+// Function UnionRun.RaceUISubAirTrickInfo.SetAirTrickInfoAndFireAnimation
+// 0x000C (0x000C - 0x0000)
+struct RaceUISubAirTrickInfo_SetAirTrickInfoAndFireAnimation final
+{
+public:
+	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SuccessBonusCount;                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsGhostView;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubAirTrickInfo_SetAirTrickInfoAndFireAnimation;
+
+// Function UnionRun.RaceUISubAirTrickInfo.SetAirTrickTextInfo
+// 0x0030 (0x0030 - 0x0000)
+struct RaceUISubAirTrickInfo_SetAirTrickTextInfo final
+{
+public:
+	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UImage*                                 Tex_1000;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UImage*                                 Tex_0100;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UImage*                                 Tex_0010;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UImage*                                 Tex_0001;                                          // 0x0020(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UImage*                                 Tex_Unit;                                          // 0x0028(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubAirTrickInfo_SetAirTrickTextInfo;
+
+// Function UnionRun.RaceUISubAirTrickInfo.GetAirTrickBonusValue
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubAirTrickInfo_GetAirTrickBonusValue final
+{
+public:
+	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubAirTrickInfo_GetAirTrickBonusValue;
+
+// Function UnionRun.RaceUISubAirTrickInfo.GetAirTrickValue
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubAirTrickInfo_GetAirTrickValue final
+{
+public:
+	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubAirTrickInfo_GetAirTrickValue;
+
+// Function UnionRun.RaceUISubApproachWarning.InitItemEnemyApproachSetting
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubApproachWarning_InitItemEnemyApproachSetting final
+{
+public:
+	float                                         InMaxScale;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUnionAttackItemInfoType                      AttackItemInfoType;                                // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         AttackItemId;                                      // 0x0005(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubApproachWarning_InitItemEnemyApproachSetting;
+
+// Function UnionRun.RaceUISubApproachWarning.OnPause
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubApproachWarning_OnPause final
+{
+public:
+	bool                                          bInPause;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubApproachWarning_OnPause;
+
+// Function UnionRun.RaceUISubApproachWarning.SetAttackTypeandId
+// 0x0002 (0x0002 - 0x0000)
+struct RaceUISubApproachWarning_SetAttackTypeandId final
+{
+public:
+	EUnionAttackItemInfoType                      InAttackType;                                      // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       InItemId;                                          // 0x0001(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubApproachWarning_SetAttackTypeandId;
+
+// Function UnionRun.RaceUISubApproachWarning.SetDriverId
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubApproachWarning_SetDriverId final
+{
+public:
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubApproachWarning_SetDriverId;
+
+// Function UnionRun.RaceUISubApproachWarning.SetItemId
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubApproachWarning_SetItemId final
+{
+public:
+	int32                                         InItemId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubApproachWarning_SetItemId;
+
+// Function UnionRun.RaceUISubApproachWarning.UpdateItemEnemyApproach
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubApproachWarning_UpdateItemEnemyApproach final
+{
+public:
+	float                                         ValueCM;                                           // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubApproachWarning_UpdateItemEnemyApproach;
+
+// Function UnionRun.RaceUISubApproachWarning.UpdateRacerApproach
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubApproachWarning_UpdateRacerApproach final
+{
+public:
+	float                                         ValueCM;                                           // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubApproachWarning_UpdateRacerApproach;
+
+// Function UnionRun.RaceUISubBasicOperation.IsKeyboard
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubBasicOperation_IsKeyboard final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBasicOperation_IsKeyboard;
+
+// Function UnionRun.TrexAnimInstance.GetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_GetIsAttack final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_GetIsAttack;
+
+// Function UnionRun.TrexAnimInstance.GetIsDamage
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_GetIsDamage final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_GetIsDamage;
+
+// Function UnionRun.TrexAnimInstance.GetIsMove
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_GetIsMove final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_GetIsMove;
+
+// Function UnionRun.TrexAnimInstance.GetIsTurn
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_GetIsTurn final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_GetIsTurn;
+
+// Function UnionRun.TrexAnimInstance.GetIsTurnEnd
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_GetIsTurnEnd final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_GetIsTurnEnd;
+
+// Function UnionRun.TrexAnimInstance.SetIsAttack
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_SetIsAttack final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_SetIsAttack;
+
+// Function UnionRun.TrexAnimInstance.SetIsDamage
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_SetIsDamage final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_SetIsDamage;
+
+// Function UnionRun.TrexAnimInstance.SetIsMove
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_SetIsMove final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_SetIsMove;
+
+// Function UnionRun.TrexAnimInstance.SetIsTurn
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_SetIsTurn final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_SetIsTurn;
+
+// Function UnionRun.TrexAnimInstance.SetIsTurnEnd
+// 0x0001 (0x0001 - 0x0000)
+struct TrexAnimInstance_SetIsTurnEnd final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TrexAnimInstance_SetIsTurnEnd;
+
+// Function UnionRun.RaceUISubBoost.CheckBoostLevelInGhostReplay
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubBoost_CheckBoostLevelInGhostReplay final
+{
+public:
+	int32                                         Level;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBoost_CheckBoostLevelInGhostReplay;
+
+// Function UnionRun.RaceUISubBoost.IsFastFirstCharge
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubBoost_IsFastFirstCharge final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubBoost_IsFastFirstCharge;
+
+// Function UnionRun.RaceUISubBoost.IsFastSecondCharge
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubBoost_IsFastSecondCharge final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubBoost_IsFastSecondCharge;
+
+// Function UnionRun.RaceUISubBoost.IsFastThirdCharge
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubBoost_IsFastThirdCharge final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubBoost_IsFastThirdCharge;
+
+// Function UnionRun.RaceUISubBoost.IsViewGhostReplay
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubBoost_IsViewGhostReplay final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBoost_IsViewGhostReplay;
+
+// Function UnionRun.RaceUISubBoost.SetVisibleHUD
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubBoost_SetVisibleHUD final
+{
+public:
+	bool                                          IsVisible_0;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DeltaTime;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBoost_SetVisibleHUD;
+
+// Function UnionRun.RaceUISubBoost.SetWaitTimeJustBoostInGhostReplay
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubBoost_SetWaitTimeJustBoostInGhostReplay final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBoost_SetWaitTimeJustBoostInGhostReplay;
+
+// Function UnionRun.RaceUISubBoost.UpdateChargeInfo
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubBoost_UpdateChargeInfo final
+{
+public:
+	int32                                         ChargeLevel;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChargeRate;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBoost_UpdateChargeInfo;
+
+// Function UnionRun.RaceUISubBoost.GetIsOpened
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubBoost_GetIsOpened final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBoost_GetIsOpened;
+
+// Function UnionRun.RaceUISubBtnKey.SetButtonState
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubBtnKey_SetButtonState final
+{
+public:
+	int32                                         InState;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnKey_SetButtonState;
+
+// Function UnionRun.RaceUISubBtnKey.GetKeyDisplayName
+// 0x0030 (0x0030 - 0x0000)
+struct RaceUISubBtnKey_GetKeyDisplayName final
+{
+public:
+	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PlayerControllerIndex;                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubBtnKey_GetKeyDisplayName;
+
+// Function UnionRun.RaceUISubBtnKey.GetMouseButtonIndex
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubBtnKey_GetMouseButtonIndex final
+{
+public:
+	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubBtnKey_GetMouseButtonIndex;
+
+// Function UnionRun.RaceUISubButtonBase.GetControllerButtonTextureType
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubButtonBase_GetControllerButtonTextureType final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerButtonTextureType                  ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubButtonBase_GetControllerButtonTextureType;
+
+// Function UnionRun.RaceUISubButtonBase.GetControllerType
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubButtonBase_GetControllerType final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBtnGuidePlatFormController                   ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubButtonBase_GetControllerType;
+
+// Function UnionRun.RaceUISubCourseMapIcon.SetReaderFlag
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubCourseMapIcon_SetReaderFlag final
+{
+public:
+	bool                                          InReader;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubCourseMapIcon_SetReaderFlag;
+
+// Function UnionRun.RaceUISubGadget.IsAdditionalGadget
+// 0x0002 (0x0002 - 0x0000)
+struct RaceUISubGadget_IsAdditionalGadget final
+{
+public:
+	EGadgetId                                     gadgetId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubGadget_IsAdditionalGadget;
+
+// Function UnionRun.RaceUISubGadget.IsNotEnableGadget
+// 0x0002 (0x0002 - 0x0000)
+struct RaceUISubGadget_IsNotEnableGadget final
+{
+public:
+	EGadgetId                                     gadgetId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubGadget_IsNotEnableGadget;
+
+// Function UnionRun.RaceUISubGadgetIcon.SetGadgetId
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubGadgetIcon_SetGadgetId final
+{
+public:
+	EGadgetId                                     InGadgetId;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubGadgetIcon_SetGadgetId;
+
+// Function UnionRun.RaceUISubGadgetIcon.SetIconMaterial
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubGadgetIcon_SetIconMaterial final
+{
+public:
+	int32                                         IconIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubGadgetIcon_SetIconMaterial;
+
+// Function UnionRun.RaceUISubGadgetIcon.GetGadgetId
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubGadgetIcon_GetGadgetId final
+{
+public:
+	EGadgetId                                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubGadgetIcon_GetGadgetId;
+
+// Function UnionRun.RaceUISubRing.SetCurrentRingCount
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubRing_SetCurrentRingCount final
+{
+public:
+	int32                                         NewRingCount;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubRing_SetCurrentRingCount;
+
+// Function UnionRun.RaceUISubRing.SetParams
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubRing_SetParams final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubRing_SetParams;
+
+// Function UnionRun.RaceUISubRing.SetRingBackColor
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubRing_SetRingBackColor final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsGroup;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsLocalMulti;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubRing_SetRingBackColor;
+
+// Function UnionRun.RaceUISubGroupRing.SetRingCharaIcon
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubGroupRing_SetRingCharaIcon final
+{
+public:
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubGroupRing_SetRingCharaIcon;
+
+// Function UnionRun.RaceUISubItemIcon.DisplayHideAnim
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubItemIcon_DisplayHideAnim final
+{
+public:
+	bool                                          Display;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_DisplayHideAnim;
+
+// Function UnionRun.RaceUISubItemIcon.GetRandomLotteryDisplayItemId
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubItemIcon_GetRandomLotteryDisplayItemId final
+{
+public:
+	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_GetRandomLotteryDisplayItemId;
+
+// Function UnionRun.RaceUISubItemIcon.ItemLostAnimStart
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubItemIcon_ItemLostAnimStart final
+{
+public:
+	bool                                          bHideIcon;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_ItemLostAnimStart;
+
+// Function UnionRun.RaceUISubItemIcon.LotterySeqStart
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubItemIcon_LotterySeqStart final
+{
+public:
+	bool                                          LotterySound;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_LotterySeqStart;
+
+// Function UnionRun.RaceUISubItemIcon.PlayItemUseSound
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubItemIcon_PlayItemUseSound final
+{
+public:
+	EItemId                                       ItemId;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     DriverId;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSelectorLabel;                                   // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoundHandle                           ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_PlayItemUseSound;
+
+// Function UnionRun.RaceUISubItemIcon.SetAttributeColorIndex
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubItemIcon_SetAttributeColorIndex final
+{
+public:
+	int32                                         InAttributeIndex;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetAttributeColorIndex;
+
+// Function UnionRun.RaceUISubItemIcon.SetChargeGaugeRate
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubItemIcon_SetChargeGaugeRate final
+{
+public:
+	float                                         Rate;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetChargeGaugeRate;
+
+// Function UnionRun.RaceUISubItemIcon.SetGaugeType
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubItemIcon_SetGaugeType final
+{
+public:
+	bool                                          bRemainCountGauge;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetGaugeType;
+
+// Function UnionRun.RaceUISubItemIcon.SetItemIdIndex
+// 0x000C (0x000C - 0x0000)
+struct RaceUISubItemIcon_SetItemIdIndex final
+{
+public:
+	int32                                         InItemIdIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InRemainCount;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreAttribute;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnLottery;                                        // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetItemIdIndex;
+
+// Function UnionRun.RaceUISubItemIcon.SetItemIdTexture
+// 0x0050 (0x0050 - 0x0000)
+struct RaceUISubItemIcon_SetItemIdTexture final
+{
+public:
+	TMap<EItemId, class UTexture2D*>              InItemId_TextureMap;                               // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetItemIdTexture;
+
+// Function UnionRun.RaceUISubItemIcon.SetLotteryDisplayItemIds
+// 0x0010 (0x0010 - 0x0000)
+struct RaceUISubItemIcon_SetLotteryDisplayItemIds final
+{
+public:
+	TArray<uint8>                                 ItemIds;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetLotteryDisplayItemIds;
+
+// Function UnionRun.RaceUISubItemIcon.SetRemainCountGauge
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubItemIcon_SetRemainCountGauge final
+{
+public:
+	int32                                         Count;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxCount;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetRemainCountGauge;
+
+// Function UnionRun.RaceUISubItemIcon.SetRingNum
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubItemIcon_SetRingNum final
+{
+public:
+	int32                                         InRingCount;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetRingNum;
+
+// Function UnionRun.RaceUISubItemIcon.SetRingNumVisible
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubItemIcon_SetRingNumVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubItemIcon_SetRingNumVisible;
+
+// Function UnionRun.RaceUISubLap.InitializeLapCount
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubLap_InitializeLapCount final
+{
+public:
+	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubLap_InitializeLapCount;
+
+// Function UnionRun.RaceUISubLap.SetCurrentLap
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubLap_SetCurrentLap final
+{
+public:
+	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubLap_SetCurrentLap;
+
+// Function UnionRun.RaceUISubLap.SetCurrentLapMID
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubLap_SetCurrentLapMID final
+{
+public:
+	class UMaterialInstanceDynamic*               Mid;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubLap_SetCurrentLapMID;
+
+// Function UnionRun.RaceUISubLap.SetMaxLap
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubLap_SetMaxLap final
+{
+public:
+	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubLap_SetMaxLap;
+
+// Function UnionRun.RaceUISubLap.SetMaxLapMID
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubLap_SetMaxLapMID final
+{
+public:
+	class UMaterialInstanceDynamic*               Mid;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubLap_SetMaxLapMID;
+
+// Function UnionRun.RaceUISubLap.UpdateLapCount
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubLap_UpdateLapCount final
+{
+public:
+	float                                         InDelta;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubLap_UpdateLapCount;
+
+// Function UnionRun.RaceUISubPlayerName.GetGhostPfId
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubPlayerName_GetGhostPfId final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubPlayerName_GetGhostPfId;
+
+// Function UnionRun.RaceUISubReturnDashGauge.GetButtonWidget
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubReturnDashGauge_GetButtonWidget final
+{
+public:
+	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubReturnDashGauge_GetButtonWidget;
+
+// Function UnionRun.RaceUISubReturnDashGauge.SetDashInputKey
+// 0x0018 (0x0018 - 0x0000)
+struct RaceUISubReturnDashGauge_SetDashInputKey final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetDashInputKey;
+
+// Function UnionRun.RaceUISubReturnDashGauge.SetGaugeParcent
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubReturnDashGauge_SetGaugeParcent final
+{
+public:
+	float                                         GaugeRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetGaugeParcent;
+
+// Function UnionRun.RaceUISubReturnDashGauge.SetGaugePivotAndRange
+// 0x0010 (0x0010 - 0x0000)
+struct RaceUISubReturnDashGauge_SetGaugePivotAndRange final
+{
+public:
+	class UImage*                                 ImageRef;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PivotRate;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GaugeRateRange;                                    // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetGaugePivotAndRange;
+
+// Function UnionRun.RaceUISubReturnDashGauge.SetReturnDashSetting
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubReturnDashGauge_SetReturnDashSetting final
+{
+public:
+	float                                         Pivot;                                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Range;                                             // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetReturnDashSetting;
+
+// Function UnionRun.RaceUISubStartGauge.GetButtonWidget
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubStartGauge_GetButtonWidget final
+{
+public:
+	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_GetButtonWidget;
+
+// Function UnionRun.RaceUISubStartGauge.GetKeyAccel
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubStartGauge_GetKeyAccel final
+{
+public:
+	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_GetKeyAccel;
+
+// Function UnionRun.RaceUISubStartGauge.IsPlayControlKeyboard
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubStartGauge_IsPlayControlKeyboard final
+{
+public:
+	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_IsPlayControlKeyboard;
+
+// Function UnionRun.RaceUISubStartGauge.SetDashInputKey
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubStartGauge_SetDashInputKey final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PlayerIndex;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_SetDashInputKey;
+
+// Function UnionRun.RaceUISubStartGauge.SetGaugeParcent
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubStartGauge_SetGaugeParcent final
+{
+public:
+	float                                         GaugeRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_SetGaugeParcent;
+
+// Function UnionRun.RaceUISubStartGauge.SetGaugeParcentTrigger
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubStartGauge_SetGaugeParcentTrigger final
+{
+public:
+	float                                         GaugeRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_SetGaugeParcentTrigger;
+
+// Function UnionRun.RaceUISubStartGauge.SetGaugePivotAndRange
+// 0x0010 (0x0010 - 0x0000)
+struct RaceUISubStartGauge_SetGaugePivotAndRange final
+{
+public:
+	class UImage*                                 ImageRef;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PivotRate;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GaugeRateRange;                                    // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_SetGaugePivotAndRange;
+
+// Function UnionRun.RaceUISubStartGauge.SetStartDashParamSetting
+// 0x0030 (0x0030 - 0x0000)
+struct RaceUISubStartGauge_SetStartDashParamSetting final
+{
+public:
+	struct FUnionRaceStartDashParam               InStartDashParam;                                  // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_SetStartDashParamSetting;
+
+// Function UnionRun.RaceUISubStartGauge.SetStartDashSetting
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubStartGauge_SetStartDashSetting final
+{
+public:
+	float                                         LV3_PIVOT;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LV3_RANGE;                                         // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LV2_PIVOT;                                         // 0x0008(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LV2_RANGE;                                         // 0x000C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NG1_PIVOT;                                         // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NG1_RANGE;                                         // 0x0014(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NG2_PIVOT;                                         // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NG2_RANGE;                                         // 0x001C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubStartGauge_SetStartDashSetting;
+
+// Function UnionRun.RaceUISubTeamGroup.SetCharaIconNative
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubTeamGroup_SetCharaIconNative final
+{
+public:
+	class UTexture2D*                             IconTex;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTeamGroup_SetCharaIconNative;
+
+// Function UnionRun.RaceUISubTeamGroup.SetDispTextYou
+// 0x0001 (0x0001 - 0x0000)
+struct RaceUISubTeamGroup_SetDispTextYou final
+{
+public:
+	bool                                          IsDisp;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTeamGroup_SetDispTextYou;
+
+// Function UnionRun.RaceUISubTeamGroup.SetRankNative
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubTeamGroup_SetRankNative final
+{
+public:
+	int32                                         Rank;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTeamGroup_SetRankNative;
+
+// Function UnionRun.RaceUISubTimeTrialTime.SetTargetTime
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubTimeTrialTime_SetTargetTime final
+{
+public:
+	class URichTextBlock*                         TargetTextBlock;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   TargetName;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	int32                                         TargetTime;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsClockCount;                                      // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubTimeTrialTime_SetTargetTime;
+
+// Function UnionRun.RaceUISubTimeTrialTime.SetTargetTime4Best
+// 0x0008 (0x0008 - 0x0000)
+struct RaceUISubTimeTrialTime_SetTargetTime4Best final
+{
+public:
+	class URichTextBlock*                         TargetTextBlock;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTimeTrialTime_SetTargetTime4Best;
+
+// Function UnionRun.RaceUISubTimeTrialTime.UpdateLapTime
 // 0x0028 (0x0028 - 0x0000)
-struct UnionRaceUIFestaReward_GetUpdatePoint final
+struct RaceUISubTimeTrialTime_UpdateLapTime final
 {
 public:
-	TArray<struct FFestaPointRewardUIData>        RewardDataArray;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         StartIconCount;                                    // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NowPoint;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Add;                                               // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutIconWindowX;                                    // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutGagePosi;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutGetRewardIndex;                                 // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsBestLap;                                         // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRaceUITimeTrialTime                   ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUIFestaReward_GetUpdatePoint;
+DUMPER7_ASSERTS_RaceUISubTimeTrialTime_UpdateLapTime;
 
-// Function UnionRun.UnionRaceUIFestaReward.SetupViewBg
-// 0x0040 (0x0040 - 0x0000)
-struct UnionRaceUIFestaReward_SetupViewBg final
+// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapDiffTime
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubTimeTrialTimeLap_SetLapDiffTime final
 {
 public:
-	struct FVector                                InCameraLocation;                                  // 0x0000(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               CameraRotation;                                    // 0x0018(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsLightSpawn;                                     // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACameraActor*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LapNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionRaceUIFestaReward_SetupViewBg;
+DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapDiffTime;
+
+// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapTime
+// 0x0024 (0x0024 - 0x0000)
+struct RaceUISubTimeTrialTimeLap_SetLapTime final
+{
+public:
+	struct FRaceUITimeTrialTime                   NewTime;                                           // 0x0000(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         Lap;                                               // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapTime;
+
+// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapTimeIsGhostReplay
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUISubTimeTrialTimeLap_SetLapTimeIsGhostReplay final
+{
+public:
+	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapTimeIsGhostReplay;
+
+// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapTimeWithDiff
+// 0x0028 (0x0028 - 0x0000)
+struct RaceUISubTimeTrialTimeLap_SetLapTimeWithDiff final
+{
+public:
+	struct FRaceUITimeTrialTime                   NewTime;                                           // 0x0000(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         Lap;                                               // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsVisibleDiff;                                     // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapTimeWithDiff;
+
+// Function UnionRun.RaceUISubTimeTrialTimeLap.UpdateLapTime
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUISubTimeTrialTimeLap_UpdateLapTime final
+{
+public:
+	struct FRaceUITimeTrialTime                   ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_UpdateLapTime;
+
+// Function UnionRun.RaceUITutorialControllerKey.GetTutorialKey
+// 0x0020 (0x0020 - 0x0000)
+struct RaceUITutorialControllerKey_GetTutorialKey final
+{
+public:
+	ETutorialAction                               tutorialAction;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUITutorialControllerKey_GetTutorialKey;
+
+// Function UnionRun.RaceUITutorialControllerKey.UpdateHintIndex
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUITutorialControllerKey_UpdateHintIndex final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUITutorialControllerKey_UpdateHintIndex;
+
+// Function UnionRun.RaceUITutorialControllerKey.UpdateTutorialIndex
+// 0x0004 (0x0004 - 0x0000)
+struct RaceUITutorialControllerKey_UpdateTutorialIndex final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RaceUITutorialControllerKey_UpdateTutorialIndex;
+
+// Function UnionRun.ReplayFixedCameraCollision.OnCollisionBaseHit
+// 0x0060 (0x0060 - 0x0000)
+struct ReplayFixedCameraCollision_OnCollisionBaseHit final
+{
+public:
+	struct FCollisionHitInfo                      Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ReplayFixedCameraCollision_OnCollisionBaseHit;
+
+// Function UnionRun.ReplayFixedCameraCollision.SetCameraData
+// 0x0018 (0x0018 - 0x0000)
+struct ReplayFixedCameraCollision_SetCameraData final
+{
+public:
+	struct FVector                                NewBoxSize;                                        // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ReplayFixedCameraCollision_SetCameraData;
+
+// Function UnionRun.RingObject.GetFinalLapRingNum
+// 0x0004 (0x0004 - 0x0000)
+struct RingObject_GetFinalLapRingNum final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RingObject_GetFinalLapRingNum;
+
+// Function UnionRun.RingObject.GetFinalLapRingOffset
+// 0x0004 (0x0004 - 0x0000)
+struct RingObject_GetFinalLapRingOffset final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RingObject_GetFinalLapRingOffset;
+
+// Function UnionRun.RingObject.IsFinalLapChange
+// 0x0001 (0x0001 - 0x0000)
+struct RingObject_IsFinalLapChange final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RingObject_IsFinalLapChange;
+
+// Function UnionRun.RingObject.SetIsFinalLapChange
+// 0x0001 (0x0001 - 0x0000)
+struct RingObject_SetIsFinalLapChange final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RingObject_SetIsFinalLapChange;
+
+// Function UnionRun.ShortcutRingObject.GetOverrideCollisionScale
+// 0x0004 (0x0004 - 0x0000)
+struct ShortcutRingObject_GetOverrideCollisionScale final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_GetOverrideCollisionScale;
+
+// Function UnionRun.ShortcutRingObject.GetRingScale
+// 0x0004 (0x0004 - 0x0000)
+struct ShortcutRingObject_GetRingScale final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_GetRingScale;
+
+// Function UnionRun.ShortcutRingObject.GetShortcutId
+// 0x0004 (0x0004 - 0x0000)
+struct ShortcutRingObject_GetShortcutId final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_GetShortcutId;
+
+// Function UnionRun.ShortcutRingObject.GetShortcutRingType
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_GetShortcutRingType final
+{
+public:
+	EShortcutRingType                             ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_GetShortcutRingType;
+
+// Function UnionRun.ShortcutRingObject.GetStageId
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_GetStageId final
+{
+public:
+	EStageId                                      ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_GetStageId;
+
+// Function UnionRun.ShortcutRingObject.IsHalfRing
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_IsHalfRing final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_IsHalfRing;
+
+// Function UnionRun.ShortcutRingObject.IsUseOverrideCollisionScale
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_IsUseOverrideCollisionScale final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_IsUseOverrideCollisionScale;
+
+// Function UnionRun.ShortcutRingObject.SetHalfRing
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_SetHalfRing final
+{
+public:
+	bool                                          bHalf;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_SetHalfRing;
+
+// Function UnionRun.ShortcutRingObject.SetRingScale
+// 0x0004 (0x0004 - 0x0000)
+struct ShortcutRingObject_SetRingScale final
+{
+public:
+	float                                         Scale;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_SetRingScale;
+
+// Function UnionRun.ShortcutRingObject.SetShortcutId
+// 0x0004 (0x0004 - 0x0000)
+struct ShortcutRingObject_SetShortcutId final
+{
+public:
+	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_SetShortcutId;
+
+// Function UnionRun.ShortcutRingObject.SetShortcutRingType
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_SetShortcutRingType final
+{
+public:
+	EShortcutRingType                             Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_SetShortcutRingType;
+
+// Function UnionRun.ShortcutRingObject.SetTravelRingType
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_SetTravelRingType final
+{
+public:
+	ETravelRingType                               Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_SetTravelRingType;
+
+// Function UnionRun.ShortcutRingObject.GetTravelRingType
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_GetTravelRingType final
+{
+public:
+	ETravelRingType                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_GetTravelRingType;
+
+// Function UnionRun.ShortcutRingObject.IsUseAnotherGate
+// 0x0001 (0x0001 - 0x0000)
+struct ShortcutRingObject_IsUseAnotherGate final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShortcutRingObject_IsUseAnotherGate;
+
+// Function UnionRun.SquidAnimInstance.IsSquidState
+// 0x0002 (0x0002 - 0x0000)
+struct SquidAnimInstance_IsSquidState final
+{
+public:
+	ESquidState                                   State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SquidAnimInstance_IsSquidState;
+
+// Function UnionRun.TowerAnimInstance.IsTowerState
+// 0x0002 (0x0002 - 0x0000)
+struct TowerAnimInstance_IsTowerState final
+{
+public:
+	ETowerState                                   State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TowerAnimInstance_IsTowerState;
+
+// Function UnionRun.TransformRingObject.GetRingScaleRate
+// 0x0004 (0x0004 - 0x0000)
+struct TransformRingObject_GetRingScaleRate final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TransformRingObject_GetRingScaleRate;
+
+// Function UnionRun.TransformRingObject.SetRingScaleRate
+// 0x0004 (0x0004 - 0x0000)
+struct TransformRingObject_SetRingScaleRate final
+{
+public:
+	float                                         Rate;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TransformRingObject_SetRingScaleRate;
+
+// Function UnionRun.TransformRingObject.SetTransformRingType
+// 0x0001 (0x0001 - 0x0000)
+struct TransformRingObject_SetTransformRingType final
+{
+public:
+	ETransformRingType                            Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TransformRingObject_SetTransformRingType;
+
+// Function UnionRun.TransformRingObject.UpdateParallelMode
+// 0x0004 (0x0004 - 0x0000)
+struct TransformRingObject_UpdateParallelMode final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TransformRingObject_UpdateParallelMode;
+
+// Function UnionRun.TriggerComponent.OnCollisionBaseHit
+// 0x0060 (0x0060 - 0x0000)
+struct TriggerComponent_OnCollisionBaseHit final
+{
+public:
+	struct FCollisionHitInfo                      Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TriggerComponent_OnCollisionBaseHit;
+
+// Function UnionRun.TriggerComponent.OnCollisionHitResult
+// 0x0058 (0x0058 - 0x0000)
+struct TriggerComponent_OnCollisionHitResult final
+{
+public:
+	struct FCollisionHitResultInfo                Info;                                              // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TriggerComponent_OnCollisionHitResult;
+
+// Function UnionRun.TriggerComponent.SetSurfaceFlag
+// 0x001F (0x001F - 0x0000)
+struct TriggerComponent_SetSurfaceFlag final
+{
+public:
+	struct FUnionSurfaceFlag                      flag;                                              // 0x0000(0x001F)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TriggerComponent_SetSurfaceFlag;
+
+// Function UnionRun.TriggerComponent.SetSurfaceType
+// 0x0001 (0x0001 - 0x0000)
+struct TriggerComponent_SetSurfaceType final
+{
+public:
+	EUnionSurfaceType                             Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TriggerComponent_SetSurfaceType;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetAttackEnemyItemIdIF
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_GetAttackEnemyItemIdIF final
+{
+public:
+	EEnemyItemId                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetAttackEnemyItemIdIF;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetAttackItemIdIF
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_GetAttackItemIdIF final
+{
+public:
+	EItemId                                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetAttackItemIdIF;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectDomainIndex
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectDomainIndex final
+{
+public:
+	EDomainIndex                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectDomainIndex;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectDomainLocationUE
+// 0x0018 (0x0018 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectDomainLocationUE final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectDomainLocationUE;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectDomainNumber
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectDomainNumber final
+{
+public:
+	EDomainNumber                                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectDomainNumber;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectLapCount
+// 0x0004 (0x0004 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectLapCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectLapCount;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectPathIndexDistance
+// 0x0004 (0x0004 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectPathIndexDistance final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectPathIndexDistance;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectRaceDistance
+// 0x0004 (0x0004 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectRaceDistance final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectRaceDistance;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectRaceDomainElapsedRatio
+// 0x0004 (0x0004 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectRaceDomainElapsedRatio final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectRaceDomainElapsedRatio;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetObjectWorldLocation
+// 0x0018 (0x0018 - 0x0000)
+struct UnionAttackItemInfoInterface_GetObjectWorldLocation final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectWorldLocation;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetSameDomainOnlyFlag
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_GetSameDomainOnlyFlag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetSameDomainOnlyFlag;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetUsingRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionAttackItemInfoInterface_GetUsingRacerIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetUsingRacerIndex;
+
+// Function UnionRun.UnionAttackItemInfoInterface.IsAttackItemMoveToTargetIgnorePathIF
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_IsAttackItemMoveToTargetIgnorePathIF final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_IsAttackItemMoveToTargetIgnorePathIF;
+
+// Function UnionRun.UnionAttackItemInfoInterface.IsAttackItemTargetIF
+// 0x0008 (0x0008 - 0x0000)
+struct UnionAttackItemInfoInterface_IsAttackItemTargetIF final
+{
+public:
+	int32                                         checkRacerIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_IsAttackItemTargetIF;
+
+// Function UnionRun.UnionAttackItemInfoInterface.IsAttackItemUsedForBackIF
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_IsAttackItemUsedForBackIF final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_IsAttackItemUsedForBackIF;
+
+// Function UnionRun.UnionAttackItemInfoInterface.GetAttackItemInfoTypeIF
+// 0x0001 (0x0001 - 0x0000)
+struct UnionAttackItemInfoInterface_GetAttackItemInfoTypeIF final
+{
+public:
+	EUnionAttackItemInfoType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetAttackItemInfoTypeIF;
+
+// Function UnionRun.UnionDroneInfoInterface.NotifyCallDroneEvent
+// 0x0004 (0x0004 - 0x0000)
+struct UnionDroneInfoInterface_NotifyCallDroneEvent final
+{
+public:
+	struct FCallDroneInfo                         Info;                                              // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionDroneInfoInterface_NotifyCallDroneEvent;
+
+// Function UnionRun.UnionDroneInfoInterface.NotifyDroneVisibilityEvent
+// 0x0001 (0x0001 - 0x0000)
+struct UnionDroneInfoInterface_NotifyDroneVisibilityEvent final
+{
+public:
+	bool                                          Visibility;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionDroneInfoInterface_NotifyDroneVisibilityEvent;
+
+// Function UnionRun.UnionPhysicalMaterial.GetPhysicalSurfaceType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_GetPhysicalSurfaceType final
+{
+public:
+	EUnionSurfaceType                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_GetPhysicalSurfaceType;
+
+// Function UnionRun.UnionPhysicalMaterial.GetSurfaceFlag
+// 0x001F (0x001F - 0x0000)
+struct UnionPhysicalMaterial_GetSurfaceFlag final
+{
+public:
+	struct FUnionSurfaceFlag                      ReturnValue;                                       // 0x0000(0x001F)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_GetSurfaceFlag;
+
+// Function UnionRun.UnionPhysicalMaterial.IsAssistWall
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsAssistWall final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsAssistWall;
+
+// Function UnionRun.UnionPhysicalMaterial.IsAssistWallItemIgnoret
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsAssistWallItemIgnoret final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsAssistWallItemIgnoret;
+
+// Function UnionRun.UnionPhysicalMaterial.IsBouncy
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsBouncy final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBouncy;
+
+// Function UnionRun.UnionPhysicalMaterial.IsBumpyHeavy
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsBumpyHeavy final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBumpyHeavy;
+
+// Function UnionRun.UnionPhysicalMaterial.IsBumpyLight
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsBumpyLight final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBumpyLight;
+
+// Function UnionRun.UnionPhysicalMaterial.IsBumpyMedium
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsBumpyMedium final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBumpyMedium;
+
+// Function UnionRun.UnionPhysicalMaterial.IsCameraChange
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsCameraChange final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsCameraChange;
+
+// Function UnionRun.UnionPhysicalMaterial.IsCarDriveable
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsCarDriveable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsCarDriveable;
+
+// Function UnionRun.UnionPhysicalMaterial.IsCylindrical
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsCylindrical final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsCylindrical;
+
+// Function UnionRun.UnionPhysicalMaterial.IsDash
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsDash final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsDash;
+
+// Function UnionRun.UnionPhysicalMaterial.IsGravitySwitch
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsGravitySwitch final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsGravitySwitch;
+
+// Function UnionRun.UnionPhysicalMaterial.IsGrindDash
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsGrindDash final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsGrindDash;
+
+// Function UnionRun.UnionPhysicalMaterial.IsGuidedJump
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsGuidedJump final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsGuidedJump;
+
+// Function UnionRun.UnionPhysicalMaterial.IsHitBouncyMidium
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsHitBouncyMidium final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitBouncyMidium;
+
+// Function UnionRun.UnionPhysicalMaterial.IsHitLoseRing
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsHitLoseRing final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitLoseRing;
+
+// Function UnionRun.UnionPhysicalMaterial.IsHitSlowdownLight
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsHitSlowdownLight final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitSlowdownLight;
+
+// Function UnionRun.UnionPhysicalMaterial.IsHitSlowdownMidium
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsHitSlowdownMidium final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitSlowdownMidium;
+
+// Function UnionRun.UnionPhysicalMaterial.IsIgnoreSticky
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsIgnoreSticky final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsIgnoreSticky;
+
+// Function UnionRun.UnionPhysicalMaterial.IsItemOnly
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsItemOnly final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsItemOnly;
+
+// Function UnionRun.UnionPhysicalMaterial.IsMachineOnlyWall
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsMachineOnlyWall final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsMachineOnlyWall;
+
+// Function UnionRun.UnionPhysicalMaterial.IsNoJump
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsNoJump final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsNoJump;
+
+// Function UnionRun.UnionPhysicalMaterial.IsNrrow
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsNrrow final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsNrrow;
+
+// Function UnionRun.UnionPhysicalMaterial.IsPseudoPlane
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsPseudoPlane final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsPseudoPlane;
+
+// Function UnionRun.UnionPhysicalMaterial.IsRespot
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsRespot final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsRespot;
+
+// Function UnionRun.UnionPhysicalMaterial.IsSlide
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsSlide final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlide;
+
+// Function UnionRun.UnionPhysicalMaterial.IsSlippy
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsSlippy final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlippy;
+
+// Function UnionRun.UnionPhysicalMaterial.IsSlowDownLight
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsSlowDownLight final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlowDownLight;
+
+// Function UnionRun.UnionPhysicalMaterial.IsSlowDownMedium
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsSlowDownMedium final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlowDownMedium;
+
+// Function UnionRun.UnionPhysicalMaterial.IsWall
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsWall final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsWall;
+
+// Function UnionRun.UnionPhysicalMaterial.IsYellowDrill
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPhysicalMaterial_IsYellowDrill final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPhysicalMaterial_IsYellowDrill;
+
+// Function UnionRun.UnionPlayerInfoBillboardUI.ChangeDriverInfo
+// 0x0001 (0x0001 - 0x0000)
+struct UnionPlayerInfoBillboardUI_ChangeDriverInfo final
+{
+public:
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionPlayerInfoBillboardUI_ChangeDriverInfo;
+
+// Function UnionRun.UnionRaceGadgetUI.InitializeIconsByGadgetInfo
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceGadgetUI_InitializeIconsByGadgetInfo final
+{
+public:
+	TArray<EGadgetId>                             GadgetInfo;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceGadgetUI_InitializeIconsByGadgetInfo;
+
+// Function UnionRun.UnionRaceGadgetUI.InitializeIconsByRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceGadgetUI_InitializeIconsByRacerIndex final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceGadgetUI_InitializeIconsByRacerIndex;
+
+// Function UnionRun.UnionRaceInfoNotifier.RegisterRaceInfoListener
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceInfoNotifier_RegisterRaceInfoListener final
+{
+public:
+	class UObject*                                InListener;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceInfoNotifier_RegisterRaceInfoListener;
+
+// Function UnionRun.UnionRaceInfoNotifier.UnregisterRaceInfoListener
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceInfoNotifier_UnregisterRaceInfoListener final
+{
+public:
+	class UObject*                                InListener;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceInfoNotifier_UnregisterRaceInfoListener;
+
+// Function UnionRun.UnionRaceMinimap.AddCourseMapActor
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceMinimap_AddCourseMapActor final
+{
+public:
+	class AActor*                                 InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       InItemId;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_AddCourseMapActor;
+
+// Function UnionRun.UnionRaceMinimap.GetGroupColor
+// 0x0014 (0x0014 - 0x0000)
+struct UnionRaceMinimap_GetGroupColor final
+{
+public:
+	int32                                         GouupIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_GetGroupColor;
+
+// Function UnionRun.UnionRaceMinimap.InitializeMinimap
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_InitializeMinimap final
+{
+public:
+	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_InitializeMinimap;
+
+// Function UnionRun.UnionRaceMinimap.RemoveCourseMapActor
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_RemoveCourseMapActor final
+{
+public:
+	class AActor*                                 InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_RemoveCourseMapActor;
+
+// Function UnionRun.UnionRaceMinimap.SetCourseMapCharaSpin
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceMinimap_SetCourseMapCharaSpin final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetCourseMapCharaSpin;
+
+// Function UnionRun.UnionRaceMinimap.SetCourseSetting
+// 0x0048 (0x0048 - 0x0000)
+struct UnionRaceMinimap_SetCourseSetting final
+{
+public:
+	TSoftObjectPtr<class UObject>                 CourseTexture;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InOrthoRate;                                       // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InAngle;                                           // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InOffset;                                          // 0x0030(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetCourseSetting;
+
+// Function UnionRun.UnionRaceMinimap.SetDomainIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceMinimap_SetDomainIndex final
+{
+public:
+	int32                                         InDomainIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetDomainIndex;
+
+// Function UnionRun.UnionRaceMinimap.SetDomainNumber
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceMinimap_SetDomainNumber final
+{
+public:
+	int32                                         InDomainNumber;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetDomainNumber;
+
+// Function UnionRun.UnionRaceMinimap.SetDriverId
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_SetDriverId final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DriverId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetDriverId;
+
+// Function UnionRun.UnionRaceMinimap.SetGroupIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_SetGroupIndex final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GroupIndex;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetGroupIndex;
+
+// Function UnionRun.UnionRaceMinimap.SetMinimapIconItem
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_SetMinimapIconItem final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       InItemId;                                          // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetMinimapIconItem;
+
+// Function UnionRun.UnionRaceMinimap.SetMinimapIconType
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_SetMinimapIconType final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMinimapIconType                              InMinimapIconType;                                 // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetMinimapIconType;
+
+// Function UnionRun.UnionRaceMinimap.SetPlayerIndex
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceMinimap_SetPlayerIndex final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PlayerIndex;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsPlayer;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsLocalMulti;                                      // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetPlayerIndex;
+
+// Function UnionRun.UnionRaceMinimap.SetPosition
+// 0x0020 (0x0020 - 0x0000)
+struct UnionRaceMinimap_SetPosition final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InPosition;                                        // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetPosition;
+
+// Function UnionRun.UnionRaceMinimap.SetPositionAndZOrder
+// 0x0028 (0x0028 - 0x0000)
+struct UnionRaceMinimap_SetPositionAndZOrder final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InPosition;                                        // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         InZOrder;                                          // 0x0020(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetPositionAndZOrder;
+
+// Function UnionRun.UnionRaceMinimap.SetRacerCount
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceMinimap_SetRacerCount final
+{
+public:
+	int32                                         RacerCount_0;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetRacerCount;
+
+// Function UnionRun.UnionRaceMinimap.SetRacerIconVisibility
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_SetRacerIconVisibility final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESlateVisibility                              NewVisibility;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetRacerIconVisibility;
+
+// Function UnionRun.UnionRaceMinimap.SetReaderFlag
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_SetReaderFlag final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InIsReader;                                        // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetReaderFlag;
+
+// Function UnionRun.UnionRaceMinimap.SetRival
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceMinimap_SetRival final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsRival;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsPowerRival;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_SetRival;
+
+// Function UnionRun.UnionRaceMinimap.UpdateMinimap
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceMinimap_UpdateMinimap final
+{
+public:
+	float                                         InDelta;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceMinimap_UpdateMinimap;
 
 // Function UnionRun.UnionRacer.ApplyPauseInput
 // 0x0001 (0x0001 - 0x0000)
@@ -2811,116 +7243,450 @@ public:
 };
 DUMPER7_ASSERTS_UnionRacer_GetViewSplitId;
 
-// Function UnionRun.GadgetMessageInterface.GadgetNotifyAttack
-// 0x0070 (0x0070 - 0x0000)
-struct GadgetMessageInterface_GadgetNotifyAttack final
-{
-public:
-	struct FGadgetNotifyAttackInfo                Info;                                              // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GadgetMessageInterface_GadgetNotifyAttack;
-
-// Function UnionRun.GadgetMessageInterface.GadgetNotifyMessage
+// Function UnionRun.UnionRaceReturnDashUI.GetButtonWidget
 // 0x0008 (0x0008 - 0x0000)
-struct GadgetMessageInterface_GadgetNotifyMessage final
-{
-public:
-	class FName                                   Message;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GadgetMessageInterface_GadgetNotifyMessage;
-
-// Function UnionRun.RaceUISubReturnDashGauge.GetButtonWidget
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubReturnDashGauge_GetButtonWidget final
+struct UnionRaceReturnDashUI_GetButtonWidget final
 {
 public:
 	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubReturnDashGauge_GetButtonWidget;
+DUMPER7_ASSERTS_UnionRaceReturnDashUI_GetButtonWidget;
 
-// Function UnionRun.RaceUISubReturnDashGauge.SetDashInputKey
-// 0x0018 (0x0018 - 0x0000)
-struct RaceUISubReturnDashGauge_SetDashInputKey final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetDashInputKey;
-
-// Function UnionRun.RaceUISubReturnDashGauge.SetGaugeParcent
+// Function UnionRun.UnionRaceReturnDashUI.SetGaugeParcent
 // 0x0004 (0x0004 - 0x0000)
-struct RaceUISubReturnDashGauge_SetGaugeParcent final
+struct UnionRaceReturnDashUI_SetGaugeParcent final
 {
 public:
-	float                                         GaugeRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GaugeRate;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetGaugeParcent;
+DUMPER7_ASSERTS_UnionRaceReturnDashUI_SetGaugeParcent;
 
-// Function UnionRun.RaceUISubReturnDashGauge.SetGaugePivotAndRange
-// 0x0010 (0x0010 - 0x0000)
-struct RaceUISubReturnDashGauge_SetGaugePivotAndRange final
-{
-public:
-	class UImage*                                 ImageRef;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PivotRate;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GaugeRateRange;                                    // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetGaugePivotAndRange;
-
-// Function UnionRun.RaceUISubReturnDashGauge.SetReturnDashSetting
+// Function UnionRun.UnionRaceReturnDashUI.SetReturnDashSetting
 // 0x0008 (0x0008 - 0x0000)
-struct RaceUISubReturnDashGauge_SetReturnDashSetting final
+struct UnionRaceReturnDashUI_SetReturnDashSetting final
 {
 public:
 	float                                         Pivot;                                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Range;                                             // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubReturnDashGauge_SetReturnDashSetting;
+DUMPER7_ASSERTS_UnionRaceReturnDashUI_SetReturnDashSetting;
 
-// Function UnionRun.ItemThornBallObject.GetHitSpeedRatio
+// Function UnionRun.UnionRacerFunction.GetDistance
+// 0x0038 (0x0038 - 0x0000)
+struct UnionRacerFunction_GetDistance final
+{
+public:
+	struct FVector                                Pos1;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Pos2;                                              // 0x0018(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacerFunction_GetDistance;
+
+// Function UnionRun.UnionRacerFunction.GetRacerGroupIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacerFunction_GetRacerGroupIndex final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacerFunction_GetRacerGroupIndex;
+
+// Function UnionRun.UnionRacerFunction.GetRacerIndexByDriverID
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacerFunction_GetRacerIndexByDriverID final
+{
+public:
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacerFunction_GetRacerIndexByDriverID;
+
+// Function UnionRun.UnionRacerFunction.GetRacerIndexByPlayerID
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacerFunction_GetRacerIndexByPlayerID final
+{
+public:
+	int32                                         PlayerId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacerFunction_GetRacerIndexByPlayerID;
+
+// Function UnionRun.UnionRacerFunction.GetRankingSkipInterval
 // 0x0004 (0x0004 - 0x0000)
-struct ItemThornBallObject_GetHitSpeedRatio final
+struct UnionRacerFunction_GetRankingSkipInterval final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemThornBallObject_GetHitSpeedRatio;
+DUMPER7_ASSERTS_UnionRacerFunction_GetRankingSkipInterval;
 
-// Function UnionRun.ItemThornBallObject.OnPlayBreakEffect
+// Function UnionRun.UnionRacerFunction.GetRankUpGaugeSpeed
 // 0x0004 (0x0004 - 0x0000)
-struct ItemThornBallObject_OnPlayBreakEffect final
+struct UnionRacerFunction_GetRankUpGaugeSpeed final
 {
 public:
-	float                                         Scale;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemThornBallObject_OnPlayBreakEffect;
+DUMPER7_ASSERTS_UnionRacerFunction_GetRankUpGaugeSpeed;
 
-// Function UnionRun.ItemThornBallObject.OnPlayDamegeSound
+// Function UnionRun.UnionRacerFunction.GetUnionRacers
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacerFunction_GetUnionRacers final
+{
+public:
+	class UUnionRacers*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacerFunction_GetUnionRacers;
+
+// Function UnionRun.UnionRacerFunction.IsInScreen
+// 0x0028 (0x0028 - 0x0000)
+struct UnionRacerFunction_IsInScreen final
+{
+public:
+	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Position;                                          // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacerFunction_IsInScreen;
+
+// Function UnionRun.UnionRacerFunction.IsSameGroup
+// 0x000C (0x000C - 0x0000)
+struct UnionRacerFunction_IsSameGroup final
+{
+public:
+	int32                                         InRacerIndexA;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InRacerIndexB;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacerFunction_IsSameGroup;
+
+// Function UnionRun.UnionRacers.GetDriverIdByRacerIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_GetDriverIdByRacerIndex final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacers_GetDriverIdByRacerIndex;
+
+// Function UnionRun.UnionRacers.ChangeVehicleDisplayMode
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_ChangeVehicleDisplayMode final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVehicleDisplayMode                           InVehicleDisplayMode;                              // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacers_ChangeVehicleDisplayMode;
+
+// Function UnionRun.UnionRacers.Destroy
 // 0x0001 (0x0001 - 0x0000)
-struct ItemThornBallObject_OnPlayDamegeSound final
+struct UnionRacers_Destroy final
 {
 public:
-	ESoundPan                                     SoundPan;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemThornBallObject_OnPlayDamegeSound;
+DUMPER7_ASSERTS_UnionRacers_Destroy;
 
-// Function UnionRun.ItemThornBallObject.OnPlayLandingSound
+// Function UnionRun.UnionRacers.ExecTick
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_ExecTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_ExecTick;
+
+// Function UnionRun.UnionRacers.GetLocalPlayers
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_GetLocalPlayers final
+{
+public:
+	TArray<class UUnionRacer*>                    OutRacers;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetLocalPlayers;
+
+// Function UnionRun.UnionRacers.GetPlayerRank
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_GetPlayerRank final
+{
+public:
+	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetPlayerRank;
+
+// Function UnionRun.UnionRacers.GetRaceHUDRef
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_GetRaceHUDRef final
+{
+public:
+	class UUnionRaceUI*                           ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRaceHUDRef;
+
+// Function UnionRun.UnionRacers.GetRaceLapInfo
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_GetRaceLapInfo final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionRaceLapInfo*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRaceLapInfo;
+
+// Function UnionRun.UnionRacers.GetRacer
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_GetRacer final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionRacer*                            ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRacer;
+
+// Function UnionRun.UnionRacers.GetRacer3DPositionAndDomainNumber
+// 0x0020 (0x0020 - 0x0000)
+struct UnionRacers_GetRacer3DPositionAndDomainNumber final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDomainNumber                                 DomainNum;                                         // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRacer3DPositionAndDomainNumber;
+
+// Function UnionRun.UnionRacers.GetRacerIndexByRank
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_GetRacerIndexByRank final
+{
+public:
+	int32                                         InRank;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRacerIndexByRank;
+
+// Function UnionRun.UnionRacers.GetRacerRank
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_GetRacerRank final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRacerRank;
+
+// Function UnionRun.UnionRacers.GetRacerSituationObject
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_GetRacerSituationObject final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionRaceSituationObject*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRacerSituationObject;
+
+// Function UnionRun.UnionRacers.GetRacerStatusObject
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_GetRacerStatusObject final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionRacerStatusObject*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRacerStatusObject;
+
+// Function UnionRun.UnionRacers.GetTestRaceCount
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_GetTestRaceCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetTestRaceCount;
+
+// Function UnionRun.UnionRacers.IsOfflinePlayer
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_IsOfflinePlayer final
+{
+public:
+	class UUnionRacer*                            Racer;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacers_IsOfflinePlayer;
+
+// Function UnionRun.UnionRacers.IsOnlineCom
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_IsOnlineCom final
+{
+public:
+	class UUnionRacer*                            Racer;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacers_IsOnlineCom;
+
+// Function UnionRun.UnionRacers.IsPlayer
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_IsPlayer final
+{
+public:
+	class UUnionRacer*                            Racer;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRacers_IsPlayer;
+
+// Function UnionRun.UnionRacers.SetLinkPlayerControllerIndexToRacerIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_SetLinkPlayerControllerIndexToRacerIndex final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InRacerIndex;                                      // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_SetLinkPlayerControllerIndexToRacerIndex;
+
+// Function UnionRun.UnionRacers.SetRaceLapInfo
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_SetRaceLapInfo final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionRaceLapInfo*                      InRaceLapInfo;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_SetRaceLapInfo;
+
+// Function UnionRun.UnionRacers.SetTickable
 // 0x0001 (0x0001 - 0x0000)
-struct ItemThornBallObject_OnPlayLandingSound final
+struct UnionRacers_SetTickable final
 {
 public:
-	bool                                          waterFlag;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTickable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemThornBallObject_OnPlayLandingSound;
+DUMPER7_ASSERTS_UnionRacers_SetTickable;
 
-// Function UnionRun.ItemThornBallObject.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemThornBallObject_OnTriggerColliderConflict final
+// Function UnionRun.UnionRacers.SetVehicle
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRacers_SetVehicle final
 {
 public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  InVehicle;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemThornBallObject_OnTriggerColliderConflict;
+DUMPER7_ASSERTS_UnionRacers_SetVehicle;
+
+// Function UnionRun.UnionRacers.UnionRacers_SetTimerDelegate
+// 0x0020 (0x0020 - 0x0000)
+struct UnionRacers_UnionRacers_SetTimerDelegate final
+{
+public:
+	TDelegate<void()>                             Delegate;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLooping;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_UnionRacers_SetTimerDelegate;
+
+// Function UnionRun.UnionRacers.UpdateBaggage
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_UpdateBaggage final
+{
+public:
+	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_UpdateBaggage;
+
+// Function UnionRun.UnionRacers.UpdateDomain
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_UpdateDomain final
+{
+public:
+	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_UpdateDomain;
+
+// Function UnionRun.UnionRacers.UpdatePlayerNameHUD
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_UpdatePlayerNameHUD final
+{
+public:
+	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_UpdatePlayerNameHUD;
+
+// Function UnionRun.UnionRacers.UpdateTestRace
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_UpdateTestRace final
+{
+public:
+	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_UpdateTestRace;
+
+// Function UnionRun.UnionRacers.UpdateVehicles
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_UpdateVehicles final
+{
+public:
+	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_UpdateVehicles;
+
+// Function UnionRun.UnionRacers.GetGamePauseOwnerPlayerControllerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_GetGamePauseOwnerPlayerControllerIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetGamePauseOwnerPlayerControllerIndex;
+
+// Function UnionRun.UnionRacers.GetGamePauseOwnerRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRacers_GetGamePauseOwnerRacerIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetGamePauseOwnerRacerIndex;
+
+// Function UnionRun.UnionRacers.GetPlayerControllerIndexByRacerIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_GetPlayerControllerIndexByRacerIndex final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetPlayerControllerIndexByRacerIndex;
+
+// Function UnionRun.UnionRacers.GetRacerIndexByPlayerControllerIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRacers_GetRacerIndexByPlayerControllerIndex final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRacers_GetRacerIndexByPlayerControllerIndex;
 
 // Function UnionRun.UnionRacerStatusObject.AddRaceCustomParam
 // 0x0014 (0x0014 - 0x0000)
@@ -3770,4824 +8536,212 @@ public:
 };
 DUMPER7_ASSERTS_UnionRacerStatusObject_IsTSRKeyAssignEnabled;
 
-// Function UnionRun.ItemPerformanceInterface.GetAttachedRacerIndex
+// Function UnionRun.UnionRaceSituationObject.IsFootCutting
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceSituationObject_IsFootCutting final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceSituationObject_IsFootCutting;
+
+// Function UnionRun.UnionRaceSituationObject.IsTeamEnergyCharging
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceSituationObject_IsTeamEnergyCharging final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceSituationObject_IsTeamEnergyCharging;
+
+// Function UnionRun.UnionRaceSituationObject.SetFollowingDistDiff
 // 0x0004 (0x0004 - 0x0000)
-struct ItemPerformanceInterface_GetAttachedRacerIndex final
+struct UnionRaceSituationObject_SetFollowingDistDiff final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         followingDistance;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemPerformanceInterface_GetAttachedRacerIndex;
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetFollowingDistDiff;
 
-// Function UnionRun.ItemPerformanceInterface.GetPerformanceObjectType
-// 0x0001 (0x0001 - 0x0000)
-struct ItemPerformanceInterface_GetPerformanceObjectType final
-{
-public:
-	EPerformanceObjectType                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemPerformanceInterface_GetPerformanceObjectType;
-
-// Function UnionRun.ItemPerformanceInterface.GetStatusInfoID
-// 0x0008 (0x0008 - 0x0000)
-struct ItemPerformanceInterface_GetStatusInfoID final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemPerformanceInterface_GetStatusInfoID;
-
-// Function UnionRun.ItemPerformanceInterface.IsPerformanceObjectInAlart
-// 0x0001 (0x0001 - 0x0000)
-struct ItemPerformanceInterface_IsPerformanceObjectInAlart final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemPerformanceInterface_IsPerformanceObjectInAlart;
-
-// Function UnionRun.UnionItemSkeletalMeshContainer.OnBeginItem
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemSkeletalMeshContainer_OnBeginItem final
-{
-public:
-	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemSkeletalMeshContainer_OnBeginItem;
-
-// Function UnionRun.RaceTestUtils.EndAutoCsvProfile
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_EndAutoCsvProfile final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_EndAutoCsvProfile;
-
-// Function UnionRun.RaceTestUtils.EndAutoKibana
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_EndAutoKibana final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_EndAutoKibana;
-
-// Function UnionRun.RaceTestUtils.EndAutoProfileGpu
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_EndAutoProfileGpu final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_EndAutoProfileGpu;
-
-// Function UnionRun.RaceTestUtils.EndAutoUnrealInsights
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_EndAutoUnrealInsights final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_EndAutoUnrealInsights;
-
-// Function UnionRun.RaceTestUtils.EndRaceLoadTest
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_EndRaceLoadTest final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_EndRaceLoadTest;
-
-// Function UnionRun.RaceTestUtils.EndRaceTest
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_EndRaceTest final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_EndRaceTest;
-
-// Function UnionRun.RaceTestUtils.GetAutoCsvProfileModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetAutoCsvProfileModeFlag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetAutoCsvProfileModeFlag;
-
-// Function UnionRun.RaceTestUtils.GetAutoDebugKibanaModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetAutoDebugKibanaModeFlag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetAutoDebugKibanaModeFlag;
-
-// Function UnionRun.RaceTestUtils.GetAutoDetailKibanaModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetAutoDetailKibanaModeFlag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetAutoDetailKibanaModeFlag;
-
-// Function UnionRun.RaceTestUtils.GetAutoKibanaModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetAutoKibanaModeFlag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetAutoKibanaModeFlag;
-
-// Function UnionRun.RaceTestUtils.GetAutoProfileGpuModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetAutoProfileGpuModeFlag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetAutoProfileGpuModeFlag;
-
-// Function UnionRun.RaceTestUtils.GetAutoUnrealInsightsModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetAutoUnrealInsightsModeFlag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetAutoUnrealInsightsModeFlag;
-
-// Function UnionRun.RaceTestUtils.GetCumstomRaceTestConfig
-// 0x0010 (0x0010 - 0x0000)
-struct RaceTestUtils_GetCumstomRaceTestConfig final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetCumstomRaceTestConfig;
-
-// Function UnionRun.RaceTestUtils.GetNoHitItemPhysiceLayerMask
+// Function UnionRun.UnionRaceSituationObject.SetFollowingRacerIndex
 // 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_GetNoHitItemPhysiceLayerMask final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetNoHitItemPhysiceLayerMask;
-
-// Function UnionRun.RaceTestUtils.GetOverrideCamera
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetOverrideCamera final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCamera;
-
-// Function UnionRun.RaceTestUtils.GetOverrideCameraElevation
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverrideCameraElevation final
-{
-public:
-	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraElevation;
-
-// Function UnionRun.RaceTestUtils.GetOverrideCameraOffset
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverrideCameraOffset final
-{
-public:
-	float                                         Offset;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraOffset;
-
-// Function UnionRun.RaceTestUtils.GetOverrideCameraTargetY
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverrideCameraTargetY final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraTargetY;
-
-// Function UnionRun.RaceTestUtils.GetOverrideCameraTargetZ
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverrideCameraTargetZ final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraTargetZ;
-
-// Function UnionRun.RaceTestUtils.GetOverrideCameraVFov
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverrideCameraVFov final
-{
-public:
-	float                                         VFov;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverrideCameraVFov;
-
-// Function UnionRun.RaceTestUtils.GetOverridePathCamera
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetOverridePathCamera final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCamera;
-
-// Function UnionRun.RaceTestUtils.GetOverridePathCameraElevation
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverridePathCameraElevation final
-{
-public:
-	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraElevation;
-
-// Function UnionRun.RaceTestUtils.GetOverridePathCameraOffset
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverridePathCameraOffset final
-{
-public:
-	float                                         Offset;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraOffset;
-
-// Function UnionRun.RaceTestUtils.GetOverridePathCameraTargetY
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverridePathCameraTargetY final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraTargetY;
-
-// Function UnionRun.RaceTestUtils.GetOverridePathCameraTargetZ
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverridePathCameraTargetZ final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraTargetZ;
-
-// Function UnionRun.RaceTestUtils.GetOverridePathCameraVFov
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetOverridePathCameraVFov final
-{
-public:
-	float                                         VFov;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetOverridePathCameraVFov;
-
-// Function UnionRun.RaceTestUtils.GetRaceLoadTestMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_GetRaceLoadTestMode final
-{
-public:
-	ERaceLoadTestMode                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetRaceLoadTestMode;
-
-// Function UnionRun.RaceTestUtils.GetRacerSetting
-// 0x0030 (0x0030 - 0x0000)
-struct RaceTestUtils_GetRacerSetting final
+struct UnionRaceSituationObject_SetFollowingRacerIndex final
 {
 public:
 	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRaceTestRacerSetting                  Setting;                                           // 0x0008(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_RaceTestUtils_GetRacerSetting;
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetFollowingRacerIndex;
 
-// Function UnionRun.RaceTestUtils.GetRaceTestConfig
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetRaceTestConfig final
-{
-public:
-	const class URaceTestConfig*                  ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetRaceTestConfig;
-
-// Function UnionRun.RaceTestUtils.GetRaceTestConfigAccess
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetRaceTestConfigAccess final
-{
-public:
-	class URaceTestConfig*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetRaceTestConfigAccess;
-
-// Function UnionRun.RaceTestUtils.GetRaceTestItemTableAsset
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_GetRaceTestItemTableAsset final
-{
-public:
-	const class UDataTable*                       ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_GetRaceTestItemTableAsset;
-
-// Function UnionRun.RaceTestUtils.GetScreenNum
+// Function UnionRun.UnionRaceSituationObject.SetFollowingRatioDiff
 // 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_GetScreenNum final
+struct UnionRaceSituationObject_SetFollowingRatioDiff final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         followingDistance;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceTestUtils_GetScreenNum;
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetFollowingRatioDiff;
 
-// Function UnionRun.RaceTestUtils.GetTagNameToDestroyActor
-// 0x0010 (0x0010 - 0x0000)
-struct RaceTestUtils_GetTagNameToDestroyActor final
+// Function UnionRun.UnionRaceSituationObject.SetLeadingDistDiff
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceSituationObject_SetLeadingDistDiff final
 {
 public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         leadingDistance;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceTestUtils_GetTagNameToDestroyActor;
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetLeadingDistDiff;
 
-// Function UnionRun.RaceTestUtils.IsAutoCsvProfileMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsAutoCsvProfileMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsAutoCsvProfileMode;
-
-// Function UnionRun.RaceTestUtils.IsAutoDebugKibanaMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsAutoDebugKibanaMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsAutoDebugKibanaMode;
-
-// Function UnionRun.RaceTestUtils.IsAutoDetailKibanaMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsAutoDetailKibanaMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsAutoDetailKibanaMode;
-
-// Function UnionRun.RaceTestUtils.IsAutoKibanaMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsAutoKibanaMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsAutoKibanaMode;
-
-// Function UnionRun.RaceTestUtils.IsAutoProfileGpuMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsAutoProfileGpuMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsAutoProfileGpuMode;
-
-// Function UnionRun.RaceTestUtils.IsAutoUnrealInsightsMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsAutoUnrealInsightsMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsAutoUnrealInsightsMode;
-
-// Function UnionRun.RaceTestUtils.IsDisabledGameHighLoading
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsDisabledGameHighLoading final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsDisabledGameHighLoading;
-
-// Function UnionRun.RaceTestUtils.IsEnableItemTableSynchro
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsEnableItemTableSynchro final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsEnableItemTableSynchro;
-
-// Function UnionRun.RaceTestUtils.IsFinalRaceLoadTest
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsFinalRaceLoadTest final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsFinalRaceLoadTest;
-
-// Function UnionRun.RaceTestUtils.IsForceComRun
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_IsForceComRun final
+// Function UnionRun.UnionRaceSituationObject.SetLeadingRacerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceSituationObject_SetLeadingRacerIndex final
 {
 public:
 	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_RaceTestUtils_IsForceComRun;
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetLeadingRacerIndex;
 
-// Function UnionRun.RaceTestUtils.IsNoBgmMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsNoBgmMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsNoBgmMode;
-
-// Function UnionRun.RaceTestUtils.IsNoCourseObject
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsNoCourseObject final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsNoCourseObject;
-
-// Function UnionRun.RaceTestUtils.IsNoGimmickObject
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsNoGimmickObject final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsNoGimmickObject;
-
-// Function UnionRun.RaceTestUtils.IsNoHudMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsNoHudMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsNoHudMode;
-
-// Function UnionRun.RaceTestUtils.IsPathCameraPawnMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsPathCameraPawnMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsPathCameraPawnMode;
-
-// Function UnionRun.RaceTestUtils.IsPerformanceTestRun
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_IsPerformanceTestRun final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsPerformanceTestRun;
-
-// Function UnionRun.RaceTestUtils.IsRaceLoadAutoTestMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsRaceLoadAutoTestMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsRaceLoadAutoTestMode;
-
-// Function UnionRun.RaceTestUtils.IsRaceTestMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsRaceTestMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsRaceTestMode;
-
-// Function UnionRun.RaceTestUtils.IsUseItemTable
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsUseItemTable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsUseItemTable;
-
-// Function UnionRun.RaceTestUtils.OverrideDebugMenuRaceLoadTestMode
+// Function UnionRun.UnionRaceSituationObject.SetLeadingRatioDiff
 // 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_OverrideDebugMenuRaceLoadTestMode final
+struct UnionRaceSituationObject_SetLeadingRatioDiff final
 {
 public:
-	int32                                         Mode;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         leadingDistance;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceTestUtils_OverrideDebugMenuRaceLoadTestMode;
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetLeadingRatioDiff;
 
-// Function UnionRun.RaceTestUtils.SaveRaceLoadAutoTestResult
+// Function UnionRun.UnionRaceSituationObject.SetOddNumRankSeconds
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceSituationObject_SetOddNumRankSeconds final
+{
+public:
+	float                                         oddNumRankSeconds_0;                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetOddNumRankSeconds;
+
+// Function UnionRun.UnionRaceSituationObject.SetPrevRank
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceSituationObject_SetPrevRank final
+{
+public:
+	int32                                         Rank_0;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetPrevRank;
+
+// Function UnionRun.UnionRaceSituationObject.SetRank
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceSituationObject_SetRank final
+{
+public:
+	int32                                         Rank_0;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetRank;
+
+// Function UnionRun.UnionRaceSituationObject.SetRivalDistDiff
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceSituationObject_SetRivalDistDiff final
+{
+public:
+	float                                         rivalDistDiff_0;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetRivalDistDiff;
+
+// Function UnionRun.UnionRaceSituationObject.SetTeamEnergyCharging
 // 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SaveRaceLoadAutoTestResult final
+struct UnionRaceSituationObject_SetTeamEnergyCharging final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCharging;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceTestUtils_SaveRaceLoadAutoTestResult;
+DUMPER7_ASSERTS_UnionRaceSituationObject_SetTeamEnergyCharging;
 
-// Function UnionRun.RaceTestUtils.SetAutoCsvProfileModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetAutoCsvProfileModeFlag final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetAutoCsvProfileModeFlag;
-
-// Function UnionRun.RaceTestUtils.SetAutoDebugKibanaModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetAutoDebugKibanaModeFlag final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetAutoDebugKibanaModeFlag;
-
-// Function UnionRun.RaceTestUtils.SetAutoDetailKibanaModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetAutoDetailKibanaModeFlag final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetAutoDetailKibanaModeFlag;
-
-// Function UnionRun.RaceTestUtils.SetAutoKibanaModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetAutoKibanaModeFlag final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetAutoKibanaModeFlag;
-
-// Function UnionRun.RaceTestUtils.SetAutoProfileGpuModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetAutoProfileGpuModeFlag final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetAutoProfileGpuModeFlag;
-
-// Function UnionRun.RaceTestUtils.SetAutoUnrealInsightsModeFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetAutoUnrealInsightsModeFlag final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetAutoUnrealInsightsModeFlag;
-
-// Function UnionRun.RaceTestUtils.SetCustomRaceTestConfig
-// 0x0010 (0x0010 - 0x0000)
-struct RaceTestUtils_SetCustomRaceTestConfig final
-{
-public:
-	class FString                                 RaceTestConfig;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetCustomRaceTestConfig;
-
-// Function UnionRun.RaceTestUtils.SetDrivingCount
+// Function UnionRun.UnionRaceSituationObject.GetFollowingDistDiff
 // 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetDrivingCount final
-{
-public:
-	int32                                         DrivingCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetDrivingCount;
-
-// Function UnionRun.RaceTestUtils.SetLoadingTime
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetLoadingTime final
-{
-public:
-	float                                         LoadingTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetLoadingTime;
-
-// Function UnionRun.RaceTestUtils.SetOverrideCamera
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetOverrideCamera final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCamera;
-
-// Function UnionRun.RaceTestUtils.SetOverrideCameraElevation
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverrideCameraElevation final
-{
-public:
-	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraElevation;
-
-// Function UnionRun.RaceTestUtils.SetOverrideCameraOffset
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverrideCameraOffset final
-{
-public:
-	float                                         Offset;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraOffset;
-
-// Function UnionRun.RaceTestUtils.SetOverrideCameraTargetY
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverrideCameraTargetY final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraTargetY;
-
-// Function UnionRun.RaceTestUtils.SetOverrideCameraTargetZ
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverrideCameraTargetZ final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraTargetZ;
-
-// Function UnionRun.RaceTestUtils.SetOverrideCameraVFov
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverrideCameraVFov final
-{
-public:
-	float                                         VFov;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverrideCameraVFov;
-
-// Function UnionRun.RaceTestUtils.SetOverridePathCamera
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetOverridePathCamera final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCamera;
-
-// Function UnionRun.RaceTestUtils.SetOverridePathCameraElevation
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverridePathCameraElevation final
-{
-public:
-	float                                         Elevation;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraElevation;
-
-// Function UnionRun.RaceTestUtils.SetOverridePathCameraOffset
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverridePathCameraOffset final
-{
-public:
-	float                                         Offset;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraOffset;
-
-// Function UnionRun.RaceTestUtils.SetOverridePathCameraTargetY
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverridePathCameraTargetY final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraTargetY;
-
-// Function UnionRun.RaceTestUtils.SetOverridePathCameraTargetZ
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverridePathCameraTargetZ final
-{
-public:
-	float                                         Target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraTargetZ;
-
-// Function UnionRun.RaceTestUtils.SetOverridePathCameraVFov
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetOverridePathCameraVFov final
-{
-public:
-	float                                         VFov;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetOverridePathCameraVFov;
-
-// Function UnionRun.RaceTestUtils.SetPathCameraPawnMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_SetPathCameraPawnMode final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetPathCameraPawnMode;
-
-// Function UnionRun.RaceTestUtils.SetRaceLoadTestCountMax
-// 0x0004 (0x0004 - 0x0000)
-struct RaceTestUtils_SetRaceLoadTestCountMax final
-{
-public:
-	int32                                         Count;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetRaceLoadTestCountMax;
-
-// Function UnionRun.RaceTestUtils.SetTagNameToDestroyActor
-// 0x0010 (0x0010 - 0x0000)
-struct RaceTestUtils_SetTagNameToDestroyActor final
-{
-public:
-	class FString                                 TagName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_SetTagNameToDestroyActor;
-
-// Function UnionRun.RaceTestUtils.StartAutoCsvProfile
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_StartAutoCsvProfile final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_StartAutoCsvProfile;
-
-// Function UnionRun.RaceTestUtils.StartAutoKibana
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_StartAutoKibana final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_StartAutoKibana;
-
-// Function UnionRun.RaceTestUtils.StartAutoProfileGpu
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_StartAutoProfileGpu final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_StartAutoProfileGpu;
-
-// Function UnionRun.RaceTestUtils.StartAutoUnrealInsights
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_StartAutoUnrealInsights final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_StartAutoUnrealInsights;
-
-// Function UnionRun.RaceTestUtils.StartRaceLoadTest
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_StartRaceLoadTest final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_StartRaceLoadTest;
-
-// Function UnionRun.RaceTestUtils.StartRaceTest
-// 0x0008 (0x0008 - 0x0000)
-struct RaceTestUtils_StartRaceTest final
-{
-public:
-	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_StartRaceTest;
-
-// Function UnionRun.RaceTestUtils.TickProfileGpuAndScreenshot
-// 0x0010 (0x0010 - 0x0000)
-struct RaceTestUtils_TickProfileGpuAndScreenshot final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      PC;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_TickProfileGpuAndScreenshot;
-
-// Function UnionRun.RaceTestUtils.UpdateRaceLoadAutoTest
-// 0x0018 (0x0018 - 0x0000)
-struct RaceTestUtils_UpdateRaceLoadAutoTest final
-{
-public:
-	TArray<EStageId>                              OpenStageIDs;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceTestUtils_UpdateRaceLoadAutoTest;
-
-// Function UnionRun.RaceTestUtils.IsCustomRaceTestAutoConfigMode
-// 0x0001 (0x0001 - 0x0000)
-struct RaceTestUtils_IsCustomRaceTestAutoConfigMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceTestUtils_IsCustomRaceTestAutoConfigMode;
-
-// Function UnionRun.RingObject.GetFinalLapRingNum
-// 0x0004 (0x0004 - 0x0000)
-struct RingObject_GetFinalLapRingNum final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RingObject_GetFinalLapRingNum;
-
-// Function UnionRun.RingObject.GetFinalLapRingOffset
-// 0x0004 (0x0004 - 0x0000)
-struct RingObject_GetFinalLapRingOffset final
+struct UnionRaceSituationObject_GetFollowingDistDiff final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RingObject_GetFinalLapRingOffset;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetFollowingDistDiff;
 
-// Function UnionRun.RingObject.IsFinalLapChange
-// 0x0001 (0x0001 - 0x0000)
-struct RingObject_IsFinalLapChange final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RingObject_IsFinalLapChange;
-
-// Function UnionRun.RingObject.SetIsFinalLapChange
-// 0x0001 (0x0001 - 0x0000)
-struct RingObject_SetIsFinalLapChange final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RingObject_SetIsFinalLapChange;
-
-// Function UnionRun.RaceUISubCourseMapIcon.SetReaderFlag
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubCourseMapIcon_SetReaderFlag final
-{
-public:
-	bool                                          InReader;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubCourseMapIcon_SetReaderFlag;
-
-// Function UnionRun.ObakeAnimInstance.GetIsAttack
-// 0x0001 (0x0001 - 0x0000)
-struct ObakeAnimInstance_GetIsAttack final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ObakeAnimInstance_GetIsAttack;
-
-// Function UnionRun.ObakeAnimInstance.GetIsIdle
-// 0x0001 (0x0001 - 0x0000)
-struct ObakeAnimInstance_GetIsIdle final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ObakeAnimInstance_GetIsIdle;
-
-// Function UnionRun.ObakeAnimInstance.SetIsAttack
-// 0x0001 (0x0001 - 0x0000)
-struct ObakeAnimInstance_SetIsAttack final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ObakeAnimInstance_SetIsAttack;
-
-// Function UnionRun.ObakeAnimInstance.SetIsIdle
-// 0x0001 (0x0001 - 0x0000)
-struct ObakeAnimInstance_SetIsIdle final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ObakeAnimInstance_SetIsIdle;
-
-// Function UnionRun.UnionPhysicalMaterial.GetPhysicalSurfaceType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_GetPhysicalSurfaceType final
-{
-public:
-	EUnionSurfaceType                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_GetPhysicalSurfaceType;
-
-// Function UnionRun.UnionPhysicalMaterial.GetSurfaceFlag
-// 0x001F (0x001F - 0x0000)
-struct UnionPhysicalMaterial_GetSurfaceFlag final
-{
-public:
-	struct FUnionSurfaceFlag                      ReturnValue;                                       // 0x0000(0x001F)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_GetSurfaceFlag;
-
-// Function UnionRun.UnionPhysicalMaterial.IsAssistWall
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsAssistWall final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsAssistWall;
-
-// Function UnionRun.UnionPhysicalMaterial.IsAssistWallItemIgnoret
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsAssistWallItemIgnoret final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsAssistWallItemIgnoret;
-
-// Function UnionRun.UnionPhysicalMaterial.IsBouncy
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsBouncy final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBouncy;
-
-// Function UnionRun.UnionPhysicalMaterial.IsBumpyHeavy
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsBumpyHeavy final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBumpyHeavy;
-
-// Function UnionRun.UnionPhysicalMaterial.IsBumpyLight
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsBumpyLight final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBumpyLight;
-
-// Function UnionRun.UnionPhysicalMaterial.IsBumpyMedium
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsBumpyMedium final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsBumpyMedium;
-
-// Function UnionRun.UnionPhysicalMaterial.IsCameraChange
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsCameraChange final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsCameraChange;
-
-// Function UnionRun.UnionPhysicalMaterial.IsCarDriveable
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsCarDriveable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsCarDriveable;
-
-// Function UnionRun.UnionPhysicalMaterial.IsCylindrical
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsCylindrical final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsCylindrical;
-
-// Function UnionRun.UnionPhysicalMaterial.IsDash
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsDash final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsDash;
-
-// Function UnionRun.UnionPhysicalMaterial.IsGravitySwitch
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsGravitySwitch final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsGravitySwitch;
-
-// Function UnionRun.UnionPhysicalMaterial.IsGrindDash
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsGrindDash final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsGrindDash;
-
-// Function UnionRun.UnionPhysicalMaterial.IsGuidedJump
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsGuidedJump final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsGuidedJump;
-
-// Function UnionRun.UnionPhysicalMaterial.IsHitBouncyMidium
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsHitBouncyMidium final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitBouncyMidium;
-
-// Function UnionRun.UnionPhysicalMaterial.IsHitLoseRing
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsHitLoseRing final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitLoseRing;
-
-// Function UnionRun.UnionPhysicalMaterial.IsHitSlowdownLight
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsHitSlowdownLight final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitSlowdownLight;
-
-// Function UnionRun.UnionPhysicalMaterial.IsHitSlowdownMidium
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsHitSlowdownMidium final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsHitSlowdownMidium;
-
-// Function UnionRun.UnionPhysicalMaterial.IsIgnoreSticky
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsIgnoreSticky final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsIgnoreSticky;
-
-// Function UnionRun.UnionPhysicalMaterial.IsItemOnly
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsItemOnly final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsItemOnly;
-
-// Function UnionRun.UnionPhysicalMaterial.IsMachineOnlyWall
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsMachineOnlyWall final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsMachineOnlyWall;
-
-// Function UnionRun.UnionPhysicalMaterial.IsNoJump
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsNoJump final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsNoJump;
-
-// Function UnionRun.UnionPhysicalMaterial.IsNrrow
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsNrrow final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsNrrow;
-
-// Function UnionRun.UnionPhysicalMaterial.IsPseudoPlane
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsPseudoPlane final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsPseudoPlane;
-
-// Function UnionRun.UnionPhysicalMaterial.IsRespot
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsRespot final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsRespot;
-
-// Function UnionRun.UnionPhysicalMaterial.IsSlide
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsSlide final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlide;
-
-// Function UnionRun.UnionPhysicalMaterial.IsSlippy
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsSlippy final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlippy;
-
-// Function UnionRun.UnionPhysicalMaterial.IsSlowDownLight
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsSlowDownLight final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlowDownLight;
-
-// Function UnionRun.UnionPhysicalMaterial.IsSlowDownMedium
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsSlowDownMedium final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsSlowDownMedium;
-
-// Function UnionRun.UnionPhysicalMaterial.IsWall
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsWall final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsWall;
-
-// Function UnionRun.UnionPhysicalMaterial.IsYellowDrill
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPhysicalMaterial_IsYellowDrill final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPhysicalMaterial_IsYellowDrill;
-
-// Function UnionRun.GimmckEventCollision.SetEventId
-// 0x0001 (0x0001 - 0x0000)
-struct GimmckEventCollision_SetEventId final
-{
-public:
-	EUnionEventId                                 EventId;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmckEventCollision_SetEventId;
-
-// Function UnionRun.GimmickBingoBall.SetCollisionSocketName
-// 0x0008 (0x0008 - 0x0000)
-struct GimmickBingoBall_SetCollisionSocketName final
-{
-public:
-	class FName                                   NewName;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickBingoBall_SetCollisionSocketName;
-
-// Function UnionRun.GimmickBollard.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct GimmickBollard_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickBollard_OnTriggerColliderConflict;
-
-// Function UnionRun.VATBreakObjectBase.OnVATUpdate
-// 0x0018 (0x0018 - 0x0000)
-struct VATBreakObjectBase_OnVATUpdate final
-{
-public:
-	class UUnionVATMeshComponent*                 VATComponent;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUnionVATSequenceInfo                  SequenceInfo;                                      // 0x0008(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_VATBreakObjectBase_OnVATUpdate;
-
-// Function UnionRun.VATBreakObjectBase.GetBreakSpeedType
-// 0x0001 (0x0001 - 0x0000)
-struct VATBreakObjectBase_GetBreakSpeedType final
-{
-public:
-	EBreakSpeedType                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_VATBreakObjectBase_GetBreakSpeedType;
-
-// Function UnionRun.GimmickCannonBoo.OnVATFrameFunction
-// 0x0018 (0x0018 - 0x0000)
-struct GimmickCannonBoo_OnVATFrameFunction final
-{
-public:
-	class UUnionVATMeshComponent*                 VATMeshComponent;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUnionVATSequenceInfo                  SequenceInfo;                                      // 0x0008(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GimmickCannonBoo_OnVATFrameFunction;
-
-// Function UnionRun.PackageRingObject.HitRacer
+// Function UnionRun.UnionRaceSituationObject.GetFollowingRacerIndex
 // 0x0004 (0x0004 - 0x0000)
-struct PackageRingObject_HitRacer final
+struct UnionRaceSituationObject_GetFollowingRacerIndex final
 {
 public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PackageRingObject_HitRacer;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetFollowingRacerIndex;
 
-// Function UnionRun.PackageRingObject.SetRingType
-// 0x0001 (0x0001 - 0x0000)
-struct PackageRingObject_SetRingType final
-{
-public:
-	EPackageRingType                              Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PackageRingObject_SetRingType;
-
-// Function UnionRun.RaceObjectSkeletal.SetBodySkeletalMesh
-// 0x0008 (0x0008 - 0x0000)
-struct RaceObjectSkeletal_SetBodySkeletalMesh final
-{
-public:
-	class USkeletalMesh*                          NewSkeletalMesh;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceObjectSkeletal_SetBodySkeletalMesh;
-
-// Function UnionRun.GimmickFracturedRock.OnPlayAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct GimmickFracturedRock_OnPlayAnimation final
-{
-public:
-	float                                         displayFram;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         globalPieceScaleMultiplier;                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickFracturedRock_OnPlayAnimation;
-
-// Function UnionRun.ItemExtnd09Projectile.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemExtnd09Projectile_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemExtnd09Projectile_OnTriggerColliderConflict;
-
-// Function UnionRun.ItemBodyCutObject.OnTriggerConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemBodyCutObject_OnTriggerConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemBodyCutObject_OnTriggerConflict;
-
-// Function UnionRun.GimmickMessageInterface.NotifyStartGimmickEvent
-// 0x000C (0x000C - 0x0000)
-struct GimmickMessageInterface_NotifyStartGimmickEvent final
-{
-public:
-	EStageId                                      StageId;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         EventId;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RacerIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickMessageInterface_NotifyStartGimmickEvent;
-
-// Function UnionRun.RaceUISubAirTrickInfo.SetAirTrickInfoAndFireAnimation
-// 0x000C (0x000C - 0x0000)
-struct RaceUISubAirTrickInfo_SetAirTrickInfoAndFireAnimation final
-{
-public:
-	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SuccessBonusCount;                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsGhostView;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubAirTrickInfo_SetAirTrickInfoAndFireAnimation;
-
-// Function UnionRun.RaceUISubAirTrickInfo.SetAirTrickTextInfo
-// 0x0030 (0x0030 - 0x0000)
-struct RaceUISubAirTrickInfo_SetAirTrickTextInfo final
-{
-public:
-	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UImage*                                 Tex_1000;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UImage*                                 Tex_0100;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UImage*                                 Tex_0010;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UImage*                                 Tex_0001;                                          // 0x0020(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UImage*                                 Tex_Unit;                                          // 0x0028(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubAirTrickInfo_SetAirTrickTextInfo;
-
-// Function UnionRun.RaceUISubAirTrickInfo.GetAirTrickBonusValue
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubAirTrickInfo_GetAirTrickBonusValue final
-{
-public:
-	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubAirTrickInfo_GetAirTrickBonusValue;
-
-// Function UnionRun.RaceUISubAirTrickInfo.GetAirTrickValue
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubAirTrickInfo_GetAirTrickValue final
-{
-public:
-	int32                                         SuccessCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubAirTrickInfo_GetAirTrickValue;
-
-// Function UnionRun.ShortcutRingObject.GetOverrideCollisionScale
+// Function UnionRun.UnionRaceSituationObject.GetFollowingRatioDiff
 // 0x0004 (0x0004 - 0x0000)
-struct ShortcutRingObject_GetOverrideCollisionScale final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_GetOverrideCollisionScale;
-
-// Function UnionRun.ShortcutRingObject.GetRingScale
-// 0x0004 (0x0004 - 0x0000)
-struct ShortcutRingObject_GetRingScale final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_GetRingScale;
-
-// Function UnionRun.ShortcutRingObject.GetShortcutId
-// 0x0004 (0x0004 - 0x0000)
-struct ShortcutRingObject_GetShortcutId final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_GetShortcutId;
-
-// Function UnionRun.ShortcutRingObject.GetShortcutRingType
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_GetShortcutRingType final
-{
-public:
-	EShortcutRingType                             ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_GetShortcutRingType;
-
-// Function UnionRun.ShortcutRingObject.GetStageId
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_GetStageId final
-{
-public:
-	EStageId                                      ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_GetStageId;
-
-// Function UnionRun.ShortcutRingObject.IsHalfRing
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_IsHalfRing final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_IsHalfRing;
-
-// Function UnionRun.ShortcutRingObject.IsUseOverrideCollisionScale
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_IsUseOverrideCollisionScale final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_IsUseOverrideCollisionScale;
-
-// Function UnionRun.ShortcutRingObject.SetHalfRing
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_SetHalfRing final
-{
-public:
-	bool                                          bHalf;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_SetHalfRing;
-
-// Function UnionRun.ShortcutRingObject.SetRingScale
-// 0x0004 (0x0004 - 0x0000)
-struct ShortcutRingObject_SetRingScale final
-{
-public:
-	float                                         Scale;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_SetRingScale;
-
-// Function UnionRun.ShortcutRingObject.SetShortcutId
-// 0x0004 (0x0004 - 0x0000)
-struct ShortcutRingObject_SetShortcutId final
-{
-public:
-	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_SetShortcutId;
-
-// Function UnionRun.ShortcutRingObject.SetShortcutRingType
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_SetShortcutRingType final
-{
-public:
-	EShortcutRingType                             Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_SetShortcutRingType;
-
-// Function UnionRun.ShortcutRingObject.SetTravelRingType
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_SetTravelRingType final
-{
-public:
-	ETravelRingType                               Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_SetTravelRingType;
-
-// Function UnionRun.ShortcutRingObject.GetTravelRingType
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_GetTravelRingType final
-{
-public:
-	ETravelRingType                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_GetTravelRingType;
-
-// Function UnionRun.ShortcutRingObject.IsUseAnotherGate
-// 0x0001 (0x0001 - 0x0000)
-struct ShortcutRingObject_IsUseAnotherGate final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ShortcutRingObject_IsUseAnotherGate;
-
-// Function UnionRun.RaceUISubItemIcon.DisplayHideAnim
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubItemIcon_DisplayHideAnim final
-{
-public:
-	bool                                          Display;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_DisplayHideAnim;
-
-// Function UnionRun.RaceUISubItemIcon.GetRandomLotteryDisplayItemId
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubItemIcon_GetRandomLotteryDisplayItemId final
-{
-public:
-	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_GetRandomLotteryDisplayItemId;
-
-// Function UnionRun.RaceUISubItemIcon.ItemLostAnimStart
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubItemIcon_ItemLostAnimStart final
-{
-public:
-	bool                                          bHideIcon;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_ItemLostAnimStart;
-
-// Function UnionRun.RaceUISubItemIcon.LotterySeqStart
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubItemIcon_LotterySeqStart final
-{
-public:
-	bool                                          LotterySound;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_LotterySeqStart;
-
-// Function UnionRun.RaceUISubItemIcon.SetAttributeColorIndex
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubItemIcon_SetAttributeColorIndex final
-{
-public:
-	int32                                         InAttributeIndex;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetAttributeColorIndex;
-
-// Function UnionRun.RaceUISubItemIcon.SetGaugeType
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubItemIcon_SetGaugeType final
-{
-public:
-	bool                                          bRemainCountGauge;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetGaugeType;
-
-// Function UnionRun.RaceUISubItemIcon.SetItemIdIndex
-// 0x000C (0x000C - 0x0000)
-struct RaceUISubItemIcon_SetItemIdIndex final
-{
-public:
-	int32                                         InItemIdIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InRemainCount;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreAttribute;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnLottery;                                        // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetItemIdIndex;
-
-// Function UnionRun.RaceUISubItemIcon.SetItemIdTexture
-// 0x0050 (0x0050 - 0x0000)
-struct RaceUISubItemIcon_SetItemIdTexture final
-{
-public:
-	TMap<EItemId, class UTexture2D*>              InItemId_TextureMap;                               // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetItemIdTexture;
-
-// Function UnionRun.RaceUISubItemIcon.SetLotteryDisplayItemIds
-// 0x0010 (0x0010 - 0x0000)
-struct RaceUISubItemIcon_SetLotteryDisplayItemIds final
-{
-public:
-	TArray<uint8>                                 ItemIds;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetLotteryDisplayItemIds;
-
-// Function UnionRun.RaceUISubItemIcon.SetRemainCountGauge
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubItemIcon_SetRemainCountGauge final
-{
-public:
-	int32                                         Count;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxCount;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetRemainCountGauge;
-
-// Function UnionRun.RaceUISubItemIcon.SetRingNum
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubItemIcon_SetRingNum final
-{
-public:
-	int32                                         InRingCount;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetRingNum;
-
-// Function UnionRun.RaceUISubItemIcon.SetRingNumVisible
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubItemIcon_SetRingNumVisible final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemIcon_SetRingNumVisible;
-
-// Function UnionRun.RaceUISubGadgetIcon.SetGadgetId
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubGadgetIcon_SetGadgetId final
-{
-public:
-	EGadgetId                                     InGadgetId;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubGadgetIcon_SetGadgetId;
-
-// Function UnionRun.RaceUISubGadgetIcon.SetIconMaterial
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubGadgetIcon_SetIconMaterial final
-{
-public:
-	int32                                         IconIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubGadgetIcon_SetIconMaterial;
-
-// Function UnionRun.RaceUISubGadgetIcon.GetGadgetId
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubGadgetIcon_GetGadgetId final
-{
-public:
-	EGadgetId                                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubGadgetIcon_GetGadgetId;
-
-// Function UnionRun.GimmickStaticBodyComponent.SetCameraId
-// 0x0004 (0x0004 - 0x0000)
-struct GimmickStaticBodyComponent_SetCameraId final
-{
-public:
-	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetCameraId;
-
-// Function UnionRun.GimmickStaticBodyComponent.SetIgnoreItemInvincibleWall
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickStaticBodyComponent_SetIgnoreItemInvincibleWall final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetIgnoreItemInvincibleWall;
-
-// Function UnionRun.GimmickStaticBodyComponent.SetParamId
-// 0x0004 (0x0004 - 0x0000)
-struct GimmickStaticBodyComponent_SetParamId final
-{
-public:
-	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetParamId;
-
-// Function UnionRun.GimmickStaticBodyComponent.SetPostProcessEffectType
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickStaticBodyComponent_SetPostProcessEffectType final
-{
-public:
-	EUnionRacePostProcessEffectType               Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetPostProcessEffectType;
-
-// Function UnionRun.GimmickStaticBodyComponent.SetResultCameraType
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickStaticBodyComponent_SetResultCameraType final
-{
-public:
-	EResultCameraProductionType                   Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetResultCameraType;
-
-// Function UnionRun.GimmickStaticBodyComponent.SetSurfaceFlag
-// 0x001F (0x001F - 0x0000)
-struct GimmickStaticBodyComponent_SetSurfaceFlag final
-{
-public:
-	struct FUnionSurfaceFlag                      flag;                                              // 0x0000(0x001F)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetSurfaceFlag;
-
-// Function UnionRun.GimmickStaticBodyComponent.SetSurfaceType
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickStaticBodyComponent_SetSurfaceType final
-{
-public:
-	EUnionSurfaceType                             Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickStaticBodyComponent_SetSurfaceType;
-
-// Function UnionRun.ItemMagnetObject.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemMagnetObject_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMagnetObject_OnTriggerColliderConflict;
-
-// Function UnionRun.GimmickThornBall.GetHitSpeedRatio
-// 0x0004 (0x0004 - 0x0000)
-struct GimmickThornBall_GetHitSpeedRatio final
+struct UnionRaceSituationObject_GetFollowingRatioDiff final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GimmickThornBall_GetHitSpeedRatio;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetFollowingRatioDiff;
 
-// Function UnionRun.GimmickTriggerMotionAnimInstance.NativeUpdateAnimation
+// Function UnionRun.UnionRaceSituationObject.GetLeadingDistDiff
 // 0x0004 (0x0004 - 0x0000)
-struct GimmickTriggerMotionAnimInstance_NativeUpdateAnimation final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickTriggerMotionAnimInstance_NativeUpdateAnimation;
-
-// Function UnionRun.GimmickTriggerMotionBase.GetPlayRate
-// 0x0008 (0x0008 - 0x0000)
-struct GimmickTriggerMotionBase_GetPlayRate final
-{
-public:
-	ETriggerMotionState                           State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickTriggerMotionBase_GetPlayRate;
-
-// Function UnionRun.GimmickTriggerMotionBase.GetTriggerMotionType
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickTriggerMotionBase_GetTriggerMotionType final
-{
-public:
-	ETriggerMotionType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickTriggerMotionBase_GetTriggerMotionType;
-
-// Function UnionRun.GimmickTriggerMotionBase.IsPlayIdle
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickTriggerMotionBase_IsPlayIdle final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickTriggerMotionBase_IsPlayIdle;
-
-// Function UnionRun.GimmickTriggerMotionBase.IsPlayOneShot
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickTriggerMotionBase_IsPlayOneShot final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickTriggerMotionBase_IsPlayOneShot;
-
-// Function UnionRun.GimmickTriggerMotionBase.IsTriggered
-// 0x0001 (0x0001 - 0x0000)
-struct GimmickTriggerMotionBase_IsTriggered final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GimmickTriggerMotionBase_IsTriggered;
-
-// Function UnionRun.GimmickTriggerMotionVAT.OnVATSequence
-// 0x0018 (0x0018 - 0x0000)
-struct GimmickTriggerMotionVAT_OnVATSequence final
-{
-public:
-	class UUnionVATMeshComponent*                 VATMeshComponent;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUnionVATSequenceInfo                  SequenceInfo;                                      // 0x0008(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GimmickTriggerMotionVAT_OnVATSequence;
-
-// Function UnionRun.RaceUISubStartGauge.GetButtonWidget
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubStartGauge_GetButtonWidget final
-{
-public:
-	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_GetButtonWidget;
-
-// Function UnionRun.RaceUISubStartGauge.GetKeyAccel
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubStartGauge_GetKeyAccel final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_GetKeyAccel;
-
-// Function UnionRun.RaceUISubStartGauge.IsPlayControlKeyboard
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubStartGauge_IsPlayControlKeyboard final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_IsPlayControlKeyboard;
-
-// Function UnionRun.RaceUISubStartGauge.SetDashInputKey
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubStartGauge_SetDashInputKey final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlayerIndex;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_SetDashInputKey;
-
-// Function UnionRun.RaceUISubStartGauge.SetGaugeParcent
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubStartGauge_SetGaugeParcent final
-{
-public:
-	float                                         GaugeRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_SetGaugeParcent;
-
-// Function UnionRun.RaceUISubStartGauge.SetGaugeParcentTrigger
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubStartGauge_SetGaugeParcentTrigger final
-{
-public:
-	float                                         GaugeRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_SetGaugeParcentTrigger;
-
-// Function UnionRun.RaceUISubStartGauge.SetGaugePivotAndRange
-// 0x0010 (0x0010 - 0x0000)
-struct RaceUISubStartGauge_SetGaugePivotAndRange final
-{
-public:
-	class UImage*                                 ImageRef;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PivotRate;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GaugeRateRange;                                    // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_SetGaugePivotAndRange;
-
-// Function UnionRun.RaceUISubStartGauge.SetStartDashParamSetting
-// 0x0030 (0x0030 - 0x0000)
-struct RaceUISubStartGauge_SetStartDashParamSetting final
-{
-public:
-	struct FUnionRaceStartDashParam               InStartDashParam;                                  // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_SetStartDashParamSetting;
-
-// Function UnionRun.RaceUISubStartGauge.SetStartDashSetting
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubStartGauge_SetStartDashSetting final
-{
-public:
-	float                                         LV3_PIVOT;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LV3_RANGE;                                         // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LV2_PIVOT;                                         // 0x0008(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LV2_RANGE;                                         // 0x000C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NG1_PIVOT;                                         // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NG1_RANGE;                                         // 0x0014(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NG2_PIVOT;                                         // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NG2_RANGE;                                         // 0x001C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubStartGauge_SetStartDashSetting;
-
-// Function UnionRun.GUNHunterAnimInstance.SetIsAttackCharge
-// 0x0001 (0x0001 - 0x0000)
-struct GUNHunterAnimInstance_SetIsAttackCharge final
-{
-public:
-	bool                                          isChange;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GUNHunterAnimInstance_SetIsAttackCharge;
-
-// Function UnionRun.GUNHunterAnimInstance.SetIsDead
-// 0x0001 (0x0001 - 0x0000)
-struct GUNHunterAnimInstance_SetIsDead final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GUNHunterAnimInstance_SetIsDead;
-
-// Function UnionRun.GUNHunterAnimInstance.IsShootState
-// 0x0003 (0x0003 - 0x0000)
-struct GUNHunterAnimInstance_IsShootState final
-{
-public:
-	EGUNHunterShootState                          State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          isDown;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GUNHunterAnimInstance_IsShootState;
-
-// Function UnionRun.GUNHunterAnimInstance.IsStartMotion
-// 0x0002 (0x0002 - 0x0000)
-struct GUNHunterAnimInstance_IsStartMotion final
-{
-public:
-	EGUNHunterStartType                           Motion;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GUNHunterAnimInstance_IsStartMotion;
-
-// Function UnionRun.ItemCountDownComponent.InitializeCountDown
-// 0x0010 (0x0010 - 0x0000)
-struct ItemCountDownComponent_InitializeCountDown final
-{
-public:
-	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReset;                                            // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ItemCountDownComponent_InitializeCountDown;
-
-// Function UnionRun.ItemCountDownComponent.ResetTargetParameter
-// 0x0008 (0x0008 - 0x0000)
-struct ItemCountDownComponent_ResetTargetParameter final
-{
-public:
-	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemCountDownComponent_ResetTargetParameter;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsGift
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsGift final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsGift;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsIdle
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsIdle final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsIdle;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsSteal
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsSteal final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsSteal;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrow
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsThrow final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrow;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrowHit
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsThrowHit final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrowHit;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrowMissBound
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsThrowMissBound final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrowMissBound;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsThrowMissFall
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsThrowMissFall final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsThrowMissFall;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetIsUse
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetIsUse final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetIsUse;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.GetThrowAnimController
-// 0x0004 (0x0004 - 0x0000)
-struct ItemDarkChaoAnimInstance_GetThrowAnimController final
+struct UnionRaceSituationObject_GetLeadingDistDiff final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_GetThrowAnimController;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetLeadingDistDiff;
 
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsGift
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsGift final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsGift;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsIdle
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsIdle final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsIdle;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsSteal
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsSteal final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsSteal;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrow
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsThrow final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrow;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrowHit
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsThrowHit final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrowHit;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrowMissBound
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsThrowMissBound final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrowMissBound;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsThrowMissFall
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsThrowMissFall final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsThrowMissFall;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetIsUse
-// 0x0001 (0x0001 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetIsUse final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetIsUse;
-
-// Function UnionRun.ItemDarkChaoAnimInstance.SetThrowAnimController
+// Function UnionRun.UnionRaceSituationObject.GetLeadingRacerIndex
 // 0x0004 (0x0004 - 0x0000)
-struct ItemDarkChaoAnimInstance_SetThrowAnimController final
+struct UnionRaceSituationObject_GetLeadingRacerIndex final
 {
 public:
-	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemDarkChaoAnimInstance_SetThrowAnimController;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetLeadingRacerIndex;
 
-// Function UnionRun.ItemHomingPunchObject.EventHitRacer
+// Function UnionRun.UnionRaceSituationObject.GetLeadingRatioDiff
 // 0x0004 (0x0004 - 0x0000)
-struct ItemHomingPunchObject_EventHitRacer final
-{
-public:
-	int32                                         HitRacerIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemHomingPunchObject_EventHitRacer;
-
-// Function UnionRun.ItemHomingPunchObject.OnPlayDamegeSound
-// 0x0001 (0x0001 - 0x0000)
-struct ItemHomingPunchObject_OnPlayDamegeSound final
-{
-public:
-	ESoundPan                                     SoundPan;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemHomingPunchObject_OnPlayDamegeSound;
-
-// Function UnionRun.ItemHomingPunchObject.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemHomingPunchObject_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemHomingPunchObject_OnTriggerColliderConflict;
-
-// Function UnionRun.ItemMessageInterface.CalIsInWithinPlaneArea
-// 0x0020 (0x0020 - 0x0000)
-struct ItemMessageInterface_CalIsInWithinPlaneArea final
-{
-public:
-	struct FVector                                Position;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ItemMessageInterface_CalIsInWithinPlaneArea;
-
-// Function UnionRun.ItemMessageInterface.ConfirmAbsorbOject
-// 0x0160 (0x0160 - 0x0000)
-struct ItemMessageInterface_ConfirmAbsorbOject final
-{
-public:
-	struct FAbsorbedObjectInfo                    Info;                                              // 0x0000(0x0150)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0150(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_151[0xF];                                      // 0x0151(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ItemMessageInterface_ConfirmAbsorbOject;
-
-// Function UnionRun.ItemMessageInterface.GetItemActiveTime
-// 0x0004 (0x0004 - 0x0000)
-struct ItemMessageInterface_GetItemActiveTime final
+struct UnionRaceSituationObject_GetLeadingRatioDiff final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemMessageInterface_GetItemActiveTime;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetLeadingRatioDiff;
 
-// Function UnionRun.ItemMessageInterface.GetItemDomainNumber
-// 0x0001 (0x0001 - 0x0000)
-struct ItemMessageInterface_GetItemDomainNumber final
-{
-public:
-	EDomainNumber                                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_GetItemDomainNumber;
-
-// Function UnionRun.ItemMessageInterface.GetItemHolderRacerIndex
+// Function UnionRun.UnionRaceSituationObject.GetOddNumRankSeconds
 // 0x0004 (0x0004 - 0x0000)
-struct ItemMessageInterface_GetItemHolderRacerIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_GetItemHolderRacerIndex;
-
-// Function UnionRun.ItemMessageInterface.GetItemPathTransform
-// 0x0060 (0x0060 - 0x0000)
-struct ItemMessageInterface_GetItemPathTransform final
-{
-public:
-	struct FTransform                             ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_GetItemPathTransform;
-
-// Function UnionRun.ItemMessageInterface.GetItemThrowDirection
-// 0x0001 (0x0001 - 0x0000)
-struct ItemMessageInterface_GetItemThrowDirection final
-{
-public:
-	EItemThrowDirection                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_GetItemThrowDirection;
-
-// Function UnionRun.ItemMessageInterface.GetItemType
-// 0x0001 (0x0001 - 0x0000)
-struct ItemMessageInterface_GetItemType final
-{
-public:
-	EItemId                                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_GetItemType;
-
-// Function UnionRun.ItemMessageInterface.GetItemUniqueID
-// 0x0004 (0x0004 - 0x0000)
-struct ItemMessageInterface_GetItemUniqueID final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_GetItemUniqueID;
-
-// Function UnionRun.ItemMessageInterface.GetTrapItemOnGroundTime
-// 0x0004 (0x0004 - 0x0000)
-struct ItemMessageInterface_GetTrapItemOnGroundTime final
+struct UnionRaceSituationObject_GetOddNumRankSeconds final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ItemMessageInterface_GetTrapItemOnGroundTime;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetOddNumRankSeconds;
 
-// Function UnionRun.ItemMessageInterface.IsItemPathRouteForm
-// 0x0008 (0x0008 - 0x0000)
-struct ItemMessageInterface_IsItemPathRouteForm final
-{
-public:
-	int32                                         Type;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ItemMessageInterface_IsItemPathRouteForm;
-
-// Function UnionRun.ItemMessageInterface.IsItemPathType
-// 0x0008 (0x0008 - 0x0000)
-struct ItemMessageInterface_IsItemPathType final
-{
-public:
-	int32                                         Type;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ItemMessageInterface_IsItemPathType;
-
-// Function UnionRun.ItemMessageInterface.IsWarpTarget
-// 0x0008 (0x0008 - 0x0000)
-struct ItemMessageInterface_IsWarpTarget final
-{
-public:
-	int32                                         WarpRingAttacRacerIndex;                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ItemMessageInterface_IsWarpTarget;
-
-// Function UnionRun.ItemMessageInterface.NotifyAbsorbOject
-// 0x0018 (0x0018 - 0x0000)
-struct ItemMessageInterface_NotifyAbsorbOject final
-{
-public:
-	struct FAbsorberInfo                          Info;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_NotifyAbsorbOject;
-
-// Function UnionRun.ItemMessageInterface.NotifyCyanLaserMoveInfo
-// 0x0170 (0x0170 - 0x0000)
-struct ItemMessageInterface_NotifyCyanLaserMoveInfo final
-{
-public:
-	struct FCyanLaserMoveInfo                     Info;                                              // 0x0000(0x0170)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_NotifyCyanLaserMoveInfo;
-
-// Function UnionRun.ItemMessageInterface.NotifyWarpRingMoveInfo
-// 0x00F0 (0x00F0 - 0x0000)
-struct ItemMessageInterface_NotifyWarpRingMoveInfo final
-{
-public:
-	struct FWarpRingMoveInfo                      Info;                                              // 0x0000(0x00F0)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_NotifyWarpRingMoveInfo;
-
-// Function UnionRun.ItemMessageInterface.NotifyWarpTargetBegin
-// 0x0008 (0x0008 - 0x0000)
-struct ItemMessageInterface_NotifyWarpTargetBegin final
-{
-public:
-	int32                                         WarpRingAttacRacerIndex;                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ItemMessageInterface_NotifyWarpTargetBegin;
-
-// Function UnionRun.ItemMessageInterface.NotifyWarpTargetEnd
+// Function UnionRun.UnionRaceSituationObject.GetPrevRank
 // 0x0004 (0x0004 - 0x0000)
-struct ItemMessageInterface_NotifyWarpTargetEnd final
-{
-public:
-	int32                                         WarpRingAttacRacerIndex;                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemMessageInterface_NotifyWarpTargetEnd;
-
-// Function UnionRun.ItemRocketPunchObject.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemRocketPunchObject_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemRocketPunchObject_OnTriggerColliderConflict;
-
-// Function UnionRun.ItemSlicerObject.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemSlicerObject_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemSlicerObject_OnTriggerColliderConflict;
-
-// Function UnionRun.ItemSplashProjectile.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemSplashProjectile_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemSplashProjectile_OnTriggerColliderConflict;
-
-// Function UnionRun.ItemVioletVoidObject.IsMeshAnimEating
-// 0x0001 (0x0001 - 0x0000)
-struct ItemVioletVoidObject_IsMeshAnimEating final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemVioletVoidObject_IsMeshAnimEating;
-
-// Function UnionRun.ItemVioletVoidObject.IsMeshAnimInSleep
-// 0x0001 (0x0001 - 0x0000)
-struct ItemVioletVoidObject_IsMeshAnimInSleep final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemVioletVoidObject_IsMeshAnimInSleep;
-
-// Function UnionRun.ItemVioletVoidObject.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemVioletVoidObject_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemVioletVoidObject_OnTriggerColliderConflict;
-
-// Function UnionRun.ItemVioletVoidObject.PlaySE
-// 0x0008 (0x0008 - 0x0000)
-struct ItemVioletVoidObject_PlaySE final
-{
-public:
-	class FName                                   SEName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemVioletVoidObject_PlaySE;
-
-// Function UnionRun.ItemVioletVoidObject.RequestMeshAnimAppearance
-// 0x0001 (0x0001 - 0x0000)
-struct ItemVioletVoidObject_RequestMeshAnimAppearance final
-{
-public:
-	bool                                          bAppearance;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemVioletVoidObject_RequestMeshAnimAppearance;
-
-// Function UnionRun.ItemWarpRingObject.OnHitTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct ItemWarpRingObject_OnHitTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ItemWarpRingObject_OnHitTriggerColliderConflict;
-
-// Function UnionRun.KingBoomBooProjectile.OnTriggerColliderConflict
-// 0x0060 (0x0060 - 0x0000)
-struct KingBoomBooProjectile_OnTriggerColliderConflict final
-{
-public:
-	struct FHitTriggerInfo                        HitInfo;                                           // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KingBoomBooProjectile_OnTriggerColliderConflict;
-
-// Function UnionRun.PauseManager.SetGamePaused
-// 0x0008 (0x0008 - 0x0000)
-struct PauseManager_SetGamePaused final
-{
-public:
-	bool                                          Paused;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RacerIndex;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PauseManager_SetGamePaused;
-
-// Function UnionRun.PauseManager.SetGamePauseOwnerRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct PauseManager_SetGamePauseOwnerRacerIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PauseManager_SetGamePauseOwnerRacerIndex;
-
-// Function UnionRun.PauseManager.SetIsOnlineMode
-// 0x0001 (0x0001 - 0x0000)
-struct PauseManager_SetIsOnlineMode final
-{
-public:
-	bool                                          IsOnlineMode;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PauseManager_SetIsOnlineMode;
-
-// Function UnionRun.PauseManager.GetGamePauseOwnerRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct PauseManager_GetGamePauseOwnerRacerIndex final
+struct UnionRaceSituationObject_GetPrevRank final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PauseManager_GetGamePauseOwnerRacerIndex;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetPrevRank;
 
-// Function UnionRun.PauseManager.IsGamePaused
-// 0x0001 (0x0001 - 0x0000)
-struct PauseManager_IsGamePaused final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PauseManager_IsGamePaused;
-
-// Function UnionRun.PauseManager.IsGamePauseOwnerGoaled
-// 0x0001 (0x0001 - 0x0000)
-struct PauseManager_IsGamePauseOwnerGoaled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PauseManager_IsGamePauseOwnerGoaled;
-
-// Function UnionRun.PauseManager.IsOnlineMode
-// 0x0001 (0x0001 - 0x0000)
-struct PauseManager_IsOnlineMode final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PauseManager_IsOnlineMode;
-
-// Function UnionRun.RaceLogUtil.GetRacerLapInfo
-// 0x0018 (0x0018 - 0x0000)
-struct RaceLogUtil_GetRacerLapInfo final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceLogUtil_GetRacerLapInfo;
-
-// Function UnionRun.RaceLogUtil.GetRacerStatusInfo
-// 0x0018 (0x0018 - 0x0000)
-struct RaceLogUtil_GetRacerStatusInfo final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceLogUtil_GetRacerStatusInfo;
-
-// Function UnionRun.RaceLogUtil.PrintRaceLog
-// 0x0028 (0x0028 - 0x0000)
-struct RaceLogUtil_PrintRaceLog final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 str;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 at;                                                // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceLogUtil_PrintRaceLog;
-
-// Function UnionRun.RaceLogUtil.PrintRunLog
-// 0x0028 (0x0028 - 0x0000)
-struct RaceLogUtil_PrintRunLog final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 str;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 at;                                                // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceLogUtil_PrintRunLog;
-
-// Function UnionRun.RaceLogUtil.PrintWarpLog
-// 0x0028 (0x0028 - 0x0000)
-struct RaceLogUtil_PrintWarpLog final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 str;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 at;                                                // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceLogUtil_PrintWarpLog;
-
-// Function UnionRun.RacerReactionManager.ForcePlayVoice
-// 0x00A8 (0x00A8 - 0x0000)
-struct RacerReactionManager_ForcePlayVoice final
-{
-public:
-	struct FRacerReactionVoice                    ReactionVoice;                                     // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         RacerIndex;                                        // 0x00A0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinimumCoolTime;                                   // 0x00A4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RacerReactionManager_ForcePlayVoice;
-
-// Function UnionRun.RacerReactionManager.SoundPlayIrregularInfoDod
-// 0x00B0 (0x00B0 - 0x0000)
-struct RacerReactionManager_SoundPlayIrregularInfoDod final
-{
-public:
-	struct FRacerReactionVoice                    ReactionVoice;                                     // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         RacerIndex;                                        // 0x00A0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinimumCoolTime;                                   // 0x00A4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x00A8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RacerReactionManager_SoundPlayIrregularInfoDod;
-
-// Function UnionRun.RaceUISubAiming.ReStartAimingUseBeforeSound
+// Function UnionRun.UnionRaceSituationObject.GetRank
 // 0x0004 (0x0004 - 0x0000)
-struct RaceUISubAiming_ReStartAimingUseBeforeSound final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubAiming_ReStartAimingUseBeforeSound;
-
-// Function UnionRun.RaceUISubAiming.SetRaceHUD
-// 0x0010 (0x0010 - 0x0000)
-struct RaceUISubAiming_SetRaceHUD final
-{
-public:
-	class UUnionRaceUI*                           inRaceHud;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         localPlayerNum;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubAiming_SetRaceHUD;
-
-// Function UnionRun.RaceUISubAiming.StopSound
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubAiming_StopSound final
-{
-public:
-	bool                                          bPause;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubAiming_StopSound;
-
-// Function UnionRun.RaceUISubApproachWarning.InitItemEnemyApproachSetting
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubApproachWarning_InitItemEnemyApproachSetting final
-{
-public:
-	float                                         InMaxScale;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUnionAttackItemInfoType                      AttackItemInfoType;                                // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         AttackItemId;                                      // 0x0005(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubApproachWarning_InitItemEnemyApproachSetting;
-
-// Function UnionRun.RaceUISubApproachWarning.OnPause
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubApproachWarning_OnPause final
-{
-public:
-	bool                                          bInPause;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubApproachWarning_OnPause;
-
-// Function UnionRun.RaceUISubApproachWarning.SetAttackTypeandId
-// 0x0002 (0x0002 - 0x0000)
-struct RaceUISubApproachWarning_SetAttackTypeandId final
-{
-public:
-	EUnionAttackItemInfoType                      InAttackType;                                      // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       InItemId;                                          // 0x0001(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubApproachWarning_SetAttackTypeandId;
-
-// Function UnionRun.RaceUISubApproachWarning.SetDriverId
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubApproachWarning_SetDriverId final
-{
-public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubApproachWarning_SetDriverId;
-
-// Function UnionRun.RaceUISubApproachWarning.SetItemId
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubApproachWarning_SetItemId final
-{
-public:
-	int32                                         InItemId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubApproachWarning_SetItemId;
-
-// Function UnionRun.RaceUISubApproachWarning.UpdateItemEnemyApproach
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubApproachWarning_UpdateItemEnemyApproach final
-{
-public:
-	float                                         ValueCM;                                           // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubApproachWarning_UpdateItemEnemyApproach;
-
-// Function UnionRun.RaceUISubApproachWarning.UpdateRacerApproach
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubApproachWarning_UpdateRacerApproach final
-{
-public:
-	float                                         ValueCM;                                           // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubApproachWarning_UpdateRacerApproach;
-
-// Function UnionRun.RaceUISubBasicOperation.IsKeyboard
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubBasicOperation_IsKeyboard final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBasicOperation_IsKeyboard;
-
-// Function UnionRun.RaceUISubBoost.CheckBoostLevelInGhostReplay
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubBoost_CheckBoostLevelInGhostReplay final
-{
-public:
-	int32                                         Level;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBoost_CheckBoostLevelInGhostReplay;
-
-// Function UnionRun.RaceUISubBoost.IsFastFirstCharge
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubBoost_IsFastFirstCharge final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubBoost_IsFastFirstCharge;
-
-// Function UnionRun.RaceUISubBoost.IsFastSecondCharge
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubBoost_IsFastSecondCharge final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubBoost_IsFastSecondCharge;
-
-// Function UnionRun.RaceUISubBoost.IsFastThirdCharge
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubBoost_IsFastThirdCharge final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubBoost_IsFastThirdCharge;
-
-// Function UnionRun.RaceUISubBoost.IsViewGhostReplay
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubBoost_IsViewGhostReplay final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBoost_IsViewGhostReplay;
-
-// Function UnionRun.RaceUISubBoost.SetVisibleHUD
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubBoost_SetVisibleHUD final
-{
-public:
-	bool                                          IsVisible_0;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DeltaTime;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBoost_SetVisibleHUD;
-
-// Function UnionRun.RaceUISubBoost.SetWaitTimeJustBoostInGhostReplay
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubBoost_SetWaitTimeJustBoostInGhostReplay final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBoost_SetWaitTimeJustBoostInGhostReplay;
-
-// Function UnionRun.RaceUISubBoost.UpdateChargeInfo
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubBoost_UpdateChargeInfo final
-{
-public:
-	int32                                         ChargeLevel;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChargeRate;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBoost_UpdateChargeInfo;
-
-// Function UnionRun.RaceUISubBoost.GetIsOpened
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubBoost_GetIsOpened final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBoost_GetIsOpened;
-
-// Function UnionRun.RaceUISubBtnGuide.GetControllerType
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubBtnGuide_GetControllerType final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsNotSetKey;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBtnGuidePlatFormController                   ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetControllerType;
-
-// Function UnionRun.RaceUISubBtnGuide.GetUseItemKey
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubBtnGuide_GetUseItemKey final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetUseItemKey;
-
-// Function UnionRun.RaceUISubBtnGuide.SetUseItemKey
-// 0x0018 (0x0018 - 0x0000)
-struct RaceUISubBtnGuide_SetUseItemKey final
-{
-public:
-	struct FKey                                   UseItemKey;                                        // 0x0000(0x0018)(ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_SetUseItemKey;
-
-// Function UnionRun.RaceUISubBtnGuide.GetFlightGuideKey
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubBtnGuide_GetFlightGuideKey final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuggestUpInput;                                   // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetFlightGuideKey;
-
-// Function UnionRun.RaceUISubBtnGuide.GetKeyDisplayName
-// 0x0030 (0x0030 - 0x0000)
-struct RaceUISubBtnGuide_GetKeyDisplayName final
-{
-public:
-	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlayerControllerIndex;                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetKeyDisplayName;
-
-// Function UnionRun.RaceUISubBtnGuide.GetMouseButtonIndex
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubBtnGuide_GetMouseButtonIndex final
-{
-public:
-	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetMouseButtonIndex;
-
-// Function UnionRun.RaceUISubBtnGuide.GetReleaseEffectKey
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubBtnGuide_GetReleaseEffectKey final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetReleaseEffectKey;
-
-// Function UnionRun.RaceUISubBtnGuide.GetSteerKey
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubBtnGuide_GetSteerKey final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SteerNo;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetSteerKey;
-
-// Function UnionRun.RaceUISubBtnGuide.GetUseItemKeyPC
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubBtnGuide_GetUseItemKeyPC final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_GetUseItemKeyPC;
-
-// Function UnionRun.RaceUISubBtnGuide.IsKeyboard
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubBtnGuide_IsKeyboard final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnGuide_IsKeyboard;
-
-// Function UnionRun.RaceUISubBtnKey.SetButtonState
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubBtnKey_SetButtonState final
-{
-public:
-	int32                                         InState;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnKey_SetButtonState;
-
-// Function UnionRun.RaceUISubBtnKey.GetKeyDisplayName
-// 0x0030 (0x0030 - 0x0000)
-struct RaceUISubBtnKey_GetKeyDisplayName final
-{
-public:
-	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlayerControllerIndex;                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubBtnKey_GetKeyDisplayName;
-
-// Function UnionRun.RaceUISubBtnKey.GetMouseButtonIndex
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubBtnKey_GetMouseButtonIndex final
-{
-public:
-	struct FKey                                   InKey;                                             // 0x0000(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubBtnKey_GetMouseButtonIndex;
-
-// Function UnionRun.RaceUISubGadget.IsNotEnableGadget
-// 0x0002 (0x0002 - 0x0000)
-struct RaceUISubGadget_IsNotEnableGadget final
-{
-public:
-	EGadgetId                                     gadgetId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubGadget_IsNotEnableGadget;
-
-// Function UnionRun.RaceUISubRing.SetCurrentRingCount
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubRing_SetCurrentRingCount final
-{
-public:
-	int32                                         NewRingCount;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubRing_SetCurrentRingCount;
-
-// Function UnionRun.RaceUISubRing.SetParams
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubRing_SetParams final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubRing_SetParams;
-
-// Function UnionRun.RaceUISubRing.SetRingBackColor
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubRing_SetRingBackColor final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsGroup;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsLocalMulti;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubRing_SetRingBackColor;
-
-// Function UnionRun.RaceUISubGroupRing.SetRingCharaIcon
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubGroupRing_SetRingCharaIcon final
-{
-public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubGroupRing_SetRingCharaIcon;
-
-// Function UnionRun.RaceUISubHitInfo.SetCharaIndex
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubHitInfo_SetCharaIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsRival;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubHitInfo_SetCharaIndex;
-
-// Function UnionRun.RaceUISubHitInfo.SetGroupColorMaterial
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubHitInfo_SetGroupColorMaterial final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubHitInfo_SetGroupColorMaterial;
-
-// Function UnionRun.RaceUISubHitInfo.SetLocalPlayerColorMaterial
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubHitInfo_SetLocalPlayerColorMaterial final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubHitInfo_SetLocalPlayerColorMaterial;
-
-// Function UnionRun.RaceUISubHitInfo.SetLostItemIdIndex_Implement
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubHitInfo_SetLostItemIdIndex_Implement final
-{
-public:
-	int32                                         InItemIdIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubHitInfo_SetLostItemIdIndex_Implement;
-
-// Function UnionRun.RaceUISubHitInfo.SetPlatformIcon
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubHitInfo_SetPlatformIcon final
-{
-public:
-	ECrossplayPlatform                            Platform;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubHitInfo_SetPlatformIcon;
-
-// Function UnionRun.RaceUISubHitInfo.SwitchBaseUI
-// 0x0002 (0x0002 - 0x0000)
-struct RaceUISubHitInfo_SwitchBaseUI final
-{
-public:
-	bool                                          IsRival;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsPowerRival;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubHitInfo_SwitchBaseUI;
-
-// Function UnionRun.RaceUISubItemSummonButton.SetSummonInputKey
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubItemSummonButton_SetSummonInputKey final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsKeyboard;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PlayerControllerIndex;                             // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubItemSummonButton_SetSummonInputKey;
-
-// Function UnionRun.RaceUISubPlayerName.GetGhostPfId
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubPlayerName_GetGhostPfId final
+struct UnionRaceSituationObject_GetRank final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_RaceUISubPlayerName_GetGhostPfId;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetRank;
 
-// Function UnionRun.RaceUISubRuleCount.GetCount
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubRuleCount_GetCount final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubRuleCount_GetCount;
-
-// Function UnionRun.RaceUISubRuleCount.GetGroupRaceBonusData
-// 0x0070 (0x0070 - 0x0000)
-struct RaceUISubRuleCount_GetGroupRaceBonusData final
-{
-public:
-	struct FMenuGroupRaceBonusData                ReturnValue;                                       // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubRuleCount_GetGroupRaceBonusData;
-
-// Function UnionRun.RaceUISubRuleCount.SetNewCount
+// Function UnionRun.UnionRaceSituationObject.GetRivalDistDiff
 // 0x0004 (0x0004 - 0x0000)
-struct RaceUISubRuleCount_SetNewCount final
-{
-public:
-	int32                                         NewCuont;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubRuleCount_SetNewCount;
-
-// Function UnionRun.RaceUISubRuleCount.UpdateRuleCountImpl
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubRuleCount_UpdateRuleCountImpl final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubRuleCount_UpdateRuleCountImpl;
-
-// Function UnionRun.RaceUISubTeamGroup.SetCharaIconNative
-// 0x0008 (0x0008 - 0x0000)
-struct RaceUISubTeamGroup_SetCharaIconNative final
-{
-public:
-	class UTexture2D*                             IconTex;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTeamGroup_SetCharaIconNative;
-
-// Function UnionRun.RaceUISubTeamGroup.SetDispTextYou
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubTeamGroup_SetDispTextYou final
-{
-public:
-	bool                                          IsDisp;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTeamGroup_SetDispTextYou;
-
-// Function UnionRun.RaceUISubTeamGroup.SetRankNative
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubTeamGroup_SetRankNative final
-{
-public:
-	int32                                         Rank;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTeamGroup_SetRankNative;
-
-// Function UnionRun.RaceUISubTeamHUD.ExecChangeRank
-// 0x0010 (0x0010 - 0x0000)
-struct RaceUISubTeamHUD_ExecChangeRank final
-{
-public:
-	int32                                         PanelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDriverId                                     DriverId;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsDispPlayer;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Rank;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubTeamHUD_ExecChangeRank;
-
-// Function UnionRun.RaceUISubTeamHUD.ExecPlayChangeRank
-// 0x0010 (0x0010 - 0x0000)
-struct RaceUISubTeamHUD_ExecPlayChangeRank final
-{
-public:
-	int32                                         PanelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDriverId                                     DriverId;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsDispPlayer;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Rank;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubTeamHUD_ExecPlayChangeRank;
-
-// Function UnionRun.RaceUISubTeamHUD.ExecSetRankOnly
-// 0x000C (0x000C - 0x0000)
-struct RaceUISubTeamHUD_ExecSetRankOnly final
-{
-public:
-	int32                                         PanelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubTeamHUD_ExecSetRankOnly;
-
-// Function UnionRun.RaceUISubTeamHUD.GetTeamRankRough
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubTeamHUD_GetTeamRankRough final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTeamHUD_GetTeamRankRough;
-
-// Function UnionRun.RaceUISubTeamHUD.SetTeamRank
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubTeamHUD_SetTeamRank final
-{
-public:
-	int32                                         TeamRank;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTeamHUD_SetTeamRank;
-
-// Function UnionRun.RaceUISubTeamHUD.UpdateCharaRank
-// 0x0001 (0x0001 - 0x0000)
-struct RaceUISubTeamHUD_UpdateCharaRank final
-{
-public:
-	bool                                          IsForce;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTeamHUD_UpdateCharaRank;
-
-// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapDiffTime
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubTimeTrialTimeLap_SetLapDiffTime final
-{
-public:
-	int32                                         LapNum;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapDiffTime;
-
-// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapTime
-// 0x0024 (0x0024 - 0x0000)
-struct RaceUISubTimeTrialTimeLap_SetLapTime final
-{
-public:
-	struct FRaceUITimeTrialTime                   NewTime;                                           // 0x0000(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         Lap;                                               // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapTime;
-
-// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapTimeIsGhostReplay
-// 0x0004 (0x0004 - 0x0000)
-struct RaceUISubTimeTrialTimeLap_SetLapTimeIsGhostReplay final
-{
-public:
-	int32                                         Lap;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapTimeIsGhostReplay;
-
-// Function UnionRun.RaceUISubTimeTrialTimeLap.SetLapTimeWithDiff
-// 0x0028 (0x0028 - 0x0000)
-struct RaceUISubTimeTrialTimeLap_SetLapTimeWithDiff final
-{
-public:
-	struct FRaceUITimeTrialTime                   NewTime;                                           // 0x0000(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         Lap;                                               // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsVisibleDiff;                                     // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_SetLapTimeWithDiff;
-
-// Function UnionRun.RaceUISubTimeTrialTimeLap.UpdateLapTime
-// 0x0020 (0x0020 - 0x0000)
-struct RaceUISubTimeTrialTimeLap_UpdateLapTime final
-{
-public:
-	struct FRaceUITimeTrialTime                   ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RaceUISubTimeTrialTimeLap_UpdateLapTime;
-
-// Function UnionRun.ReplayFixedCameraCollision.OnCollisionBaseHit
-// 0x0060 (0x0060 - 0x0000)
-struct ReplayFixedCameraCollision_OnCollisionBaseHit final
-{
-public:
-	struct FCollisionHitInfo                      Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ReplayFixedCameraCollision_OnCollisionBaseHit;
-
-// Function UnionRun.ReplayFixedCameraCollision.SetCameraData
-// 0x0018 (0x0018 - 0x0000)
-struct ReplayFixedCameraCollision_SetCameraData final
-{
-public:
-	struct FVector                                NewBoxSize;                                        // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ReplayFixedCameraCollision_SetCameraData;
-
-// Function UnionRun.ReplayMoveCameraCollision.OnCollisionBaseHit
-// 0x0060 (0x0060 - 0x0000)
-struct ReplayMoveCameraCollision_OnCollisionBaseHit final
-{
-public:
-	struct FCollisionHitInfo                      Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ReplayMoveCameraCollision_OnCollisionBaseHit;
-
-// Function UnionRun.ReplayMoveCameraCollision.SetCameraData
-// 0x0018 (0x0018 - 0x0000)
-struct ReplayMoveCameraCollision_SetCameraData final
-{
-public:
-	struct FVector                                NewBoxSize;                                        // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ReplayMoveCameraCollision_SetCameraData;
-
-// Function UnionRun.RespotObject.UpdateRespotMatrix
-// 0x0060 (0x0060 - 0x0000)
-struct RespotObject_UpdateRespotMatrix final
-{
-public:
-	struct FTransform                             NewTransform;                                      // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RespotObject_UpdateRespotMatrix;
-
-// Function UnionRun.SimpleTravelRingObject.GetTransformRingType
-// 0x0001 (0x0001 - 0x0000)
-struct SimpleTravelRingObject_GetTransformRingType final
-{
-public:
-	ETransformRingType                            ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SimpleTravelRingObject_GetTransformRingType;
-
-// Function UnionRun.SimpleTravelRingObject.GetTravelRingSizeType
-// 0x0001 (0x0001 - 0x0000)
-struct SimpleTravelRingObject_GetTravelRingSizeType final
-{
-public:
-	ETravelRingSizeType                           ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SimpleTravelRingObject_GetTravelRingSizeType;
-
-// Function UnionRun.SimpleTravelRingObject.GetTravelRingType
-// 0x0001 (0x0001 - 0x0000)
-struct SimpleTravelRingObject_GetTravelRingType final
-{
-public:
-	ETravelRingType                               ReturnValue;                                       // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SimpleTravelRingObject_GetTravelRingType;
-
-// Function UnionRun.SimpleTravelRingObject.SetTransformRingType
-// 0x0001 (0x0001 - 0x0000)
-struct SimpleTravelRingObject_SetTransformRingType final
-{
-public:
-	ETransformRingType                            Type;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SimpleTravelRingObject_SetTransformRingType;
-
-// Function UnionRun.SimpleTravelRingObject.SetTravelRingSizeType
-// 0x0001 (0x0001 - 0x0000)
-struct SimpleTravelRingObject_SetTravelRingSizeType final
-{
-public:
-	ETravelRingSizeType                           Type;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SimpleTravelRingObject_SetTravelRingSizeType;
-
-// Function UnionRun.SimpleTravelRingObject.SetTravelRingType
-// 0x0001 (0x0001 - 0x0000)
-struct SimpleTravelRingObject_SetTravelRingType final
-{
-public:
-	ETravelRingType                               Type;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SimpleTravelRingObject_SetTravelRingType;
-
-// Function UnionRun.SummonRingAnimInstance.GetIsExit
-// 0x0001 (0x0001 - 0x0000)
-struct SummonRingAnimInstance_GetIsExit final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SummonRingAnimInstance_GetIsExit;
-
-// Function UnionRun.SummonRingAnimInstance.GetIsStart
-// 0x0001 (0x0001 - 0x0000)
-struct SummonRingAnimInstance_GetIsStart final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SummonRingAnimInstance_GetIsStart;
-
-// Function UnionRun.SummonRingAnimInstance.SetIsExit
-// 0x0001 (0x0001 - 0x0000)
-struct SummonRingAnimInstance_SetIsExit final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SummonRingAnimInstance_SetIsExit;
-
-// Function UnionRun.SummonRingAnimInstance.SetIsStart
-// 0x0001 (0x0001 - 0x0000)
-struct SummonRingAnimInstance_SetIsStart final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SummonRingAnimInstance_SetIsStart;
-
-// Function UnionRun.TireMark.AddPoint3D
-// 0x0060 (0x0060 - 0x0000)
-struct TireMark_AddPoint3D final
-{
-public:
-	struct FVector                                Position;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x0018(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Side;                                              // 0x0030(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Density;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 Color;                                             // 0x004C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              OffsetUV;                                          // 0x0050(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TireMark_AddPoint3D;
-
-// Function UnionRun.TireMark.GetTireMarkMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct TireMark_GetTireMarkMaterial final
-{
-public:
-	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TireMark_GetTireMarkMaterial;
-
-// Function UnionRun.TireMark.SetTireMarkMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct TireMark_SetTireMarkMaterial final
-{
-public:
-	class UMaterialInterface*                     MaterialInterface;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TireMark_SetTireMarkMaterial;
-
-// Function UnionRun.TransformRingObject.GetRingScaleRate
-// 0x0004 (0x0004 - 0x0000)
-struct TransformRingObject_GetRingScaleRate final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TransformRingObject_GetRingScaleRate;
-
-// Function UnionRun.TransformRingObject.SetRingScaleRate
-// 0x0004 (0x0004 - 0x0000)
-struct TransformRingObject_SetRingScaleRate final
-{
-public:
-	float                                         Rate;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TransformRingObject_SetRingScaleRate;
-
-// Function UnionRun.TransformRingObject.SetTransformRingType
-// 0x0001 (0x0001 - 0x0000)
-struct TransformRingObject_SetTransformRingType final
-{
-public:
-	ETransformRingType                            Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TransformRingObject_SetTransformRingType;
-
-// Function UnionRun.TransformRingObject.UpdateParallelMode
-// 0x0004 (0x0004 - 0x0000)
-struct TransformRingObject_UpdateParallelMode final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TransformRingObject_UpdateParallelMode;
-
-// Function UnionRun.TrexAnimInstance.GetIsAttack
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_GetIsAttack final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_GetIsAttack;
-
-// Function UnionRun.TrexAnimInstance.GetIsDamage
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_GetIsDamage final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_GetIsDamage;
-
-// Function UnionRun.TrexAnimInstance.GetIsMove
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_GetIsMove final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_GetIsMove;
-
-// Function UnionRun.TrexAnimInstance.GetIsTurn
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_GetIsTurn final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_GetIsTurn;
-
-// Function UnionRun.TrexAnimInstance.GetIsTurnEnd
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_GetIsTurnEnd final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_GetIsTurnEnd;
-
-// Function UnionRun.TrexAnimInstance.SetIsAttack
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_SetIsAttack final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_SetIsAttack;
-
-// Function UnionRun.TrexAnimInstance.SetIsDamage
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_SetIsDamage final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_SetIsDamage;
-
-// Function UnionRun.TrexAnimInstance.SetIsMove
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_SetIsMove final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_SetIsMove;
-
-// Function UnionRun.TrexAnimInstance.SetIsTurn
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_SetIsTurn final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_SetIsTurn;
-
-// Function UnionRun.TrexAnimInstance.SetIsTurnEnd
-// 0x0001 (0x0001 - 0x0000)
-struct TrexAnimInstance_SetIsTurnEnd final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TrexAnimInstance_SetIsTurnEnd;
-
-// Function UnionRun.TriggerComponent.OnCollisionBaseHit
-// 0x0060 (0x0060 - 0x0000)
-struct TriggerComponent_OnCollisionBaseHit final
-{
-public:
-	struct FCollisionHitInfo                      Info;                                              // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TriggerComponent_OnCollisionBaseHit;
-
-// Function UnionRun.TriggerComponent.OnCollisionHitResult
-// 0x0058 (0x0058 - 0x0000)
-struct TriggerComponent_OnCollisionHitResult final
-{
-public:
-	struct FCollisionHitResultInfo                Info;                                              // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TriggerComponent_OnCollisionHitResult;
-
-// Function UnionRun.TriggerComponent.SetSurfaceFlag
-// 0x001F (0x001F - 0x0000)
-struct TriggerComponent_SetSurfaceFlag final
-{
-public:
-	struct FUnionSurfaceFlag                      flag;                                              // 0x0000(0x001F)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TriggerComponent_SetSurfaceFlag;
-
-// Function UnionRun.TriggerComponent.SetSurfaceType
-// 0x0001 (0x0001 - 0x0000)
-struct TriggerComponent_SetSurfaceType final
-{
-public:
-	EUnionSurfaceType                             Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TriggerComponent_SetSurfaceType;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetAttackEnemyItemIdIF
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_GetAttackEnemyItemIdIF final
-{
-public:
-	EEnemyItemId                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetAttackEnemyItemIdIF;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetAttackItemIdIF
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_GetAttackItemIdIF final
-{
-public:
-	EItemId                                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetAttackItemIdIF;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectDomainIndex
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectDomainIndex final
-{
-public:
-	EDomainIndex                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectDomainIndex;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectDomainLocationUE
-// 0x0018 (0x0018 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectDomainLocationUE final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectDomainLocationUE;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectDomainNumber
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectDomainNumber final
-{
-public:
-	EDomainNumber                                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectDomainNumber;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectLapCount
-// 0x0004 (0x0004 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectLapCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectLapCount;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectPathIndexDistance
-// 0x0004 (0x0004 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectPathIndexDistance final
+struct UnionRaceSituationObject_GetRivalDistDiff final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectPathIndexDistance;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectRaceDistance
-// 0x0004 (0x0004 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectRaceDistance final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectRaceDistance;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectRaceDomainElapsedRatio
-// 0x0004 (0x0004 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectRaceDomainElapsedRatio final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectRaceDomainElapsedRatio;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetObjectWorldLocation
-// 0x0018 (0x0018 - 0x0000)
-struct UnionAttackItemInfoInterface_GetObjectWorldLocation final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetObjectWorldLocation;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetSameDomainOnlyFlag
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_GetSameDomainOnlyFlag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetSameDomainOnlyFlag;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetUsingRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionAttackItemInfoInterface_GetUsingRacerIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetUsingRacerIndex;
-
-// Function UnionRun.UnionAttackItemInfoInterface.IsAttackItemMoveToTargetIgnorePathIF
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_IsAttackItemMoveToTargetIgnorePathIF final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_IsAttackItemMoveToTargetIgnorePathIF;
-
-// Function UnionRun.UnionAttackItemInfoInterface.IsAttackItemTargetIF
-// 0x0008 (0x0008 - 0x0000)
-struct UnionAttackItemInfoInterface_IsAttackItemTargetIF final
-{
-public:
-	int32                                         checkRacerIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_IsAttackItemTargetIF;
-
-// Function UnionRun.UnionAttackItemInfoInterface.IsAttackItemUsedForBackIF
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_IsAttackItemUsedForBackIF final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_IsAttackItemUsedForBackIF;
-
-// Function UnionRun.UnionAttackItemInfoInterface.GetAttackItemInfoTypeIF
-// 0x0001 (0x0001 - 0x0000)
-struct UnionAttackItemInfoInterface_GetAttackItemInfoTypeIF final
-{
-public:
-	EUnionAttackItemInfoType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionAttackItemInfoInterface_GetAttackItemInfoTypeIF;
-
-// Function UnionRun.UnionCameraModifierPostEffect.SetCameraPostEffectParameter
-// 0x0010 (0x0010 - 0x0000)
-struct UnionCameraModifierPostEffect_SetCameraPostEffectParameter final
-{
-public:
-	EUnionCameraModifierPostEffectType            EffectType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   ParameterName;                                     // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionCameraModifierPostEffect_SetCameraPostEffectParameter;
-
-// Function UnionRun.UnionDebugStringSubsystem.Draw
-// 0x0010 (0x0010 - 0x0000)
-struct UnionDebugStringSubsystem_Draw final
-{
-public:
-	class UCanvas*                                InCanvas;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerController*                      InPC;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionDebugStringSubsystem_Draw;
-
-// Function UnionRun.UnionDebugStringSubsystem.PrintDebugString
-// 0x0028 (0x0028 - 0x0000)
-struct UnionDebugStringSubsystem_PrintDebugString final
-{
-public:
-	struct FDebugPrintStringStruct                DebugString;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionDebugStringSubsystem_PrintDebugString;
-
-// Function UnionRun.UnionDebugStringSubsystem.SetDebugStringVisibleFlag
-// 0x0001 (0x0001 - 0x0000)
-struct UnionDebugStringSubsystem_SetDebugStringVisibleFlag final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionDebugStringSubsystem_SetDebugStringVisibleFlag;
-
-// Function UnionRun.UnionDroneInfoInterface.NotifyCallDroneEvent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionDroneInfoInterface_NotifyCallDroneEvent final
-{
-public:
-	struct FCallDroneInfo                         Info;                                              // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionDroneInfoInterface_NotifyCallDroneEvent;
-
-// Function UnionRun.UnionDroneInfoInterface.NotifyDroneVisibilityEvent
-// 0x0001 (0x0001 - 0x0000)
-struct UnionDroneInfoInterface_NotifyDroneVisibilityEvent final
-{
-public:
-	bool                                          Visibility;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionDroneInfoInterface_NotifyDroneVisibilityEvent;
-
-// Function UnionRun.UnionFlightCourseDebugDisp.SetUseAssistLength
-// 0x0001 (0x0001 - 0x0000)
-struct UnionFlightCourseDebugDisp_SetUseAssistLength final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionFlightCourseDebugDisp_SetUseAssistLength;
-
-// Function UnionRun.UnionGroupInfoInterface.NoticeCompletedChargeGroupEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionGroupInfoInterface_NoticeCompletedChargeGroupEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETeamBoostType                                TeamBoostType;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionGroupInfoInterface_NoticeCompletedChargeGroupEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeChangeThrowDirectionEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeChangeThrowDirectionEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemThrowDirection                           ThrowType;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeChangeThrowDirectionEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeClearItemEvent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionItemInfoInterface_NoticeClearItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeClearItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeDecreaseUsableTimesEvent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionItemInfoInterface_NoticeDecreaseUsableTimesEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeDecreaseUsableTimesEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeEndIrregularCharging
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeEndIrregularCharging final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeEndIrregularCharging;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeEndItemEvent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionItemInfoInterface_NoticeEndItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeEndItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeEndLostItemEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeEndLostItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemInfoType                                 ItemInfoType;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeEndLostItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeExchangeIrregularHoldItem
-// 0x0004 (0x0004 - 0x0000)
-struct UnionItemInfoInterface_NoticeExchangeIrregularHoldItem final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeExchangeIrregularHoldItem;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeHoldItemEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeHoldItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemThrowDirection                           DefaultThrowDirection;                             // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGadgetLuckyItem;                                  // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeHoldItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeItemStockTradeEvent
-// 0x000C (0x000C - 0x0000)
-struct UnionItemInfoInterface_NoticeItemStockTradeEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FItemSet                               PrevItemSet;                                       // 0x0004(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FItemSet                               NewItemSet;                                        // 0x0007(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeItemStockTradeEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeRefreshEvent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionItemInfoInterface_NoticeRefreshEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeRefreshEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeResultLotteryItemEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeResultLotteryItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeResultLotteryItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeStartIrregularCharging
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeStartIrregularCharging final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartIrregularCharging;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeStartLostItemEvent
-// 0x000C (0x000C - 0x0000)
-struct UnionItemInfoInterface_NoticeStartLostItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemInfoType                                 ItemInfoType;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LostItemCount;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartLostItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeStartLotteryItemEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeStartLotteryItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartLotteryItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeStartShuffleItemEvent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionItemInfoInterface_NoticeStartShuffleItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeStartShuffleItemEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeTakePackageRingEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeTakePackageRingEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InRingNum;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeTakePackageRingEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeUpgradeEvent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionItemInfoInterface_NoticeUpgradeEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeUpgradeEvent;
-
-// Function UnionRun.UnionItemInfoInterface.NoticeUseItemEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionItemInfoInterface_NoticeUseItemEvent final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       ItemId;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemThrowDirection                           ThrowType;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionItemInfoInterface_NoticeUseItemEvent;
-
-// Function UnionRun.UnionMiscFunction.ContainsLevel
-// 0x0020 (0x0020 - 0x0000)
-struct UnionMiscFunction_ContainsLevel final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LevelName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionMiscFunction_ContainsLevel;
-
-// Function UnionRun.UnionMiscFunction.GetCourseEditorStageAssetDir
-// 0x0018 (0x0018 - 0x0000)
-struct UnionMiscFunction_GetCourseEditorStageAssetDir final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionMiscFunction_GetCourseEditorStageAssetDir;
-
-// Function UnionRun.UnionMiscFunction.GetStageAssetDir
-// 0x0018 (0x0018 - 0x0000)
-struct UnionMiscFunction_GetStageAssetDir final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionMiscFunction_GetStageAssetDir;
-
-// Function UnionRun.UnionMiscFunction.GetStageAssetFilenameTrunk
-// 0x0018 (0x0018 - 0x0000)
-struct UnionMiscFunction_GetStageAssetFilenameTrunk final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionMiscFunction_GetStageAssetFilenameTrunk;
-
-// Function UnionRun.UnionMiscFunction.LoadComPathAssetByFilePath
-// 0x0020 (0x0020 - 0x0000)
-struct UnionMiscFunction_LoadComPathAssetByFilePath final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionComPathBinaryDataAsset*           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionMiscFunction_LoadComPathAssetByFilePath;
-
-// Function UnionRun.UnionMiscFunction.LoadCourseCollisionAssetByFilePath
-// 0x0020 (0x0020 - 0x0000)
-struct UnionMiscFunction_LoadCourseCollisionAssetByFilePath final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionBtCollisionBinaryAsset*           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionMiscFunction_LoadCourseCollisionAssetByFilePath;
-
-// Function UnionRun.UnionMiscFunction.LoadCourseNavigationAssetByFilePath
-// 0x0020 (0x0020 - 0x0000)
-struct UnionMiscFunction_LoadCourseNavigationAssetByFilePath final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionNavigationBinaryDataAsset*        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionMiscFunction_LoadCourseNavigationAssetByFilePath;
-
-// Function UnionRun.UnionMiscFunction.LoadRunPathAssetByFilePath
-// 0x0020 (0x0020 - 0x0000)
-struct UnionMiscFunction_LoadRunPathAssetByFilePath final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FilePath;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionRunPathBinaryDataAsset*           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionMiscFunction_LoadRunPathAssetByFilePath;
-
-// Function UnionRun.UnionNavMarker.GetUseSplineActor
-// 0x0028 (0x0028 - 0x0000)
-struct UnionNavMarker_GetUseSplineActor final
-{
-public:
-	TSoftObjectPtr<class AActor>                  ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetUseSplineActor;
-
-// Function UnionRun.UnionNavMarker.IsFinalLapOnly
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_IsFinalLapOnly final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_IsFinalLapOnly;
-
-// Function UnionRun.UnionNavMarker.SetIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionNavMarker_SetIndex final
-{
-public:
-	int32                                         NewIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetIndex;
-
-// Function UnionRun.UnionNavMarker.SetIsAnother
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_SetIsAnother final
-{
-public:
-	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetIsAnother;
-
-// Function UnionRun.UnionNavMarker.SetLapType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_SetLapType final
-{
-public:
-	ENavMarkerLapType                             NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetLapType;
-
-// Function UnionRun.UnionNavMarker.SetSplineOnPosition
-// 0x0004 (0x0004 - 0x0000)
-struct UnionNavMarker_SetSplineOnPosition final
-{
-public:
-	int32                                         InPosition;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetSplineOnPosition;
-
-// Function UnionRun.UnionNavMarker.SetTransformRingType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_SetTransformRingType final
-{
-public:
-	ETransformRingType                            TransformType;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetTransformRingType;
-
-// Function UnionRun.UnionNavMarker.SetType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_SetType final
-{
-public:
-	EUnionNavMarkerType                           NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetType;
-
-// Function UnionRun.UnionNavMarker.SetUseSplineActor
-// 0x0028 (0x0028 - 0x0000)
-struct UnionNavMarker_SetUseSplineActor final
-{
-public:
-	TSoftObjectPtr<class AActor>                  InUseSplineActor;                                  // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetUseSplineActor;
-
-// Function UnionRun.UnionNavMarker.SetUseSplineLength
-// 0x0004 (0x0004 - 0x0000)
-struct UnionNavMarker_SetUseSplineLength final
-{
-public:
-	float                                         InLength;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_SetUseSplineLength;
-
-// Function UnionRun.UnionNavMarker.GetIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionNavMarker_GetIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetIndex;
-
-// Function UnionRun.UnionNavMarker.GetLapType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_GetLapType final
-{
-public:
-	ENavMarkerLapType                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetLapType;
-
-// Function UnionRun.UnionNavMarker.GetSplineOnPosition
-// 0x0004 (0x0004 - 0x0000)
-struct UnionNavMarker_GetSplineOnPosition final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetSplineOnPosition;
-
-// Function UnionRun.UnionNavMarker.GetTransformRingType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_GetTransformRingType final
-{
-public:
-	ETransformRingType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetTransformRingType;
-
-// Function UnionRun.UnionNavMarker.GetType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_GetType final
-{
-public:
-	EUnionNavMarkerType                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetType;
-
-// Function UnionRun.UnionNavMarker.GetUnionSplineComponent
-// 0x0008 (0x0008 - 0x0000)
-struct UnionNavMarker_GetUnionSplineComponent final
-{
-public:
-	class UUnionSplineComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetUnionSplineComponent;
-
-// Function UnionRun.UnionNavMarker.GetUseSplineLength
-// 0x0004 (0x0004 - 0x0000)
-struct UnionNavMarker_GetUseSplineLength final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_GetUseSplineLength;
-
-// Function UnionRun.UnionNavMarker.IsAnother
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_IsAnother final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_IsAnother;
-
-// Function UnionRun.UnionNavMarker.IsInvalid
-// 0x0001 (0x0001 - 0x0000)
-struct UnionNavMarker_IsInvalid final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionNavMarker_IsInvalid;
-
-// Function UnionRun.UnionPlayerInfoBillboardUI.ChangeDriverInfo
-// 0x0001 (0x0001 - 0x0000)
-struct UnionPlayerInfoBillboardUI_ChangeDriverInfo final
-{
-public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionPlayerInfoBillboardUI_ChangeDriverInfo;
-
-// Function UnionRun.UnionRaceGadgetUI.InitializeIconsByGadgetInfo
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceGadgetUI_InitializeIconsByGadgetInfo final
-{
-public:
-	TArray<EGadgetId>                             GadgetInfo;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceGadgetUI_InitializeIconsByGadgetInfo;
-
-// Function UnionRun.UnionRaceGadgetUI.InitializeIconsByRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceGadgetUI_InitializeIconsByRacerIndex final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceGadgetUI_InitializeIconsByRacerIndex;
-
-// Function UnionRun.UnionRaceInfoNotifier.RegisterRaceInfoListener
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceInfoNotifier_RegisterRaceInfoListener final
-{
-public:
-	class UObject*                                InListener;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceInfoNotifier_RegisterRaceInfoListener;
-
-// Function UnionRun.UnionRaceInfoNotifier.UnregisterRaceInfoListener
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceInfoNotifier_UnregisterRaceInfoListener final
-{
-public:
-	class UObject*                                InListener;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceInfoNotifier_UnregisterRaceInfoListener;
-
-// Function UnionRun.UnionRaceMinimap.AddCourseMapActor
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRaceMinimap_AddCourseMapActor final
-{
-public:
-	class AActor*                                 InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       InItemId;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_AddCourseMapActor;
-
-// Function UnionRun.UnionRaceMinimap.GetGroupColor
-// 0x0014 (0x0014 - 0x0000)
-struct UnionRaceMinimap_GetGroupColor final
-{
-public:
-	int32                                         GouupIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_GetGroupColor;
-
-// Function UnionRun.UnionRaceMinimap.InitializeMinimap
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_InitializeMinimap final
-{
-public:
-	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_InitializeMinimap;
-
-// Function UnionRun.UnionRaceMinimap.RemoveCourseMapActor
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_RemoveCourseMapActor final
-{
-public:
-	class AActor*                                 InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_RemoveCourseMapActor;
-
-// Function UnionRun.UnionRaceMinimap.SetCourseMapCharaSpin
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceMinimap_SetCourseMapCharaSpin final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetCourseMapCharaSpin;
-
-// Function UnionRun.UnionRaceMinimap.SetCourseSetting
-// 0x0048 (0x0048 - 0x0000)
-struct UnionRaceMinimap_SetCourseSetting final
-{
-public:
-	TSoftObjectPtr<class UObject>                 CourseTexture;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InOrthoRate;                                       // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InAngle;                                           // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InOffset;                                          // 0x0030(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetCourseSetting;
-
-// Function UnionRun.UnionRaceMinimap.SetDomainIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceMinimap_SetDomainIndex final
-{
-public:
-	int32                                         InDomainIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetDomainIndex;
-
-// Function UnionRun.UnionRaceMinimap.SetDomainNumber
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceMinimap_SetDomainNumber final
-{
-public:
-	int32                                         InDomainNumber;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetDomainNumber;
-
-// Function UnionRun.UnionRaceMinimap.SetDriverId
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_SetDriverId final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DriverId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetDriverId;
-
-// Function UnionRun.UnionRaceMinimap.SetGroupIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_SetGroupIndex final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GroupIndex;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetGroupIndex;
-
-// Function UnionRun.UnionRaceMinimap.SetMinimapIconItem
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_SetMinimapIconItem final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       InItemId;                                          // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetMinimapIconItem;
-
-// Function UnionRun.UnionRaceMinimap.SetMinimapIconType
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_SetMinimapIconType final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMinimapIconType                              InMinimapIconType;                                 // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetMinimapIconType;
-
-// Function UnionRun.UnionRaceMinimap.SetPlayerIndex
-// 0x000C (0x000C - 0x0000)
-struct UnionRaceMinimap_SetPlayerIndex final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlayerIndex;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsPlayer;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsLocalMulti;                                      // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetPlayerIndex;
-
-// Function UnionRun.UnionRaceMinimap.SetPosition
-// 0x0020 (0x0020 - 0x0000)
-struct UnionRaceMinimap_SetPosition final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                InPosition;                                        // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetPosition;
-
-// Function UnionRun.UnionRaceMinimap.SetPositionAndZOrder
-// 0x0028 (0x0028 - 0x0000)
-struct UnionRaceMinimap_SetPositionAndZOrder final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                InPosition;                                        // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         InZOrder;                                          // 0x0020(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetPositionAndZOrder;
-
-// Function UnionRun.UnionRaceMinimap.SetRacerCount
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceMinimap_SetRacerCount final
-{
-public:
-	int32                                         RacerCount_0;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetRacerCount;
-
-// Function UnionRun.UnionRaceMinimap.SetRacerIconVisibility
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_SetRacerIconVisibility final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESlateVisibility                              NewVisibility;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetRacerIconVisibility;
-
-// Function UnionRun.UnionRaceMinimap.SetReaderFlag
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_SetReaderFlag final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InIsReader;                                        // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetReaderFlag;
-
-// Function UnionRun.UnionRaceMinimap.SetRival
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceMinimap_SetRival final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsRival;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsPowerRival;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_SetRival;
-
-// Function UnionRun.UnionRaceMinimap.UpdateMinimap
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceMinimap_UpdateMinimap final
-{
-public:
-	float                                         InDelta;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceMinimap_UpdateMinimap;
-
-// Function UnionRun.UnionRaceReturnDashUI.GetButtonWidget
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceReturnDashUI_GetButtonWidget final
-{
-public:
-	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceReturnDashUI_GetButtonWidget;
-
-// Function UnionRun.UnionRaceReturnDashUI.SetGaugeParcent
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRaceReturnDashUI_SetGaugeParcent final
-{
-public:
-	float                                         GaugeRate;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceReturnDashUI_SetGaugeParcent;
-
-// Function UnionRun.UnionRaceReturnDashUI.SetReturnDashSetting
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRaceReturnDashUI_SetReturnDashSetting final
-{
-public:
-	float                                         Pivot;                                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Range;                                             // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRaceReturnDashUI_SetReturnDashSetting;
-
-// Function UnionRun.UnionRacers.GetDriverIdByRacerIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_GetDriverIdByRacerIndex final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDriverId                                     ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRacers_GetDriverIdByRacerIndex;
-
-// Function UnionRun.UnionRacers.ChangeVehicleDisplayMode
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_ChangeVehicleDisplayMode final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVehicleDisplayMode                           InVehicleDisplayMode;                              // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRacers_ChangeVehicleDisplayMode;
-
-// Function UnionRun.UnionRacers.Destroy
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRacers_Destroy final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_Destroy;
-
-// Function UnionRun.UnionRacers.ExecTick
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_ExecTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_ExecTick;
-
-// Function UnionRun.UnionRacers.GetLocalPlayers
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_GetLocalPlayers final
-{
-public:
-	TArray<class UUnionRacer*>                    OutRacers;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetLocalPlayers;
-
-// Function UnionRun.UnionRacers.GetPlayerRank
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_GetPlayerRank final
-{
-public:
-	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetPlayerRank;
-
-// Function UnionRun.UnionRacers.GetRaceHUDRef
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_GetRaceHUDRef final
-{
-public:
-	class UUnionRaceUI*                           ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRaceHUDRef;
-
-// Function UnionRun.UnionRacers.GetRaceLapInfo
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_GetRaceLapInfo final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionRaceLapInfo*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRaceLapInfo;
-
-// Function UnionRun.UnionRacers.GetRacer
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_GetRacer final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionRacer*                            ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRacer;
-
-// Function UnionRun.UnionRacers.GetRacer3DPositionAndDomainNumber
-// 0x0020 (0x0020 - 0x0000)
-struct UnionRacers_GetRacer3DPositionAndDomainNumber final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDomainNumber                                 DomainNum;                                         // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRacer3DPositionAndDomainNumber;
-
-// Function UnionRun.UnionRacers.GetRacerIndexByRank
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_GetRacerIndexByRank final
-{
-public:
-	int32                                         InRank;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRacerIndexByRank;
-
-// Function UnionRun.UnionRacers.GetRacerRank
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_GetRacerRank final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRacerRank;
-
-// Function UnionRun.UnionRacers.GetRacerSituationObject
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_GetRacerSituationObject final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionRaceSituationObject*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRacerSituationObject;
-
-// Function UnionRun.UnionRacers.GetRacerStatusObject
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_GetRacerStatusObject final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionRacerStatusObject*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRacerStatusObject;
-
-// Function UnionRun.UnionRacers.GetTestRaceCount
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_GetTestRaceCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetTestRaceCount;
-
-// Function UnionRun.UnionRacers.IsOfflinePlayer
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_IsOfflinePlayer final
-{
-public:
-	class UUnionRacer*                            Racer;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRacers_IsOfflinePlayer;
-
-// Function UnionRun.UnionRacers.IsOnlineCom
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_IsOnlineCom final
-{
-public:
-	class UUnionRacer*                            Racer;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRacers_IsOnlineCom;
-
-// Function UnionRun.UnionRacers.IsPlayer
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_IsPlayer final
-{
-public:
-	class UUnionRacer*                            Racer;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionRacers_IsPlayer;
-
-// Function UnionRun.UnionRacers.SetLinkPlayerControllerIndexToRacerIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_SetLinkPlayerControllerIndexToRacerIndex final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InRacerIndex;                                      // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_SetLinkPlayerControllerIndexToRacerIndex;
-
-// Function UnionRun.UnionRacers.SetRaceLapInfo
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_SetRaceLapInfo final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionRaceLapInfo*                      InRaceLapInfo;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_SetRaceLapInfo;
-
-// Function UnionRun.UnionRacers.SetTickable
-// 0x0001 (0x0001 - 0x0000)
-struct UnionRacers_SetTickable final
-{
-public:
-	bool                                          bTickable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_SetTickable;
-
-// Function UnionRun.UnionRacers.SetVehicle
-// 0x0010 (0x0010 - 0x0000)
-struct UnionRacers_SetVehicle final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  InVehicle;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_SetVehicle;
-
-// Function UnionRun.UnionRacers.UnionRacers_SetTimerDelegate
-// 0x0020 (0x0020 - 0x0000)
-struct UnionRacers_UnionRacers_SetTimerDelegate final
-{
-public:
-	TDelegate<void()>                             Delegate;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLooping;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_UnionRacers_SetTimerDelegate;
-
-// Function UnionRun.UnionRacers.UpdateBaggage
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_UpdateBaggage final
-{
-public:
-	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_UpdateBaggage;
-
-// Function UnionRun.UnionRacers.UpdateDomain
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_UpdateDomain final
-{
-public:
-	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_UpdateDomain;
-
-// Function UnionRun.UnionRacers.UpdatePlayerNameHUD
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_UpdatePlayerNameHUD final
-{
-public:
-	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_UpdatePlayerNameHUD;
-
-// Function UnionRun.UnionRacers.UpdateTestRace
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_UpdateTestRace final
-{
-public:
-	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_UpdateTestRace;
-
-// Function UnionRun.UnionRacers.UpdateVehicles
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_UpdateVehicles final
-{
-public:
-	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_UpdateVehicles;
-
-// Function UnionRun.UnionRacers.GetGamePauseOwnerPlayerControllerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_GetGamePauseOwnerPlayerControllerIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetGamePauseOwnerPlayerControllerIndex;
-
-// Function UnionRun.UnionRacers.GetGamePauseOwnerRacerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionRacers_GetGamePauseOwnerRacerIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetGamePauseOwnerRacerIndex;
-
-// Function UnionRun.UnionRacers.GetPlayerControllerIndexByRacerIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_GetPlayerControllerIndexByRacerIndex final
-{
-public:
-	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetPlayerControllerIndexByRacerIndex;
-
-// Function UnionRun.UnionRacers.GetRacerIndexByPlayerControllerIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UnionRacers_GetRacerIndexByPlayerControllerIndex final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionRacers_GetRacerIndexByPlayerControllerIndex;
+DUMPER7_ASSERTS_UnionRaceSituationObject_GetRivalDistDiff;
 
 // Function UnionRun.UnionRaceStartUI.GetButtonWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -8683,6 +8837,788 @@ public:
 	int32                                         MilliSecondValue;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionRaceLapInfo_GetLastLapTimeValue;
+
+// Function UnionRun.UnionRaceUI.AddAttackItemObject_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_AddAttackItemObject_Implementation final
+{
+public:
+	class UObject*                                InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_AddAttackItemObject_Implementation;
+
+// Function UnionRun.UnionRaceUI.ChangePlayerConntrollerForPauseMenu
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceUI_ChangePlayerConntrollerForPauseMenu final
+{
+public:
+	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_ChangePlayerConntrollerForPauseMenu;
+
+// Function UnionRun.UnionRaceUI.DbgDrawTeamGaugeData
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceUI_DbgDrawTeamGaugeData final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_DbgDrawTeamGaugeData;
+
+// Function UnionRun.UnionRaceUI.DbgDrawTeamGaugeRate
+// 0x0014 (0x0014 - 0x0000)
+struct UnionRaceUI_DbgDrawTeamGaugeRate final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TransChargeRate;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalChargeRate;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GaugePercent;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsForce;                                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsBoost;                                           // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_DbgDrawTeamGaugeRate;
+
+// Function UnionRun.UnionRaceUI.FireAirTrickInfo_Implementation
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_FireAirTrickInfo_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SuccessBonusCount;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_FireAirTrickInfo_Implementation;
+
+// Function UnionRun.UnionRaceUI.FireCourseMapCharaSpin_Implementation
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceUI_FireCourseMapCharaSpin_Implementation final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_FireCourseMapCharaSpin_Implementation;
+
+// Function UnionRun.UnionRaceUI.FireInOutAnim
+// 0x0014 (0x0014 - 0x0000)
+struct UnionRaceUI_FireInOutAnim final
+{
+public:
+	bool                                          bin;                                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             OnAnimationEndEvent;                               // 0x0004(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_FireInOutAnim;
+
+// Function UnionRun.UnionRaceUI.GetItemHoldCount
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_GetItemHoldCount final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsMain;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetItemHoldCount;
+
+// Function UnionRun.UnionRaceUI.GetItemHoldCount_New
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_GetItemHoldCount_New final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetItemHoldCount_New;
+
+// Function UnionRun.UnionRaceUI.GetItemIconsState
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_GetItemIconsState final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUnionRaceHUDItemIconsState                   OutState;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetItemIconsState;
+
+// Function UnionRun.UnionRaceUI.GetItemPackageRingCount
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_GetItemPackageRingCount final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsMain;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetItemPackageRingCount;
+
+// Function UnionRun.UnionRaceUI.GetItemPackageRingCount_New
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_GetItemPackageRingCount_New final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemInfoType                                 ItemInfoType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetItemPackageRingCount_New;
+
+// Function UnionRun.UnionRaceUI.GetRedStarRings_Implementation
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUI_GetRedStarRings_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionRaceUIResultRedStarRings*         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetRedStarRings_Implementation;
+
+// Function UnionRun.UnionRaceUI.GetReturnDashButtonObject_Implementation
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUI_GetReturnDashButtonObject_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetReturnDashButtonObject_Implementation;
+
+// Function UnionRun.UnionRaceUI.GetStartDashButtonObject_Implementation
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUI_GetStartDashButtonObject_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetStartDashButtonObject_Implementation;
+
+// Function UnionRun.UnionRaceUI.GetTimeTiralGadgetPresetData
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUI_GetTimeTiralGadgetPresetData final
+{
+public:
+	struct FUserGadgetPresetData                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetTimeTiralGadgetPresetData;
+
+// Function UnionRun.UnionRaceUI.GetWarningBeltVisible_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_GetWarningBeltVisible_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_GetWarningBeltVisible_Implementation;
+
+// Function UnionRun.UnionRaceUI.IsBehindCurrentCamera
+// 0x0028 (0x0028 - 0x0000)
+struct UnionRaceUI_IsBehindCurrentCamera final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                WorldLocation;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsBehindCurrentCamera;
+
+// Function UnionRun.UnionRaceUI.IsDebugAimingHidden
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_IsDebugAimingHidden final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsDebugAimingHidden;
+
+// Function UnionRun.UnionRaceUI.IsDebugBoostHidden
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_IsDebugBoostHidden final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsDebugBoostHidden;
+
+// Function UnionRun.UnionRaceUI.IsDebugGuideButtonHidden
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_IsDebugGuideButtonHidden final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsDebugGuideButtonHidden;
+
+// Function UnionRun.UnionRaceUI.IsGhostOnline
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_IsGhostOnline final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsGhostOnline;
+
+// Function UnionRun.UnionRaceUI.IsPlayingReplay
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_IsPlayingReplay final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsPlayingReplay;
+
+// Function UnionRun.UnionRaceUI.IsPubCameraPlayRace
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_IsPubCameraPlayRace final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsPubCameraPlayRace;
+
+// Function UnionRun.UnionRaceUI.IsViewGhostReplay
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_IsViewGhostReplay final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsViewGhostReplay;
+
+// Function UnionRun.UnionRaceUI.NotifyIrregularInfiniteItem
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceUI_NotifyIrregularInfiniteItem final
+{
+public:
+	int32                                         InRacerIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_NotifyIrregularInfiniteItem;
+
+// Function UnionRun.UnionRaceUI.OnPackageRingEffectFinished
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_OnPackageRingEffectFinished final
+{
+public:
+	class APackageRingEffect*                     EffectActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_OnPackageRingEffectFinished;
+
+// Function UnionRun.UnionRaceUI.OnPackageRingEffectSoundStart
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_OnPackageRingEffectSoundStart final
+{
+public:
+	class APackageRingEffect*                     EffectActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_OnPackageRingEffectSoundStart;
+
+// Function UnionRun.UnionRaceUI.RemoveAttackInfoWidget_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_RemoveAttackInfoWidget_Implementation final
+{
+public:
+	class UObject*                                InAttackItem;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_RemoveAttackInfoWidget_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetAfterHomingAimTargetedUIVisible_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetAfterHomingAimTargetedUIVisible_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetAfterHomingAimTargetedUIVisible_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetAfterHomingAimUIVisible_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetAfterHomingAimUIVisible_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetAfterHomingAimUIVisible_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetAimingUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetAimingUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetAimingUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetAirTrickUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetAirTrickUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetAirTrickUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetBeforeHomingAimTargetedUIVisible_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetBeforeHomingAimTargetedUIVisible_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetBeforeHomingAimTargetedUIVisible_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetBeforeHomingAimUIVisible_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetBeforeHomingAimUIVisible_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetBeforeHomingAimUIVisible_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetBoostUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetBoostUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetBoostUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetCharaHeadUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetCharaHeadUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetCharaHeadUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetCourseMapCharaSpin
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceUI_SetCourseMapCharaSpin final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetCourseMapCharaSpin;
+
+// Function UnionRun.UnionRaceUI.SetCourseMapUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetCourseMapUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetCourseMapUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetDebugAimingHidden
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetDebugAimingHidden final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetDebugAimingHidden;
+
+// Function UnionRun.UnionRaceUI.SetDebugBoostHidden
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetDebugBoostHidden final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetDebugBoostHidden;
+
+// Function UnionRun.UnionRaceUI.SetDebugGuideButtonHidden
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetDebugGuideButtonHidden final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetDebugGuideButtonHidden;
+
+// Function UnionRun.UnionRaceUI.SetDebugItemWarningHidden
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetDebugItemWarningHidden final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetDebugItemWarningHidden;
+
+// Function UnionRun.UnionRaceUI.SetGadgetIconUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetGadgetIconUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetGadgetIconUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetGuideButtonUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetGuideButtonUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetGuideButtonUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetHitInfoUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetHitInfoUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetHitInfoUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetItemIconsState
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetItemIconsState final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUnionRaceHUDItemIconsState                   InState;                                           // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetItemIconsState;
+
+// Function UnionRun.UnionRaceUI.SetItemIconUIVisible
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_SetItemIconUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PlayerControllerIndex;                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlagOnly;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetItemIconUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetItemIconUIVisibleAll
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetItemIconUIVisibleAll final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetItemIconUIVisibleAll;
+
+// Function UnionRun.UnionRaceUI.SetItemWarningUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetItemWarningUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetItemWarningUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetLapUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetLapUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetLapUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetRaceMinimapRef_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetRaceMinimapRef_Implementation final
+{
+public:
+	class UUnionRaceMinimap*                      InRaceMinimap;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRaceMinimapRef_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetRacerApproachInfo
+// 0x0018 (0x0018 - 0x0000)
+struct UnionRaceUI_SetRacerApproachInfo final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class URaceUISubApproachWarning*>      ApproachInfo;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRacerApproachInfo;
+
+// Function UnionRun.UnionRaceUI.SetRacerIndex_Implementation
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_SetRacerIndex_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InRacerIndex;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsLocalPlayer;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRacerIndex_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetRaceUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetRaceUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRaceUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetRankUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetRankUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRankUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetRedStarRingUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetRedStarRingUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRedStarRingUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetReturnDashSetting_Implementation
+// 0x000C (0x000C - 0x0000)
+struct UnionRaceUI_SetReturnDashSetting_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Pivot;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Range;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashSetting_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetReturnDashUIGaugeRate_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetReturnDashUIGaugeRate_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GaugeRate;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashUIGaugeRate_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetReturnDashUIVisible_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetReturnDashUIVisible_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashUIVisible_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetReturnDashUIVisibleWithAnim_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetReturnDashUIVisibleWithAnim_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetReturnDashUIVisibleWithAnim_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetRingUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetRingUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRingUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetRivalStartUI_Implementation
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUI_SetRivalStartUI_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionRacerStatusObject*                RivalStatusObj;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetRivalStartUI_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetSpeedNumUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetSpeedNumUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetSpeedNumUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetStartDashButtonUIVisible
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetStartDashButtonUIVisible final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetStartDashButtonUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetStartDashParamSetting_Implementation
+// 0x0034 (0x0034 - 0x0000)
+struct UnionRaceUI_SetStartDashParamSetting_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUnionRaceStartDashParam               InStartDashParam;                                  // 0x0004(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetStartDashParamSetting_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetStartUIGaugeRate_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetStartUIGaugeRate_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GaugeRate;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetStartUIGaugeRate_Implementation;
+
+// Function UnionRun.UnionRaceUI.SetTeamRankUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetTeamRankUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetTeamRankUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetTextBalloonUIVisible
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUI_SetTextBalloonUIVisible final
+{
+public:
+	bool                                          bVisible;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetTextBalloonUIVisible;
+
+// Function UnionRun.UnionRaceUI.SetWarningBeltVisible_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_SetWarningBeltVisible_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisible;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_SetWarningBeltVisible_Implementation;
+
+// Function UnionRun.UnionRaceUI.UpdateByHoldItemInfo_Implementation
+// 0x0088 (0x0088 - 0x0000)
+struct UnionRaceUI_UpdateByHoldItemInfo_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHoldItemInfo                          InItemInfo;                                        // 0x0008(0x0080)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_UpdateByHoldItemInfo_Implementation;
+
+// Function UnionRun.UnionRaceUI.UpdateByRacers_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_UpdateByRacers_Implementation final
+{
+public:
+	class UUnionRacers*                           InRacers;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_UpdateByRacers_Implementation;
+
+// Function UnionRun.UnionRaceUI.UpdateHomingAimLocation_Implementation
+// 0x0020 (0x0020 - 0x0000)
+struct UnionRaceUI_UpdateHomingAimLocation_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                AimLocation;                                       // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_UpdateHomingAimLocation_Implementation;
+
+// Function UnionRun.UnionRaceUI.UpdateHomingAimTargetedLocation_Implementation
+// 0x0020 (0x0020 - 0x0000)
+struct UnionRaceUI_UpdateHomingAimTargetedLocation_Implementation final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PlayerLocation;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_UpdateHomingAimTargetedLocation_Implementation;
+
+// Function UnionRun.UnionRaceUI.UpdateIsComSetting
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_UpdateIsComSetting final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsCom;                                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_UpdateIsComSetting;
+
+// Function UnionRun.UnionRaceUI.UpdateMinimapIconByRacers_Implementation
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_UpdateMinimapIconByRacers_Implementation final
+{
+public:
+	class UUnionRacers*                           InRacers;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_UpdateMinimapIconByRacers_Implementation;
+
+// Function UnionRun.UnionRaceUI.UpdateRaceHUD
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRaceUI_UpdateRaceHUD final
+{
+public:
+	float                                         Delta;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUI_UpdateRaceHUD;
+
+// Function UnionRun.UnionRaceUI.IsLocalPlayer
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUI_IsLocalPlayer final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUI_IsLocalPlayer;
 
 // Function UnionRun.UnionRaceUIBPFL.CalcItemCategory
 // 0x0002 (0x0002 - 0x0000)
@@ -9113,6 +10049,56 @@ public:
 };
 DUMPER7_ASSERTS_UnionRaceUIBPFL_SetTextBalloonHUDVisible;
 
+// Function UnionRun.UnionRaceUIFestaReward.GetEMachineId
+// 0x0008 (0x0008 - 0x0000)
+struct UnionRaceUIFestaReward_GetEMachineId final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMachineId                                    ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUIFestaReward_GetEMachineId;
+
+// Function UnionRun.UnionRaceUIFestaReward.GetRacerContributionList
+// 0x0018 (0x0018 - 0x0000)
+struct UnionRaceUIFestaReward_GetRacerContributionList final
+{
+public:
+	int32                                         InPlayerRacerIndex;                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFestaRacerContribution>        OutFestaRacerContribution;                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIFestaReward_GetRacerContributionList;
+
+// Function UnionRun.UnionRaceUIFestaReward.GetUpdatePoint
+// 0x0028 (0x0028 - 0x0000)
+struct UnionRaceUIFestaReward_GetUpdatePoint final
+{
+public:
+	TArray<struct FFestaPointRewardUIData>        RewardDataArray;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         StartIconCount;                                    // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NowPoint;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Add;                                               // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutIconWindowX;                                    // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutGagePosi;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutGetRewardIndex;                                 // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIFestaReward_GetUpdatePoint;
+
+// Function UnionRun.UnionRaceUIFestaReward.SetupViewBg
+// 0x0040 (0x0040 - 0x0000)
+struct UnionRaceUIFestaReward_SetupViewBg final
+{
+public:
+	struct FVector                                InCameraLocation;                                  // 0x0000(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               CameraRotation;                                    // 0x0018(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsLightSpawn;                                     // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACameraActor*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIFestaReward_SetupViewBg;
+
 // Function UnionRun.UnionRaceUIResultLine.PlayBonusPoint
 // 0x0020 (0x0020 - 0x0000)
 struct UnionRaceUIResultLine_PlayBonusPoint final
@@ -9232,6 +10218,15 @@ public:
 	int32                                         TotalPoint;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionRaceUIResultLine_SetTotalPointValue;
+
+// Function UnionRun.UnionRaceUIResultLine.SetupVisibleSettingByGameMode
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUIResultLine_SetupVisibleSettingByGameMode final
+{
+public:
+	EGameModeId                                   GameMode;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIResultLine_SetupVisibleSettingByGameMode;
 
 // Function UnionRun.UnionRaceUIGroupResultLine.SetGroupIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -9763,7 +10758,8 @@ public:
 	float                                         PosRate;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Distance;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayerControllerIndex;                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bResetPos;                                         // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_UnionRaceUIInterface_SetAttackInfoPosition;
 
@@ -9923,7 +10919,8 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Scale;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsScaleKeepInHoming;                               // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EItemId                                       ItemId;                                            // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_UnionRaceUIInterface_SetManualAimingUIVisible;
 
@@ -10036,7 +11033,8 @@ public:
 	int32                                         PlayerControllerIndex;                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         RankAfterIndex;                                    // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EDriverId                                     InDriverId;                                        // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bResetPos;                                         // 0x000E(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_UnionRaceUIInterface_SetRacerApproachInfoPosition;
 
@@ -10605,6 +11603,76 @@ public:
 };
 DUMPER7_ASSERTS_UnionRaceUIResultRedStarRing_InitRing;
 
+// Function UnionRun.UnionRaceUIResultRedStarRings.GetOtherResultRedStarRingAcquisitionType
+// 0x0018 (0x0018 - 0x0000)
+struct UnionRaceUIResultRedStarRings_GetOtherResultRedStarRingAcquisitionType final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<ERedStarRingAcquisitionType>           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetOtherResultRedStarRingAcquisitionType;
+
+// Function UnionRun.UnionRaceUIResultRedStarRings.GetRaceRedStarRingAcquisitionType
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUIResultRedStarRings_GetRaceRedStarRingAcquisitionType final
+{
+public:
+	TArray<ERedStarRingAcquisitionType>           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetRaceRedStarRingAcquisitionType;
+
+// Function UnionRun.UnionRaceUIResultRedStarRings.GetResultRedStarRingAcquisitionType
+// 0x0018 (0x0018 - 0x0000)
+struct UnionRaceUIResultRedStarRings_GetResultRedStarRingAcquisitionType final
+{
+public:
+	EStageId                                      InStageId;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<ERedStarRingAcquisitionType>           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetResultRedStarRingAcquisitionType;
+
+// Function UnionRun.UnionRaceUIResultRedStarRings.GetResultRedStarRingAllGetType
+// 0x0018 (0x0018 - 0x0000)
+struct UnionRaceUIResultRedStarRings_GetResultRedStarRingAllGetType final
+{
+public:
+	TArray<ERedStarRingAcquisitionType>           AcquisitionType;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         PlayerIndex;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERedstarRingAllGetType                        ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_GetResultRedStarRingAllGetType;
+
+// Function UnionRun.UnionRaceUIResultRedStarRings.InitRings
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUIResultRedStarRings_InitRings final
+{
+public:
+	TArray<bool>                                  Rings;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_InitRings;
+
+// Function UnionRun.UnionRaceUIResultRedStarRings.PickUpRing
+// 0x0001 (0x0001 - 0x0000)
+struct UnionRaceUIResultRedStarRings_PickUpRing final
+{
+public:
+	uint8                                         RingIndex;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_PickUpRing;
+
+// Function UnionRun.UnionRaceUIResultRedStarRings.SetRedStarRingsRef
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRaceUIResultRedStarRings_SetRedStarRingsRef final
+{
+public:
+	TArray<class UUnionRaceUIResultRedStarRing*>  Rings;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRaceUIResultRedStarRings_SetRedStarRingsRef;
+
 // Function UnionRun.UnionRaceUIResultScene.GetGhostDiffLapTime
 // 0x0018 (0x0018 - 0x0000)
 struct UnionRaceUIResultScene_GetGhostDiffLapTime final
@@ -10785,6 +11853,35 @@ public:
 };
 DUMPER7_ASSERTS_UnionRunDebugBPFL_RemoveAttackItemDevOnly;
 
+// Function UnionRun.UnionRunDebugPacketReplay.GetOnlineRaceReplayData
+// 0x0010 (0x0010 - 0x0000)
+struct UnionRunDebugPacketReplay_GetOnlineRaceReplayData final
+{
+public:
+	TArray<uint8>                                 Data;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRunDebugPacketReplay_GetOnlineRaceReplayData;
+
+// Function UnionRun.UnionRunDebugPacketReplay.LoadOnlineRaceReplay
+// 0x0268 (0x0268 - 0x0000)
+struct UnionRunDebugPacketReplay_LoadOnlineRaceReplay final
+{
+public:
+	struct FOnlineRaceReplay                      RaceReplayData;                                    // 0x0000(0x0260)(Parm, OutParm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0260(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionRunDebugPacketReplay_LoadOnlineRaceReplay;
+
+// Function UnionRun.UnionRunDebugPacketReplay.SetOnlineRaceReplay
+// 0x0260 (0x0260 - 0x0000)
+struct UnionRunDebugPacketReplay_SetOnlineRaceReplay final
+{
+public:
+	struct FOnlineRaceReplay                      RaceReplayData;                                    // 0x0000(0x0260)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRunDebugPacketReplay_SetOnlineRaceReplay;
+
 // Function UnionRun.UnionSplineComponent.GetCurrentLocationAndRotation
 // 0x0050 (0x0050 - 0x0000)
 struct UnionSplineComponent_GetCurrentLocationAndRotation final
@@ -10891,6 +11988,15 @@ public:
 };
 DUMPER7_ASSERTS_UnionSplineMoveComponent_AddMoveDistance;
 
+// Function UnionRun.UnionSplineMoveComponent.CopyParamFrom
+// 0x0008 (0x0008 - 0x0000)
+struct UnionSplineMoveComponent_CopyParamFrom final
+{
+public:
+	class UUnionSplineMoveComponent*              comp;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionSplineMoveComponent_CopyParamFrom;
+
 // Function UnionRun.UnionSplineMoveComponent.ForceReverse
 // 0x0001 (0x0001 - 0x0000)
 struct UnionSplineMoveComponent_ForceReverse final
@@ -10986,6 +12092,17 @@ public:
 	class UUnionSplineComponent*                  NewSpline;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionSplineMoveComponent_SetSpline;
+
+// Function UnionRun.UnionUcccLibrary.GetUserUcccParamData
+// 0x0028 (0x0028 - 0x0000)
+struct UnionUcccLibrary_GetUserUcccParamData final
+{
+public:
+	int32                                         OnlineRacerIndex;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCommon_UserCheatParamData             ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUcccLibrary_GetUserUcccParamData;
 
 // Function UnionRun.UnionVehicleRaceObjectInterface.ActivateCameraIF
 // 0x0001 (0x0001 - 0x0000)
@@ -11369,6 +12486,15 @@ public:
 };
 DUMPER7_ASSERTS_URaceUISubItemIconSet_SetVisibilityIrregular;
 
+// Function UnionRun.URaceUISubItemIconSet.UpdateIrregularInfiniteItem
+// 0x0008 (0x0008 - 0x0000)
+struct URaceUISubItemIconSet_UpdateIrregularInfiniteItem final
+{
+public:
+	const class UUnionRacerStatusObject*          RacerStatusObjet;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_URaceUISubItemIconSet_UpdateIrregularInfiniteItem;
+
 // Function UnionRun.URaceUISubItemIconSet.GetHoldItemCount
 // 0x0008 (0x0008 - 0x0000)
 struct URaceUISubItemIconSet_GetHoldItemCount final
@@ -11455,6 +12581,42 @@ public:
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_URaceUISubItemIconSet_IsIrregularChargeItem;
+
+// Function UnionRun.WhaleAnimInstance.GetIsJamp
+// 0x0001 (0x0001 - 0x0000)
+struct WhaleAnimInstance_GetIsJamp final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WhaleAnimInstance_GetIsJamp;
+
+// Function UnionRun.WhaleAnimInstance.GetIsJampTwist
+// 0x0001 (0x0001 - 0x0000)
+struct WhaleAnimInstance_GetIsJampTwist final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WhaleAnimInstance_GetIsJampTwist;
+
+// Function UnionRun.WhaleAnimInstance.SetIsJamp
+// 0x0001 (0x0001 - 0x0000)
+struct WhaleAnimInstance_SetIsJamp final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WhaleAnimInstance_SetIsJamp;
+
+// Function UnionRun.WhaleAnimInstance.SetIsJampTwist
+// 0x0001 (0x0001 - 0x0000)
+struct WhaleAnimInstance_SetIsJampTwist final
+{
+public:
+	bool                                          flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WhaleAnimInstance_SetIsJampTwist;
 
 }
 

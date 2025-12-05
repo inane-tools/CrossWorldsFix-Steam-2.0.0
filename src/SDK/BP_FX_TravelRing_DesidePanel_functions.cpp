@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BP_FX_TravelRing_DesidePanel.BP_FX_TravelRing_DesidePanel_C.SetNoHidden
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_FX_TravelRing_DesidePanel_C::SetNoHidden()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_TravelRing_DesidePanel_C", "SetNoHidden");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FX_TravelRing_DesidePanel.BP_FX_TravelRing_DesidePanel_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_FX_TravelRing_DesidePanel_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_TravelRing_DesidePanel_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_FX_TravelRing_DesidePanel.BP_FX_TravelRing_DesidePanel_C.ExecuteUbergraph_BP_FX_TravelRing_DesidePanel
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -62,6 +34,34 @@ void ABP_FX_TravelRing_DesidePanel_C::ExecuteUbergraph_BP_FX_TravelRing_DesidePa
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FX_TravelRing_DesidePanel.BP_FX_TravelRing_DesidePanel_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_FX_TravelRing_DesidePanel_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FX_TravelRing_DesidePanel_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FX_TravelRing_DesidePanel.BP_FX_TravelRing_DesidePanel_C.SetNoHidden
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FX_TravelRing_DesidePanel_C::SetNoHidden()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FX_TravelRing_DesidePanel_C", "SetNoHidden");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

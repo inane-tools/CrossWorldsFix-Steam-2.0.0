@@ -37,13 +37,14 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher_Pict;                               // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	int32                                         Count;                                             // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnableBlinkLoopAnim;                               // 0x0364(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          bVisible;                                          // 0x0365(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_CMN_MessageBar(int32 EntryPoint);
 	void PlayInAnim();
 	void PlayOutAnim();
 	void SetText(const class FText& InText);
-	void SetupDisableGadgetMessage();
+	void SetupDisableGadgetMessage(bool bEnableBlinkLoop);
 	void SetWaitingTextVisible(bool bInIsVisible);
 	void SetWarningIconVisible(bool bInIsVisible);
 	void SetWidgetSwitcherActiveWidgetIndex(int32 Index_0);

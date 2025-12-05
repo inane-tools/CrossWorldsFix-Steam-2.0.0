@@ -62,7 +62,7 @@ public:
 	void Construct();
 	void ExecuteUbergraph_WBP_ResultRate_Sub_RateGauge(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
-	void Set_Now_Rate_Impl(double NewParam);
+	void Set_Now_Rate_Impl(double newParam);
 	void SetBonusIconHide(bool bIsHide);
 	void SetRank(ERateRank Rank);
 	void SetRateBaseImpl(double RateUp_0, double RateDown_0, ERateRank RateRankUp, ERateRank RateRankDown);

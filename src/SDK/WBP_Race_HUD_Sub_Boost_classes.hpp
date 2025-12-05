@@ -51,7 +51,7 @@ public:
 
 public:
 	void Apply_Boost();
-	void CheckGadget(int32 PlayerIndex_0, bool IsSingle);
+	void CheckGadget(int32 PlayerIndex_0, bool isSingle);
 	void Construct();
 	void ExecuteUbergraph_WBP_Race_HUD_Sub_Boost(int32 EntryPoint);
 	void OnBoost_Event();

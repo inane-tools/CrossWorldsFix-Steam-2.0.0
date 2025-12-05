@@ -19,7 +19,7 @@ namespace SDK::Params
 struct ABP_HoldTripleWhiteBoost_C_GetBlendTime final
 {
 public:
-	double                                        NewParam;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        newParam;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ABP_HoldTripleWhiteBoost_C_GetBlendTime;
 

@@ -20,29 +20,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_CharaSelect_Sub_CharaIcon.WBP_CharaSelect_Sub_CharaIcon_C
-// 0x00C8 (0x06A8 - 0x05E0)
+// 0x00C8 (0x0698 - 0x05D0)
 class UWBP_CharaSelect_Sub_CharaIcon_C final : public UCharaSelectCharaIcon
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       UnLock_Inout;                                      // 0x05E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Select_Impossible;                                 // 0x05F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Push_Player04;                                     // 0x05F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Push_Player03;                                     // 0x0600(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Push_Player02;                                     // 0x0608(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Push_Player01;                                     // 0x0610(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Select_Loop;                                       // 0x0618(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Active_Loop;                                       // 0x0620(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWBP_DonpaTicketApp_C*                  Dialog;                                            // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         SkinPrice;                                         // 0x0630(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_634[0x4];                                      // 0x0634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TextCateogry;                                      // 0x0638(0x0010)(Edit, BlueprintVisible)
-	class FText                                   TextTitlePrice;                                    // 0x0648(0x0010)(Edit, BlueprintVisible)
-	class FText                                   TextTitleUnlock;                                   // 0x0658(0x0010)(Edit, BlueprintVisible)
-	class FText                                   TextButtonYes;                                     // 0x0668(0x0010)(Edit, BlueprintVisible)
-	class FText                                   TextButtonNo;                                      // 0x0678(0x0010)(Edit, BlueprintVisible)
-	class FText                                   TextButtonOK;                                      // 0x0688(0x0010)(Edit, BlueprintVisible)
-	TMulticastInlineDelegate<void()>              Event_RivalWinIconAnimFinished;                    // 0x0698(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       UnLock_Inout;                                      // 0x05D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Select_Impossible;                                 // 0x05E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Push_Player04;                                     // 0x05E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Push_Player03;                                     // 0x05F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Push_Player02;                                     // 0x05F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Push_Player01;                                     // 0x0600(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Select_Loop;                                       // 0x0608(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Active_Loop;                                       // 0x0610(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWBP_DonpaTicketApp_C*                  Dialog;                                            // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         SkinPrice;                                         // 0x0620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_624[0x4];                                      // 0x0624(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   TextCateogry;                                      // 0x0628(0x0010)(Edit, BlueprintVisible)
+	class FText                                   TextTitlePrice;                                    // 0x0638(0x0010)(Edit, BlueprintVisible)
+	class FText                                   TextTitleUnlock;                                   // 0x0648(0x0010)(Edit, BlueprintVisible)
+	class FText                                   TextButtonYes;                                     // 0x0658(0x0010)(Edit, BlueprintVisible)
+	class FText                                   TextButtonNo;                                      // 0x0668(0x0010)(Edit, BlueprintVisible)
+	class FText                                   TextButtonOK;                                      // 0x0678(0x0010)(Edit, BlueprintVisible)
+	TMulticastInlineDelegate<void()>              Event_RivalWinIconAnimFinished;                    // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BindDialogPrice();

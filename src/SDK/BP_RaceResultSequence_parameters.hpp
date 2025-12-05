@@ -32,6 +32,19 @@ public:
 };
 DUMPER7_ASSERTS_BP_RaceResultSequence_C_ExecuteUbergraph_BP_RaceResultSequence;
 
+// Function BP_RaceResultSequence.BP_RaceResultSequence_C.GetGroupRaceResultWidget
+// 0x0020 (0x0020 - 0x0000)
+struct BP_RaceResultSequence_C_GetGroupRaceResultWidget final
+{
+public:
+	class UWBP_GroupResult_C*                     Widget;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBPC_RaceSequenceStateResult_C*         K2Node_DynamicCast_AsBPC_Race_Sequence_State_Result; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_RaceResultSequence_C_GetGroupRaceResultWidget;
+
 // Function BP_RaceResultSequence.BP_RaceResultSequence_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
 struct BP_RaceResultSequence_C_ReceiveTick final

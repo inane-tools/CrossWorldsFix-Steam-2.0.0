@@ -477,9 +477,9 @@ void UABPT_HoldItem_C::IsSkipInState(int32 In_RemainingUses, bool* Out_Valid)
 // Function ABPT_HoldItem.ABPT_HoldItem_C.GetBlendTime
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// double*                                 NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 newParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UABPT_HoldItem_C::GetBlendTime(double* NewParam) const
+void UABPT_HoldItem_C::GetBlendTime(double* newParam) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -490,8 +490,8 @@ void UABPT_HoldItem_C::GetBlendTime(double* NewParam) const
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
+	if (newParam != nullptr)
+		*newParam = Parms.newParam;
 }
 
 

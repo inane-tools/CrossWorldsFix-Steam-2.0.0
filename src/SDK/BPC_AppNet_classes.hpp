@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_AppNet.BPC_AppNet_C
-// 0x0110 (0x0398 - 0x0288)
+// 0x0120 (0x03A8 - 0x0288)
 class UBPC_AppNet_C final : public UAppNetComponent
 {
 public:
@@ -38,9 +38,12 @@ public:
 	class ULobbyJoinInfo*                         CacheLobbyInfo;                                    // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          CachePlatformDecide;                               // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsAttentionCreating;                               // 0x0391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_392[0x6];                                      // 0x0392(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnSendInvitationAfterCreatShortLobbyId;            // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BindOnReceiveInvite();
+	void CallSendInvitationFailed();
 	void CheckInvitationNoticeDisplay(class ULobbyJoinInfo* InLobbyJoinInfo, bool* bOutDisplay);
 	void DisplayFinishEvent();
 	void ExecuteUbergraph_BPC_AppNet(int32 EntryPoint);
@@ -58,7 +61,8 @@ public:
 	void OnCompletedSendInvitation(bool bSuccessful, const struct FLobbyOperationResult& Result);
 	void OnCompleteGetUserSearch(bool bWasSuccessful, const TArray<struct FCommon_UserSearchData>& SearchDatas, EResponseCodeAbstract ResCodeAbstract);
 	void OnCreatedPopupWindowEvent(EPopupWindowType CreatedWindowType);
-	void OnDebugSendInvitation(int32 RequestIndex);
+	void OnCreateShortLobbyId();
+	void OnCreateShortLobbyIdComplete(const class FString& ShortLobbyId);
 	void OnGamerCardErrorCreatedEvent();
 	void OnGamerCardErrorDestroyedEvent();
 	void OnGenerateLobbyInviteNoticeWidget();
@@ -73,6 +77,8 @@ public:
 	void OnrejectInvitation(bool bSuccessful, const struct FLobbyOperationResult& Result);
 	void OnUnbindInvitationNoticeWidget();
 	void RequestLobbyInviteUserData();
+	void SendInvitationNoPlatform();
+	void SendInvitationWithPlatform();
 	void SendInvite();
 	void SetInviteUserId(const class FString& UserIdString);
 	void SetLobbyInvitationNoticeInfo();

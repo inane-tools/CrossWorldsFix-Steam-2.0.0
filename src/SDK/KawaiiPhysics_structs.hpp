@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 
 
@@ -216,10 +216,10 @@ public:
 	bool                                          bAutoAddChildDummyBoneConstraint;                  // 0x04BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4BD[0x3];                                      // 0x04BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FModifyBoneConstraint>          BoneConstraints;                                   // 0x04C0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UKawaiiPhysicsBoneConstraintsDataAsset* BoneConstraintsDataAsset;                          // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKawaiiPhysicsBoneConstraintsDataAsset* BoneConstraintsDataAsset;                          // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<struct FModifyBoneConstraint>          BoneConstraintsData;                               // 0x04D8(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
 	TArray<struct FModifyBoneConstraint>          MergedBoneConstraints;                             // 0x04E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class UKawaiiPhysicsLimitsDataAsset*          LimitsDataAsset;                                   // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKawaiiPhysicsLimitsDataAsset*          LimitsDataAsset;                                   // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<struct FSphericalLimit>                SphericalLimitsData;                               // 0x0500(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
 	TArray<struct FCapsuleLimit>                  CapsuleLimitsData;                                 // 0x0510(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
 	TArray<struct FPlanarLimit>                   PlanarLimitsData;                                  // 0x0520(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)

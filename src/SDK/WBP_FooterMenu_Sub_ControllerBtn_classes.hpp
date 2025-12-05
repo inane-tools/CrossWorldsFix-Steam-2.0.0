@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_FooterMenu_Sub_ControllerBtn.WBP_FooterMenu_Sub_ControllerBtn_C
-// 0x0020 (0x04D0 - 0x04B0)
+// 0x0020 (0x04C0 - 0x04A0)
 class UWBP_FooterMenu_Sub_ControllerBtn_C final : public UCommonMenuControllerButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       NSX_Joycon_Loop;                                   // 0x04B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Default_Loop;                                      // 0x04C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	int32                                         ButtonImageIndex;                                  // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       NSX_Joycon_Loop;                                   // 0x04A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Default_Loop;                                      // 0x04B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	int32                                         ButtonImageIndex;                                  // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();

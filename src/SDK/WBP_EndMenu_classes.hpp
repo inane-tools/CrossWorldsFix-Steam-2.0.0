@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -21,7 +21,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_EndMenu.WBP_EndMenu_C
-// 0x0160 (0x0540 - 0x03E0)
+// 0x0168 (0x0548 - 0x03E0)
 class UWBP_EndMenu_C final : public URaceEndMenuSceneWidgetBase
 {
 public:
@@ -70,6 +70,7 @@ public:
 	int32                                         FocusIndex;                                        // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_52C[0x4];                                      // 0x052C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              PreDecisionEventDispatcher;                        // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bIsSetupComplete;                                  // 0x0540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

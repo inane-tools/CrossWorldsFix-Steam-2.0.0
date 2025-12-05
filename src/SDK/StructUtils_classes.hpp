@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Class StructUtils.PropertyBagMissingObject
-// 0x0000 (0x0028 - 0x0028)
-class UPropertyBagMissingObject final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PropertyBagMissingObject")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PropertyBagMissingObject")
-	}
-	static class UPropertyBagMissingObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPropertyBagMissingObject>();
-	}
-};
-DUMPER7_ASSERTS_UPropertyBagMissingObject;
-
 // Class StructUtils.PropertyBag
 // 0x0018 (0x00D8 - 0x00C0)
 class UPropertyBag final : public UScriptStruct
@@ -60,6 +40,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPropertyBag;
+
+// Class StructUtils.PropertyBagMissingObject
+// 0x0000 (0x0028 - 0x0028)
+class UPropertyBagMissingObject final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PropertyBagMissingObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertyBagMissingObject")
+	}
+	static class UPropertyBagMissingObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPropertyBagMissingObject>();
+	}
+};
+DUMPER7_ASSERTS_UPropertyBagMissingObject;
 
 }
 

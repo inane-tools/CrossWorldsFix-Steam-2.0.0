@@ -24,8 +24,8 @@ namespace SDK
 class ULevelVariantSets final : public UObject
 {
 public:
-	TSubclassOf<class UObject>                    DirectorClass;                                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UVariantSet*>                    VariantSets;                                       // 0x0030(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UObject>                    DirectorClass;                                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	TArray<class UVariantSet*>                    VariantSets;                                       // 0x0030(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -55,7 +55,7 @@ class ALevelVariantSetsActor final : public AActor
 {
 public:
 	struct FSoftObjectPath                        LevelVariantSets;                                  // 0x0290(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<TSubclassOf<class UObject>, class ULevelVariantSetsFunctionDirector*> DirectorInstances;    // 0x02B0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<TSubclassOf<class UObject>, class ULevelVariantSetsFunctionDirector*> DirectorInstances;    // 0x02B0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	class ULevelVariantSets* GetLevelVariantSets(bool bLoad);
@@ -116,7 +116,7 @@ public:
 	TMap<class FString, class FString>            PropertySetterParameterDefaults;                   // 0x00D0(0x0050)(Protected, NativeAccessSpecifierProtected)
 	bool                                          bHasRecordedData;                                  // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    LeafPropertyClass;                                 // 0x0128(0x0008)(ZeroConstructor, Deprecated, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UObject>                    LeafPropertyClass;                                 // 0x0128(0x0008)(ZeroConstructor, Deprecated, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_130[0x8];                                      // 0x0130(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 ValueBytes;                                        // 0x0138(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	EPropertyValueCategory                        PropCategory;                                      // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -269,7 +269,7 @@ class ASwitchActor final : public AActor
 {
 public:
 	uint8                                         Pad_290[0x18];                                     // 0x0290(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        SceneComponent;                                    // 0x02A8(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USceneComponent*                        SceneComponent;                                    // 0x02A8(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	int32                                         LastSelectedOption;                                // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -303,8 +303,8 @@ public:
 	TArray<struct FVariantDependency>             Dependencies;                                      // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	class FText                                   DisplayText;                                       // 0x0038(0x0010)(Deprecated, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UVariantObjectBinding*>          ObjectBindings;                                    // 0x0058(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             Thumbnail;                                         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UVariantObjectBinding*>          ObjectBindings;                                    // 0x0058(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTexture2D*                             Thumbnail;                                         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	int32 AddDependency(struct FVariantDependency* Dependency);
@@ -351,7 +351,7 @@ public:
 	class FString                                 CachedActorLabel;                                  // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FSoftObjectPath                        ObjectPtr;                                         // 0x0038(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TLazyObjectPtr<class UObject>                 LazyObjectPtr;                                     // 0x0058(0x0018)(IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UPropertyValue*>                 CapturedProperties;                                // 0x0070(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UPropertyValue*>                 CapturedProperties;                                // 0x0070(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	TArray<struct FFunctionCaller>                FunctionCallers;                                   // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
@@ -379,8 +379,8 @@ public:
 	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bExpanded;                                         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UVariant*>                       Variants;                                          // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             Thumbnail;                                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UVariant*>                       Variants;                                          // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTexture2D*                             Thumbnail;                                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	class ULevelVariantSets* GetParent();

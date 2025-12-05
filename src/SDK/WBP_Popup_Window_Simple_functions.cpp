@@ -317,26 +317,6 @@ void UWBP_Popup_Window_Simple_C::SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnI
 }
 
 
-// Function WBP_Popup_Window_Simple.WBP_Popup_Window_Simple_C.SetFooterTextMessege
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_Popup_Window_Simple_C::SetFooterTextMessege(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Simple_C", "SetFooterTextMessege");
-
-	Params::WBP_Popup_Window_Simple_C_SetFooterTextMessege Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Popup_Window_Simple.WBP_Popup_Window_Simple_C.SetImageButtonSelectText
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

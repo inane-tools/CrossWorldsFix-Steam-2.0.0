@@ -139,8 +139,8 @@ DUMPER7_ASSERTS_UMovieScenePartialEvaluationTestObject;
 class UMovieSceneTestSequence final : public UMovieSceneSequence
 {
 public:
-	class UMovieScene*                            MovieScene;                                        // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        BoundObjects;                                      // 0x0070(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class UMovieScene*                            MovieScene;                                        // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UObject*>                        BoundObjects;                                      // 0x0070(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	TArray<struct FGuid>                          BindingGuids;                                      // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
@@ -354,8 +354,8 @@ public:
 	struct FMovieSceneDoubleChannel               Rotation[0x3];                                     // 0x0480(0x0118)(NativeAccessSpecifierPrivate)
 	struct FMovieSceneDoubleChannel               Scale[0x3];                                        // 0x07C8(0x0118)(NativeAccessSpecifierPrivate)
 	struct FMovieSceneFloatChannel                ManualWeight;                                      // 0x0B10(0x0110)(NativeAccessSpecifierPrivate)
-	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                               // 0x0C20(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMovieScene3DTransformSectionConstraints* Constraints;                                     // 0x0C28(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                               // 0x0C20(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UMovieScene3DTransformSectionConstraints* Constraints;                                     // 0x0C28(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	bool                                          bUseQuaternionInterpolation;                       // 0x0C30(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_C31[0x7];                                      // 0x0C31(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -406,7 +406,7 @@ class UMovieSceneAudioSection final : public UMovieSceneSection
 {
 public:
 	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Sound;                                             // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USoundBase*                             Sound;                                             // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	struct FFrameNumber                           StartFrameOffset;                                  // 0x0100(0x0004)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         StartOffset;                                       // 0x0104(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         AudioStartTime;                                    // 0x0108(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -425,7 +425,7 @@ public:
 	bool                                          bSuppressSubtitles;                                // 0x05E9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bOverrideAttenuation;                              // 0x05EA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_5EB[0x5];                                      // 0x05EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      AttenuationSettings;                               // 0x05F0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USoundAttenuation*                      AttenuationSettings;                               // 0x05F0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	TDelegate<void(const TArray<struct FSubtitleCue>& Subtitles, float CueDuration)> OnQueueSubtitles; // 0x05F8(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void()>              OnAudioFinished;                                   // 0x0608(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void(const class USoundWave* PlayingSoundWave, const float PlaybackPercent)> OnAudioPlaybackPercent; // 0x0618(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
@@ -839,7 +839,7 @@ class UMovieSceneDataLayerSection final : public UMovieSceneSection
 public:
 	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FActorDataLayer>                DataLayers;                                        // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<class UDataLayerAsset*>                DataLayerAssets;                                   // 0x0108(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UDataLayerAsset*>                DataLayerAssets;                                   // 0x0108(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	EDataLayerRuntimeState                        DesiredState;                                      // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	EDataLayerRuntimeState                        PrerollState;                                      // 0x0119(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bFlushOnActivated;                                 // 0x011A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -1055,7 +1055,7 @@ class UMovieSceneFloatSection final : public UMovieSceneSection
 public:
 	uint8                                         Pad_F0[0x10];                                      // 0x00F0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneFloatChannel                FloatCurve;                                        // 0x0100(0x0110)(Protected, NativeAccessSpecifierProtected)
-	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                               // 0x0210(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieSceneSectionChannelOverrideRegistry* OverrideRegistry;                               // 0x0210(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1237,8 +1237,8 @@ class alignas(0x10) UMovieSceneSkeletalAnimationSection final : public UMovieSce
 public:
 	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneSkeletalAnimationParams     Params_0;                                          // 0x00F8(0x0150)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          AnimSequence;                                      // 0x0248(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0250(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAnimSequence*                          AnimSequence;                                      // 0x0248(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0250(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	float                                         StartOffset;                                       // 0x0258(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         EndOffset;                                         // 0x025C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         PlayRate;                                          // 0x0260(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -1545,7 +1545,7 @@ class UMovieScenePropertySystem : public UMovieSceneEntitySystem
 {
 public:
 	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieScenePropertyInstantiatorSystem*  InstantiatorSystem;                                // 0x0048(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieScenePropertyInstantiatorSystem*  InstantiatorSystem;                                // 0x0048(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1868,7 +1868,7 @@ class UMovieSceneCustomPrimitiveDataSystem final : public UMovieSceneEntitySyste
 {
 public:
 	uint8                                         Pad_40[0x188];                                     // 0x0040(0x0188)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieScenePiecewiseDoubleBlenderSystem* DoubleBlenderSystem;                              // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScenePiecewiseDoubleBlenderSystem* DoubleBlenderSystem;                              // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -2230,7 +2230,7 @@ class UMovieSceneMaterialParameterInstantiatorSystem final : public UMovieSceneE
 {
 public:
 	uint8                                         Pad_40[0x310];                                     // 0x0040(0x0310)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieScenePiecewiseDoubleBlenderSystem* DoubleBlenderSystem;                              // 0x0350(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieScenePiecewiseDoubleBlenderSystem* DoubleBlenderSystem;                              // 0x0350(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -2434,8 +2434,8 @@ public:
 	TMulticastInlineDelegate<void(const struct FTransform& PredictedTransform)> Result;              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              Failure;                                           // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneSequencePlayer*              SequencePlayer;                                    // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class USceneComponent*                        SceneComponent;                                    // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneSequencePlayer*              SequencePlayer;                                    // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class USceneComponent*                        SceneComponent;                                    // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2466,8 +2466,8 @@ class UMovieScenePredictionSystem final : public UMovieSceneEntitySystem
 {
 public:
 	uint8                                         Pad_40[0x90];                                      // 0x0040(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneAsyncAction_SequencePrediction*> PendingPredictions;                     // 0x00D0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UMovieSceneAsyncAction_SequencePrediction*> ProcessingPredictions;                  // 0x00E0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneAsyncAction_SequencePrediction*> PendingPredictions;                     // 0x00D0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	TArray<class UMovieSceneAsyncAction_SequencePrediction*> ProcessingPredictions;                  // 0x00E0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -2769,7 +2769,7 @@ class UMovieSceneHierarchicalEasingInstantiatorSystem final : public UMovieScene
 {
 public:
 	uint8                                         Pad_40[0x88];                                      // 0x0040(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWeightAndEasingEvaluatorSystem*        EvaluatorSystem;                                   // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UWeightAndEasingEvaluatorSystem*        EvaluatorSystem;                                   // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2793,7 +2793,7 @@ DUMPER7_ASSERTS_UMovieSceneHierarchicalEasingInstantiatorSystem;
 class UMovieSceneHierarchicalEasingFinalizationSystem final : public UMovieSceneEntityInstantiatorSystem
 {
 public:
-	class UMovieSceneHierarchicalEasingInstantiatorSystem* InstantiatorSystem;                       // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneHierarchicalEasingInstantiatorSystem* InstantiatorSystem;                       // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -2885,7 +2885,7 @@ DUMPER7_ASSERTS_UMovieSceneCVarTrackInstance;
 class UMovieScene3DConstraintTrack : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             ConstraintSections;                                // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UMovieSceneSection*>             ConstraintSections;                                // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -2951,10 +2951,10 @@ DUMPER7_ASSERTS_UMovieScene3DPathTrack;
 class UMovieScenePropertyTrack : public UMovieSceneNameableTrack
 {
 public:
-	class UMovieSceneSection*                     SectionToKey;                                      // 0x0098(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneSection*                     SectionToKey;                                      // 0x0098(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	struct FMovieScenePropertyBinding             PropertyBinding;                                   // 0x00A0(0x0014)(NoDestructor, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00B8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00B8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3024,7 +3024,7 @@ DUMPER7_ASSERTS_UMovieSceneActorReferenceTrack;
 class UMovieSceneAudioTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             AudioSections;                                     // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             AudioSections;                                     // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3070,7 +3070,7 @@ DUMPER7_ASSERTS_UMovieSceneBoolTrack;
 class UMovieSceneByteTrack final : public UMovieScenePropertyTrack
 {
 public:
-	class UEnum*                                  Enum;                                              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UEnum*                                  Enum;                                              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3095,7 +3095,7 @@ class UMovieSceneCameraCutTrack final : public UMovieSceneNameableTrack
 public:
 	bool                                          bCanBlend;                                         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	bool                                          bAutoArrangeSections;                              // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -3120,7 +3120,7 @@ DUMPER7_ASSERTS_UMovieSceneCameraCutTrack;
 class UMovieSceneCameraShakeSourceShakeTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             CameraShakeSections;                               // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             CameraShakeSections;                               // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3143,7 +3143,7 @@ DUMPER7_ASSERTS_UMovieSceneCameraShakeSourceShakeTrack;
 class UMovieSceneCameraShakeSourceTriggerTrack final : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3166,7 +3166,7 @@ DUMPER7_ASSERTS_UMovieSceneCameraShakeSourceTriggerTrack;
 class UMovieSceneCameraShakeTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             CameraShakeSections;                               // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             CameraShakeSections;                               // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3234,8 +3234,8 @@ class UMovieSceneCustomPrimitiveDataTrack final : public UMovieSceneNameableTrac
 {
 public:
 	uint8                                         Pad_98[0x10];                                      // 0x0098(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UMovieSceneSection*                     SectionToKey;                                      // 0x00B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UMovieSceneSection*                     SectionToKey;                                      // 0x00B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3258,7 +3258,7 @@ DUMPER7_ASSERTS_UMovieSceneCustomPrimitiveDataTrack;
 class UMovieSceneCVarTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3281,7 +3281,7 @@ DUMPER7_ASSERTS_UMovieSceneCVarTrack;
 class UMovieSceneDataLayerTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3324,7 +3324,7 @@ DUMPER7_ASSERTS_UMovieSceneDoubleTrack;
 class UMovieSceneEnumTrack final : public UMovieScenePropertyTrack
 {
 public:
-	class UEnum*                                  Enum;                                              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UEnum*                                  Enum;                                              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3373,7 +3373,7 @@ public:
 	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	EFireEventsAtPosition                         EventPosition;                                     // 0x00AC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00B0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00B0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3456,7 +3456,7 @@ DUMPER7_ASSERTS_UMovieSceneIntegerTrack;
 class UMovieSceneLevelVisibilityTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3479,8 +3479,8 @@ DUMPER7_ASSERTS_UMovieSceneLevelVisibilityTrack;
 class UMovieSceneMaterialTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UMovieSceneSection*                     SectionToKey;                                      // 0x00A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UMovieSceneSection*                     SectionToKey;                                      // 0x00A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3504,7 +3504,7 @@ class UMovieSceneMaterialParameterCollectionTrack final : public UMovieSceneMate
 {
 public:
 	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialParameterCollection*           MPC;                                               // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialParameterCollection*           MPC;                                               // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3551,7 +3551,7 @@ DUMPER7_ASSERTS_UMovieSceneComponentMaterialTrack;
 class UMovieSceneObjectPropertyTrack final : public UMovieScenePropertyTrack
 {
 public:
-	TSubclassOf<class UObject>                    PropertyClass;                                     // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    PropertyClass;                                     // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3575,7 +3575,7 @@ class UMovieSceneParticleParameterTrack final : public UMovieSceneNameableTrack
 {
 public:
 	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3599,7 +3599,7 @@ class UMovieSceneParticleTrack final : public UMovieSceneNameableTrack
 {
 public:
 	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             ParticleSections;                                  // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             ParticleSections;                                  // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3645,7 +3645,7 @@ DUMPER7_ASSERTS_UMovieScenePrimitiveMaterialTrack;
 class UMovieSceneSkeletalAnimationTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bUseLegacySectionIndexBlend;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneSkeletalAnimRootMotionTrackParams RootMotionParams;                            // 0x00B0(0x0080)(NoDestructor, NativeAccessSpecifierPublic)

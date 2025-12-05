@@ -38,7 +38,7 @@ public:
 	void FireAnimation(bool In);
 	void OnOutAnimFinished();
 	void PreConstruct(bool IsDesignTime);
-	void SetGrandPrix(EGrandPrixId NewParam);
+	void SetGrandPrix(EGrandPrixId newParam);
 	void SetRoundAndStageName(const class FText& InRoundName, const class FText& InStageName);
 	void SetStageIconTexture(class UTexture2D* Texture);
 

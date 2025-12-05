@@ -94,7 +94,7 @@ DUMPER7_ASSERTS_UAnimToTextureInstancePlaybackLibrary;
 class UVATMeshComponent : public UStaticMeshComponent
 {
 public:
-	class UAnimToTextureDataAsset*                AnimToTextureDataAsset;                            // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimToTextureDataAsset*                AnimToTextureDataAsset;                            // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	int32                                         AnimationIndex;                                    // 0x05E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeStartOffset;                                   // 0x05E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeStartRange;                                    // 0x05E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

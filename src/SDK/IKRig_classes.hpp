@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 #include "IKRig_structs.hpp"
 #include "PBIK_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -74,7 +74,7 @@ DUMPER7_ASSERTS_UCurveRemapOp;
 class URetargetOpStack final : public UObject
 {
 public:
-	TArray<class URetargetOpBase*>                RetargetOps;                                       // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class URetargetOpBase*>                RetargetOps;                                       // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -297,10 +297,10 @@ public:
 	TSoftObjectPtr<class UIKRigDefinition>        SourceIKRigAsset;                                  // 0x0030(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSoftObjectPtr<class UIKRigDefinition>        TargetIKRigAsset;                                  // 0x0058(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FRetargetChainMap>              ChainMapping;                                      // 0x0080(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<class URetargetChainSettings*>         ChainSettings;                                     // 0x0090(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class URetargetRootSettings*                  RootSettings;                                      // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UIKRetargetGlobalSettings*              GlobalSettings;                                    // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class URetargetOpStack*                       OpStack;                                           // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class URetargetChainSettings*>         ChainSettings;                                     // 0x0090(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	class URetargetRootSettings*                  RootSettings;                                      // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UIKRetargetGlobalSettings*              GlobalSettings;                                    // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class URetargetOpStack*                       OpStack;                                           // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	TMap<class FName, struct FRetargetProfile>    Profiles;                                          // 0x00B8(0x0050)(NativeAccessSpecifierPrivate)
 	class FName                                   CurrentProfile;                                    // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<class FName, struct FIKRetargetPose>     SourceRetargetPoses;                               // 0x0110(0x0050)(NativeAccessSpecifierPrivate)
@@ -350,9 +350,9 @@ class alignas(0x10) UIKRetargetProcessor final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x160];                                     // 0x0028(0x0160)(Fixing Size After Last Property [ Dumper-7 ])
-	class UIKRigProcessor*                        IKRigProcessor;                                    // 0x0188(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UIKRigProcessor*                        IKRigProcessor;                                    // 0x0188(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_190[0x1F8];                                    // 0x0190(0x01F8)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class URetargetOpBase*>                OpStack;                                           // 0x0388(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class URetargetOpBase*>                OpStack;                                           // 0x0388(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -407,8 +407,8 @@ public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class USkeletalMesh>           PreviewSkeletalMesh;                               // 0x0030(0x0028)(Edit, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIKRigSkeleton                         Skeleton;                                          // 0x0058(0x0070)(NativeAccessSpecifierPrivate)
-	TArray<class UIKRigEffectorGoal*>             Goals;                                             // 0x00C8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UIKRigSolver*>                   Solvers;                                           // 0x00D8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UIKRigEffectorGoal*>             Goals;                                             // 0x00C8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	TArray<class UIKRigSolver*>                   Solvers;                                           // 0x00D8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	struct FRetargetDefinition                    RetargetDefinition;                                // 0x00E8(0x0018)(NativeAccessSpecifierPrivate)
 
 public:
@@ -433,7 +433,7 @@ class UIKRigProcessor final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UIKRigSolver*>                   Solvers;                                           // 0x0060(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UIKRigSolver*>                   Solvers;                                           // 0x0060(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_70[0xD8];                                      // 0x0070(0x00D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -520,7 +520,7 @@ public:
 	float                                         RotateYAlpha;                                      // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotateZAlpha;                                      // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UIKRig_BodyMoverEffector*>       Effectors;                                         // 0x0068(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UIKRig_BodyMoverEffector*>       Effectors;                                         // 0x0068(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -583,7 +583,7 @@ public:
 	bool                                          bEnableTwistCorrection;                            // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAxis                                         EndBoneForwardAxis;                                // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UIKRig_LimbEffector*                    Effector;                                          // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UIKRig_LimbEffector*                    Effector;                                          // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_68[0x28];                                      // 0x0068(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -690,8 +690,8 @@ public:
 	float                                         OverRelaxation;                                    // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bStartSolveFromInputPose;                          // 0x0074(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UIKRig_FBIKEffector*>            Effectors;                                         // 0x0078(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UIKRig_FBIKBoneSettings*>        BoneSettings;                                      // 0x0088(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UIKRig_FBIKEffector*>            Effectors;                                         // 0x0078(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UIKRig_FBIKBoneSettings*>        BoneSettings;                                      // 0x0088(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_98[0x58];                                      // 0x0098(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -743,7 +743,7 @@ class UIKRig_PoleSolver final : public UIKRigSolver
 public:
 	class FName                                   RootName;                                          // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   EndName;                                           // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UIKRig_PoleSolverEffector*              Effector;                                          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UIKRig_PoleSolverEffector*              Effector;                                          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_48[0x20];                                      // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -795,7 +795,7 @@ class UIKRig_SetTransform final : public UIKRigSolver
 public:
 	class FName                                   Goal;                                              // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   RootBone;                                          // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UIKRig_SetTransformEffector*            Effector;                                          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UIKRig_SetTransformEffector*            Effector;                                          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

@@ -71,7 +71,7 @@ public:
 	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRewardRedStarRingData>         CallFunc_SaveResult_OutRedStarRingData;            // 0x0168(0x0010)(ReferenceParm)
 	TArray<struct FHonorCommendationData>         K2Node_CustomEvent_HonorList;                      // 0x0178(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_CustomEvent_index;                          // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Index;                          // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetResultOtherPlayerRank_ReturnValue;     // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

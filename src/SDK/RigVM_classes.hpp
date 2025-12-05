@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "RigVM_structs.hpp"
 #include "Engine_classes.hpp"
+#include "RigVM_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -166,7 +166,7 @@ class UDataAssetLink final : public UNameSpacedUserData
 {
 public:
 	TSoftObjectPtr<class UDataAsset>              DataAsset;                                         // 0x0100(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             DataAssetCached;                                   // 0x0128(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDataAsset*                             DataAssetCached;                                   // 0x0128(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	void SetDataAsset(TSoftObjectPtr<class UDataAsset> InDataAsset);
@@ -260,7 +260,7 @@ DUMPER7_ASSERTS_URigVMNativized;
 class URigVMUserWorkflowOptions : public UObject
 {
 public:
-	class UObject*                                Subject;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                Subject;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	struct FRigVMUserWorkflow                     Workflow;                                          // 0x0030(0x0058)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_88[0x10];                                      // 0x0088(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -296,16 +296,16 @@ public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigVMRuntimeSettings                  VMRuntimeSettings;                                 // 0x0030(0x0018)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class URigVM*                                 VM;                                                // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class URigVM*                                 VM;                                                // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	TMap<class FString, struct FSoftObjectPath>   UserDefinedStructGuidToPathName;                   // 0x0060(0x0050)(Protected, NativeAccessSpecifierProtected)
 	TMap<class FString, struct FSoftObjectPath>   UserDefinedEnumToPathName;                         // 0x00B0(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<class UObject*>                          UserDefinedTypesInUse;                             // 0x0100(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TSet<class UObject*>                          UserDefinedTypesInUse;                             // 0x0100(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_150[0x8];                                      // 0x0150(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigVMDrawContainer                    DrawContainer;                                     // 0x0158(0x0018)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_170[0x18];                                     // 0x0170(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           EventQueue;                                        // 0x0188(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	uint8                                         Pad_198[0x90];                                     // 0x0198(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0228(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0228(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_238[0x40];                                     // 0x0238(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

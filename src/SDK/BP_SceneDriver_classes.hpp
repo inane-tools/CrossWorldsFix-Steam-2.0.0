@@ -32,7 +32,8 @@ public:
 	void OnAssetLoaded();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void SetEnableGfur(bool Enable);
+	void SetEnableGFur(bool Enable);
+	void SetupCharacterById(EDriverId In_DriverId);
 	void UserConstructionScript();
 
 	class USkeletalMesh* GetRivalMesh(EDriverId In_DriverId) const;

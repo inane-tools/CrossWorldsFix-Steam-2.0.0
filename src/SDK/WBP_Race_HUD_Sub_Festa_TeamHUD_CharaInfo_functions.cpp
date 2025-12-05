@@ -20,9 +20,9 @@ namespace SDK
 // Function WBP_Race_HUD_Sub_Festa_TeamHUD_CharaInfo.WBP_Race_HUD_Sub_Festa_TeamHUD_CharaInfo_C.SetIcon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EDriverId                               NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EDriverId                               newParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Race_HUD_Sub_Festa_TeamHUD_CharaInfo_C::SetIcon(EDriverId NewParam)
+void UWBP_Race_HUD_Sub_Festa_TeamHUD_CharaInfo_C::SetIcon(EDriverId newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UWBP_Race_HUD_Sub_Festa_TeamHUD_CharaInfo_C::SetIcon(EDriverId NewParam)
 
 	Params::WBP_Race_HUD_Sub_Festa_TeamHUD_CharaInfo_C_SetIcon Parms{};
 
-	Parms.NewParam = NewParam;
+	Parms.newParam = newParam;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

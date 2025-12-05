@@ -35,9 +35,9 @@ void UWBP_Race_HUD_Sub_Boost_C::Apply_Boost()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   PlayerIndex_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Race_HUD_Sub_Boost_C::CheckGadget(int32 PlayerIndex_0, bool IsSingle)
+void UWBP_Race_HUD_Sub_Boost_C::CheckGadget(int32 PlayerIndex_0, bool isSingle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -47,7 +47,7 @@ void UWBP_Race_HUD_Sub_Boost_C::CheckGadget(int32 PlayerIndex_0, bool IsSingle)
 	Params::WBP_Race_HUD_Sub_Boost_C_CheckGadget Parms{};
 
 	Parms.PlayerIndex_0 = PlayerIndex_0;
-	Parms.IsSingle = IsSingle;
+	Parms.isSingle = isSingle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

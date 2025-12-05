@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C
-// 0x0070 (0x03B8 - 0x0348)
+// 0x0090 (0x03D8 - 0x0348)
 class UWBP_Race_HUD_Sub_Aming_C final : public URaceUISubAiming
 {
 public:
@@ -35,21 +36,30 @@ public:
 	class UOverlay*                               Overlay_0;                                         // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 PAT_AmingIcon;                                     // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 PAT_AmingIcon_1;                                   // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          IsAiming;                                          // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 PAT_Num;                                           // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Roll;                                              // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Scale;                                             // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Aming;                              // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          IsAiming;                                          // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EItemId                                       ManualAimingItem;                                  // 0x03D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void Change_Aiming_UI(EItemId Item);
 	void Construct();
 	void ExecuteUbergraph_WBP_Race_HUD_Sub_Aming(int32 EntryPoint);
+	void Get_Manual_Aiming_UI_Widget_Index(EItemId ItemId, int32* Index_0);
 	void InitVariable();
 	void PlayAnimationHoming();
 	void PlayAnimationLockOff();
 	void PlayAnimationLockOn();
 	void PlayAnimManualKeep();
 	void ResetScaleOverlay();
+	void Set_Default_UI_Material_Param_Index(double Value);
+	void Set_Item_Remain_Count(double remain);
 	void Set_Manual_Aiming(bool IsVisible_0);
 	void SetAfterHomingVisibility(bool IsVisible_0);
 	void SetBeforeHomingNotAnim();
-	void SetIconScale(double Scale);
+	void SetIconScale(double Scale_0);
 	void StopAnimationAll();
 
 public:

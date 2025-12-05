@@ -260,10 +260,10 @@ void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::InitializeRingGauge()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   RacerIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  ChargePer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::PlayChrageEffect(int32 RacerIndex, bool IsSingle, double ChargePer)
+void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::PlayChrageEffect(int32 RacerIndex, bool isSingle, double ChargePer)
 {
 	static class UFunction* Func = nullptr;
 
@@ -273,7 +273,7 @@ void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::PlayChrageEffect(int32 RacerIndex, bool 
 	Params::WBP_Race_HUD_Sub_Festa_TeamHUD_C_PlayChrageEffect Parms{};
 
 	Parms.RacerIndex = RacerIndex;
-	Parms.IsSingle = IsSingle;
+	Parms.isSingle = isSingle;
 	Parms.ChargePer = ChargePer;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -475,9 +475,9 @@ void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::SetPreStartInfo(bool IsValid, int32 Play
 // Function WBP_Race_HUD_Sub_Festa_TeamHUD.WBP_Race_HUD_Sub_Festa_TeamHUD_C.SetRankForSingle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   newParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::SetRankForSingle(int32 NewParam)
+void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::SetRankForSingle(int32 newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -486,7 +486,7 @@ void UWBP_Race_HUD_Sub_Festa_TeamHUD_C::SetRankForSingle(int32 NewParam)
 
 	Params::WBP_Race_HUD_Sub_Festa_TeamHUD_C_SetRankForSingle Parms{};
 
-	Parms.NewParam = NewParam;
+	Parms.newParam = newParam;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

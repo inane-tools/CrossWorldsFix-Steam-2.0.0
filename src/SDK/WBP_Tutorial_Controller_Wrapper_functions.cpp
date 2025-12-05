@@ -42,13 +42,13 @@ void UWBP_Tutorial_Controller_Wrapper_C::Create(class FName InRowName, EUnionCon
 
 
 // Function WBP_Tutorial_Controller_Wrapper.WBP_Tutorial_Controller_Wrapper_C.CreateController
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EUnionControllerType                    InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EUnionPlatform                          InPlatform                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UCommonUIController**             NewParam                                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCommonUIController**             newParam                                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Tutorial_Controller_Wrapper_C::CreateController(EUnionControllerType InType, EUnionPlatform InPlatform, class UCommonUIController** NewParam)
+void UWBP_Tutorial_Controller_Wrapper_C::CreateController(EUnionControllerType InType, EUnionPlatform InPlatform, class UCommonUIController** newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -62,8 +62,8 @@ void UWBP_Tutorial_Controller_Wrapper_C::CreateController(EUnionControllerType I
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
+	if (newParam != nullptr)
+		*newParam = Parms.newParam;
 }
 
 

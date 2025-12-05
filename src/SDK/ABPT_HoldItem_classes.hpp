@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "ABPT_HoldItem_structs.hpp"
 #include "UNION_classes.hpp"
+#include "ABPT_HoldItem_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK
@@ -125,7 +125,7 @@ public:
 	void ExecuteUbergraph_ABPT_HoldItem(int32 EntryPoint);
 	void IsSkipInState(int32 In_RemainingUses, bool* Out_Valid);
 
-	void GetBlendTime(double* NewParam) const;
+	void GetBlendTime(double* newParam) const;
 	void IsValidOutState(bool* Out_Valid) const;
 	void IsValidUseState(bool* Out_Valid) const;
 

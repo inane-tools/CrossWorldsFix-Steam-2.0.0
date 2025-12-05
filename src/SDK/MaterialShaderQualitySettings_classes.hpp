@@ -46,7 +46,7 @@ DUMPER7_ASSERTS_UShaderPlatformQualitySettings;
 class UMaterialShaderQualitySettings final : public UObject
 {
 public:
-	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                      // 0x0028(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                      // 0x0028(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

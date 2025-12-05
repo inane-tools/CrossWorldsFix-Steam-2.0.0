@@ -544,26 +544,6 @@ void UWBP_Popup_DonpaTicket_Use_C::SetFooterMenuBtn(int32 BtnIconIndex, int32 Bt
 }
 
 
-// Function WBP_Popup_DonpaTicket_Use.WBP_Popup_DonpaTicket_Use_C.SetFooterTextMessege
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_Popup_DonpaTicket_Use_C::SetFooterTextMessege(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetFooterTextMessege");
-
-	Params::WBP_Popup_DonpaTicket_Use_C_SetFooterTextMessege Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Popup_DonpaTicket_Use.WBP_Popup_DonpaTicket_Use_C.SetImageButtonSelectText
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "InterchangeCommon_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "InterchangePipelines_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "InterchangeFactoryNodes_structs.hpp"
 #include "InterchangeCore_structs.hpp"
 #include "InterchangeCore_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "InterchangeFactoryNodes_structs.hpp"
+#include "InterchangeCommon_structs.hpp"
 
 
 namespace SDK
@@ -247,11 +247,11 @@ public:
 	struct FRotator                               ImportOffsetRotation;                              // 0x0148(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ImportOffsetUniformScale;                          // 0x0160(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeGenericCommonMeshesProperties* CommonMeshesProperties;                         // 0x0168(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties* CommonSkeletalMeshesAndAnimationsProperties; // 0x0170(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericMeshPipeline*        MeshPipeline;                                      // 0x0178(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericAnimationPipeline*   AnimationPipeline;                                 // 0x0180(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericMaterialPipeline*    MaterialPipeline;                                  // 0x0188(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeGenericCommonMeshesProperties* CommonMeshesProperties;                         // 0x0168(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties* CommonSkeletalMeshesAndAnimationsProperties; // 0x0170(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericMeshPipeline*        MeshPipeline;                                      // 0x0178(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericAnimationPipeline*   AnimationPipeline;                                 // 0x0180(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericMaterialPipeline*    MaterialPipeline;                                  // 0x0188(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_190[0xD8];                                     // 0x0190(0x00D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -285,8 +285,8 @@ public:
 	bool                                          bCreateMaterialInstanceForParent;                  // 0x0132(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_133[0x5];                                      // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftObjectPath                        ParentMaterial;                                    // 0x0138(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericTexturePipeline*     TexturePipeline;                                   // 0x0158(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0160(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInterchangeGenericTexturePipeline*     TexturePipeline;                                   // 0x0158(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0160(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_168[0x50];                                     // 0x0168(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -406,7 +406,7 @@ public:
 	class FString                                 AssetName;                                         // 0x0120(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowNonPowerOfTwo;                               // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0138(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0138(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_140[0x30];                                     // 0x0140(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

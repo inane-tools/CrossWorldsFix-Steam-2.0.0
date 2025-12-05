@@ -180,10 +180,11 @@ void ABP_RaceSequence_C::ChangeSubEvent(const EMainSubCourseIndex& NextMainSubSt
 // Function BP_RaceSequence.BP_RaceSequence_C.ChangeSubMapTexture
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// int32                                   DomainIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMainSubCourseIndex                     NextMainSubState                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EStageCourseMainSubMapInfo*             MainSubState                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_RaceSequence_C::ChangeSubMapTexture(EMainSubCourseIndex NextMainSubState, EStageCourseMainSubMapInfo* MainSubState)
+void ABP_RaceSequence_C::ChangeSubMapTexture(int32 DomainIndex, EMainSubCourseIndex NextMainSubState, EStageCourseMainSubMapInfo* MainSubState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -192,6 +193,7 @@ void ABP_RaceSequence_C::ChangeSubMapTexture(EMainSubCourseIndex NextMainSubStat
 
 	Params::BP_RaceSequence_C_ChangeSubMapTexture Parms{};
 
+	Parms.DomainIndex = DomainIndex;
 	Parms.NextMainSubState = NextMainSubState;
 
 	UObject::ProcessEvent(Func, &Parms);

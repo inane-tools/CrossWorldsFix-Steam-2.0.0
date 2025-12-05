@@ -17,26 +17,18 @@
 namespace SDK::Params
 {
 
-// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.SetTravelRingState
-// 0x0180 (0x0180 - 0x0000)
-struct BP_TravelRingAnotherEnterSpawner_C_SetTravelRingState final
+// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner
+// 0x0020 (0x0020 - 0x0000)
+struct BP_TravelRingAnotherEnterSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner final
 {
 public:
-	uint8                                         TravelRingState_0;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorRelativeTransform_SweepHitResult; // 0x0088(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetSpawnActor_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FX_TravelRing_C*                    K2Node_DynamicCast_AsBP_FX_Travel_Ring;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_TravelRingAnotherEnterSpawner_C_SetTravelRingState;
+DUMPER7_ASSERTS_BP_TravelRingAnotherEnterSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner;
 
 // Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.SetReturnEffectVisibility
 // 0x0068 (0x0068 - 0x0000)
@@ -67,18 +59,26 @@ public:
 };
 DUMPER7_ASSERTS_BP_TravelRingAnotherEnterSpawner_C_SetReturnEffectVisibility;
 
-// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner
-// 0x0020 (0x0020 - 0x0000)
-struct BP_TravelRingAnotherEnterSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner final
+// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.SetTravelRingState
+// 0x0180 (0x0180 - 0x0000)
+struct BP_TravelRingAnotherEnterSpawner_C_SetTravelRingState final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetSpawnActor_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FX_TravelRing_C*                    K2Node_DynamicCast_AsBP_FX_Travel_Ring;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         TravelRingState_0;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorRelativeTransform_SweepHitResult; // 0x0088(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_TravelRingAnotherEnterSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner;
+DUMPER7_ASSERTS_BP_TravelRingAnotherEnterSpawner_C_SetTravelRingState;
 
 }
 

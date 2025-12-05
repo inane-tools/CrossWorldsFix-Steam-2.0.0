@@ -17,23 +17,37 @@
 namespace SDK
 {
 
-// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.SetTravelRingState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner
+// (Final, UbergraphFunction)
 // Parameters:
-// uint8                                   TravelRingState_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TravelRingAnotherEnterSpawner_C::SetTravelRingState(uint8 TravelRingState_0)
+void ABP_TravelRingAnotherEnterSpawner_C::ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingAnotherEnterSpawner_C", "SetTravelRingState");
+		Func = Class->GetFunction("BP_TravelRingAnotherEnterSpawner_C", "ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner");
 
-	Params::BP_TravelRingAnotherEnterSpawner_C_SetTravelRingState Parms{};
+	Params::BP_TravelRingAnotherEnterSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner Parms{};
 
-	Parms.TravelRingState_0 = TravelRingState_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.PostSpawnSequenceActor
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void ABP_TravelRingAnotherEnterSpawner_C::PostSpawnSequenceActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TravelRingAnotherEnterSpawner_C", "PostSpawnSequenceActor");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,35 +71,21 @@ void ABP_TravelRingAnotherEnterSpawner_C::SetReturnEffectVisibility(bool Visibil
 }
 
 
-// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.PostSpawnSequenceActor
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void ABP_TravelRingAnotherEnterSpawner_C::PostSpawnSequenceActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingAnotherEnterSpawner_C", "PostSpawnSequenceActor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner
-// (Final, UbergraphFunction)
+// Function BP_TravelRingAnotherEnterSpawner.BP_TravelRingAnotherEnterSpawner_C.SetTravelRingState
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   TravelRingState_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TravelRingAnotherEnterSpawner_C::ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner(int32 EntryPoint)
+void ABP_TravelRingAnotherEnterSpawner_C::SetTravelRingState(uint8 TravelRingState_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingAnotherEnterSpawner_C", "ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner");
+		Func = Class->GetFunction("BP_TravelRingAnotherEnterSpawner_C", "SetTravelRingState");
 
-	Params::BP_TravelRingAnotherEnterSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherEnterSpawner Parms{};
+	Params::BP_TravelRingAnotherEnterSpawner_C_SetTravelRingState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.TravelRingState_0 = TravelRingState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

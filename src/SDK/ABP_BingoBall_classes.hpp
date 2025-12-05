@@ -31,16 +31,16 @@ public:
 	class AGimmickBingoBall*                      OwnerActor;                                        // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ABP_BingoBall(int32 EntryPoint);
-	void AnimNotify_Ball_8();
-	void AnimNotify_Ball_42();
-	void AnimNotify_Ball_39();
-	void AnimNotify_Ball_33();
-	void AnimNotify_Ball_27();
-	void AnimNotify_Ball_20();
-	void AnimNotify_Ball_15();
-	void AnimNotify_Ball_11();
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void AnimNotify_Ball_11();
+	void AnimNotify_Ball_15();
+	void AnimNotify_Ball_20();
+	void AnimNotify_Ball_27();
+	void AnimNotify_Ball_33();
+	void AnimNotify_Ball_39();
+	void AnimNotify_Ball_42();
+	void AnimNotify_Ball_8();
+	void ExecuteUbergraph_ABP_BingoBall(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

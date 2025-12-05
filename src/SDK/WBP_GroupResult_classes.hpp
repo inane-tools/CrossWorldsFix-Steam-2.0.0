@@ -85,6 +85,7 @@ public:
 	void Set_Group_Result_Impl(class UWBP_GroupResult_C* GroupResult_0);
 	void SetLoadingMode();
 	void SetTeamColor();
+	void SetupWidget();
 	void StartAnim();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Update();

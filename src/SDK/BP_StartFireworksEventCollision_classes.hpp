@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0600(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_StartFireworksEventCollision(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

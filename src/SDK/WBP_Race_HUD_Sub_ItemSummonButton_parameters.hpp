@@ -30,6 +30,7 @@ public:
 	bool                                          CallFunc_Key_IsGamepadKey_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetKey_Success;                           // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetKey_Success_1;                         // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetKey_IsSuccess;                         // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Race_HUD_Sub_ItemSummonButton_C_ExecuteUbergraph_WBP_Race_HUD_Sub_ItemSummonButton;
 

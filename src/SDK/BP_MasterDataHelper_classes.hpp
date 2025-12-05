@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MasterDataHelper.BP_MasterDataHelper_C
-// 0x0000 (0x01E0 - 0x01E0)
+// 0x0000 (0x01E8 - 0x01E8)
 class UBP_MasterDataHelper_C final : public UMasterDataHelper
 {
 public:

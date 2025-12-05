@@ -30,7 +30,7 @@ public:
 	float                                         DebugDrawMovePathTime;                             // 0x0220(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           DebugDrawMovePathColor;                            // 0x0224(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_234[0x14];                                     // 0x0234(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMoveController*>                m_controllerContainer;                             // 0x0248(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMoveController*>                m_controllerContainer;                             // 0x0248(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_258[0x128];                                    // 0x0258(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -134,7 +134,7 @@ class UHHPathConverter final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x60];                                      // 0x0028(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHHSplineInfo*                          Spline;                                            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UHHSplineInfo*                          Spline;                                            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_90[0x38];                                      // 0x0090(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

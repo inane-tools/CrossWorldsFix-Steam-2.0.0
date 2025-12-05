@@ -10,18 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "UnionLib_structs.hpp"
+#include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
 #include "UnionRun_structs.hpp"
-#include "UnionLib_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateSendRaceEnd.BPC_RaceSequenceStateSendRaceEnd_C
-// 0x0010 (0x0178 - 0x0168)
+// 0x0030 (0x0198 - 0x0168)
 class UBPC_RaceSequenceStateSendRaceEnd_C final : public URaceSequenceStateSendRaceEnd
 {
 public:
@@ -31,6 +32,13 @@ public:
 	EResponseCodeAbstract                         ConnectedResCodeAbstract;                          // 0x0175(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESequenceMainType                             MainSequenceType;                                  // 0x0176(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESequenceSubType                              SubSequenceType;                                   // 0x0177(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSaveSeq;                                          // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ResultLegendRate;                                  // 0x017C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUpdateMaxLegendCompe;                             // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ELegendCompeRateGrade                         NewLegendCompeGrade;                               // 0x0181(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_182[0x6];                                      // 0x0182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRewardBaseData>                Out_Reward_Arr;                                    // 0x0188(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ConvertStickerData(const struct FUserStickerData& UserStickerData, struct FCommon_MachineStickerData* Common_MachineStickerData);
@@ -47,11 +55,13 @@ public:
 	void NotifySendResultSave();
 	void OnExitState();
 	void OnInitState();
+	void OnSaveComplate(ESaveDataStatus Status);
 	void OnSendResultSaveFestaResultCallback(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
 	void OnSendResultSaveLegendCompeResultCallback(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
 	void OnSendResultSaveRankMatchResultCallback(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error);
 	void OutputLog_Event(const class FString& DispStr, bool bError);
 	void SendPredictLog();
+	void UnbindOnSaveEvent();
 	void UpdateSendResultSaveCount();
 	void UploadPredictCarPacket();
 

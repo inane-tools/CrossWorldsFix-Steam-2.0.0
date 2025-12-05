@@ -102,6 +102,29 @@ public:
 };
 DUMPER7_ASSERTS_UAchievementWriteCallbackProxy;
 
+// Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
+// 0x0158 (0x0180 - 0x0028)
+class UOnlineEngineInterfaceImpl final : public UOnlineEngineInterface
+{
+public:
+	uint8                                         Pad_28[0x158];                                     // 0x0028(0x0158)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineEngineInterfaceImpl")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineEngineInterfaceImpl")
+	}
+	static class UOnlineEngineInterfaceImpl* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineEngineInterfaceImpl>();
+	}
+};
+DUMPER7_ASSERTS_UOnlineEngineInterfaceImpl;
+
 // Class OnlineSubsystemUtils.ConnectionCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
 class UConnectionCallbackProxy final : public UOnlineBlueprintCallProxyBase
@@ -674,7 +697,7 @@ public:
 	uint8                                         Pad_290[0x8];                                      // 0x0290(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BeaconConnectionInitialTimeout;                    // 0x0298(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         BeaconConnectionTimeout;                           // 0x029C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNetDriver*                             NetDriver;                                         // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNetDriver*                             NetDriver;                                         // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_2A8[0x18];                                     // 0x02A8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -698,8 +721,8 @@ DUMPER7_ASSERTS_AOnlineBeacon;
 class AOnlineBeaconClient : public AOnlineBeacon
 {
 public:
-	class AOnlineBeaconHostObject*                BeaconOwner;                                       // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNetConnection*                         BeaconConnection;                                  // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AOnlineBeaconHostObject*                BeaconOwner;                                       // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UNetConnection*                         BeaconConnection;                                  // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	EBeaconConnectionState                        ConnectionState;                                   // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2D1[0x4F];                                     // 0x02D1(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -733,7 +756,7 @@ public:
 	uint8                                         Pad_2C6[0x2];                                      // 0x02C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	uint32                                        MaxAuthTokenSize;                                  // 0x02C8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2CC[0x54];                                     // 0x02CC(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x0320(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x0320(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_330[0xA0];                                     // 0x0330(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -759,7 +782,7 @@ class AOnlineBeaconHostObject : public AActor
 public:
 	class FString                                 BeaconTypeName;                                    // 0x0290(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class AOnlineBeaconClient>        ClientBeaconActorClass;                            // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x02A8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x02A8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -919,7 +942,7 @@ DUMPER7_ASSERTS_APartyBeaconClient;
 class APartyBeaconHost final : public AOnlineBeaconHostObject
 {
 public:
-	class UPartyBeaconState*                      State;                                             // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPartyBeaconState*                      State;                                             // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_2C0[0x60];                                     // 0x02C0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bLogoutOnSessionTimeout;                           // 0x0320(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsValidationStrRequired;                          // 0x0321(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -1081,7 +1104,7 @@ DUMPER7_ASSERTS_ASpectatorBeaconClient;
 class ASpectatorBeaconHost final : public AOnlineBeaconHostObject
 {
 public:
-	class USpectatorBeaconState*                  State;                                             // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USpectatorBeaconState*                  State;                                             // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_2C0[0x60];                                     // 0x02C0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bLogoutOnSessionTimeout;                           // 0x0320(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsValidationStrRequired;                          // 0x0321(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -1230,29 +1253,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UVoipListenerSynthComponent;
-
-// Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
-// 0x0158 (0x0180 - 0x0028)
-class UOnlineEngineInterfaceImpl final : public UOnlineEngineInterface
-{
-public:
-	uint8                                         Pad_28[0x158];                                     // 0x0028(0x0158)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnlineEngineInterfaceImpl")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnlineEngineInterfaceImpl")
-	}
-	static class UOnlineEngineInterfaceImpl* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineEngineInterfaceImpl>();
-	}
-};
-DUMPER7_ASSERTS_UOnlineEngineInterfaceImpl;
 
 }
 

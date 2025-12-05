@@ -70,7 +70,7 @@ enum class EInterchangeMaterialSearchLocation : uint8
 struct FInterchangeLodSceneNodeContainer final
 {
 public:
-	TArray<class UInterchangeSceneNode*>          SceneNodes;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UInterchangeSceneNode*>          SceneNodes;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FInterchangeLodSceneNodeContainer;
 
@@ -80,7 +80,7 @@ struct FInterchangeMeshInstance final
 {
 public:
 	class FString                                 MeshInstanceUid;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeSceneNode*                  LodGroupNode;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeSceneNode*                  LodGroupNode;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bReferenceSkinnedMesh;                             // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReferenceMorphTarget;                             // 0x0019(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasMorphTargets;                                  // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -96,7 +96,7 @@ struct FInterchangeMeshGeometry final
 {
 public:
 	class FString                                 MeshUid;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeMeshNode*                   MeshNode;                                          // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeMeshNode*                   MeshNode;                                          // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<class FString>                         ReferencingMeshInstanceUids;                       // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         AttachedSocketUids;                                // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };

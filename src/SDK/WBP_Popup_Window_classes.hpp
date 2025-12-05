@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionUI_classes.hpp"
 
@@ -45,6 +45,7 @@ public:
 	double                                        ButtonControlTimer;                                // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ButtonControlDelayTime;                            // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnableInput;                                       // 0x0470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableButtonControl;                               // 0x0471(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddFocusButton(const TArray<class UUnionUIButtonBase*>& ButtonArray);
@@ -137,7 +138,6 @@ public:
 	void SetDonpaTicketCount(int32 CurrentCount, int32 AfterCount);
 	void SetEnableInput(bool InEnable);
 	void SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType, const class FText& BtnText);
-	void SetFooterTextMessege(const class FText& Text);
 	void SetImageButtonSelectText(const class FText& InText);
 	void SetImageTexture(const class UTexture2D* Texture2D);
 	void SetInfoDisplay(bool SetImage);

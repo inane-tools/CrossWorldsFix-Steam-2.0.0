@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Race_HUD_Sub_ItemSummonButton.WBP_Race_HUD_Sub_ItemSummonButton_C
-// 0x0048 (0x0338 - 0x02F0)
+// 0x0050 (0x0340 - 0x02F0)
 class UWBP_Race_HUD_Sub_ItemSummonButton_C final : public URaceUISubItemSummonButton
 {
 public:
@@ -30,7 +30,8 @@ public:
 	class UWBP_Race_Sub_Btn_Key_C*                WBP_Race_StartDash_Sub_Btn;                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Race_Sub_Btn_Cross_C*              WBP_Race_StartDash_Sub_Btn_Cross;                  // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Race_Sub_Btn_LR_C*                 WBP_Race_StartDash_Sub_Btn_LR;                     // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_Btn;                                // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Race_Sub_Btn_Option_C*             WBP_Race_Sub_Btn_Option;                           // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Btn;                                // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();

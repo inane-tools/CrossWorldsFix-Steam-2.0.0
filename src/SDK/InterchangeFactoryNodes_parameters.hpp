@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 #include "CinematicCamera_structs.hpp"
 #include "Engine_structs.hpp"
-#include "InterchangeNodes_structs.hpp"
 #include "InterchangeFactoryNodes_structs.hpp"
+#include "InterchangeNodes_structs.hpp"
 
 
 namespace SDK::Params

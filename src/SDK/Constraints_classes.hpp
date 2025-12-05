@@ -29,7 +29,7 @@ public:
 	FMulticastSparseDelegateProperty_             OnConstraintAdded_BP;                              // 0x0028(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
 	FMulticastSparseDelegateProperty_             OnConstraintRemoved_BP;                            // 0x0029(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2A[0xE];                                       // 0x002A(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UTickableConstraint*>            Constraints;                                       // 0x0038(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UTickableConstraint*>            Constraints;                                       // 0x0038(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -79,7 +79,7 @@ DUMPER7_ASSERTS_UConstraintSubsystem;
 class AConstraintsActor final : public AActor
 {
 public:
-	class UConstraintsManager*                    ConstraintsManager;                                // 0x0290(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UConstraintsManager*                    ConstraintsManager;                                // 0x0290(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -205,8 +205,8 @@ DUMPER7_ASSERTS_UTransformableComponentHandle;
 class UTickableTransformConstraint : public UTickableConstraint
 {
 public:
-	class UTransformableHandle*                   ParentTRSHandle;                                   // 0x0090(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTransformableHandle*                   ChildTRSHandle;                                    // 0x0098(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTransformableHandle*                   ParentTRSHandle;                                   // 0x0090(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UTransformableHandle*                   ChildTRSHandle;                                    // 0x0098(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bMaintainOffset;                                   // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Weight;                                            // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

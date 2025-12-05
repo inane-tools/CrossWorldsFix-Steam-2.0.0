@@ -507,6 +507,24 @@ public:
 };
 DUMPER7_ASSERTS_MariaUpload_GetSegaAccountID;
 
+// Function mariaUploadPlugin.MariaUpload.GetSegaAccountType
+// 0x0001 (0x0001 - 0x0000)
+struct MariaUpload_GetSegaAccountType final
+{
+public:
+	EMariaSegaAccountType                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_GetSegaAccountType;
+
+// Function mariaUploadPlugin.MariaUpload.GetSentMessagesNum
+// 0x0004 (0x0004 - 0x0000)
+struct MariaUpload_GetSentMessagesNum final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_GetSentMessagesNum;
+
 // Function mariaUploadPlugin.MariaUpload.GetUserID
 // 0x0010 (0x0010 - 0x0000)
 struct MariaUpload_GetUserID final
@@ -578,6 +596,24 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MariaUpload_IsOnMSPC;
+
+// Function mariaUploadPlugin.MariaUpload.IsOnSwitch1
+// 0x0001 (0x0001 - 0x0000)
+struct MariaUpload_IsOnSwitch1 final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_IsOnSwitch1;
+
+// Function mariaUploadPlugin.MariaUpload.IsOnSwitch2
+// 0x0001 (0x0001 - 0x0000)
+struct MariaUpload_IsOnSwitch2 final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_IsOnSwitch2;
 
 // Function mariaUploadPlugin.MariaUpload.IsOnXbox
 // 0x0001 (0x0001 - 0x0000)
@@ -763,6 +799,15 @@ public:
 };
 DUMPER7_ASSERTS_MariaUpload_SetAppInformations;
 
+// Function mariaUploadPlugin.MariaUpload.SetAppVersion
+// 0x0010 (0x0010 - 0x0000)
+struct MariaUpload_SetAppVersion final
+{
+public:
+	class FString                                 AppVersion;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_SetAppVersion;
+
 // Function mariaUploadPlugin.MariaUpload.SetAuthenticateDevMode_GDK
 // 0x0001 (0x0001 - 0x0000)
 struct MariaUpload_SetAuthenticateDevMode_GDK final
@@ -914,6 +959,16 @@ public:
 };
 DUMPER7_ASSERTS_MariaUpload_SetPendingUntilNetworkAvailable_Switch;
 
+// Function mariaUploadPlugin.MariaUpload.SetRecoveryWaitModeSpan
+// 0x0008 (0x0008 - 0x0000)
+struct MariaUpload_SetRecoveryWaitModeSpan final
+{
+public:
+	int32                                         SecondsForNg;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SecondsForError;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_SetRecoveryWaitModeSpan;
+
 // Function mariaUploadPlugin.MariaUpload.SetSaveSlot
 // 0x0004 (0x0004 - 0x0000)
 struct MariaUpload_SetSaveSlot final
@@ -931,6 +986,16 @@ public:
 	EMariaDevMode                                 DevMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MariaUpload_SetSegaAccountDevMode;
+
+// Function mariaUploadPlugin.MariaUpload.SetSegaAccountLinkTarget
+// 0x0002 (0x0002 - 0x0000)
+struct MariaUpload_SetSegaAccountLinkTarget final
+{
+public:
+	EMariaSegaAccountLinkTarget                   LinkTarget;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_SetSegaAccountLinkTarget;
 
 // Function mariaUploadPlugin.MariaUpload.SetSendQueueDelay
 // 0x0004 (0x0004 - 0x0000)

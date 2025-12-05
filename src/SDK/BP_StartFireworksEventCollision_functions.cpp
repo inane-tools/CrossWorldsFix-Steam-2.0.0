@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_StartFireworksEventCollision.BP_StartFireworksEventCollision_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_StartFireworksEventCollision_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartFireworksEventCollision_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_StartFireworksEventCollision.BP_StartFireworksEventCollision_C.ExecuteUbergraph_BP_StartFireworksEventCollision
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void ABP_StartFireworksEventCollision_C::ExecuteUbergraph_BP_StartFireworksEvent
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_StartFireworksEventCollision.BP_StartFireworksEventCollision_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_StartFireworksEventCollision_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StartFireworksEventCollision_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

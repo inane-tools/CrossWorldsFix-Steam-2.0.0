@@ -14,15 +14,18 @@
 namespace SDK::Params
 {
 
-// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.SetTravelRingState
-// 0x0002 (0x0002 - 0x0000)
-struct BP_TravelRingAnotherExitSpawner_C_SetTravelRingState final
+// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherExitSpawner
+// 0x0020 (0x0020 - 0x0000)
+struct BP_TravelRingAnotherExitSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherExitSpawner final
 {
 public:
-	uint8                                         TravelRingState_0;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetSpawnActor_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FX_TravelRing_C*                    K2Node_DynamicCast_AsBP_FX_Travel_Ring;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_TravelRingAnotherExitSpawner_C_SetTravelRingState;
+DUMPER7_ASSERTS_BP_TravelRingAnotherExitSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherExitSpawner;
 
 // Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.SetReturnEffectVisibility
 // 0x0068 (0x0068 - 0x0000)
@@ -53,18 +56,15 @@ public:
 };
 DUMPER7_ASSERTS_BP_TravelRingAnotherExitSpawner_C_SetReturnEffectVisibility;
 
-// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.ExecuteUbergraph_BP_TravelRingAnotherExitSpawner
-// 0x0020 (0x0020 - 0x0000)
-struct BP_TravelRingAnotherExitSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherExitSpawner final
+// Function BP_TravelRingAnotherExitSpawner.BP_TravelRingAnotherExitSpawner_C.SetTravelRingState
+// 0x0002 (0x0002 - 0x0000)
+struct BP_TravelRingAnotherExitSpawner_C_SetTravelRingState final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetSpawnActor_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FX_TravelRing_C*                    K2Node_DynamicCast_AsBP_FX_Travel_Ring;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         TravelRingState_0;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_TravelRingAnotherExitSpawner_C_ExecuteUbergraph_BP_TravelRingAnotherExitSpawner;
+DUMPER7_ASSERTS_BP_TravelRingAnotherExitSpawner_C_SetTravelRingState;
 
 }
 

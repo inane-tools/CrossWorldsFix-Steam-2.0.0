@@ -10,11 +10,24 @@
 
 #include "Basic.hpp"
 
+#include "UnionSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C.Change Aiming UI
+// 0x000C (0x000C - 0x0000)
+struct WBP_Race_HUD_Sub_Aming_C_Change_Aiming_UI final
+{
+public:
+	EItemId                                       Item;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Get_Manual_Aiming_UI_Widget_Index_index;  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_Change_Aiming_UI;
 
 // Function WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C.ExecuteUbergraph_WBP_Race_HUD_Sub_Aming
 // 0x0004 (0x0004 - 0x0000)
@@ -24,6 +37,18 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_ExecuteUbergraph_WBP_Race_HUD_Sub_Aming;
+
+// Function WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C.Get Manual Aiming UI Widget Index
+// 0x000C (0x000C - 0x0000)
+struct WBP_Race_HUD_Sub_Aming_C_Get_Manual_Aiming_UI_Widget_Index final
+{
+public:
+	EItemId                                       ItemId;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_Get_Manual_Aiming_UI_Widget_Index;
 
 // Function WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C.PlayAnimationHoming
 // 0x0008 (0x0008 - 0x0000)
@@ -61,12 +86,37 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_PlayAnimManualKeep;
 
+// Function WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C.Set Default UI Material Param Index
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Race_HUD_Sub_Aming_C_Set_Default_UI_Material_Param_Index final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_Set_Default_UI_Material_Param_Index;
+
+// Function WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C.Set Item Remain Count
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Race_HUD_Sub_Aming_C_Set_Item_Remain_Count final
+{
+public:
+	double                                        remain;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_Set_Item_Remain_Count;
+
 // Function WBP_Race_HUD_Sub_Aming.WBP_Race_HUD_Sub_Aming_C.Set Manual Aiming
-// 0x0001 (0x0001 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct WBP_Race_HUD_Sub_Aming_C_Set_Manual_Aiming final
 {
 public:
 	bool                                          IsVisible_0;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Get_Manual_Aiming_UI_Widget_Index_index;  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_Set_Manual_Aiming;
 
@@ -93,7 +143,7 @@ DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_SetBeforeHomingNotAnim;
 struct WBP_Race_HUD_Sub_Aming_C_SetIconScale final
 {
 public:
-	double                                        Scale;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Race_HUD_Sub_Aming_C_SetIconScale;

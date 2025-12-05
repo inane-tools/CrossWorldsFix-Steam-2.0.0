@@ -44,9 +44,9 @@ void UABP_HoldDoubleWhiteBoost_C::IsSkipInState(int32 In_RemainingUses, bool* Ou
 // Function ABP_HoldDoubleWhiteBoost.ABP_HoldDoubleWhiteBoost_C.GetBlendTime
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// double*                                 NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 newParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UABP_HoldDoubleWhiteBoost_C::GetBlendTime(double* NewParam) const
+void UABP_HoldDoubleWhiteBoost_C::GetBlendTime(double* newParam) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -57,8 +57,8 @@ void UABP_HoldDoubleWhiteBoost_C::GetBlendTime(double* NewParam) const
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
+	if (newParam != nullptr)
+		*newParam = Parms.newParam;
 }
 
 

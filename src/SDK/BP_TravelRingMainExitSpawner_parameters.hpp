@@ -14,16 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BP_TravelRingMainExitSpawner.BP_TravelRingMainExitSpawner_C.SetTravelRingState
-// 0x0002 (0x0002 - 0x0000)
-struct BP_TravelRingMainExitSpawner_C_SetTravelRingState final
-{
-public:
-	uint8                                         TravelRingState_0;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_TravelRingMainExitSpawner_C_SetTravelRingState;
-
 // Function BP_TravelRingMainExitSpawner.BP_TravelRingMainExitSpawner_C.ExecuteUbergraph_BP_TravelRingMainExitSpawner
 // 0x0020 (0x0020 - 0x0000)
 struct BP_TravelRingMainExitSpawner_C_ExecuteUbergraph_BP_TravelRingMainExitSpawner final
@@ -37,6 +27,16 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_TravelRingMainExitSpawner_C_ExecuteUbergraph_BP_TravelRingMainExitSpawner;
+
+// Function BP_TravelRingMainExitSpawner.BP_TravelRingMainExitSpawner_C.SetTravelRingState
+// 0x0002 (0x0002 - 0x0000)
+struct BP_TravelRingMainExitSpawner_C_SetTravelRingState final
+{
+public:
+	uint8                                         TravelRingState_0;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_TravelRingMainExitSpawner_C_SetTravelRingState;
 
 }
 

@@ -36,7 +36,7 @@ public:
 	struct FPropertyPathTestStruct                Struct;                                            // 0x0050(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPropertyPathTestStruct                StructRef;                                         // 0x00B0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPropertyPathTestStruct                StructConstRef;                                    // 0x0110(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class UPropertyPathTestObject*                InnerObject;                                       // 0x0170(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPropertyPathTestObject*                InnerObject;                                       // 0x0170(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_178[0x8];                                      // 0x0178(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

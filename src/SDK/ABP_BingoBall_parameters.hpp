@@ -16,6 +16,15 @@
 namespace SDK::Params
 {
 
+// Function ABP_BingoBall.ABP_BingoBall_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct ABP_BingoBall_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_ABP_BingoBall_C_AnimGraph;
+
 // Function ABP_BingoBall.ABP_BingoBall_C.ExecuteUbergraph_ABP_BingoBall
 // 0x00C8 (0x00C8 - 0x0000)
 struct ABP_BingoBall_C_ExecuteUbergraph_ABP_BingoBall final
@@ -64,15 +73,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ABP_BingoBall_C_ExecuteUbergraph_ABP_BingoBall;
-
-// Function ABP_BingoBall.ABP_BingoBall_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct ABP_BingoBall_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-DUMPER7_ASSERTS_ABP_BingoBall_C_AnimGraph;
 
 }
 

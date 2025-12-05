@@ -17,222 +17,6 @@
 namespace SDK
 {
 
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.AddQuery
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TSubclassOf<class UMovieGraphConditionGroupQueryBase>&InQueryType                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             InsertIndex                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieGraphConditionGroupQueryBase*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphConditionGroupQueryBase* UMovieGraphConditionGroup::AddQuery(const TSubclassOf<class UMovieGraphConditionGroupQueryBase>& InQueryType, const int32 InsertIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "AddQuery");
-
-	Params::MovieGraphConditionGroup_AddQuery Parms{};
-
-	Parms.InQueryType = InQueryType;
-	Parms.InsertIndex = InsertIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.MoveQueryToIndex
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             NewIndex                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroup::MoveQueryToIndex(class UMovieGraphConditionGroupQueryBase* InQuery, const int32 NewIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "MoveQueryToIndex");
-
-	Params::MovieGraphConditionGroup_MoveQueryToIndex Parms{};
-
-	Parms.InQuery = InQuery;
-	Parms.NewIndex = NewIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.RemoveQuery
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroup::RemoveQuery(class UMovieGraphConditionGroupQueryBase* InQuery)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "RemoveQuery");
-
-	Params::MovieGraphConditionGroup_RemoveQuery Parms{};
-
-	Parms.InQuery = InQuery;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.SetOperationType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const EMovieGraphConditionGroupOpType   OperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroup::SetOperationType(const EMovieGraphConditionGroupOpType OperationType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "SetOperationType");
-
-	Params::MovieGraphConditionGroup_SetOperationType Parms{};
-
-	Parms.OperationType = OperationType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.Evaluate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class AActor*>                     ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-TSet<class AActor*> UMovieGraphConditionGroup::Evaluate(const class UWorld* InWorld) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "Evaluate");
-
-	Params::MovieGraphConditionGroup_Evaluate Parms{};
-
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetOperationType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EMovieGraphConditionGroupOpType         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EMovieGraphConditionGroupOpType UMovieGraphConditionGroup::GetOperationType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "GetOperationType");
-
-	Params::MovieGraphConditionGroup_GetOperationType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetQueries
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<class UMovieGraphConditionGroupQueryBase*>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<class UMovieGraphConditionGroupQueryBase*> UMovieGraphConditionGroup::GetQueries() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "GetQueries");
-
-	Params::MovieGraphConditionGroup_GetQueries Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroup.IsFirstConditionGroup
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroup::IsFirstConditionGroup() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroup", "IsFirstConditionGroup");
-
-	Params::MovieGraphConditionGroup_IsFirstConditionGroup Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function MovieRenderPipelineCore.MovieGraphNode.TogglePromotePropertyToPin
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -329,212 +113,6 @@ class UMovieGraphPin* UMovieGraphNode::GetOutputPin(const class FName& InPinLabe
 	Params::MovieGraphNode_GetOutputPin Parms{};
 
 	Parms.InPinLabel = InPinLabel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroupQueryBase::SetEnabled(const bool bEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetEnabled");
-
-	Params::MovieGraphConditionGroupQueryBase_SetEnabled Parms{};
-
-	Parms.bEnabled = bEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetOperationType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const EMovieGraphConditionGroupQueryOpTypeOperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroupQueryBase::SetOperationType(const EMovieGraphConditionGroupQueryOpType OperationType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetOperationType");
-
-	Params::MovieGraphConditionGroupQueryBase_SetOperationType Parms{};
-
-	Parms.OperationType = OperationType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.Evaluate
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<class AActor*>&            InActorsToQuery                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class AActor*>*                    OutMatchingActors                                      (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UMovieGraphConditionGroupQueryBase::Evaluate(const TArray<class AActor*>& InActorsToQuery, const class UWorld* InWorld, TSet<class AActor*>* OutMatchingActors) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "Evaluate");
-
-	Params::MovieGraphConditionGroupQueryBase_Evaluate Parms{};
-
-	Parms.InActorsToQuery = std::move(InActorsToQuery);
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMatchingActors != nullptr)
-		*OutMatchingActors = std::move(Parms.OutMatchingActors);
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.GetOperationType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EMovieGraphConditionGroupQueryOpType    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EMovieGraphConditionGroupQueryOpType UMovieGraphConditionGroupQueryBase::GetOperationType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "GetOperationType");
-
-	Params::MovieGraphConditionGroupQueryBase_GetOperationType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEditorOnlyQuery
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::IsEditorOnlyQuery() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEditorOnlyQuery");
-
-	Params::MovieGraphConditionGroupQueryBase_IsEditorOnlyQuery Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::IsEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEnabled");
-
-	Params::MovieGraphConditionGroupQueryBase_IsEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsFirstConditionGroupQuery
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::IsFirstConditionGroupQuery() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsFirstConditionGroupQuery");
-
-	Params::MovieGraphConditionGroupQueryBase_IsFirstConditionGroupQuery Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.ShouldHidePropertyNames
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConditionGroupQueryBase::ShouldHidePropertyNames() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "ShouldHidePropertyNames");
-
-	Params::MovieGraphConditionGroupQueryBase_ShouldHidePropertyNames Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1328,19 +906,48 @@ void UMovieGraphBurnInWidget::UpdateForGraph(class UMovieGraphPipeline* InGraphP
 }
 
 
-// Function MovieRenderPipelineCore.MovieGraphConfig.AddInput
-// (Final, Native, Public, BlueprintCallable)
+// Function MovieRenderPipelineCore.MoviePipelineSetting.SetIsEnabled
+// (Native, Public, BlueprintCallable)
 // Parameters:
-// class UMovieGraphInput*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UMovieGraphInput* UMovieGraphConfig::AddInput()
+void UMoviePipelineSetting::SetIsEnabled(bool bInEnabled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "AddInput");
+		Func = Class->GetFunction("MoviePipelineSetting", "SetIsEnabled");
 
-	Params::MovieGraphConfig_AddInput Parms{};
+	Params::MoviePipelineSetting_SetIsEnabled Parms{};
+
+	Parms.bInEnabled = bInEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLine
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString&                          InOutUnrealURLParams                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString&                          InOutCommandLineArgs                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMoviePipelineSetting::BuildNewProcessCommandLine(class FString& InOutUnrealURLParams, class FString& InOutCommandLineArgs) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineSetting", "BuildNewProcessCommandLine");
+
+	Params::MoviePipelineSetting_BuildNewProcessCommandLine Parms{};
+
+	Parms.InOutUnrealURLParams = std::move(InOutUnrealURLParams);
+	Parms.InOutCommandLineArgs = std::move(InOutCommandLineArgs);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1349,532 +956,60 @@ class UMovieGraphInput* UMovieGraphConfig::AddInput()
 
 	Func->FunctionFlags = Flgs;
 
-	return Parms.ReturnValue;
+	InOutUnrealURLParams = std::move(Parms.InOutUnrealURLParams);
+	InOutCommandLineArgs = std::move(Parms.InOutCommandLineArgs);
 }
 
 
-// Function MovieRenderPipelineCore.MovieGraphConfig.AddLabeledEdge
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLineArgs
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UMovieGraphNode*                  FromNode                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FName&                      FromPinLabel                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieGraphNode*                  ToNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FName&                      ToPinLabel                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>&                  InOutUnrealURLParams                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class FString>&                  InOutCommandLineArgs                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class FString>&                  InOutDeviceProfileCvars                                (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class FString>&                  InOutExecCmds                                          (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMoviePipelineSetting::BuildNewProcessCommandLineArgs(TArray<class FString>& InOutUnrealURLParams, TArray<class FString>& InOutCommandLineArgs, TArray<class FString>& InOutDeviceProfileCvars, TArray<class FString>& InOutExecCmds) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineSetting", "BuildNewProcessCommandLineArgs");
+
+	Params::MoviePipelineSetting_BuildNewProcessCommandLineArgs Parms{};
+
+	Parms.InOutUnrealURLParams = std::move(InOutUnrealURLParams);
+	Parms.InOutCommandLineArgs = std::move(InOutCommandLineArgs);
+	Parms.InOutDeviceProfileCvars = std::move(InOutDeviceProfileCvars);
+	Parms.InOutExecCmds = std::move(InOutExecCmds);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	InOutUnrealURLParams = std::move(Parms.InOutUnrealURLParams);
+	InOutCommandLineArgs = std::move(Parms.InOutCommandLineArgs);
+	InOutDeviceProfileCvars = std::move(Parms.InOutDeviceProfileCvars);
+	InOutExecCmds = std::move(Parms.InOutExecCmds);
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineSetting.IsEnabled
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMovieGraphConfig::AddLabeledEdge(class UMovieGraphNode* FromNode, const class FName& FromPinLabel, class UMovieGraphNode* ToNode, const class FName& ToPinLabel)
+bool UMoviePipelineSetting::IsEnabled() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "AddLabeledEdge");
+		Func = Class->GetFunction("MoviePipelineSetting", "IsEnabled");
 
-	Params::MovieGraphConfig_AddLabeledEdge Parms{};
-
-	Parms.FromNode = FromNode;
-	Parms.FromPinLabel = FromPinLabel;
-	Parms.ToNode = ToNode;
-	Parms.ToPinLabel = ToPinLabel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.AddOutput
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphOutput*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphOutput* UMovieGraphConfig::AddOutput()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "AddOutput");
-
-	Params::MovieGraphConfig_AddOutput Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.AddVariable
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FName                       InCustomBaseName                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieGraphVariable*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphVariable* UMovieGraphConfig::AddVariable(const class FName InCustomBaseName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "AddVariable");
-
-	Params::MovieGraphConfig_AddVariable Parms{};
-
-	Parms.InCustomBaseName = InCustomBaseName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.CreateFlattenedGraph
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMovieGraphTraversalContext&InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FString*                          OutError                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieGraphEvaluatedConfig*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphEvaluatedConfig* UMovieGraphConfig::CreateFlattenedGraph(const struct FMovieGraphTraversalContext& InContext, class FString* OutError)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "CreateFlattenedGraph");
-
-	Params::MovieGraphConfig_CreateFlattenedGraph Parms{};
-
-	Parms.InContext = std::move(InContext);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutError != nullptr)
-		*OutError = std::move(Parms.OutError);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.CreateNodeByClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const TSubclassOf<class UMovieGraphNode>InClass                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieGraphNode*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphNode* UMovieGraphConfig::CreateNodeByClass(const TSubclassOf<class UMovieGraphNode> InClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "CreateNodeByClass");
-
-	Params::MovieGraphConfig_CreateNodeByClass Parms{};
-
-	Parms.InClass = InClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.DeleteMember
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphMember*                MemberToDelete                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::DeleteMember(class UMovieGraphMember* MemberToDelete)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "DeleteMember");
-
-	Params::MovieGraphConfig_DeleteMember Parms{};
-
-	Parms.MemberToDelete = MemberToDelete;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveAllInboundEdges
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::RemoveAllInboundEdges(class UMovieGraphNode* InNode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "RemoveAllInboundEdges");
-
-	Params::MovieGraphConfig_RemoveAllInboundEdges Parms{};
-
-	Parms.InNode = InNode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveAllOutboundEdges
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::RemoveAllOutboundEdges(class UMovieGraphNode* InNode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "RemoveAllOutboundEdges");
-
-	Params::MovieGraphConfig_RemoveAllOutboundEdges Parms{};
-
-	Parms.InNode = InNode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveInboundEdges
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FName&                      InPinName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::RemoveInboundEdges(class UMovieGraphNode* InNode, const class FName& InPinName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "RemoveInboundEdges");
-
-	Params::MovieGraphConfig_RemoveInboundEdges Parms{};
-
-	Parms.InNode = InNode;
-	Parms.InPinName = InPinName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveLabeledEdge
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UMovieGraphNode*                  FromNode                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FName&                      FromPinName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieGraphNode*                  ToNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FName&                      ToPinName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::RemoveLabeledEdge(class UMovieGraphNode* FromNode, const class FName& FromPinName, class UMovieGraphNode* ToNode, const class FName& ToPinName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "RemoveLabeledEdge");
-
-	Params::MovieGraphConfig_RemoveLabeledEdge Parms{};
-
-	Parms.FromNode = FromNode;
-	Parms.FromPinName = FromPinName;
-	Parms.ToNode = ToNode;
-	Parms.ToPinName = ToPinName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveNode
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::RemoveNode(class UMovieGraphNode* InNode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "RemoveNode");
-
-	Params::MovieGraphConfig_RemoveNode Parms{};
-
-	Parms.InNode = InNode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveNodes
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const TArray<class UMovieGraphNode*>&   InNodes                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::RemoveNodes(const TArray<class UMovieGraphNode*>& InNodes)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "RemoveNodes");
-
-	Params::MovieGraphConfig_RemoveNodes Parms{};
-
-	Parms.InNodes = std::move(InNodes);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveOutboundEdges
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FName&                      InPinName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieGraphConfig::RemoveOutboundEdges(class UMovieGraphNode* InNode, const class FName& InPinName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "RemoveOutboundEdges");
-
-	Params::MovieGraphConfig_RemoveOutboundEdges Parms{};
-
-	Parms.InNode = InNode;
-	Parms.InPinName = InPinName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.UpdateGlobalVariableValues
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UMovieGraphPipeline*        InPipeline                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieGraphConfig::UpdateGlobalVariableValues(const class UMovieGraphPipeline* InPipeline)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "UpdateGlobalVariableValues");
-
-	Params::MovieGraphConfig_UpdateGlobalVariableValues Parms{};
-
-	Parms.InPipeline = InPipeline;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.GetInputNode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UMovieGraphNode*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphNode* UMovieGraphConfig::GetInputNode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "GetInputNode");
-
-	Params::MovieGraphConfig_GetInputNode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.GetInputs
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class UMovieGraphInput*>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UMovieGraphInput*> UMovieGraphConfig::GetInputs() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "GetInputs");
-
-	Params::MovieGraphConfig_GetInputs Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.GetOutputNode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UMovieGraphNode*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieGraphNode* UMovieGraphConfig::GetOutputNode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "GetOutputNode");
-
-	Params::MovieGraphConfig_GetOutputNode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.GetOutputs
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class UMovieGraphOutput*>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UMovieGraphOutput*> UMovieGraphConfig::GetOutputs() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "GetOutputs");
-
-	Params::MovieGraphConfig_GetOutputs Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MovieGraphConfig.GetVariables
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const bool                              bIncludeGlobal                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UMovieGraphVariable*>      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UMovieGraphVariable*> UMovieGraphConfig::GetVariables(const bool bIncludeGlobal) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieGraphConfig", "GetVariables");
-
-	Params::MovieGraphConfig_GetVariables Parms{};
-
-	Parms.bIncludeGlobal = bIncludeGlobal;
+	Params::MoviePipelineSetting_IsEnabled Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2860,6 +1995,422 @@ class FString UMovieGraphMember::GetMemberName() const
 }
 
 
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.CancelAllJobs
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UMoviePipelineExecutorBase::CancelAllJobs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "CancelAllJobs");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.CancelCurrentJob
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UMoviePipelineExecutorBase::CancelCurrentJob()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "CancelCurrentJob");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.ConnectSocket
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FString&                    InHostName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InPort                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMoviePipelineExecutorBase::ConnectSocket(const class FString& InHostName, const int32 InPort)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "ConnectSocket");
+
+	Params::MoviePipelineExecutorBase_ConnectSocket Parms{};
+
+	Parms.InHostName = std::move(InHostName);
+	Parms.InPort = InPort;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.DisconnectSocket
+// (Final, Native, Protected, BlueprintCallable)
+
+void UMoviePipelineExecutorBase::DisconnectSocket()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "DisconnectSocket");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.Execute
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMoviePipelineQueue*              InPipelineQueue                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMoviePipelineExecutorBase::Execute(class UMoviePipelineQueue* InPipelineQueue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "Execute");
+
+	Params::MoviePipelineExecutorBase_Execute Parms{};
+
+	Parms.InPipelineQueue = InPipelineQueue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.OnBeginFrame
+// (Native, Event, Public, BlueprintEvent)
+
+void UMoviePipelineExecutorBase::OnBeginFrame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "OnBeginFrame");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.OnExecutorErroredImpl
+// (Native, Protected, BlueprintCallable)
+// Parameters:
+// class UMoviePipeline*                   ErroredPipeline                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFatal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FText&                      ErrorReason                                            (Parm, NativeAccessSpecifierPublic)
+
+void UMoviePipelineExecutorBase::OnExecutorErroredImpl(class UMoviePipeline* ErroredPipeline, bool bFatal, const class FText& ErrorReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "OnExecutorErroredImpl");
+
+	Params::MoviePipelineExecutorBase_OnExecutorErroredImpl Parms{};
+
+	Parms.ErroredPipeline = ErroredPipeline;
+	Parms.bFatal = bFatal;
+	Parms.ErrorReason = std::move(ErrorReason);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.OnExecutorFinishedImpl
+// (Native, Protected, BlueprintCallable)
+
+void UMoviePipelineExecutorBase::OnExecutorFinishedImpl()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "OnExecutorFinishedImpl");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SendHTTPRequest
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    InURL                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InVerb                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&InHeaders                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMoviePipelineExecutorBase::SendHTTPRequest(const class FString& InURL, const class FString& InVerb, const class FString& InMessage, const TMap<class FString, class FString>& InHeaders)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "SendHTTPRequest");
+
+	Params::MoviePipelineExecutorBase_SendHTTPRequest Parms{};
+
+	Parms.InURL = std::move(InURL);
+	Parms.InVerb = std::move(InVerb);
+	Parms.InMessage = std::move(InMessage);
+	Parms.InHeaders = std::move(InHeaders);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SendSocketMessage
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FString&                    InMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMoviePipelineExecutorBase::SendSocketMessage(const class FString& InMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "SendSocketMessage");
+
+	Params::MoviePipelineExecutorBase_SendSocketMessage Parms{};
+
+	Parms.InMessage = std::move(InMessage);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SetMoviePipelineClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                           InPipelineClass                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMoviePipelineExecutorBase::SetMoviePipelineClass(class UClass* InPipelineClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "SetMoviePipelineClass");
+
+	Params::MoviePipelineExecutorBase_SetMoviePipelineClass Parms{};
+
+	Parms.InPipelineClass = InPipelineClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SetStatusMessage
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    InStatus                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMoviePipelineExecutorBase::SetStatusMessage(const class FString& InStatus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "SetStatusMessage");
+
+	Params::MoviePipelineExecutorBase_SetStatusMessage Parms{};
+
+	Parms.InStatus = std::move(InStatus);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SetStatusProgress
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const float                             InProgress                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMoviePipelineExecutorBase::SetStatusProgress(const float InProgress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "SetStatusProgress");
+
+	Params::MoviePipelineExecutorBase_SetStatusProgress Parms{};
+
+	Parms.InProgress = InProgress;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.GetStatusMessage
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMoviePipelineExecutorBase::GetStatusMessage() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "GetStatusMessage");
+
+	Params::MoviePipelineExecutorBase_GetStatusMessage Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.GetStatusProgress
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMoviePipelineExecutorBase::GetStatusProgress() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "GetStatusProgress");
+
+	Params::MoviePipelineExecutorBase_GetStatusProgress Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.IsRendering
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMoviePipelineExecutorBase::IsRendering() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "IsRendering");
+
+	Params::MoviePipelineExecutorBase_IsRendering Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.IsSocketConnected
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMoviePipelineExecutorBase::IsSocketConnected() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MoviePipelineExecutorBase", "IsSocketConnected");
+
+	Params::MoviePipelineExecutorBase_IsSocketConnected Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MovieRenderPipelineCore.MovieGraphEvaluatedConfig.GetBranchNames
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2941,6 +2492,565 @@ TArray<class UMovieGraphSettingNode*> UMovieGraphEvaluatedConfig::GetSettingsFor
 	Parms.InBranchName = InBranchName;
 	Parms.bIncludeCDOs = bIncludeCDOs;
 	Parms.bExactMatch = bExactMatch;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.AddInput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphInput*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphInput* UMovieGraphConfig::AddInput()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "AddInput");
+
+	Params::MovieGraphConfig_AddInput Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.AddLabeledEdge
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UMovieGraphNode*                  FromNode                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      FromPinLabel                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieGraphNode*                  ToNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      ToPinLabel                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::AddLabeledEdge(class UMovieGraphNode* FromNode, const class FName& FromPinLabel, class UMovieGraphNode* ToNode, const class FName& ToPinLabel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "AddLabeledEdge");
+
+	Params::MovieGraphConfig_AddLabeledEdge Parms{};
+
+	Parms.FromNode = FromNode;
+	Parms.FromPinLabel = FromPinLabel;
+	Parms.ToNode = ToNode;
+	Parms.ToPinLabel = ToPinLabel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.AddOutput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphOutput*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphOutput* UMovieGraphConfig::AddOutput()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "AddOutput");
+
+	Params::MovieGraphConfig_AddOutput Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.AddVariable
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FName                       InCustomBaseName                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieGraphVariable*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphVariable* UMovieGraphConfig::AddVariable(const class FName InCustomBaseName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "AddVariable");
+
+	Params::MovieGraphConfig_AddVariable Parms{};
+
+	Parms.InCustomBaseName = InCustomBaseName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.CreateFlattenedGraph
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMovieGraphTraversalContext&InContext                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FString*                          OutError                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieGraphEvaluatedConfig*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphEvaluatedConfig* UMovieGraphConfig::CreateFlattenedGraph(const struct FMovieGraphTraversalContext& InContext, class FString* OutError)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "CreateFlattenedGraph");
+
+	Params::MovieGraphConfig_CreateFlattenedGraph Parms{};
+
+	Parms.InContext = std::move(InContext);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutError != nullptr)
+		*OutError = std::move(Parms.OutError);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.CreateNodeByClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TSubclassOf<class UMovieGraphNode>InClass                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieGraphNode*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphNode* UMovieGraphConfig::CreateNodeByClass(const TSubclassOf<class UMovieGraphNode> InClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "CreateNodeByClass");
+
+	Params::MovieGraphConfig_CreateNodeByClass Parms{};
+
+	Parms.InClass = InClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.DeleteMember
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphMember*                MemberToDelete                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::DeleteMember(class UMovieGraphMember* MemberToDelete)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "DeleteMember");
+
+	Params::MovieGraphConfig_DeleteMember Parms{};
+
+	Parms.MemberToDelete = MemberToDelete;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveAllInboundEdges
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::RemoveAllInboundEdges(class UMovieGraphNode* InNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "RemoveAllInboundEdges");
+
+	Params::MovieGraphConfig_RemoveAllInboundEdges Parms{};
+
+	Parms.InNode = InNode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveAllOutboundEdges
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::RemoveAllOutboundEdges(class UMovieGraphNode* InNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "RemoveAllOutboundEdges");
+
+	Params::MovieGraphConfig_RemoveAllOutboundEdges Parms{};
+
+	Parms.InNode = InNode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveInboundEdges
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InPinName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::RemoveInboundEdges(class UMovieGraphNode* InNode, const class FName& InPinName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "RemoveInboundEdges");
+
+	Params::MovieGraphConfig_RemoveInboundEdges Parms{};
+
+	Parms.InNode = InNode;
+	Parms.InPinName = InPinName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveLabeledEdge
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UMovieGraphNode*                  FromNode                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      FromPinName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieGraphNode*                  ToNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      ToPinName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::RemoveLabeledEdge(class UMovieGraphNode* FromNode, const class FName& FromPinName, class UMovieGraphNode* ToNode, const class FName& ToPinName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "RemoveLabeledEdge");
+
+	Params::MovieGraphConfig_RemoveLabeledEdge Parms{};
+
+	Parms.FromNode = FromNode;
+	Parms.FromPinName = FromPinName;
+	Parms.ToNode = ToNode;
+	Parms.ToPinName = ToPinName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveNode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::RemoveNode(class UMovieGraphNode* InNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "RemoveNode");
+
+	Params::MovieGraphConfig_RemoveNode Parms{};
+
+	Parms.InNode = InNode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveNodes
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TArray<class UMovieGraphNode*>&   InNodes                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::RemoveNodes(const TArray<class UMovieGraphNode*>& InNodes)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "RemoveNodes");
+
+	Params::MovieGraphConfig_RemoveNodes Parms{};
+
+	Parms.InNodes = std::move(InNodes);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.RemoveOutboundEdges
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UMovieGraphNode*                  InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InPinName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConfig::RemoveOutboundEdges(class UMovieGraphNode* InNode, const class FName& InPinName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "RemoveOutboundEdges");
+
+	Params::MovieGraphConfig_RemoveOutboundEdges Parms{};
+
+	Parms.InNode = InNode;
+	Parms.InPinName = InPinName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.UpdateGlobalVariableValues
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UMovieGraphPipeline*        InPipeline                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieGraphConfig::UpdateGlobalVariableValues(const class UMovieGraphPipeline* InPipeline)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "UpdateGlobalVariableValues");
+
+	Params::MovieGraphConfig_UpdateGlobalVariableValues Parms{};
+
+	Parms.InPipeline = InPipeline;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.GetInputNode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMovieGraphNode*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphNode* UMovieGraphConfig::GetInputNode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "GetInputNode");
+
+	Params::MovieGraphConfig_GetInputNode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.GetInputs
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UMovieGraphInput*>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UMovieGraphInput*> UMovieGraphConfig::GetInputs() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "GetInputs");
+
+	Params::MovieGraphConfig_GetInputs Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.GetOutputNode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMovieGraphNode*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphNode* UMovieGraphConfig::GetOutputNode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "GetOutputNode");
+
+	Params::MovieGraphConfig_GetOutputNode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.GetOutputs
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UMovieGraphOutput*>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UMovieGraphOutput*> UMovieGraphConfig::GetOutputs() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "GetOutputs");
+
+	Params::MovieGraphConfig_GetOutputs Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConfig.GetVariables
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const bool                              bIncludeGlobal                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UMovieGraphVariable*>      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UMovieGraphVariable*> UMovieGraphConfig::GetVariables(const bool bIncludeGlobal) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConfig", "GetVariables");
+
+	Params::MovieGraphConfig_GetVariables Parms{};
+
+	Parms.bIncludeGlobal = bIncludeGlobal;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3660,6 +3770,428 @@ class UMovieGraphTimeStepBase* UMovieGraphPipeline::GetTimeStepInstance() const
 		Func = Class->GetFunction("MovieGraphPipeline", "GetTimeStepInstance");
 
 	Params::MovieGraphPipeline_GetTimeStepInstance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroupQueryBase::SetEnabled(const bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetEnabled");
+
+	Params::MovieGraphConditionGroupQueryBase_SetEnabled Parms{};
+
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.SetOperationType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const EMovieGraphConditionGroupQueryOpTypeOperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroupQueryBase::SetOperationType(const EMovieGraphConditionGroupQueryOpType OperationType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "SetOperationType");
+
+	Params::MovieGraphConditionGroupQueryBase_SetOperationType Parms{};
+
+	Parms.OperationType = OperationType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.Evaluate
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<class AActor*>&            InActorsToQuery                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSet<class AActor*>*                    OutMatchingActors                                      (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroupQueryBase::Evaluate(const TArray<class AActor*>& InActorsToQuery, const class UWorld* InWorld, TSet<class AActor*>* OutMatchingActors) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "Evaluate");
+
+	Params::MovieGraphConditionGroupQueryBase_Evaluate Parms{};
+
+	Parms.InActorsToQuery = std::move(InActorsToQuery);
+	Parms.InWorld = InWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMatchingActors != nullptr)
+		*OutMatchingActors = std::move(Parms.OutMatchingActors);
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.GetOperationType
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMovieGraphConditionGroupQueryOpType    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EMovieGraphConditionGroupQueryOpType UMovieGraphConditionGroupQueryBase::GetOperationType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "GetOperationType");
+
+	Params::MovieGraphConditionGroupQueryBase_GetOperationType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEditorOnlyQuery
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::IsEditorOnlyQuery() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEditorOnlyQuery");
+
+	Params::MovieGraphConditionGroupQueryBase_IsEditorOnlyQuery Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::IsEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsEnabled");
+
+	Params::MovieGraphConditionGroupQueryBase_IsEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.IsFirstConditionGroupQuery
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::IsFirstConditionGroupQuery() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "IsFirstConditionGroupQuery");
+
+	Params::MovieGraphConditionGroupQueryBase_IsFirstConditionGroupQuery Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroupQueryBase.ShouldHidePropertyNames
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroupQueryBase::ShouldHidePropertyNames() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroupQueryBase", "ShouldHidePropertyNames");
+
+	Params::MovieGraphConditionGroupQueryBase_ShouldHidePropertyNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.AddQuery
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TSubclassOf<class UMovieGraphConditionGroupQueryBase>&InQueryType                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InsertIndex                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieGraphConditionGroupQueryBase*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieGraphConditionGroupQueryBase* UMovieGraphConditionGroup::AddQuery(const TSubclassOf<class UMovieGraphConditionGroupQueryBase>& InQueryType, const int32 InsertIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "AddQuery");
+
+	Params::MovieGraphConditionGroup_AddQuery Parms{};
+
+	Parms.InQueryType = InQueryType;
+	Parms.InsertIndex = InsertIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.MoveQueryToIndex
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             NewIndex                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroup::MoveQueryToIndex(class UMovieGraphConditionGroupQueryBase* InQuery, const int32 NewIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "MoveQueryToIndex");
+
+	Params::MovieGraphConditionGroup_MoveQueryToIndex Parms{};
+
+	Parms.InQuery = InQuery;
+	Parms.NewIndex = NewIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.RemoveQuery
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieGraphConditionGroupQueryBase*InQuery                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroup::RemoveQuery(class UMovieGraphConditionGroupQueryBase* InQuery)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "RemoveQuery");
+
+	Params::MovieGraphConditionGroup_RemoveQuery Parms{};
+
+	Parms.InQuery = InQuery;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.SetOperationType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const EMovieGraphConditionGroupOpType   OperationType                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieGraphConditionGroup::SetOperationType(const EMovieGraphConditionGroupOpType OperationType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "SetOperationType");
+
+	Params::MovieGraphConditionGroup_SetOperationType Parms{};
+
+	Parms.OperationType = OperationType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.Evaluate
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UWorld*                     InWorld                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSet<class AActor*>                     ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+TSet<class AActor*> UMovieGraphConditionGroup::Evaluate(const class UWorld* InWorld) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "Evaluate");
+
+	Params::MovieGraphConditionGroup_Evaluate Parms{};
+
+	Parms.InWorld = InWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetOperationType
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMovieGraphConditionGroupOpType         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EMovieGraphConditionGroupOpType UMovieGraphConditionGroup::GetOperationType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "GetOperationType");
+
+	Params::MovieGraphConditionGroup_GetOperationType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.GetQueries
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<class UMovieGraphConditionGroupQueryBase*>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<class UMovieGraphConditionGroupQueryBase*> UMovieGraphConditionGroup::GetQueries() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "GetQueries");
+
+	Params::MovieGraphConditionGroup_GetQueries Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieRenderPipelineCore.MovieGraphConditionGroup.IsFirstConditionGroup
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieGraphConditionGroup::IsFirstConditionGroup() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieGraphConditionGroup", "IsFirstConditionGroup");
+
+	Params::MovieGraphConditionGroup_IsFirstConditionGroup Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5589,122 +6121,6 @@ const class UObject* UMovieJobVariableAssignmentContainer::GetValueTypeObject(co
 }
 
 
-// Function MovieRenderPipelineCore.MoviePipelineSetting.SetIsEnabled
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineSetting::SetIsEnabled(bool bInEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineSetting", "SetIsEnabled");
-
-	Params::MoviePipelineSetting_SetIsEnabled Parms{};
-
-	Parms.bInEnabled = bInEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLine
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FString&                          InOutUnrealURLParams                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString&                          InOutCommandLineArgs                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineSetting::BuildNewProcessCommandLine(class FString& InOutUnrealURLParams, class FString& InOutCommandLineArgs) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineSetting", "BuildNewProcessCommandLine");
-
-	Params::MoviePipelineSetting_BuildNewProcessCommandLine Parms{};
-
-	Parms.InOutUnrealURLParams = std::move(InOutUnrealURLParams);
-	Parms.InOutCommandLineArgs = std::move(InOutCommandLineArgs);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	InOutUnrealURLParams = std::move(Parms.InOutUnrealURLParams);
-	InOutCommandLineArgs = std::move(Parms.InOutCommandLineArgs);
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineSetting.BuildNewProcessCommandLineArgs
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class FString>&                  InOutUnrealURLParams                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class FString>&                  InOutCommandLineArgs                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class FString>&                  InOutDeviceProfileCvars                                (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class FString>&                  InOutExecCmds                                          (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UMoviePipelineSetting::BuildNewProcessCommandLineArgs(TArray<class FString>& InOutUnrealURLParams, TArray<class FString>& InOutCommandLineArgs, TArray<class FString>& InOutDeviceProfileCvars, TArray<class FString>& InOutExecCmds) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineSetting", "BuildNewProcessCommandLineArgs");
-
-	Params::MoviePipelineSetting_BuildNewProcessCommandLineArgs Parms{};
-
-	Parms.InOutUnrealURLParams = std::move(InOutUnrealURLParams);
-	Parms.InOutCommandLineArgs = std::move(InOutCommandLineArgs);
-	Parms.InOutDeviceProfileCvars = std::move(InOutDeviceProfileCvars);
-	Parms.InOutExecCmds = std::move(InOutExecCmds);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	InOutUnrealURLParams = std::move(Parms.InOutUnrealURLParams);
-	InOutCommandLineArgs = std::move(Parms.InOutCommandLineArgs);
-	InOutDeviceProfileCvars = std::move(Parms.InOutDeviceProfileCvars);
-	InOutExecCmds = std::move(Parms.InOutExecCmds);
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineSetting.IsEnabled
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMoviePipelineSetting::IsEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineSetting", "IsEnabled");
-
-	Params::MoviePipelineSetting_IsEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function MovieRenderPipelineCore.MoviePipelineSetting_BlueprintBase.OnEngineTickBeginFrame
 // (Event, Public, BlueprintEvent)
 
@@ -7164,422 +7580,6 @@ TArray<class UMoviePipelineSetting*> UMoviePipelineConfigBase::GetUserSettings()
 		Func = Class->GetFunction("MoviePipelineConfigBase", "GetUserSettings");
 
 	Params::MoviePipelineConfigBase_GetUserSettings Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.CancelAllJobs
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UMoviePipelineExecutorBase::CancelAllJobs()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "CancelAllJobs");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.CancelCurrentJob
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UMoviePipelineExecutorBase::CancelCurrentJob()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "CancelCurrentJob");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.ConnectSocket
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// const class FString&                    InHostName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             InPort                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMoviePipelineExecutorBase::ConnectSocket(const class FString& InHostName, const int32 InPort)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "ConnectSocket");
-
-	Params::MoviePipelineExecutorBase_ConnectSocket Parms{};
-
-	Parms.InHostName = std::move(InHostName);
-	Parms.InPort = InPort;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.DisconnectSocket
-// (Final, Native, Protected, BlueprintCallable)
-
-void UMoviePipelineExecutorBase::DisconnectSocket()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "DisconnectSocket");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.Execute
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMoviePipelineQueue*              InPipelineQueue                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineExecutorBase::Execute(class UMoviePipelineQueue* InPipelineQueue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "Execute");
-
-	Params::MoviePipelineExecutorBase_Execute Parms{};
-
-	Parms.InPipelineQueue = InPipelineQueue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.OnBeginFrame
-// (Native, Event, Public, BlueprintEvent)
-
-void UMoviePipelineExecutorBase::OnBeginFrame()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "OnBeginFrame");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.OnExecutorErroredImpl
-// (Native, Protected, BlueprintCallable)
-// Parameters:
-// class UMoviePipeline*                   ErroredPipeline                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bFatal                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FText&                      ErrorReason                                            (Parm, NativeAccessSpecifierPublic)
-
-void UMoviePipelineExecutorBase::OnExecutorErroredImpl(class UMoviePipeline* ErroredPipeline, bool bFatal, const class FText& ErrorReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "OnExecutorErroredImpl");
-
-	Params::MoviePipelineExecutorBase_OnExecutorErroredImpl Parms{};
-
-	Parms.ErroredPipeline = ErroredPipeline;
-	Parms.bFatal = bFatal;
-	Parms.ErrorReason = std::move(ErrorReason);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.OnExecutorFinishedImpl
-// (Native, Protected, BlueprintCallable)
-
-void UMoviePipelineExecutorBase::OnExecutorFinishedImpl()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "OnExecutorFinishedImpl");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SendHTTPRequest
-// (Final, Native, Protected, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    InURL                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    InVerb                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    InMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TMap<class FString, class FString>&InHeaders                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMoviePipelineExecutorBase::SendHTTPRequest(const class FString& InURL, const class FString& InVerb, const class FString& InMessage, const TMap<class FString, class FString>& InHeaders)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "SendHTTPRequest");
-
-	Params::MoviePipelineExecutorBase_SendHTTPRequest Parms{};
-
-	Parms.InURL = std::move(InURL);
-	Parms.InVerb = std::move(InVerb);
-	Parms.InMessage = std::move(InMessage);
-	Parms.InHeaders = std::move(InHeaders);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SendSocketMessage
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// const class FString&                    InMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMoviePipelineExecutorBase::SendSocketMessage(const class FString& InMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "SendSocketMessage");
-
-	Params::MoviePipelineExecutorBase_SendSocketMessage Parms{};
-
-	Parms.InMessage = std::move(InMessage);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SetMoviePipelineClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                           InPipelineClass                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineExecutorBase::SetMoviePipelineClass(class UClass* InPipelineClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "SetMoviePipelineClass");
-
-	Params::MoviePipelineExecutorBase_SetMoviePipelineClass Parms{};
-
-	Parms.InPipelineClass = InPipelineClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SetStatusMessage
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    InStatus                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineExecutorBase::SetStatusMessage(const class FString& InStatus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "SetStatusMessage");
-
-	Params::MoviePipelineExecutorBase_SetStatusMessage Parms{};
-
-	Parms.InStatus = std::move(InStatus);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SetStatusProgress
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const float                             InProgress                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMoviePipelineExecutorBase::SetStatusProgress(const float InProgress)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "SetStatusProgress");
-
-	Params::MoviePipelineExecutorBase_SetStatusProgress Parms{};
-
-	Parms.InProgress = InProgress;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.GetStatusMessage
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UMoviePipelineExecutorBase::GetStatusMessage() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "GetStatusMessage");
-
-	Params::MoviePipelineExecutorBase_GetStatusMessage Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.GetStatusProgress
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMoviePipelineExecutorBase::GetStatusProgress() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "GetStatusProgress");
-
-	Params::MoviePipelineExecutorBase_GetStatusProgress Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.IsRendering
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMoviePipelineExecutorBase::IsRendering() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "IsRendering");
-
-	Params::MoviePipelineExecutorBase_IsRendering Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieRenderPipelineCore.MoviePipelineExecutorBase.IsSocketConnected
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMoviePipelineExecutorBase::IsSocketConnected() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineExecutorBase", "IsSocketConnected");
-
-	Params::MoviePipelineExecutorBase_IsSocketConnected Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

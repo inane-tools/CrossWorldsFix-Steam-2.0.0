@@ -152,9 +152,9 @@ void UWBP_Race_HUD_Sub_Festa_TeamGroup_P1_C::SetRightStart()
 // Function WBP_Race_HUD_Sub_Festa_TeamGroup_P1.WBP_Race_HUD_Sub_Festa_TeamGroup_P1_C.SetSingle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Race_HUD_Sub_Festa_TeamGroup_P1_C::SetSingle(bool IsSingle)
+void UWBP_Race_HUD_Sub_Festa_TeamGroup_P1_C::SetSingle(bool isSingle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -163,7 +163,7 @@ void UWBP_Race_HUD_Sub_Festa_TeamGroup_P1_C::SetSingle(bool IsSingle)
 
 	Params::WBP_Race_HUD_Sub_Festa_TeamGroup_P1_C_SetSingle Parms{};
 
-	Parms.IsSingle = IsSingle;
+	Parms.isSingle = isSingle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

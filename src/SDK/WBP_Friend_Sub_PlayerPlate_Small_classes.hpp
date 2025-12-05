@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Friend_Sub_PlayerPlate_Small.WBP_Friend_Sub_PlayerPlate_Small_C
-// 0x0020 (0x04B0 - 0x0490)
+// 0x0020 (0x04A0 - 0x0480)
 class UWBP_Friend_Sub_PlayerPlate_Small_C final : public UUnionUIButtonBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       PlayerPlate_Out;                                   // 0x0498(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       PlayerPlate_Loop;                                  // 0x04A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Friend_Sub_PlayerPlate_C*          WBP_Friend_Sub_PlayerPlate;                        // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0480(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       PlayerPlate_Out;                                   // 0x0488(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       PlayerPlate_Loop;                                  // 0x0490(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Friend_Sub_PlayerPlate_C*          WBP_Friend_Sub_PlayerPlate;                        // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void GetMainWidget(class UWBP_Friend_Sub_PlayerPlate_C** OutMainWidget);

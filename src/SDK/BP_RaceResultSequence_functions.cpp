@@ -51,6 +51,27 @@ void ABP_RaceResultSequence_C::ExecuteUbergraph_BP_RaceResultSequence(int32 Entr
 }
 
 
+// Function BP_RaceResultSequence.BP_RaceResultSequence_C.GetGroupRaceResultWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_GroupResult_C**              Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RaceResultSequence_C::GetGroupRaceResultWidget(class UWBP_GroupResult_C** Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceResultSequence_C", "GetGroupRaceResultWidget");
+
+	Params::BP_RaceResultSequence_C_GetGroupRaceResultWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Widget != nullptr)
+		*Widget = Parms.Widget;
+}
+
+
 // Function BP_RaceResultSequence.BP_RaceResultSequence_C.OnFinalize
 // (Event, Protected, BlueprintEvent)
 

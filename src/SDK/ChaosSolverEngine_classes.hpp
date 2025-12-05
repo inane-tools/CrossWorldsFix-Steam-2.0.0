@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "Chaos_structs.hpp"
 #include "ChaosSolverEngine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Chaos_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -194,9 +194,9 @@ public:
 	float                                         FloorHeight;                                       // 0x0354(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FChaosDebugSubstepControl              ChaosDebugSubstepControl;                          // 0x0358(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_35B[0x5];                                      // 0x035B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBillboardComponent*                    SpriteComponent;                                   // 0x0360(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBillboardComponent*                    SpriteComponent;                                   // 0x0360(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_368[0x18];                                     // 0x0368(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UChaosGameplayEventDispatcher*          GameplayEventDispatcherComponent;                  // 0x0380(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UChaosGameplayEventDispatcher*          GameplayEventDispatcherComponent;                  // 0x0380(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

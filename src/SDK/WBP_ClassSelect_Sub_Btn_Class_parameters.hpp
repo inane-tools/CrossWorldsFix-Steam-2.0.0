@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UnionUI_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WBP_ClassSelect_Sub_Btn_Class.WBP_ClassSelect_Sub_Btn_Class_C.ExecuteUbergraph_WBP_ClassSelect_Sub_Btn_Class
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WBP_ClassSelect_Sub_Btn_Class_C_ExecuteUbergraph_WBP_ClassSelect_Sub_Btn_Class final
 {
 public:
@@ -61,12 +61,10 @@ public:
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue_2;            // 0x0090(0x0010)()
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue_3;            // 0x00A0(0x0010)()
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue_4;            // 0x00B0(0x0010)()
-	class FText                                   K2Node_Select_Default_4;                           // 0x00C0(0x0010)(ConstParm)
-	class UUnionUIButtonBaseCore*                 K2Node_CustomEvent_Button;                         // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_NormalMedalCount;               // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_NormalMedalMax;                 // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_MedalCount;                     // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_MedalMax;                       // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUnionUIButtonBaseCore*                 K2Node_CustomEvent_Button;                         // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_4;                           // 0x00C8(0x0010)(ConstParm)
+	int32                                         K2Node_CustomEvent_MedalCount;                     // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_MedalMax;                       // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ClassSelect_Sub_Btn_Class_C_ExecuteUbergraph_WBP_ClassSelect_Sub_Btn_Class;
 
@@ -143,23 +141,13 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ClassSelect_Sub_Btn_Class_C_SetMenuSpeedClass;
 
-// Function WBP_ClassSelect_Sub_Btn_Class.WBP_ClassSelect_Sub_Btn_Class_C.SetTimeTrialDLCMedalCount
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_ClassSelect_Sub_Btn_Class_C_SetTimeTrialDLCMedalCount final
-{
-public:
-	int32                                         MedalCount;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MedalMax;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ClassSelect_Sub_Btn_Class_C_SetTimeTrialDLCMedalCount;
-
 // Function WBP_ClassSelect_Sub_Btn_Class.WBP_ClassSelect_Sub_Btn_Class_C.SetTimeTrialMedalCount
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_ClassSelect_Sub_Btn_Class_C_SetTimeTrialMedalCount final
 {
 public:
-	int32                                         NormalMedalCount;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NormalMedalMax;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MedalCount;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MedalMax;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ClassSelect_Sub_Btn_Class_C_SetTimeTrialMedalCount;
 

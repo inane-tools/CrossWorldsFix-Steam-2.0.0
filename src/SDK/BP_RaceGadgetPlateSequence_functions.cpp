@@ -83,9 +83,9 @@ void ABP_RaceGadgetPlateSequence_C::ExecuteUbergraph_BP_RaceGadgetPlateSequence(
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32                                   TotalCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   newParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_RaceGadgetPlateSequence_C::IsGadgetSlotMax(int32 TotalCount, bool* NewParam)
+void ABP_RaceGadgetPlateSequence_C::IsGadgetSlotMax(int32 TotalCount, bool* newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -98,8 +98,8 @@ void ABP_RaceGadgetPlateSequence_C::IsGadgetSlotMax(int32 TotalCount, bool* NewP
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
+	if (newParam != nullptr)
+		*newParam = Parms.newParam;
 }
 
 
@@ -166,6 +166,26 @@ void ABP_RaceGadgetPlateSequence_C::Retry_GadgetLvUpWindow()
 		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "Retry_GadgetLvUpWindow");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceGadgetPlateSequence.BP_RaceGadgetPlateSequence_C.SetGadgetPlateWidget
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_EndMenu_GudgetLv_Window_C*   Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RaceGadgetPlateSequence_C::SetGadgetPlateWidget(class UWBP_EndMenu_GudgetLv_Window_C* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "SetGadgetPlateWidget");
+
+	Params::BP_RaceGadgetPlateSequence_C_SetGadgetPlateWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_ChipVATBreakObject.BP_ChipVATBreakObject_C.OnPlayBreakEvent
-// (Event, Public, BlueprintEvent)
-
-void ABP_ChipVATBreakObject_C::OnPlayBreakEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ChipVATBreakObject_C", "OnPlayBreakEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_ChipVATBreakObject.BP_ChipVATBreakObject_C.ExecuteUbergraph_BP_ChipVATBreakObject
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void ABP_ChipVATBreakObject_C::ExecuteUbergraph_BP_ChipVATBreakObject(int32 Entr
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ChipVATBreakObject.BP_ChipVATBreakObject_C.OnPlayBreakEvent
+// (Event, Public, BlueprintEvent)
+
+void ABP_ChipVATBreakObject_C::OnPlayBreakEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ChipVATBreakObject_C", "OnPlayBreakEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

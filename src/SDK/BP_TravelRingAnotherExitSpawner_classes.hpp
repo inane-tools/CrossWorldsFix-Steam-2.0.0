@@ -25,10 +25,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_TravelRingAnotherExitSpawner_C;  // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void SetTravelRingState(uint8 TravelRingState_0);
-	void SetReturnEffectVisibility(bool Visibility);
-	void PostSpawnSequenceActor();
 	void ExecuteUbergraph_BP_TravelRingAnotherExitSpawner(int32 EntryPoint);
+	void PostSpawnSequenceActor();
+	void SetReturnEffectVisibility(bool Visibility);
+	void SetTravelRingState(uint8 TravelRingState_0);
 
 public:
 	static class UClass* StaticClass()

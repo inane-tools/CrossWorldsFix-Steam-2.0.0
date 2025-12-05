@@ -10,45 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UMG_structs.hpp"
-#include "UnionSystem_structs.hpp"
-
 
 namespace SDK::Params
 {
 
+// Function WBP_GadgetCustom_Sub_SkillPlate.WBP_GadgetCustom_Sub_SkillPlate_C.ChangeGlobalInvalidation
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_GadgetCustom_Sub_SkillPlate_C_ChangeGlobalInvalidation final
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_SkillPlate_C_ChangeGlobalInvalidation;
+
 // Function WBP_GadgetCustom_Sub_SkillPlate.WBP_GadgetCustom_Sub_SkillPlate_C.ExecuteUbergraph_WBP_GadgetCustom_Sub_SkillPlate
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WBP_GadgetCustom_Sub_SkillPlate_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_SkillPlate final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 Temp_class_Variable;                               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Temp_class_Variable_1;                             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Temp_class_Variable_2;                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Temp_class_Variable_3;                             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<TSubclassOf<class URichTextBlockDecorator>> K2Node_MakeArray_Array;                       // 0x0028(0x0010)(ConstParm, ReferenceParm)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Temp_class_Variable;                               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Temp_class_Variable_1;                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Temp_class_Variable_2;                             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Temp_class_Variable_3;                             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<TSubclassOf<class URichTextBlockDecorator>> K2Node_MakeArray_Array;                       // 0x0030(0x0010)(ConstParm, ReferenceParm)
 	class UClass*                                 K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetRaceButtonText_ReturnValue;            // 0x0050(0x0010)()
-	struct FGadgetDetailWindowData                K2Node_Event_InWindowData;                         // 0x0060(0x0038)(ConstParm)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAppPlayerController*                   K2Node_DynamicCast_AsApp_Player_Controller;        // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAppControllerInputType                       CallFunc_GetCurrentInputType_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_SkillPlate_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_SkillPlate;
 
@@ -60,15 +52,6 @@ public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_SkillPlate_C_PreConstruct;
-
-// Function WBP_GadgetCustom_Sub_SkillPlate.WBP_GadgetCustom_Sub_SkillPlate_C.Setup
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_GadgetCustom_Sub_SkillPlate_C_Setup final
-{
-public:
-	struct FGadgetDetailWindowData                InWindowData;                                      // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_SkillPlate_C_Setup;
 
 }
 

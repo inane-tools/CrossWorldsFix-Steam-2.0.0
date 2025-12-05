@@ -23,7 +23,7 @@ namespace SDK
 class USlateWidgetStyleAsset final : public UObject
 {
 public:
-	class USlateWidgetStyleContainerBase*         CustomStyle;                                       // 0x0028(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USlateWidgetStyleContainerBase*         CustomStyle;                                       // 0x0028(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

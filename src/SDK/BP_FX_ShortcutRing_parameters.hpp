@@ -18,22 +18,25 @@
 namespace SDK::Params
 {
 
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.SetupFunc
-// 0x0210 (0x0210 - 0x0000)
-struct BP_FX_ShortcutRing_C_SetupFunc final
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.Evt_SetRingSize
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FX_ShortcutRing_C_Evt_SetRingSize final
 {
 public:
-	EShortcutRingType                             CallFunc_GetShortcutRingType_ReturnValue;          // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0008(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult_1;  // 0x0108(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_GetRingScale_ReturnValue;                 // 0x0200(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SetRingSize_Radius_ImplicitCast;          // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Radius;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FX_ShortcutRing_C_SetupFunc;
+DUMPER7_ASSERTS_BP_FX_ShortcutRing_C_Evt_SetRingSize;
+
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.ExecuteUbergraph_BP_FX_ShortcutRing
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FX_ShortcutRing_C_ExecuteUbergraph_BP_FX_ShortcutRing final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_CustomEvent_Radius;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FX_ShortcutRing_C_ExecuteUbergraph_BP_FX_ShortcutRing;
 
 // Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.SetRingSize
 // 0x0080 (0x0080 - 0x0000)
@@ -68,25 +71,22 @@ public:
 };
 DUMPER7_ASSERTS_BP_FX_ShortcutRing_C_SetRingSize;
 
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.ExecuteUbergraph_BP_FX_ShortcutRing
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FX_ShortcutRing_C_ExecuteUbergraph_BP_FX_ShortcutRing final
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.SetupFunc
+// 0x0210 (0x0210 - 0x0000)
+struct BP_FX_ShortcutRing_C_SetupFunc final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_CustomEvent_Radius;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EShortcutRingType                             CallFunc_GetShortcutRingType_ReturnValue;          // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0008(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult_1;  // 0x0108(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_GetRingScale_ReturnValue;                 // 0x0200(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SetRingSize_Radius_ImplicitCast;          // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FX_ShortcutRing_C_ExecuteUbergraph_BP_FX_ShortcutRing;
-
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.Evt_SetRingSize
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FX_ShortcutRing_C_Evt_SetRingSize final
-{
-public:
-	double                                        Radius;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FX_ShortcutRing_C_Evt_SetRingSize;
+DUMPER7_ASSERTS_BP_FX_ShortcutRing_C_SetupFunc;
 
 }
 

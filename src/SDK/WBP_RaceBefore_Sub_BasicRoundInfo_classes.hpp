@@ -30,7 +30,7 @@ public:
 	class UWBP_CourseSelect_Sub_CourseIcon_C*     WBP_CourseSelect_Sub_CourseIcon;                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetGrandPrix(EGrandPrixId NewParam);
+	void SetGrandPrix(EGrandPrixId newParam);
 	void SetRoundAndStageName(const class FText& InRoundName, const class FText& InStageName);
 	void SetStageIconTexture(class UTexture2D* Texture);
 

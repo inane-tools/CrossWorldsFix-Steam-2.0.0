@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_EndMenu_UserReport_Sub_Btn.WBP_EndMenu_UserReport_Sub_Btn_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x06A0 - 0x06A0)
 class UWBP_EndMenu_UserReport_Sub_Btn_C final : public URaceEndMenuUserReportTypeButtonWidget
 {
 public:

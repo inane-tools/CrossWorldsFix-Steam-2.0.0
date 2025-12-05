@@ -16,18 +16,6 @@
 namespace SDK
 {
 
-// ScriptStruct ABP_MonsterTruck_BigCockpit.ABP_MonsterTruck_BigCockpit_C.AnimBlueprintGeneratedMutableData
-// 0x000F (0x0010 - 0x0001)
-struct ABP_MonsterTruck_BigCockpit::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-public:
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty;                                   // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_0;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_1;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ABP_MonsterTruck_BigCockpit__FAnimBlueprintGeneratedMutableData;
-
 // ScriptStruct ABP_MonsterTruck_BigCockpit.ABP_MonsterTruck_BigCockpit_C.AnimBlueprintGeneratedConstantData
 // 0x072F (0x0730 - 0x0001)
 struct ABP_MonsterTruck_BigCockpit::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
@@ -96,6 +84,18 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig;                     // 0x0700(0x0030)()
 };
 DUMPER7_ASSERTS_ABP_MonsterTruck_BigCockpit__FAnimBlueprintGeneratedConstantData;
+
+// ScriptStruct ABP_MonsterTruck_BigCockpit.ABP_MonsterTruck_BigCockpit_C.AnimBlueprintGeneratedMutableData
+// 0x000F (0x0010 - 0x0001)
+struct ABP_MonsterTruck_BigCockpit::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+public:
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty;                                   // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_0;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_1;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MonsterTruck_BigCockpit__FAnimBlueprintGeneratedMutableData;
 
 }
 

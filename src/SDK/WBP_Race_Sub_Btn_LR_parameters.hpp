@@ -141,7 +141,7 @@ public:
 DUMPER7_ASSERTS_WBP_Race_Sub_Btn_LR_C_OnTrickYInput;
 
 // Function WBP_Race_Sub_Btn_LR.WBP_Race_Sub_Btn_LR_C.SetBtnText
-// 0x0070 (0x0070 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct WBP_Race_Sub_Btn_LR_C_SetBtnText final
 {
 public:
@@ -149,8 +149,8 @@ public:
 	EBtnGuidePlatFormController                   CallFunc_GetControllerType_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBtnGuidePlatformText                  CallFunc_GetDataTableRowFromName_OutRow;           // 0x0010(0x0058)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBtnGuidePlatformText                  CallFunc_GetDataTableRowFromName_OutRow;           // 0x0010(0x0068)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Race_Sub_Btn_LR_C_SetBtnText;
 

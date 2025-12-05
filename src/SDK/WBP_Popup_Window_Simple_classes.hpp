@@ -50,7 +50,6 @@ public:
 	void SetDonpaTicketCount(int32 CurrentCount, int32 AfterCount);
 	void SetEnableInput(bool InEnable);
 	void SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType, const class FText& BtnText);
-	void SetFooterTextMessege(const class FText& Text);
 	void SetImageButtonSelectText(const class FText& InText);
 	void SetImageTexture(const class UTexture2D* Texture2D);
 	void SetInitialFocusButtonIndex(const int32 InButtonIndex);

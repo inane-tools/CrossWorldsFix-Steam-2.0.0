@@ -14,9 +14,9 @@
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "HoudiniEngineRuntime_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "HoudiniEngineRuntime_structs.hpp"
 
 
 namespace SDK
@@ -771,7 +771,7 @@ public:
 	int32                                         NumSplineMeshComponents;                           // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                  GeneratedSplinesMeshPackageGuid;                   // 0x038C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            GeneratedSplinesMesh;                              // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UStaticMesh*                            GeneratedSplinesMesh;                              // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	bool                                          bUsedMergeSplinesMeshAtLastTranslate;              // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -1012,7 +1012,7 @@ class UHoudiniInputSplineMeshComponent final : public UHoudiniInputMeshComponent
 {
 public:
 	struct FGuid                                  MeshPackageGuid;                                   // 0x02B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UStaticMesh*                            GeneratedMesh;                                     // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UStaticMesh*                            GeneratedMesh;                                     // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	ESplineMeshAxis                               CachedForwardAxis;                                 // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSplineMeshParams                      CachedSplineParams;                                // 0x02D0(0x00B8)(NoDestructor, Protected, NativeAccessSpecifierProtected)

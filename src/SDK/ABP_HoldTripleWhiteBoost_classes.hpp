@@ -21,7 +21,7 @@ namespace SDK
 class UABP_HoldTripleWhiteBoost_C final : public UABPT_HoldItem_C
 {
 public:
-	void GetBlendTime(double* NewParam) const;
+	void GetBlendTime(double* newParam) const;
 
 public:
 	static class UClass* StaticClass()

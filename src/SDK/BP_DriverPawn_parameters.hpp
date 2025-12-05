@@ -33,23 +33,14 @@ public:
 DUMPER7_ASSERTS_BP_DriverPawn_C_BindCurvesMaterialPlayer;
 
 // Function BP_DriverPawn.BP_DriverPawn_C.CreateDriver
-// 0x0028 (0x0028 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct BP_DriverPawn_C_CreateDriver final
 {
 public:
 	EDriverId                                     ID;                                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                OwnerPawn;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetupComponent_ReturnValue;               // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	const class UUnionSettings*                   CallFunc_GetGameSettings_ReturnValue;              // 0x0018(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetGFurEnable_ReturnValue;                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetupComponent_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_DriverPawn_C_CreateDriver;
 
@@ -138,14 +129,15 @@ public:
 };
 DUMPER7_ASSERTS_BP_DriverPawn_C_SetAnimClass;
 
-// Function BP_DriverPawn.BP_DriverPawn_C.SetEnableGfur
-// 0x0001 (0x0001 - 0x0000)
-struct BP_DriverPawn_C_SetEnableGfur final
+// Function BP_DriverPawn.BP_DriverPawn_C.SetEnableGFur
+// 0x0002 (0x0002 - 0x0000)
+struct BP_DriverPawn_C_SetEnableGFur final
 {
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_DriverPawn_C_SetEnableGfur;
+DUMPER7_ASSERTS_BP_DriverPawn_C_SetEnableGFur;
 
 // Function BP_DriverPawn.BP_DriverPawn_C.SetItemParam
 // 0x0014 (0x0014 - 0x0000)
@@ -178,6 +170,24 @@ public:
 	ECarStatusType                                StatusType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_DriverPawn_C_SetRideableStatusType;
+
+// Function BP_DriverPawn.BP_DriverPawn_C.SetupCharacterById
+// 0x0018 (0x0018 - 0x0000)
+struct BP_DriverPawn_C_SetupCharacterById final
+{
+public:
+	EDriverId                                     In_DriverId;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UUnionSettings*                   CallFunc_GetGameSettings_ReturnValue;              // 0x0008(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetGFurEnable_ReturnValue;                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DriverPawn_C_SetupCharacterById;
 
 // Function BP_DriverPawn.BP_DriverPawn_C.UseItem
 // 0x0002 (0x0002 - 0x0000)

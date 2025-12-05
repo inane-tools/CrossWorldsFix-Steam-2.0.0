@@ -18,24 +18,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Ready_Sub_ChanaWindow_P1.WBP_Ready_Sub_ChanaWindow_P1_C
-// 0x0040 (0x0320 - 0x02E0)
+// 0x0038 (0x0328 - 0x02F0)
 class UWBP_Ready_Sub_ChanaWindow_P1_C final : public UReadyWindowCharacterIcon
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Chara_Base;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Chara_NameBase;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 DMY_CharaCutIn;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUnionRichTextBlock*                    TXT_CharaName;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTexture2D*                             CharaIconTexture;                                  // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CharaName;                                         // 0x0310(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Chara_Base;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Chara_NameBase;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DMY_CharaCutIn;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUnionRichTextBlock*                    TXT_CharaName;                                     // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   CharaName;                                         // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_WBP_Ready_Sub_ChanaWindow_P1(int32 EntryPoint);
-	void OnLoaded_CA3D935E44192617A2D48ABBF6E232A2(class UObject* Loaded);
 	void SetCharacterIconCheckMark(bool bIsCheck);
 	void SetCharacterIconData();
-	void SetCharacterIconTexture(const TSoftObjectPtr<class UTexture2D>& Texture, const class FText& Name_0);
+	void SetCharacterIconTextureObj(const class UTexture2D* InTexture);
+	void SetCharacterName(const class FText& InName);
 
 public:
 	static class UClass* StaticClass()

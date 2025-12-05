@@ -17,23 +17,51 @@
 namespace SDK
 {
 
-// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.SetTravelRingState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.ExecuteUbergraph_BP_TravelRingMainEnterSpawner
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// uint8                                   TravelRingState_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TravelRingMainEnterSpawner_C::SetTravelRingState(uint8 TravelRingState_0)
+void ABP_TravelRingMainEnterSpawner_C::ExecuteUbergraph_BP_TravelRingMainEnterSpawner(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "SetTravelRingState");
+		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "ExecuteUbergraph_BP_TravelRingMainEnterSpawner");
 
-	Params::BP_TravelRingMainEnterSpawner_C_SetTravelRingState Parms{};
+	Params::BP_TravelRingMainEnterSpawner_C_ExecuteUbergraph_BP_TravelRingMainEnterSpawner Parms{};
 
-	Parms.TravelRingState_0 = TravelRingState_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.PostSpawnSequenceActor
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void ABP_TravelRingMainEnterSpawner_C::PostSpawnSequenceActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "PostSpawnSequenceActor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_TravelRingMainEnterSpawner_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,49 +85,21 @@ void ABP_TravelRingMainEnterSpawner_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_TravelRingMainEnterSpawner_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.PostSpawnSequenceActor
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void ABP_TravelRingMainEnterSpawner_C::PostSpawnSequenceActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "PostSpawnSequenceActor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.ExecuteUbergraph_BP_TravelRingMainEnterSpawner
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_TravelRingMainEnterSpawner.BP_TravelRingMainEnterSpawner_C.SetTravelRingState
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   TravelRingState_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TravelRingMainEnterSpawner_C::ExecuteUbergraph_BP_TravelRingMainEnterSpawner(int32 EntryPoint)
+void ABP_TravelRingMainEnterSpawner_C::SetTravelRingState(uint8 TravelRingState_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "ExecuteUbergraph_BP_TravelRingMainEnterSpawner");
+		Func = Class->GetFunction("BP_TravelRingMainEnterSpawner_C", "SetTravelRingState");
 
-	Params::BP_TravelRingMainEnterSpawner_C_ExecuteUbergraph_BP_TravelRingMainEnterSpawner Parms{};
+	Params::BP_TravelRingMainEnterSpawner_C_SetTravelRingState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.TravelRingState_0 = TravelRingState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

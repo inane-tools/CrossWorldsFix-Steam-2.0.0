@@ -17,29 +17,55 @@
 namespace SDK
 {
 
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.Evt_SetRingSize
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Radius                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FX_ShortcutRing_C::UserConstructionScript()
+void ABP_FX_ShortcutRing_C::Evt_SetRingSize(double Radius)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "Evt_SetRingSize");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_FX_ShortcutRing_C_Evt_SetRingSize Parms{};
+
+	Parms.Radius = Radius;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.SetupFunc
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.ExecuteUbergraph_BP_FX_ShortcutRing
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FX_ShortcutRing_C::SetupFunc()
+void ABP_FX_ShortcutRing_C::ExecuteUbergraph_BP_FX_ShortcutRing(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "SetupFunc");
+		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "ExecuteUbergraph_BP_FX_ShortcutRing");
+
+	Params::BP_FX_ShortcutRing_C_ExecuteUbergraph_BP_FX_ShortcutRing Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_FX_ShortcutRing_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,57 +91,31 @@ void ABP_FX_ShortcutRing_C::SetRingSize(double Radius)
 }
 
 
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.SetupFunc
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_FX_ShortcutRing_C::ReceiveBeginPlay()
+void ABP_FX_ShortcutRing_C::SetupFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "SetupFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.ExecuteUbergraph_BP_FX_ShortcutRing
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_FX_ShortcutRing_C::ExecuteUbergraph_BP_FX_ShortcutRing(int32 EntryPoint)
+void ABP_FX_ShortcutRing_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "ExecuteUbergraph_BP_FX_ShortcutRing");
+		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "UserConstructionScript");
 
-	Params::BP_FX_ShortcutRing_C_ExecuteUbergraph_BP_FX_ShortcutRing Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FX_ShortcutRing.BP_FX_ShortcutRing_C.Evt_SetRingSize
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Radius                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FX_ShortcutRing_C::Evt_SetRingSize(double Radius)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_ShortcutRing_C", "Evt_SetRingSize");
-
-	Params::BP_FX_ShortcutRing_C_Evt_SetRingSize Parms{};
-
-	Parms.Radius = Radius;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

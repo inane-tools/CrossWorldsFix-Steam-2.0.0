@@ -51,7 +51,7 @@ public:
 	void GetNormalGaugePercent(double* GaugePercent);
 	void Initialize();
 	void PlayEffBase();
-	void PlayGroupChargeEffect(double ChargePer, bool IsSingle);
+	void PlayGroupChargeEffect(double ChargePer, bool isSingle);
 	void PreConstruct(bool IsDesignTime);
 	void Set_Normal_GaugePercent(double Percent);
 	void SetBoostGaugePercent(double Percent);

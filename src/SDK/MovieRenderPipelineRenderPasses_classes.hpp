@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "MovieRenderPipelineCore_classes.hpp"
-#include "OpenColorIO_structs.hpp"
 #include "Engine_structs.hpp"
 #include "MovieRenderPipelineRenderPasses_structs.hpp"
 #include "ActorLayerUtilities_structs.hpp"
+#include "OpenColorIO_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -28,7 +28,7 @@ class UMovieGraphImagePassBaseNode : public UMovieGraphRenderPassNode
 public:
 	uint8                                         bOverride_ShowFlags : 1;                           // 0x0098(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieGraphShowFlags*                   ShowFlags;                                         // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMovieGraphShowFlags*                   ShowFlags;                                         // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_A8[0x10];                                      // 0x00A8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -294,8 +294,8 @@ public:
 	TArray<struct FActorLayer>                    ActorLayers;                                       // 0x0198(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A8[0x10];                                     // 0x01A8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSoftObjectPath>                DataLayers;                                        // 0x01B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             ActivePostProcessMaterials;                        // 0x01C8(0x0010)(ZeroConstructor, Transient, DuplicateTransient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     StencilLayerMaterial;                              // 0x01D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UMaterialInterface*>             ActivePostProcessMaterials;                        // 0x01C8(0x0010)(ZeroConstructor, Transient, DuplicateTransient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     StencilLayerMaterial;                              // 0x01D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_1E0[0x58];                                     // 0x01E0(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

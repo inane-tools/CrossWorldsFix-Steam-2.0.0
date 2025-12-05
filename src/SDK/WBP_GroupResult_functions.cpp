@@ -272,6 +272,20 @@ void UWBP_GroupResult_C::SetTeamColor()
 }
 
 
+// Function WBP_GroupResult.WBP_GroupResult_C.SetupWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_GroupResult_C::SetupWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GroupResult_C", "SetupWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_GroupResult.WBP_GroupResult_C.StartAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 

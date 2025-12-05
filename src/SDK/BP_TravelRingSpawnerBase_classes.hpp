@@ -26,11 +26,11 @@ public:
 	uint8                                         TravelRingState;                                   // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetTravelRingState(uint8 TravelRingState_0);
-	void ResetSpawnTransform();
-	void ReceiveBeginPlay();
-	void PostSpawnSequenceActor();
 	void ExecuteUbergraph_BP_TravelRingSpawnerBase(int32 EntryPoint);
+	void PostSpawnSequenceActor();
+	void ReceiveBeginPlay();
+	void ResetSpawnTransform();
+	void SetTravelRingState(uint8 TravelRingState_0);
 
 public:
 	static class UClass* StaticClass()

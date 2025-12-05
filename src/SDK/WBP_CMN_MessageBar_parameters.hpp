@@ -49,7 +49,8 @@ public:
 	class FText                                   K2Node_Select_Default_1;                           // 0x0090(0x0010)()
 	bool                                          K2Node_Event_bInIsVisible;                         // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          K2Node_Event_bEnableBlinkLoop;                     // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A3[0x5];                                       // 0x00A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x00A8(0x0010)()
 	int32                                         K2Node_Event_Index;                                // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -63,6 +64,15 @@ public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_CMN_MessageBar_C_SetText;
+
+// Function WBP_CMN_MessageBar.WBP_CMN_MessageBar_C.SetupDisableGadgetMessage
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_CMN_MessageBar_C_SetupDisableGadgetMessage final
+{
+public:
+	bool                                          bEnableBlinkLoop;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CMN_MessageBar_C_SetupDisableGadgetMessage;
 
 // Function WBP_CMN_MessageBar.WBP_CMN_MessageBar_C.SetWaitingTextVisible
 // 0x0001 (0x0001 - 0x0000)

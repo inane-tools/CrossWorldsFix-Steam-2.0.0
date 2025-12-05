@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SquadContext.BP_SquadContext_C
-// 0x0058 (0x04C0 - 0x0468)
+// 0x0058 (0x0528 - 0x04D0)
 class UBP_SquadContext_C final : public USquadContext
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(bool Successful)> OnCreateSquad;                                   // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool Successful)> OnConnectSquad;                                  // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool Successful, const struct FSearchLobbyResult& SearchResult)> OnSearchSquad; // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnDestroySquad;                                    // 0x04A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool Successful)> OnSendInvitationSquad;                           // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TMulticastInlineDelegate<void(bool Successful)> OnCreateSquad;                                   // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool Successful)> OnConnectSquad;                                  // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool Successful, const struct FSearchLobbyResult& SearchResult)> OnSearchSquad; // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnDestroySquad;                                    // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool Successful)> OnSendInvitationSquad;                           // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_BP_SquadContext(int32 EntryPoint);

@@ -50,7 +50,7 @@ DUMPER7_ASSERTS_FOpenColorIODisplayView;
 struct FOpenColorIOColorConversionSettings final
 {
 public:
-	class UOpenColorIOConfiguration*              ConfigurationSource;                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOpenColorIOConfiguration*              ConfigurationSource;                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	struct FOpenColorIOColorSpace                 SourceColorSpace;                                  // 0x0008(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FOpenColorIOColorSpace                 DestinationColorSpace;                             // 0x0030(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FOpenColorIODisplayView                DestinationDisplayView;                            // 0x0058(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)

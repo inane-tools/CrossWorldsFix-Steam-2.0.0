@@ -14,11 +14,11 @@
 #include "UnionSystem_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "UMG_structs.hpp"
-#include "UMG_classes.hpp"
 #include "UnionUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "UMG_structs.hpp"
+#include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "ImageWriteQueue_structs.hpp"
 #include "Slate_structs.hpp"
@@ -91,6 +91,42 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_UnionUI;
 
+// Class UnionUI.WidgetManBaseWidget
+// 0x0080 (0x0360 - 0x02E0)
+class UWidgetManBaseWidget final : public UUserWidget
+{
+public:
+	class UCanvasPanel*                           RootPanel;                                         // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DebugString;                                       // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              DebugInfoPosition;                                 // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowDebugInfo;                                     // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UWidgetManDebugString*>            DebugStringObjectSet;                              // 0x0310(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	void AddChild(class UUserWidget* ChildWidget, class UCanvasPanelSlot* ChildSlot, int32 ZOrder);
+	void AppendDebugString(const class FString& String__const);
+	void AttachDebugStringObject(class UWidgetManDebugString* DebugStringObject);
+	void ClearDebugString();
+	void DetachDebugStringObject(class UWidgetManDebugString* DebugStringObject);
+	void RemoveChild(class UUserWidget* Widget, bool* IsSucceeded);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WidgetManBaseWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WidgetManBaseWidget")
+	}
+	static class UWidgetManBaseWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWidgetManBaseWidget>();
+	}
+};
+DUMPER7_ASSERTS_UWidgetManBaseWidget;
+
 // Class UnionUI.FontFunctionObject
 // 0x00A0 (0x00C8 - 0x0028)
 class UFontFunctionObject final : public UObject
@@ -117,45 +153,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFontFunctionObject;
-
-// Class UnionUI.WidgetManContainer
-// 0x0040 (0x0068 - 0x0028)
-class UWidgetManContainer final : public UObject
-{
-public:
-	class UObject*                                Logic;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UUserWidget*>                    WidgetArray;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UCanvasPanelSlot*>               CanvasPanelSlotArray;                              // 0x0040(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        LogicArray;                                        // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          IsSubWidget;                                       // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ContainerZOrder;                                   // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	void AddWidget(class UUserWidget* Widget, class UCanvasPanelSlot* Slot, class UObject* LogicObjectRef, bool* bSucceeded);
-	void FindWidget(class UUserWidget* Widget, bool* IsFound, int32* Index_0);
-	void GetWidgetAt(int32 Index_0, bool* IsSucceeded, class UUserWidget** Widget, class UObject** LogicObject);
-	void GetWidgetCount(int32* WidgetCount);
-	void Initialize(class UUserWidget* Widget, const int32 ZOrder, class UCanvasPanelSlot* Slot, class UObject* LogicObjectRef, bool bSubWidget);
-	void IsSubWidgetContainer(bool* bSubWidget);
-	void OffsetZOrder(int32 Offset);
-	void SetZOrder(int32 InZOrder);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WidgetManContainer")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WidgetManContainer")
-	}
-	static class UWidgetManContainer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWidgetManContainer>();
-	}
-};
-DUMPER7_ASSERTS_UWidgetManContainer;
 
 // Class UnionUI.MenuCameraManager
 // 0x01F0 (0x0480 - 0x0290)
@@ -514,7 +511,7 @@ DUMPER7_ASSERTS_UMouseButtonBlueprintFunctionLibrary;
 class UUnionRichTextBlockImageDecorator : public URichTextBlockImageDecorator
 {
 public:
-	class UDataTable*                             OverrideImageSet;                                  // 0x0030(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             OverrideImageSet;                                  // 0x0030(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	int32                                         PlayerIndex;                                       // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEachPlayerSetting;                                // 0x003C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -550,7 +547,7 @@ public:
 	class FString                                 FileNameBase;                                      // 0x0290(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Width;                                             // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Height;                                            // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_2B0[0x8];                                      // 0x02B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -626,7 +623,7 @@ DUMPER7_ASSERTS_AUnionStickerFrame;
 class UUnionStickerRenderTarget final : public UObject
 {
 public:
-	class UTextureRenderTarget2D*                 RenderTarget2D;                                    // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 RenderTarget2D;                                    // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -715,7 +712,7 @@ public:
 	bool                                          bChangeableButtonState;                            // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAnalogEvent;                                      // 0x0329(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_32A[0xE];                                      // 0x032A(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CurrentButtonAnimPlayer;                           // 0x0338(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UUMGSequencePlayer*                     CurrentButtonAnimPlayer;                           // 0x0338(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_340[0x4];                                      // 0x0340(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bEnableMouseInteraction;                           // 0x0344(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_345[0x3];                                      // 0x0345(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -750,7 +747,7 @@ public:
 DUMPER7_ASSERTS_UUnionUIButtonBaseCore;
 
 // Class UnionUI.UnionUIButtonBase
-// 0x0148 (0x0490 - 0x0348)
+// 0x0138 (0x0480 - 0x0348)
 class UUnionUIButtonBase : public UUnionUIButtonBaseCore
 {
 public:
@@ -760,33 +757,32 @@ public:
 	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnUnFocusEvent;                 // 0x0360(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnDecisionEvent;                // 0x0370(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnDecisionDownEvent;            // 0x0380(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnDecisionFailedEvent;          // 0x0390(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnCancelEvent;                  // 0x03A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnCancelDownEvent;              // 0x03B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnLeftShoulderEvent;            // 0x03C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnLeftShoulderDownEvent;        // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnRightShoulderEvent;           // 0x03E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnRightShoulderDownEvent;       // 0x03F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnFaceTopEvent;                 // 0x0400(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnFaceTopDownEvent;             // 0x0410(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnSpecialEvent;                 // 0x0420(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)> OnDirectionEvent; // 0x0430(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	bool                                          bSoundEnable;                                      // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFocusSound;                                       // 0x0441(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUnionUIButtonSoundSetting                    CurrentFocusSoundSetting;                          // 0x0442(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUnionUIButtonEventState                      NowUIButtonState;                                  // 0x0443(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PanelIndex;                                        // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUnionUIButtonAnimState                       NowButtonAnimState;                                // 0x044C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44D[0x3];                                      // 0x044D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidgetAnimation*                       LastPlayButtonAnim;                                // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidgetAnimation*                       FocusAnimRef;                                      // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidgetAnimation*                       UnFocusAnimRef;                                    // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bConsumePointerInput;                              // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMouseUnFocus;                                     // 0x0469(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_46A[0x6];                                      // 0x046A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UButton*                                MouseButton;                                       // 0x0470(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_478[0x18];                                     // 0x0478(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnCancelEvent;                  // 0x0390(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnCancelDownEvent;              // 0x03A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnLeftShoulderEvent;            // 0x03B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnLeftShoulderDownEvent;        // 0x03C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnRightShoulderEvent;           // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnRightShoulderDownEvent;       // 0x03E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnFaceTopEvent;                 // 0x03F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnFaceTopDownEvent;             // 0x0400(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button)> OnSpecialEvent;                 // 0x0410(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)> OnDirectionEvent; // 0x0420(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	bool                                          bSoundEnable;                                      // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFocusSound;                                       // 0x0431(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUnionUIButtonSoundSetting                    CurrentFocusSoundSetting;                          // 0x0432(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUnionUIButtonEventState                      NowUIButtonState;                                  // 0x0433(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PanelIndex;                                        // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUnionUIButtonAnimState                       NowButtonAnimState;                                // 0x043C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_43D[0x3];                                      // 0x043D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidgetAnimation*                       LastPlayButtonAnim;                                // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidgetAnimation*                       FocusAnimRef;                                      // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidgetAnimation*                       UnFocusAnimRef;                                    // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConsumePointerInput;                              // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMouseUnFocus;                                     // 0x0459(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45A[0x6];                                      // 0x045A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UButton*                                MouseButton;                                       // 0x0460(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_468[0x18];                                     // 0x0468(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CallbackEnableMouseClick();
@@ -826,29 +822,29 @@ public:
 DUMPER7_ASSERTS_UUnionUIButtonBase;
 
 // Class UnionUI.UnionUIAnimScrollControl
-// 0x00F0 (0x0580 - 0x0490)
+// 0x00F0 (0x0570 - 0x0480)
 class UUnionUIAnimScrollControl : public UUnionUIButtonBase
 {
 public:
-	EUnionUIControlVH                             ControlVH;                                         // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_491[0x3];                                      // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PresentElementNum;                                 // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ElementNum;                                        // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CenterElementIndex;                                // 0x049C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          LastAnimDownRight;                                 // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidgetAnimation*                       LastPlayAnimation;                                 // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidgetAnimation*                       IdleAnim;                                          // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UUserWidget*>                    PresentElementArr;                                 // 0x04B8(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UUserWidget*>                    ElementArr;                                        // 0x04C8(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TMap<EUnionUIControlDir, class UWidgetAnimation*> ScrollAnimation;                               // 0x04D8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<struct FAnchorData>                    AnchorArr;                                         // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FLinearColor>                   ColorAndOpacityArr;                                // 0x0538(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FVector2D>                      PositionArr;                                       // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FWidgetTransform>               WidgetTransformArr;                                // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIAnimScrollControl* FinishedWidget)> OnScrollFinishedEvent; // 0x0568(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	bool                                          bControllable;                                     // 0x0578(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_579[0x7];                                      // 0x0579(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EUnionUIControlVH                             ControlVH;                                         // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_481[0x3];                                      // 0x0481(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PresentElementNum;                                 // 0x0484(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ElementNum;                                        // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CenterElementIndex;                                // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          LastAnimDownRight;                                 // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_491[0x7];                                      // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidgetAnimation*                       LastPlayAnimation;                                 // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidgetAnimation*                       IdleAnim;                                          // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UUserWidget*>                    PresentElementArr;                                 // 0x04A8(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UUserWidget*>                    ElementArr;                                        // 0x04B8(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TMap<EUnionUIControlDir, class UWidgetAnimation*> ScrollAnimation;                               // 0x04C8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<struct FAnchorData>                    AnchorArr;                                         // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FLinearColor>                   ColorAndOpacityArr;                                // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      PositionArr;                                       // 0x0538(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FWidgetTransform>               WidgetTransformArr;                                // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIAnimScrollControl* FinishedWidget)> OnScrollFinishedEvent; // 0x0558(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	bool                                          bControllable;                                     // 0x0568(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_569[0x7];                                      // 0x0569(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 CalcNextCenterElementIndex(bool InLastAnimDownRight);
@@ -914,40 +910,40 @@ public:
 DUMPER7_ASSERTS_UUnionUIButton;
 
 // Class UnionUI.UnionUIButtonStandard
-// 0x01C8 (0x0658 - 0x0490)
+// 0x01C8 (0x0648 - 0x0480)
 class UUnionUIButtonStandard : public UUnionUIButtonBase
 {
 public:
-	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnActivatedEvent;           // 0x0490(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDeactivatedEvent;         // 0x04A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnSelectedEvent;            // 0x04B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDeselectedEvent;          // 0x04C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnSelectAnimationFinishedEvent; // 0x04D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDecidedEvent;             // 0x04E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDecideAnimationFinishedEvent; // 0x04F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundAtomCue>           _SelecetdSoundCue;                                 // 0x0500(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class USoundAtomCue>           _DecidedSoundCue;                                  // 0x0528(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class USoundAtomCue>           _ErrorSoundCue;                                    // 0x0550(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_578[0x1];                                      // 0x0578(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          _Selectable;                                       // 0x0579(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          _ToggleEnabled;                                    // 0x057A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          _DecidedKeep;                                      // 0x057B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_57C[0x4];                                      // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidgetAnimation*                       Btn_NonActive_Loop;                                // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Active_Loop;                                   // 0x0588(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Select_Loop;                                   // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Decide_Loop;                                   // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_NonActive_to_Active;                           // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Active_to_NonActive;                           // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Active_to_Select;                              // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Active_to_Decide;                              // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Select_to_NonActive;                           // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Select_to_Active;                              // 0x05C8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Select_to_Decide;                              // 0x05D0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Decide_to_NonActive;                           // 0x05D8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Decide_to_Active;                              // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidgetAnimation*                       Btn_Decide_to_Select;                              // 0x05E8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5F0[0x68];                                     // 0x05F0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnActivatedEvent;           // 0x0480(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDeactivatedEvent;         // 0x0490(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnSelectedEvent;            // 0x04A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDeselectedEvent;          // 0x04B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnSelectAnimationFinishedEvent; // 0x04C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDecidedEvent;             // 0x04D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUnionUIButtonBaseCore* Button)> OnDecideAnimationFinishedEvent; // 0x04E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundAtomCue>           _SelecetdSoundCue;                                 // 0x04F0(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class USoundAtomCue>           _DecidedSoundCue;                                  // 0x0518(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class USoundAtomCue>           _ErrorSoundCue;                                    // 0x0540(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_568[0x1];                                      // 0x0568(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          _Selectable;                                       // 0x0569(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          _ToggleEnabled;                                    // 0x056A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          _DecidedKeep;                                      // 0x056B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_56C[0x4];                                      // 0x056C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidgetAnimation*                       Btn_NonActive_Loop;                                // 0x0570(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Active_Loop;                                   // 0x0578(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Select_Loop;                                   // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Decide_Loop;                                   // 0x0588(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_NonActive_to_Active;                           // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Active_to_NonActive;                           // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Active_to_Select;                              // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Active_to_Decide;                              // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Select_to_NonActive;                           // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Select_to_Active;                              // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Select_to_Decide;                              // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Decide_to_NonActive;                           // 0x05C8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Decide_to_Active;                              // 0x05D0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWidgetAnimation*                       Btn_Decide_to_Select;                              // 0x05D8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_5E0[0x68];                                     // 0x05E0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Activate();
@@ -1123,8 +1119,8 @@ class UUnionUIFrameGrabber : public UUserWidget
 public:
 	TMulticastInlineDelegate<void()>              OnFrameGrabberCaptureEnd;                          // 0x02E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2F0[0x10];                                     // 0x02F0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               MaterialInstanceDynamic;                           // 0x0300(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             CaptureFrameTexture;                               // 0x0308(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInstanceDynamic*               MaterialInstanceDynamic;                           // 0x0300(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UTexture2D*                             CaptureFrameTexture;                               // 0x0308(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_310[0x18];                                     // 0x0310(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1176,12 +1172,12 @@ public:
 DUMPER7_ASSERTS_UUnionUICrossFade;
 
 // Class UnionUI.UnionUIErrorViewer
-// 0x0188 (0x01B0 - 0x0028)
+// 0x01C8 (0x01F0 - 0x0028)
 class UUnionUIErrorViewer final : public UUnionErrorViewer
 {
 public:
-	class UUnionUIPopupWindowBase*                m_ErrorWindow;                                     // 0x0028(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_30[0x180];                                     // 0x0030(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UUnionUIPopupWindowBase*                m_ErrorWindow;                                     // 0x0028(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_30[0x1C0];                                     // 0x0030(0x01C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1376,6 +1372,53 @@ public:
 };
 DUMPER7_ASSERTS_UUnionUIGridNavigationBuilder;
 
+// Class UnionUI.WidgetMenuFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UWidgetMenuFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WidgetMenuFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WidgetMenuFunctionLibrary")
+	}
+	static class UWidgetMenuFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWidgetMenuFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UWidgetMenuFunctionLibrary;
+
+// Class UnionUI.UnionUIListView
+// 0x0010 (0x0C80 - 0x0C70)
+class UUnionUIListView final : public UListView
+{
+public:
+	uint8                                         Pad_C70[0x10];                                     // 0x0C70(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetHorizontalEntrySpacing(float InLeftEntrySpacing, float InRightEntrySpacing);
+	void SetVerticalEntrySpacing(float InTopEntrySpacing, float InBottomEntrySpacing);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionUIListView")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionUIListView")
+	}
+	static class UUnionUIListView* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionUIListView>();
+	}
+};
+DUMPER7_ASSERTS_UUnionUIListView;
+
 // Class UnionUI.UnionUILoadingDisplay
 // 0x0020 (0x0300 - 0x02E0)
 class UUnionUILoadingDisplay final : public UUserWidget
@@ -1410,66 +1453,37 @@ public:
 };
 DUMPER7_ASSERTS_UUnionUILoadingDisplay;
 
-// Class UnionUI.WidgetManComponent
-// 0x00D0 (0x0170 - 0x00A0)
-class UWidgetManComponent final : public UActorComponent
+// Class UnionUI.UnionUISceneCaptureManager
+// 0x0020 (0x0050 - 0x0030)
+class UUnionUISceneCaptureManager final : public UWorldSubsystem
 {
 public:
-	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnLostPriority; // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnRegainPriority; // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnPushed; // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnPoped; // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMap<EWidgetManZLayer, int32>                 ZLayerToZOrder;                                    // 0x00E0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          CreateDebugInfo;                                   // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowDebugInfo;                                     // 0x0131(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              DebugInfoPosition;                                 // 0x0138(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BaseWidgetZOrder;                                  // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidgetManDebugString*                  DebugStringObject;                                 // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UWidgetManContainer*>            WidgetStack;                                       // 0x0158(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class UWidgetManBaseWidget*                   BaseWidget;                                        // 0x0168(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class AActor*>                         CaptureTargetActors;                               // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AUnionUICapture2DActor*>         UICapture2DActors;                                 // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
-	void AddWidgetToTopAsGroup(class UUserWidget* Widget, class UObject* Logic, bool* IsSucceeded);
-	void AttachDebugStringObject(class UWidgetManDebugString* DebugStringObjectRef);
-	void DetachDebugStringObject(class UWidgetManDebugString* DebugStringObjectRef);
-	void EventBeginBaseWidget();
-	void EventBeginDebug();
-	void EventBeginStack();
-	void EventDrawDebug();
-	void EventEndBaseWidget();
-	void EventEndDebug();
-	void EventEndStack();
-	void FindWidget(class UUserWidget* Widget, bool* IsFound, int32* IndexFromTop, int32* IndexInGroup);
-	void GetTopWidget(int32 Index_0, bool* IsSucceeded, class UUserWidget** Widget, bool* IsSubWidget, class UObject** Logic);
-	void GetTopWidgetCount(int32* WidgetCount);
-	void NotifyLostPriority();
-	void NotifyPoped(class UUserWidget* Widget, class UObject* Logic);
-	void NotifyPushed(class UUserWidget* Widget, class UObject* Logic);
-	void NotifyRegainPriority();
-	void PopAllWidgets();
-	void PopWidget(bool* IsSucceeded);
-	void PushSubWidget(class UUserWidget* SubWidget, class UObject* Logic);
-	int32 PushWidget(class UUserWidget* Widget, class UObject* Logic, EWidgetManZLayer ZLayer);
-	void SwapTopWidget(class UUserWidget* Widget, bool* IsSucceeded);
-	void SwapTopWidgetByIndex(int32 IndexFromTop, bool* IsSucceeded);
+	TArray<class AUnionUICapture2DActor*> GetCaptureCameraActor();
+	class AUnionUICapture2DActor* GetCaptureCameraActorByPlayerControllerIndex(const int32& PlayerControllerIndex);
+	TArray<class AActor*> GetCaptureTargetActor();
+	void RegisterCaptureCameraActor(const int32& PlayerControllerIndex, class AUnionUICapture2DActor* CaptureActor);
+	void RegisterCaptureTargetActor(const int32& PlayerControllerIndex, class AActor* CaptureActor);
+	void UnRegisterCaptureCameraActor(const int32& PlayerControllerIndex);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("WidgetManComponent")
+		STATIC_CLASS_IMPL("UnionUISceneCaptureManager")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"WidgetManComponent")
+		STATIC_NAME_IMPL(L"UnionUISceneCaptureManager")
 	}
-	static class UWidgetManComponent* GetDefaultObj()
+	static class UUnionUISceneCaptureManager* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UWidgetManComponent>();
+		return GetDefaultObjImpl<UUnionUISceneCaptureManager>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetManComponent;
+DUMPER7_ASSERTS_UUnionUISceneCaptureManager;
 
 // Class UnionUI.UnionUILoopScrollBox
 // 0x0060 (0x0D50 - 0x0CF0)
@@ -1557,33 +1571,6 @@ public:
 };
 DUMPER7_ASSERTS_UUnionUIMovieTransition;
 
-// Class UnionUI.UnionUITextBlock
-// 0x0000 (0x0370 - 0x0370)
-class UUnionUITextBlock final : public UTextBlock
-{
-public:
-	int32                                         BaseEnFontSize;                                    // 0x0368(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void UpdateFontSize();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UnionUITextBlock")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UnionUITextBlock")
-	}
-	static class UUnionUITextBlock* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUnionUITextBlock>();
-	}
-};
-DUMPER7_ASSERTS_UUnionUITextBlock;
-
 // Class UnionUI.UnionUISceneBase
 // 0x00C8 (0x03D8 - 0x0310)
 class UUnionUISceneBase : public UUnionUIWidgetBase
@@ -1668,6 +1655,41 @@ public:
 };
 DUMPER7_ASSERTS_UUnionUIPopupWindowBase;
 
+// Class UnionUI.UnionUIWheelMenu
+// 0x0168 (0x0540 - 0x03D8)
+class UUnionUIWheelMenu final : public UUnionUISceneBase
+{
+public:
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> OnUISceneWheelSelectEvent; // 0x03E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMap<EWheelDirection, class UUnionUIButtonBase*> SelectDirectStamp;                              // 0x03F0(0x0050)(Edit, BlueprintVisible, ExportObject, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class UMenuInputRecieveObject*                MenuInputReceiveObject;                            // 0x0440(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_448[0xF8];                                     // 0x0448(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnUISceneWheelSelectEvent_Impl(class UUnionUIButtonBase* UnionButton, int32 ButtonIndex);
+	void SetUpWheelParam(bool bInIsLeftTurn, float InLStickIgone, bool bInIsTopHalf, float InBitweenDeathZone);
+	void UISceneWheelMenuKeyBind(class APlayerController* InPlayerController);
+	void UISceneWheelMenuKeyUnBind(class APlayerController* InPlayerController);
+	void WheelMenuSelect_Impl(const struct FVector& InStickVector);
+	void WheelMenuSelectInput_Impl(class UObject* Object, const struct FVector2D& InStickVector);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionUIWheelMenu")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionUIWheelMenu")
+	}
+	static class UUnionUIWheelMenu* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionUIWheelMenu>();
+	}
+};
+DUMPER7_ASSERTS_UUnionUIWheelMenu;
+
 // Class UnionUI.UnionUIPopupWindowManager
 // 0x0050 (0x0080 - 0x0030)
 class UUnionUIPopupWindowManager final : public UGameInstanceSubsystem
@@ -1678,7 +1700,7 @@ public:
 	TMulticastInlineDelegate<void()>              OnPopupWindowRemoved;                              // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnPopupWindowRemovedAll;                           // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<class UUnionUIPopupWindowBase*>        PopupWindowList;                                   // 0x0068(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	class UUnionErrorViewer*                      ErrorViewer;                                       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UUnionErrorViewer*                      ErrorViewer;                                       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	class UUnionUIPopupWindowBase* CreatePopupWindow(EPopupWindowType WindowType);
@@ -1768,26 +1790,6 @@ public:
 };
 DUMPER7_ASSERTS_UUnionRichTextBlock;
 
-// Class UnionUI.WidgetMenuFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UWidgetMenuFunctionLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WidgetMenuFunctionLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WidgetMenuFunctionLibrary")
-	}
-	static class UWidgetMenuFunctionLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWidgetMenuFunctionLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UWidgetMenuFunctionLibrary;
-
 // Class UnionUI.UnionUIRivalTransition
 // 0x0028 (0x0308 - 0x02E0)
 class UUnionUIRivalTransition final : public UUserWidget
@@ -1818,38 +1820,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UUnionUIRivalTransition;
-
-// Class UnionUI.UnionUISceneCaptureManager
-// 0x0020 (0x0050 - 0x0030)
-class UUnionUISceneCaptureManager final : public UWorldSubsystem
-{
-public:
-	TArray<class AActor*>                         CaptureTargetActors;                               // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class AUnionUICapture2DActor*>         UICapture2DActors;                                 // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	TArray<class AUnionUICapture2DActor*> GetCaptureCameraActor();
-	class AUnionUICapture2DActor* GetCaptureCameraActorByPlayerControllerIndex(const int32& PlayerControllerIndex);
-	TArray<class AActor*> GetCaptureTargetActor();
-	void RegisterCaptureCameraActor(const int32& PlayerControllerIndex, class AUnionUICapture2DActor* CaptureActor);
-	void RegisterCaptureTargetActor(const int32& PlayerControllerIndex, class AActor* CaptureActor);
-	void UnRegisterCaptureCameraActor(const int32& PlayerControllerIndex);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UnionUISceneCaptureManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UnionUISceneCaptureManager")
-	}
-	static class UUnionUISceneCaptureManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUnionUISceneCaptureManager>();
-	}
-};
-DUMPER7_ASSERTS_UUnionUISceneCaptureManager;
 
 // Class UnionUI.UnionUISequenceInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -1884,6 +1854,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_IUnionUISequenceInterface;
+
+// Class UnionUI.UnionUITextBlock
+// 0x0000 (0x0370 - 0x0370)
+class UUnionUITextBlock final : public UTextBlock
+{
+public:
+	int32                                         BaseEnFontSize;                                    // 0x0368(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateFontSize();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionUITextBlock")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionUITextBlock")
+	}
+	static class UUnionUITextBlock* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionUITextBlock>();
+	}
+};
+DUMPER7_ASSERTS_UUnionUITextBlock;
 
 // Class UnionUI.UnionUITransitionManager
 // 0x0098 (0x00C8 - 0x0030)
@@ -1955,41 +1952,6 @@ public:
 };
 DUMPER7_ASSERTS_UUnionUITransitionManager;
 
-// Class UnionUI.UnionUIWheelMenu
-// 0x0168 (0x0540 - 0x03D8)
-class UUnionUIWheelMenu final : public UUnionUISceneBase
-{
-public:
-	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)> OnUISceneWheelSelectEvent; // 0x03E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMap<EWheelDirection, class UUnionUIButtonBase*> SelectDirectStamp;                              // 0x03F0(0x0050)(Edit, BlueprintVisible, ExportObject, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class UMenuInputRecieveObject*                MenuInputReceiveObject;                            // 0x0440(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_448[0xF8];                                     // 0x0448(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnUISceneWheelSelectEvent_Impl(class UUnionUIButtonBase* UnionButton, int32 ButtonIndex);
-	void SetUpWheelParam(bool bInIsLeftTurn, float InLStickIgone, bool bInIsTopHalf, float InBitweenDeathZone);
-	void UISceneWheelMenuKeyBind(class APlayerController* InPlayerController);
-	void UISceneWheelMenuKeyUnBind(class APlayerController* InPlayerController);
-	void WheelMenuSelect_Impl(const struct FVector& InStickVector);
-	void WheelMenuSelectInput_Impl(class UObject* Object, const struct FVector2D& InStickVector);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UnionUIWheelMenu")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UnionUIWheelMenu")
-	}
-	static class UUnionUIWheelMenu* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUnionUIWheelMenu>();
-	}
-};
-DUMPER7_ASSERTS_UUnionUIWheelMenu;
-
 // Class UnionUI.WidgetFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UWidgetFunctionLibrary final : public UBlueprintFunctionLibrary
@@ -2021,41 +1983,105 @@ public:
 };
 DUMPER7_ASSERTS_UWidgetFunctionLibrary;
 
-// Class UnionUI.WidgetManBaseWidget
-// 0x0080 (0x0360 - 0x02E0)
-class UWidgetManBaseWidget final : public UUserWidget
+// Class UnionUI.WidgetManComponent
+// 0x00D0 (0x0170 - 0x00A0)
+class UWidgetManComponent final : public UActorComponent
 {
 public:
-	class UCanvasPanel*                           RootPanel;                                         // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DebugString;                                       // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              DebugInfoPosition;                                 // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowDebugInfo;                                     // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class UWidgetManDebugString*>            DebugStringObjectSet;                              // 0x0310(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnLostPriority; // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnRegainPriority; // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnPushed; // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUserWidget* EventedWidget, class UObject* LogicObject)> OnPoped; // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMap<EWidgetManZLayer, int32>                 ZLayerToZOrder;                                    // 0x00E0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          CreateDebugInfo;                                   // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowDebugInfo;                                     // 0x0131(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              DebugInfoPosition;                                 // 0x0138(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BaseWidgetZOrder;                                  // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidgetManDebugString*                  DebugStringObject;                                 // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UWidgetManContainer*>            WidgetStack;                                       // 0x0158(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class UWidgetManBaseWidget*                   BaseWidget;                                        // 0x0168(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void AddChild(class UUserWidget* ChildWidget, class UCanvasPanelSlot* ChildSlot, int32 ZOrder);
-	void AppendDebugString(const class FString& String__const);
-	void AttachDebugStringObject(class UWidgetManDebugString* DebugStringObject);
-	void ClearDebugString();
-	void DetachDebugStringObject(class UWidgetManDebugString* DebugStringObject);
-	void RemoveChild(class UUserWidget* Widget, bool* IsSucceeded);
+	void AddWidgetToTopAsGroup(class UUserWidget* Widget, class UObject* Logic, bool* IsSucceeded);
+	void AttachDebugStringObject(class UWidgetManDebugString* DebugStringObjectRef);
+	void DetachDebugStringObject(class UWidgetManDebugString* DebugStringObjectRef);
+	void EventBeginBaseWidget();
+	void EventBeginDebug();
+	void EventBeginStack();
+	void EventDrawDebug();
+	void EventEndBaseWidget();
+	void EventEndDebug();
+	void EventEndStack();
+	void FindWidget(class UUserWidget* Widget, bool* IsFound, int32* IndexFromTop, int32* IndexInGroup);
+	void GetTopWidget(int32 Index_0, bool* IsSucceeded, class UUserWidget** Widget, bool* IsSubWidget, class UObject** Logic);
+	void GetTopWidgetCount(int32* WidgetCount);
+	void NotifyLostPriority();
+	void NotifyPoped(class UUserWidget* Widget, class UObject* Logic);
+	void NotifyPushed(class UUserWidget* Widget, class UObject* Logic);
+	void NotifyRegainPriority();
+	void PopAllWidgets();
+	void PopWidget(bool* IsSucceeded);
+	void PushSubWidget(class UUserWidget* SubWidget, class UObject* Logic);
+	int32 PushWidget(class UUserWidget* Widget, class UObject* Logic, EWidgetManZLayer ZLayer);
+	void SwapTopWidget(class UUserWidget* Widget, bool* IsSucceeded);
+	void SwapTopWidgetByIndex(int32 IndexFromTop, bool* IsSucceeded);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("WidgetManBaseWidget")
+		STATIC_CLASS_IMPL("WidgetManComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"WidgetManBaseWidget")
+		STATIC_NAME_IMPL(L"WidgetManComponent")
 	}
-	static class UWidgetManBaseWidget* GetDefaultObj()
+	static class UWidgetManComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UWidgetManBaseWidget>();
+		return GetDefaultObjImpl<UWidgetManComponent>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetManBaseWidget;
+DUMPER7_ASSERTS_UWidgetManComponent;
+
+// Class UnionUI.WidgetManContainer
+// 0x0040 (0x0068 - 0x0028)
+class UWidgetManContainer final : public UObject
+{
+public:
+	class UObject*                                Logic;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UUserWidget*>                    WidgetArray;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UCanvasPanelSlot*>               CanvasPanelSlotArray;                              // 0x0040(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        LogicArray;                                        // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          IsSubWidget;                                       // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ContainerZOrder;                                   // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void AddWidget(class UUserWidget* Widget, class UCanvasPanelSlot* Slot, class UObject* LogicObjectRef, bool* bSucceeded);
+	void FindWidget(class UUserWidget* Widget, bool* IsFound, int32* Index_0);
+	void GetWidgetAt(int32 Index_0, bool* IsSucceeded, class UUserWidget** Widget, class UObject** LogicObject);
+	void GetWidgetCount(int32* WidgetCount);
+	void Initialize(class UUserWidget* Widget, const int32 ZOrder, class UCanvasPanelSlot* Slot, class UObject* LogicObjectRef, bool bSubWidget);
+	void IsSubWidgetContainer(bool* bSubWidget);
+	void OffsetZOrder(int32 Offset);
+	void SetZOrder(int32 InZOrder);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WidgetManContainer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WidgetManContainer")
+	}
+	static class UWidgetManContainer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWidgetManContainer>();
+	}
+};
+DUMPER7_ASSERTS_UWidgetManContainer;
 
 // Class UnionUI.WidgetManDebugString
 // 0x0058 (0x0080 - 0x0028)

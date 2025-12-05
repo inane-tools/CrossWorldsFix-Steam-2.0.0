@@ -23,8 +23,8 @@ class UBPC_RaceResultParty_C final : public URaceResultSequenceStateParty
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ABP_RaceResultSequence_C*               OwnerSeq;                                          // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWBP_GroupResult_C*                     GroupResult;                                       // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_GroupResult_C*                     GroupResult;                                       // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ABP_RaceResultSequence_C*               OwnerSeq;                                          // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BPC_RaceResultParty(int32 EntryPoint);

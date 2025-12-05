@@ -331,7 +331,7 @@ DUMPER7_ASSERTS_USoundfieldEffectSettingsBase;
 class USoundfieldEffectBase final : public UObject
 {
 public:
-	class USoundfieldEffectSettingsBase*          Settings;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundfieldEffectSettingsBase*          Settings;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -374,7 +374,7 @@ DUMPER7_ASSERTS_UWaveformTransformationBase;
 class UWaveformTransformationChain final : public UObject
 {
 public:
-	TArray<class UWaveformTransformationBase*>    Transformations;                                   // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UWaveformTransformationBase*>    Transformations;                                   // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

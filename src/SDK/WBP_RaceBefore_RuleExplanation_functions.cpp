@@ -147,6 +147,34 @@ void UWBP_RaceBefore_RuleExplanation_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WBP_RaceBefore_RuleExplanation.WBP_RaceBefore_RuleExplanation_C.SequenceEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_RaceBefore_RuleExplanation_C::SequenceEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "SequenceEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RaceBefore_RuleExplanation.WBP_RaceBefore_RuleExplanation_C.SequenceEvent__ENTRYPOINTWBP_RaceBefore_RuleExplanation
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_RaceBefore_RuleExplanation_C::SequenceEvent__ENTRYPOINTWBP_RaceBefore_RuleExplanation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "SequenceEvent__ENTRYPOINTWBP_RaceBefore_RuleExplanation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_RaceBefore_RuleExplanation.WBP_RaceBefore_RuleExplanation_C.SetRuleDetail
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

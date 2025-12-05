@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "MovieRenderPipelineSettings_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MovieRenderPipelineCore_classes.hpp"
+#include "MovieRenderPipelineSettings_structs.hpp"
 
 
 namespace SDK
@@ -50,8 +50,8 @@ public:
 	struct FSoftClassPath                         BurnInClass;                                       // 0x0048(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCompositeOntoFinalImage;                          // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x2F];                                      // 0x0069(0x002F)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0098(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UMoviePipelineBurnInWidget*>     BurnInWidgetInstances;                             // 0x00A0(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0098(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	TArray<class UMoviePipelineBurnInWidget*>     BurnInWidgetInstances;                             // 0x00A0(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -112,7 +112,7 @@ class UMoviePipelineWidgetRenderer final : public UMoviePipelineRenderPass
 public:
 	bool                                          bCompositeOntoFinalImage;                          // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x17];                                      // 0x0049(0x0017)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

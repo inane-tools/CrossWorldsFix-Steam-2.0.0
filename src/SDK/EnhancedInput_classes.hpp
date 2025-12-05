@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "EnhancedInput_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "EnhancedInput_structs.hpp"
 #include "DeveloperSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
@@ -76,9 +76,9 @@ public:
 	TMulticastInlineDelegate<void()>              OnSettingsApplied;                                 // 0x0040(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_50[0x20];                                      // 0x0050(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTag                           CurrentProfileIdentifier;                          // 0x0070(0x0008)(SaveGame, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<struct FGameplayTag, class UEnhancedPlayerMappableKeyProfile*> SavedKeyProfiles;            // 0x0078(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TMap<struct FGameplayTag, class UEnhancedPlayerMappableKeyProfile*> SavedKeyProfiles;            // 0x0078(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	TWeakObjectPtr<class ULocalPlayer>            OwningLocalPlayer;                                 // 0x00C8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSet<class UInputMappingContext*>             RegisteredMappingContexts;                         // 0x00D0(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TSet<class UInputMappingContext*>             RegisteredMappingContexts;                         // 0x00D0(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	void ApplySettings();
@@ -269,7 +269,7 @@ DUMPER7_ASSERTS_UEnhancedInputLibrary;
 class UEnhancedInputPlatformData final : public UObject
 {
 public:
-	TMap<class UInputMappingContext*, class UInputMappingContext*> MappingContextRedirects;          // 0x0028(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TMap<class UInputMappingContext*, class UInputMappingContext*> MappingContextRedirects;          // 0x0028(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	const class UInputMappingContext* GetContextRedirect(class UInputMappingContext* InContext) const;
@@ -385,7 +385,7 @@ class UEnhancedInputLocalPlayerSubsystem final : public ULocalPlayerSubsystem
 public:
 	uint8                                         Pad_30[0x150];                                     // 0x0030(0x0150)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              ControlMappingsRebuiltDelegate;                    // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UEnhancedInputUserSettings*             UserSettings;                                      // 0x0190(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UEnhancedInputUserSettings*             UserSettings;                                      // 0x0190(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	TMap<class UInputAction*, struct FInjectedInput> ContinuouslyInjectedInputs;                     // 0x0198(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
 
 public:
@@ -410,7 +410,7 @@ class UEnhancedInputWorldSubsystem final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_30[0x150];                                     // 0x0030(0x0150)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEnhancedPlayerInput*                   PlayerInput;                                       // 0x0180(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UEnhancedPlayerInput*                   PlayerInput;                                       // 0x0180(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_188[0x10];                                     // 0x0188(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TWeakObjectPtr<class UInputComponent>> CurrentInputStack;                                 // 0x0198(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TMap<class UInputAction*, struct FInjectedInput> ContinuouslyInjectedInputs;                     // 0x01A8(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
@@ -448,7 +448,7 @@ public:
 	uint8                                         Pad_5E8[0xA0];                                     // 0x05E8(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<struct FKey, struct FVector>             KeysPressedThisTick;                               // 0x0688(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	TMap<class UInputAction*, struct FInjectedInputArray> InputsInjectedThisTick;                    // 0x06D8(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TSet<class UInputAction*>                     LastInjectedActions;                               // 0x0728(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TSet<class UInputAction*>                     LastInjectedActions;                               // 0x0728(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_778[0x78];                                     // 0x0778(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -481,9 +481,9 @@ public:
 	EInputActionValueType                         ValueType;                                         // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInputActionAccumulationBehavior              AccumulationBehavior;                              // 0x0049(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0050(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0060(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	class UPlayerMappableKeySettings*             PlayerMappableKeySettings;                         // 0x0070(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0050(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0060(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class UPlayerMappableKeySettings*             PlayerMappableKeySettings;                         // 0x0070(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -752,9 +752,9 @@ DUMPER7_ASSERTS_UInputModifierResponseCurveExponential;
 class UInputModifierResponseCurveUser final : public UInputModifier
 {
 public:
-	class UCurveFloat*                            ResponseX;                                         // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            ResponseY;                                         // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            ResponseZ;                                         // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            ResponseX;                                         // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UCurveFloat*                            ResponseY;                                         // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UCurveFloat*                            ResponseZ;                                         // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1064,7 +1064,7 @@ DUMPER7_ASSERTS_UInputTriggerPulse;
 class UInputTriggerChordAction : public UInputTrigger
 {
 public:
-	class UInputAction*                           ChordAction;                                       // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInputAction*                           ChordAction;                                       // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -1137,7 +1137,7 @@ public:
 	class FText                                   ConfigDisplayName;                                 // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
 	bool                                          bIsDeprecated;                                     // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                MetaData;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                MetaData;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	TMap<class UInputMappingContext*, int32>      Contexts;                                          // 0x0058(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
 
 public:
@@ -1173,7 +1173,7 @@ DUMPER7_ASSERTS_UPlayerMappableInputConfig;
 class UPlayerMappableKeySettings final : public UObject
 {
 public:
-	class UObject*                                MetaData;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                MetaData;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	class FName                                   Name_0;                                            // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   DisplayName;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   DisplayCategory;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)

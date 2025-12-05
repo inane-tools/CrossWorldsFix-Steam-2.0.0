@@ -31,6 +31,20 @@ void UBPC_AppNet_C::BindOnReceiveInvite()
 }
 
 
+// Function BPC_AppNet.BPC_AppNet_C.CallSendInvitationFailed
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBPC_AppNet_C::CallSendInvitationFailed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_AppNet_C", "CallSendInvitationFailed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_AppNet.BPC_AppNet_C.CheckInvitationNoticeDisplay
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -349,21 +363,35 @@ void UBPC_AppNet_C::OnCreatedPopupWindowEvent(EPopupWindowType CreatedWindowType
 }
 
 
-// Function BPC_AppNet.BPC_AppNet_C.OnDebugSendInvitation
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   RequestIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_AppNet.BPC_AppNet_C.OnCreateShortLobbyId
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_AppNet_C::OnDebugSendInvitation(int32 RequestIndex)
+void UBPC_AppNet_C::OnCreateShortLobbyId()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnDebugSendInvitation");
+		Func = Class->GetFunction("BPC_AppNet_C", "OnCreateShortLobbyId");
 
-	Params::BPC_AppNet_C_OnDebugSendInvitation Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.RequestIndex = RequestIndex;
+
+// Function BPC_AppNet.BPC_AppNet_C.OnCreateShortLobbyIdComplete
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ShortLobbyId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBPC_AppNet_C::OnCreateShortLobbyIdComplete(const class FString& ShortLobbyId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_AppNet_C", "OnCreateShortLobbyIdComplete");
+
+	Params::BPC_AppNet_C_OnCreateShortLobbyIdComplete Parms{};
+
+	Parms.ShortLobbyId = std::move(ShortLobbyId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -606,6 +634,34 @@ void UBPC_AppNet_C::RequestLobbyInviteUserData()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_AppNet_C", "RequestLobbyInviteUserData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_AppNet.BPC_AppNet_C.SendInvitationNoPlatform
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_AppNet_C::SendInvitationNoPlatform()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_AppNet_C", "SendInvitationNoPlatform");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_AppNet.BPC_AppNet_C.SendInvitationWithPlatform
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_AppNet_C::SendInvitationWithPlatform()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_AppNet_C", "SendInvitationWithPlatform");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

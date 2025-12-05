@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "DeveloperSettings_classes.hpp"
-#include "OpenColorIO_structs.hpp"
 #include "Engine_classes.hpp"
+#include "OpenColorIO_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
@@ -82,7 +82,7 @@ public:
 	class FString                                 View;                                              // 0x0060(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOpenColorIOViewTransformDirection            DisplayViewDirection;                              // 0x0070(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class UTexture*>                  Textures;                                          // 0x0078(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<int32, class UTexture*>                  Textures;                                          // 0x0078(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_C8[0x40];                                      // 0x00C8(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -110,7 +110,7 @@ public:
 	TArray<struct FOpenColorIOColorSpace>         DesiredColorSpaces;                                // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FOpenColorIODisplayView>        DesiredDisplayViews;                               // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class FString, class FString>            Context;                                           // 0x0058(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class UOpenColorIOColorTransform*>     ColorTransforms;                                   // 0x00A8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UOpenColorIOColorTransform*>     ColorTransforms;                                   // 0x00A8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_B8[0x30];                                      // 0x00B8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ConfigHash;                                        // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 

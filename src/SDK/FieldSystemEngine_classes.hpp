@@ -25,7 +25,7 @@ namespace SDK
 class AFieldSystemActor final : public AActor
 {
 public:
-	class UFieldSystemComponent*                  FieldSystemComponent;                              // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldSystemComponent*                  FieldSystemComponent;                              // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -71,7 +71,7 @@ DUMPER7_ASSERTS_UFieldSystem;
 class UFieldSystemComponent final : public UPrimitiveComponent
 {
 public:
-	class UFieldSystem*                           FieldSystem;                                       // 0x0518(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldSystem*                           FieldSystem;                                       // 0x0518(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bIsWorldField;                                     // 0x0520(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsChaosField;                                     // 0x0521(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_522[0x6];                                      // 0x0522(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
@@ -631,8 +631,8 @@ class UOperatorField final : public UFieldNodeBase
 public:
 	float                                         Magnitude;                                         // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFieldNodeBase*                         RightField;                                        // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFieldNodeBase*                         LeftField;                                         // 0x00B0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldNodeBase*                         RightField;                                        // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UFieldNodeBase*                         LeftField;                                         // 0x00B0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	EFieldOperationType                           Operation;                                         // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -660,7 +660,7 @@ DUMPER7_ASSERTS_UOperatorField;
 class UToIntegerField final : public UFieldNodeInt
 {
 public:
-	class UFieldNodeFloat*                        FloatField;                                        // 0x00A0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldNodeFloat*                        FloatField;                                        // 0x00A0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	class UToIntegerField* SetToIntegerField(const class UFieldNodeFloat* FloatField_0);
@@ -686,7 +686,7 @@ DUMPER7_ASSERTS_UToIntegerField;
 class UToFloatField final : public UFieldNodeFloat
 {
 public:
-	class UFieldNodeInt*                          IntField;                                          // 0x00A0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldNodeInt*                          IntField;                                          // 0x00A0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	class UToFloatField* SetToFloatField(const class UFieldNodeInt* IntegerField);
@@ -712,8 +712,8 @@ DUMPER7_ASSERTS_UToFloatField;
 class UCullingField final : public UFieldNodeBase
 {
 public:
-	class UFieldNodeBase*                         Culling;                                           // 0x00A0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFieldNodeBase*                         Field;                                             // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldNodeBase*                         Culling;                                           // 0x00A0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UFieldNodeBase*                         Field;                                             // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	EFieldCullingOperationType                    Operation;                                         // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 

@@ -91,7 +91,7 @@ namespace BasicFilesImpleUtils
 const FName& GetStaticName(const wchar_t* Name, FName& StaticName);
 
 template<bool bIsFullName = false>
-class UClass* GetStaticClass(const char* Name, class UClass*& StaticClass)
+class UClass* GetStaticClassImpl(const char* Name, class UClass*& StaticClass)
 {
 	if (StaticClass == nullptr)
 	{
@@ -166,13 +166,13 @@ ClassType* GetDefaultObjImpl()
 #define STATIC_CLASS_IMPL(NameString) \
 { \
     static UClass* Clss = nullptr; \
-    return GetStaticClass(NameString, Clss); \
+    return GetStaticClassImpl(NameString, Clss); \
 }
 
 #define STATIC_CLASS_IMPL_FULLNAME(FullNameString) \
 { \
     static UClass* Clss = nullptr; \
-    return GetStaticClass<true>(FullNameString, Clss); \
+    return GetStaticClassImpl<true>(FullNameString, Clss); \
 }
 
 #define BP_STATIC_CLASS_IMPL(NameString) \
@@ -624,62 +624,6 @@ public:
 	UEType* operator->() const
 	{
 		return static_cast<UEType*>(TPersistentObjectPtr::Get());
-	}
-};
-
-class FEncryptedObjPtr
-{
-public:
-	class UObject* Object;
-	uint64_t KeyOrSomething;
-};
-
-template<typename UEType>
-class TEncryptedObjPtr : public FEncryptedObjPtr
-{
-public:
-
-public:
-	UEType* Get()
-	{
-		return static_cast<UEType*>(Object);
-	}
-	const UEType* Get() const
-	{
-		return static_cast<const UEType*>(Object);
-	}
-
-	UEType* operator->()
-	{
-		return Get();
-	}
-	const UEType* operator->() const
-	{
-		return Get();
-	}
-
-	inline operator UEType* ()
-	{
-		return Get();
-	}
-	inline operator UEType* () const
-	{
-		return Get();
-	}
-
-public:
-	inline bool operator==(const FEncryptedObjPtr& Other) const
-	{
-		return Object == Other.Object;
-	}
-	inline bool operator!=(const FEncryptedObjPtr& Other) const
-	{
-		return Object != Other.Object;
-	}
-
-	inline explicit operator bool() const
-	{
-		return Object != nullptr;
 	}
 };
 

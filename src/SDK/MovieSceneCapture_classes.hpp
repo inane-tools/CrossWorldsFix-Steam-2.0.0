@@ -146,7 +146,7 @@ public:
 	struct FSoftObjectPath                        PostProcessingMaterial;                            // 0x0078(0x0020)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisableScreenPercentage;                          // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     PostProcessingMaterialPtr;                         // 0x00A0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInterface*                     PostProcessingMaterialPtr;                         // 0x00A0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_A8[0x20];                                      // 0x00A8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -357,8 +357,8 @@ public:
 	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftClassPath                         ImageCaptureProtocolType;                          // 0x0038(0x0020)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftClassPath                         AudioCaptureProtocolType;                          // 0x0058(0x0020)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneImageCaptureProtocolBase*    ImageCaptureProtocol;                              // 0x0078(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneAudioCaptureProtocolBase*    AudioCaptureProtocol;                              // 0x0080(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneImageCaptureProtocolBase*    ImageCaptureProtocol;                              // 0x0078(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UMovieSceneAudioCaptureProtocolBase*    AudioCaptureProtocol;                              // 0x0080(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	struct FMovieSceneCaptureSettings             Settings;                                          // 0x0088(0x0070)(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
 	bool                                          bUseSeparateProcess;                               // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCloseEditorWhenCaptureStarts;                     // 0x00F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -447,7 +447,7 @@ DUMPER7_ASSERTS_UMovieSceneCaptureEnvironment;
 class UUserDefinedCaptureProtocol : public UMovieSceneImageCaptureProtocolBase
 {
 public:
-	class UWorld*                                 World;                                             // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWorld*                                 World;                                             // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_60[0x78];                                      // 0x0060(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

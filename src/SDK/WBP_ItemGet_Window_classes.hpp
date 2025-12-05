@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
 #include "UnionRun_structs.hpp"
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ItemGet_Window.WBP_ItemGet_Window_C
-// 0x0150 (0x04F8 - 0x03A8)
+// 0x0210 (0x05B8 - 0x03A8)
 class UWBP_ItemGet_Window_C final : public URewardGetWindow
 {
 public:
@@ -71,6 +71,8 @@ public:
 	double                                        ForceCount;                                        // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             TargetTexture;                                     // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	ERewardType                                   Reward_Type;                                       // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGadgetData                            TempGadgetData;                                    // 0x04F8(0x00C0)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BndEvt__WBP_ItemGet_Window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature();

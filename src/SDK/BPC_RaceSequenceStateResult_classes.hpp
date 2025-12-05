@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateResult.BPC_RaceSequenceStateResult_C
-// 0x0028 (0x0150 - 0x0128)
+// 0x0038 (0x0160 - 0x0128)
 class UBPC_RaceSequenceStateResult_C final : public URaceSequenceStateResult
 {
 public:
@@ -29,6 +29,8 @@ public:
 	class ABP_RaceSequence_C*                     Owner_BP;                                          // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UBP_RewardAchievementManager_C*         RewardAchievementManager;                          // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            RusultWidget;                                      // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_GroupResult_C*                     GroupResultWidget;                                 // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_EndMenu_GudgetLv_Window_C*         ResultGadgetPlateWidget;                           // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BPC_RaceSequenceStateResult(int32 EntryPoint);
@@ -39,6 +41,7 @@ public:
 	void OnInitState();
 	void RaceHudOutAnimEnd();
 	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void SaveDonpaTicket();
 	void SetRewardAchievement();
 

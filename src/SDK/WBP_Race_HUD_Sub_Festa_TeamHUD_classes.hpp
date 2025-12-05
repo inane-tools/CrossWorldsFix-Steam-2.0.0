@@ -59,7 +59,7 @@ public:
 	void GetCrownIndex(int32 Input, int32* Output);
 	void GetTeamRank(int32* NextTeamRank);
 	void InitializeRingGauge();
-	void PlayChrageEffect(int32 RacerIndex, bool IsSingle, double ChargePer);
+	void PlayChrageEffect(int32 RacerIndex, bool isSingle, double ChargePer);
 	void PlayEffectBase();
 	void SetBaseColor();
 	void SetBoostGaugePercent(double Percent);
@@ -70,7 +70,7 @@ public:
 	void SetNormalGaugePercent(double Percent);
 	void SetPanelRank(class UWBP_Race_HUD_Sub_Festa_TeamGroup_C* RanelHHUD, int32 Rank);
 	void SetPreStartInfo(bool IsValid, int32 PlayerIndex, class UWBP_Race_HUD_Sub_Festa_TeamGroup_P1_C* InWBPGroup);
-	void SetRankForSingle(int32 NewParam);
+	void SetRankForSingle(int32 newParam);
 	void SetRankTimer();
 	void SetTeamIcon(int32 TeamId, int32 WindowNo);
 	void SetTeamInfo();

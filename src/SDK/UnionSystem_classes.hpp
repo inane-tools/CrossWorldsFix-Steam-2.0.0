@@ -32,33 +32,48 @@
 namespace SDK
 {
 
-// Class UnionSystem.UnionStaticMeshComponent
-// 0x0000 (0x05E0 - 0x05E0)
-#pragma pack(push, 0x1)
-class alignas(0x10) UUnionStaticMeshComponent : public UStaticMeshComponent
+// Class UnionSystem.UnionAddOnBase
+// 0x0000 (0x0028 - 0x0028)
+class UUnionAddOnBase : public UObject
 {
 public:
-	void ChangeMaterial(int32 MaterialID, bool bChange, class UMaterialInterface* InMaterial);
-	void ResetMaterialAll();
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UnionAddOnBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UnionAddOnBase")
+	}
+	static class UUnionAddOnBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUnionAddOnBase>();
+	}
+};
+DUMPER7_ASSERTS_UUnionAddOnBase;
 
-	bool IsNotChangedMaterial(int32 MaterialID) const;
+// Class UnionSystem.UnionAddOnSteam
+// 0x0050 (0x0078 - 0x0028)
+class UUnionAddOnSteam final : public UUnionAddOnBase
+{
+public:
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UnionStaticMeshComponent")
+		STATIC_CLASS_IMPL("UnionAddOnSteam")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UnionStaticMeshComponent")
+		STATIC_NAME_IMPL(L"UnionAddOnSteam")
 	}
-	static class UUnionStaticMeshComponent* GetDefaultObj()
+	static class UUnionAddOnSteam* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUnionStaticMeshComponent>();
+		return GetDefaultObjImpl<UUnionAddOnSteam>();
 	}
 };
-#pragma pack(pop)
-DUMPER7_ASSERTS_UUnionStaticMeshComponent;
+DUMPER7_ASSERTS_UUnionAddOnSteam;
 
 // Class UnionSystem.AppControllerInputManager
 // 0x0018 (0x0058 - 0x0040)
@@ -150,6 +165,7 @@ public:
 	static bool IsPlayInEditor();
 	static bool IsPlayStation();
 	static bool IsPre2ndRom();
+	static bool IsReachedTargetVersion(EUnionRomVersion TargetVersion);
 	static bool IsShippingBuild();
 	static bool IsSupportHDVibration();
 	static bool IsSwitch();
@@ -222,80 +238,56 @@ public:
 };
 DUMPER7_ASSERTS_UChallengeStatsUtility;
 
-// Class UnionSystem.MilestoneUtil
-// 0x0000 (0x0028 - 0x0028)
-class UMilestoneUtil final : public UBlueprintFunctionLibrary
+// Class UnionSystem.MenuPopupWindowInterface
+// 0x0000 (0x0000 - 0x0000)
+class IMenuPopupWindowInterface final
 {
 public:
-	static EMilestoneVersion GetEnablePrelaunchAnotherStageLotteryMilestoneVersion();
-	static const TArray<EDriverId> GetGrandPrixRivalDriverIds();
-	static EDriverId GetRivalByMilestoneVersion();
-	static bool IsAlreadyGrandPrixLeast1Play();
-	static bool IsCharaIconLockCover(EDriverId DriverId);
-	static bool IsCloseCourseInRaceParkCustomMatchMilestoneVersion();
-	static bool IsDisableDecisionInRaceParkMilestoneVersion();
-	static bool IsDisableEtceteraChallengeMilestoneVersion();
-	static bool IsDisableEtceteraHintMilestoneVersion();
-	static bool IsDisableEtceteraOthersMilestoneVersion();
-	static bool IsDisableEtceteraStoreMilestoneVersion();
-	static bool IsDisableEtceteraTitleMilestoneVersion();
-	static bool IsDisableFestaMilestoneVersion();
-	static bool IsDisableFriendlistMilestoneVersion();
-	static bool IsDisableGetAchievement();
-	static bool IsDisableGrandPrixCourse2MilestoneVersion();
-	static bool IsDisableGrandPrixCourse3MilestoneVersion();
-	static bool IsDisableGrandPrixCourseMilestoneVersion();
-	static bool IsDisableGrandPrixMilestoneVersion();
-	static bool IsDisableHornAuraTabMilestoneVersion();
-	static bool IsDisableRaceParkMilestoneVersion();
-	static bool IsDisableRaceParkRivalOnOffMilestoneVersion();
-	static bool IsDisableSelectTimeTrialMilestoneVersion();
-	static bool IsDisableTimeTrialMilestoneVersion();
-	static bool IsDisableTopMenuFestaRuleMilestoneVersion();
-	static bool IsDisableTopMenuNewsMilestoneVersion();
-	static bool IsDisableTrialMilestoneVersion();
-	static bool IsEnableAdvertiseRatingMilestoneVersion();
-	static bool IsEnableEtceteraFullGameStoreMilestoneVersion();
-	static bool IsEnableResetSaveDataMilestoneVersion();
-	static bool IsEnableSpecificTitleDebugCommandMilestoneVersion();
-	static bool IsEnableThumbnailCollaboRaceMilestoneVersion();
-	static bool IsEnableTitleDemoMilestoneVersion();
-	static bool IsEnableTitleStoreMilestoneVersion();
-	static bool IsEnableTopMenuStoreMilestoneVersion();
-	static bool IsEnableTopMenuStorePopupAutoMilestoneVersion();
-	static bool IsExclusionGhostUpDownloadEventMilestoneVersion();
-	static bool IsForceEnableTopMenuNewsMilestoneVersion();
-	static bool IsHiddenCharacter(EDriverId DriverId);
-	static bool IsHiddenMachineParts(EMachineId MachineId);
-	static bool IsHiddenRomVerMilestoneVersion();
-	static bool IsHiddenWebManualQRcodeMilestoneVersion();
-	static bool IsHideTipsInPreLaunchHide(EHintId InHintId);
-	static bool IsIgnoreTypeDashInGarage();
-	static bool IsInitialMachineParts(EMachineId MachineId, int32 FrontPrice, int32 RearPrice, int32 TirePrice);
-	static bool IsLimitDonpaTicketMilestoneVersion();
-	static bool IsLimitRewardInRaceParkMilestoneVersion();
-	static bool IsOfflineMilestoneVersion();
-	static bool IsRaceUnLockedMilestoneVersion(const EGameModeId InGameModeId, const EStageId InStageId);
-	static bool IsSkipDodonpaEventMilestoneVersion();
-	static bool IsSkipSelectPlayNumMilestoneVersion();
-	static bool IsTopMenuAccessLoginSuccessOnly();
-	static bool IsVisibleCompanyNameMilestoneVersion();
+	class UWidgetAnimation* GetAnimationIn();
+	class UWidgetAnimation* GetAnimationLoop();
+	class UWidgetAnimation* GetAnimationOut();
+	EPopupWindowButtonType GetPopupWindowButtonType();
+	EPopupWindowType GetPopupWindowType();
+	void InitParam(EPopupWindowButtonType ButtonType);
+	void PlayAnimationIn();
+	void SetButtonControlDelayTime(float InTime);
+	void SetButtonText(const TArray<class FText>& BtnTextArray);
+	void SetDisplayFooterButton(const bool InDisplay);
+	void SetDonpaTicketCount(int32 CurrentCount, int32 AfterCount);
+	void SetEnableInput(bool InEnable);
+	void SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType, const class FText& BtnText);
+	void SetImageButtonSelectText(const class FText& InText);
+	void SetImageTexture(const class UTexture2D* Texture2D);
+	void SetInitialFocusButtonIndex(const int32 InButtonIndex);
+	void SetPopupInfoDisplayIndex(int32 Index_0);
+	void SetPopupInfoMainMenuButtonIconIndex(int32 Btn01IconIndex, int32 Btn02IconIndex);
+	void SetTextMessege(const class FText& Text);
+	void SetTextTitle(const class FText& Text, bool Attension);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MilestoneUtil")
+		STATIC_CLASS_IMPL("MenuPopupWindowInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MilestoneUtil")
+		STATIC_NAME_IMPL(L"MenuPopupWindowInterface")
 	}
-	static class UMilestoneUtil* GetDefaultObj()
+	static class IMenuPopupWindowInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMilestoneUtil>();
+		return GetDefaultObjImpl<IMenuPopupWindowInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_UMilestoneUtil;
+DUMPER7_ASSERTS_IMenuPopupWindowInterface;
 
 // Class UnionSystem.AppGameInstance
 // 0x0020 (0x01E0 - 0x01C0)
@@ -327,40 +319,31 @@ public:
 };
 DUMPER7_ASSERTS_UAppGameInstance;
 
-// Class UnionSystem.HonorTitleListDataAsset
-// 0x0058 (0x0088 - 0x0030)
-class UHonorTitleListDataAsset final : public UDataAsset
+// Class UnionSystem.HashHelper
+// 0x0000 (0x0028 - 0x0028)
+class UHashHelper final : public UBlueprintFunctionLibrary
 {
 public:
-	class UDataTable*                             HonorTitleCompositeDataTable;                      // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, struct FHonorTitleListData>       HonorTitleTableDataMap;                            // 0x0038(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
-
-public:
-	void ClearData();
-	void Update();
-
-	TArray<struct FHonorTitleListData> GetAllHonorTitleAndIdWithRarity(int32 Rarity, TArray<int32>* outHonorTitleIdArray) const;
-	TArray<struct FHonorTitleListData> GetAllHonorTitleWithRarity(int32 Rarity) const;
-	TSoftObjectPtr<class UTexture2D> GetHonorTitlePlate(int32 HonorTitleId) const;
-	int32 GetHonorTitleRarity(int32 HonorTitleId) const;
-	class FText GetHonorTitleVBName(int32 HonorTitleId, bool* IsValid) const;
-	bool GetIsHonorTitleDLC(int32 HonorTitleIndex) const;
+	static TArray<uint8> HashIntoByteArray(const class FString& Data);
+	static TArray<uint8> HashIntoByteArrayFromByteArray(const TArray<uint8>& Bytes);
+	static class FString HashIntoTextString(const class FString& Data);
+	static class FString HashIntoTextStringFromByteArray(const TArray<uint8>& Bytes);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HonorTitleListDataAsset")
+		STATIC_CLASS_IMPL("HashHelper")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HonorTitleListDataAsset")
+		STATIC_NAME_IMPL(L"HashHelper")
 	}
-	static class UHonorTitleListDataAsset* GetDefaultObj()
+	static class UHashHelper* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHonorTitleListDataAsset>();
+		return GetDefaultObjImpl<UHashHelper>();
 	}
 };
-DUMPER7_ASSERTS_UHonorTitleListDataAsset;
+DUMPER7_ASSERTS_UHashHelper;
 
 // Class UnionSystem.AppGameMode
 // 0x0000 (0x0328 - 0x0328)
@@ -382,36 +365,45 @@ public:
 };
 DUMPER7_ASSERTS_AAppGameMode;
 
-// Class UnionSystem.ControllerButtonData
-// 0x0050 (0x0080 - 0x0030)
-class UControllerButtonData final : public UDataAsset
+// Class UnionSystem.JukeboxDataAsset
+// 0x00B0 (0x00E0 - 0x0030)
+class UJukeboxDataAsset final : public UDataAsset
 {
 public:
-	TMap<struct FKey, EControllerButtonTextureIndex> KeyConfig;                                      // 0x0030(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class UDataTable*                             JukeboxAlbumCompositeDataTable;                    // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             JukeboxTrackCompositeDataTable;                    // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, struct FAlbumData>                AlbumDataMap;                                      // 0x0040(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
+	TMap<int32, struct FTrackData>                TrackDataMap;                                      // 0x0090(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
+
+public:
+	void ClearData();
+	struct FAlbumData GetAlbumData(int32 AlbumID);
+	struct FTrackData GetTrackData(int32 TrackID);
+	void Update();
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ControllerButtonData")
+		STATIC_CLASS_IMPL("JukeboxDataAsset")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ControllerButtonData")
+		STATIC_NAME_IMPL(L"JukeboxDataAsset")
 	}
-	static class UControllerButtonData* GetDefaultObj()
+	static class UJukeboxDataAsset* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UControllerButtonData>();
+		return GetDefaultObjImpl<UJukeboxDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UControllerButtonData;
+DUMPER7_ASSERTS_UJukeboxDataAsset;
 
 // Class UnionSystem.SimpleAnimationComponent
 // 0x0080 (0x0120 - 0x00A0)
 class alignas(0x10) USimpleAnimationComponent : public UActorComponent
 {
 public:
-	class UAnimSequence*                          Animation;                                         // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USceneComponent*                        Target;                                            // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          Animation;                                         // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class USceneComponent*                        Target;                                            // 0x00A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	float                                         PlayRate;                                          // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PlayOffsetInFrame;                                 // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B8[0x68];                                      // 0x00B8(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -431,30 +423,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USimpleAnimationComponent;
-
-// Class UnionSystem.SimpleAnimEventComponent
-// 0x0020 (0x0140 - 0x0120)
-class USimpleAnimEventComponent final : public USimpleAnimationComponent
-{
-public:
-	TArray<struct FUnionSimpleAnimEvent>          AnimEventSequence;                                 // 0x0120(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_130[0x10];                                     // 0x0130(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SimpleAnimEventComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SimpleAnimEventComponent")
-	}
-	static class USimpleAnimEventComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USimpleAnimEventComponent>();
-	}
-};
-DUMPER7_ASSERTS_USimpleAnimEventComponent;
 
 // Class UnionSystem.AtomListenerFocusPointForCamera
 // 0x0020 (0x0250 - 0x0230)
@@ -520,6 +488,7 @@ public:
 	static void ApplyAntiAliasMethod();
 	static void ApplyAudioSettings();
 	static void ApplyBlur();
+	static void ApplyButtonTextureFromSave();
 	static void ApplyFrameRateLimit();
 	static void ApplyFullscreenMode(bool ApplyImmediately);
 	static void ApplyGraphicMode();
@@ -660,18 +629,18 @@ class UAppPlayerControllerSubsystem final : public UGameInstanceSubsystem
 {
 public:
 	TMap<class FName, EControllerButtonTextureIndex> ButtonNameToTextureIndex;                       // 0x0030(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FName, class UMaterialInstanceDynamic*> ButtonMaterials;                              // 0x0080(0x0050)(BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<class FName, class UMaterialInstanceDynamic*> ButtonMaterials;                              // 0x0080(0x0050)(BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	TMap<class FName, class FName>                TagToActionMapping;                                // 0x00D0(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<struct FKey, class UMaterialInstanceDynamic*> KeyToButtonMaterial;                          // 0x0120(0x0050)(BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<struct FKey, class UMaterialInstanceDynamic*> KeyToButtonMaterial;                          // 0x0120(0x0050)(BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 	TMap<struct FKey, EControllerButtonTextureIndex> KeyToPadTextureIndex;                           // 0x0170(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class UTexture2D*                             CurrentButtonTexture;                              // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UControllerButtonData*                  FKeyToControllerTextureIndex;                      // 0x01C8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             CurrentButtonTexture;                              // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UControllerButtonData*                  FKeyToControllerTextureIndex;                      // 0x01C8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         CurrentDisplayKeyboardLayout;                      // 0x01D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         CurrentDisplayKeytopPattern;                       // 0x01D1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D2[0x6];                                      // 0x01D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<EControllerButtonTextureIndex, EMenuKeyboardButtonTextureIndex> PadToMenuKeyboardTextureIndex; // 0x01D8(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
 	uint8                                         Pad_228[0x28];                                     // 0x0228(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AAppPlayerController*>           AppPlayerControllers;                              // 0x0250(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class AAppPlayerController*>           AppPlayerControllers;                              // 0x0250(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	TMap<struct FKey, struct FLocalizeRuntimeTextArray> KeyToKeytopTextMap;                          // 0x0260(0x0050)(NativeAccessSpecifierPrivate)
 
 public:
@@ -681,8 +650,6 @@ public:
 	class AAppPlayerController* CreatePlayer(int32 ControllerId, bool bSpawnPlayerController);
 	class AAppPlayerController* GetAppPlayerController(int32 ControllerId);
 	int32 GetControllerTextureIndexFromFKey(const struct FKey& InKey);
-	EControllerButtonTextureType GetCurrentButtonTextureType();
-	class UTexture2D* GetCurrentDeviceTexture();
 	class UTexture2D* GetMenuKeyboardButtonTexture();
 	class UTexture2D* GetMenuMouseButtonTexture();
 	void RemoveDeviceChangeInterface(int32 InPlayerControllerIndex, class UObject* InIFObject);
@@ -693,6 +660,8 @@ public:
 	void UpdateButtonMaterialByDeviceType(uint8 DeviceType);
 	void UpdateCurrentButtonTextureType();
 
+	EControllerButtonTextureType GetCurrentButtonTextureType() const;
+	class UTexture2D* GetCurrentDeviceTexture() const;
 	uint8 GetCurrentDisplayKeytopPattern(int32 InPlayerIndex) const;
 
 public:
@@ -780,9 +749,12 @@ class UAppSaveGameHelper final : public UBlueprintFunctionLibrary
 public:
 	static void AddALLRivalWinCount();
 	static void AddCompensationData(int32 ID);
+	static bool AddLegendCompeEnteredSeason(int32 InSeason);
+	static void AddLegendCompeRecievedFinalResultSeason(int32 InSeason);
 	static void AddRaceStatsValue(const EStatsEventId InStatsId, const int32 Value);
 	static void AddRewardGetDisplayRequestData(ERewardAchievementType InRewardAchievementType);
 	static void AddRivalWinCount(EDriverId DriverId);
+	static TArray<int32> CalcLegendCompeNeedFinalResultSeason();
 	static bool CheckRewardGetDisplayRequest(ERewardAchievementType InRewardAchievementType);
 	static bool CheckRewardGetDisplayRequestData();
 	static void ClearDriverNew(EDriverId InDriverId);
@@ -818,6 +790,7 @@ public:
 	static bool GetIsValidGhost(const EStageId InStageId, const ESpeedClassId InSpeedClassId);
 	static struct FItemSwitchSetting GetItemSwitchSetting(EGameModeId InGameModeId);
 	static struct FItemSwitchSettingSave GetItemSwitchSettingSave(EGameModeId InGameModeId);
+	static TArray<int32> GetLegendCompeEnteredSeason();
 	static void GetMachineColorPresetAll(TArray<EMachineColorPresetId>* OutMachineColorPresetId);
 	static void GetMachinePartsAll(TArray<EMachineId>* OutFrontPartsId, TArray<EMachineId>* OutRearPartsId, TArray<EMachineId>* OutTirePartsId);
 	static bool GetNewHonorTitleUnlocked(int32 HonorTitleIndex);
@@ -976,7 +949,7 @@ public:
 DUMPER7_ASSERTS_UAppSaveGameHelper;
 
 // Class UnionSystem.AppSaveGame
-// 0x0C30 (0x0C58 - 0x0028)
+// 0x0C50 (0x0C78 - 0x0028)
 class UAppSaveGame final : public USaveGame
 {
 public:
@@ -1006,6 +979,7 @@ public:
 	uint8                                         Pad_C19[0x7];                                      // 0x0C19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUserActivityCardFlagData              _UserActivityCardFlagData;                         // 0x0C20(0x0028)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FCompensationData                      _CompensationData;                                 // 0x0C48(0x0010)(NativeAccessSpecifierPublic)
+	struct FUserLegendCompeData                   _UserLegendCompeData;                              // 0x0C58(0x0020)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1061,6 +1035,7 @@ public:
 	static void LogTimeSpanMillisecondsByNamedDateTimes(const class FName& InBeginTimeName, const class FName& InEndTimeName);
 	static class FText MakeDateText(const struct FDateTime& DateTime);
 	static class FText MakeDateTimeText(const struct FDateTime& DateTime);
+	static class FText ReplaceDateTimePlaceholder(const class FText& BaseText, const struct FDateTime& StartDateLocalTime, const struct FDateTime& EndDateLocalTime);
 	static struct FTimespan Sub_DateTimeDateTime(const struct FDateTime& A, const struct FDateTime& B);
 	static bool UnionDateTimeParse(class FString& DateTimeString, struct FDateTime* OutDateTime);
 
@@ -1402,10 +1377,13 @@ class UDebugOnlineAutoPlaySetting final : public UBlueprintFunctionLibrary
 {
 public:
 	static int32 GetDebugAutoPlayMode();
+	static int32 GetMaxDebugAutoPlayModeNum();
 	static bool IsDebugAutoPlay();
+	static bool IsDebugAutoPlayMonkeyTest();
 	static bool IsDebugAutoPlayShortRace();
 	static void SetDebugAutoPlay(bool flg);
 	static void SetDebugAutoPlayMode(int32 Mode);
+	static void SetDebugAutoPlayMonkeyTest(bool flg);
 	static void SetDebugAutoPlayShortRace(bool flg);
 
 public:
@@ -1486,8 +1464,8 @@ DUMPER7_ASSERTS_UDriverIdUtilityLibrary;
 class ULobbyMemberContextBase : public UObject
 {
 public:
-	class ULobbyContextBase*                      LobbyContext;                                      // 0x0028(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ULobbyMemberTransactionParam*           TransactionParam;                                  // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ULobbyContextBase*                      LobbyContext;                                      // 0x0028(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class ULobbyMemberTransactionParam*           TransactionParam;                                  // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_38[0x68];                                      // 0x0038(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1679,11 +1657,11 @@ public:
 DUMPER7_ASSERTS_UFlagFileManager;
 
 // Class UnionSystem.FriendSubsystem
-// 0x0CA0 (0x0CD0 - 0x0030)
+// 0x0CB0 (0x0CE0 - 0x0030)
 class UFriendSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0xCA0];                                     // 0x0030(0x0CA0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xCB0];                                     // 0x0030(0x0CB0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddBlockPlayer(const class FString& ProductUserId, TDelegate<void(EBlockPlayerErrorCode ErrorCode, const class FString& ProductUserId)> OnComplete);
@@ -1783,6 +1761,38 @@ public:
 };
 DUMPER7_ASSERTS_UFriendSubsystem;
 
+// Class UnionSystem.GadgetSettingData
+// 0x02A0 (0x02D0 - 0x0030)
+class UGadgetSettingData final : public UDataAsset
+{
+public:
+	struct FGadgetSetting                         GadgetSettingTable[0x85];                          // 0x0030(0x0005)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void UpdateGadgetSetting();
+
+	EGadgetMenuCategory GadgetMenuCategory(EGadgetId gadgetId) const;
+	bool IsEquippable(EGadgetId gadgetId) const;
+	bool IsGadgetKit(EGadgetId gadgetId) const;
+	bool IsHiddenGadget(EGadgetId gadgetId) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GadgetSettingData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GadgetSettingData")
+	}
+	static class UGadgetSettingData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGadgetSettingData>();
+	}
+};
+DUMPER7_ASSERTS_UGadgetSettingData;
+
 // Class UnionSystem.GameActivitySubsystem
 // 0x0000 (0x0030 - 0x0030)
 class UGameActivitySubsystem final : public UGameInstanceSubsystem
@@ -1845,8 +1855,8 @@ public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(bool IsError, EUploadState UploadState)> CompleteUpload;           // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              FinishUpload;                                      // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UGhostUploader*                         m_ghostUploader;                                   // 0x0050(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UGhostResultUploader*                   m_resultUploader;                                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UGhostUploader*                         m_ghostUploader;                                   // 0x0050(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UGhostResultUploader*                   m_resultUploader;                                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_60[0x4C0];                                     // 0x0060(0x04C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1915,7 +1925,7 @@ public:
 	TMulticastInlineDelegate<void(bool OutIsError)> FinishDownload;                                  // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              FailedDownload;                                    // 0x02A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2B0[0x28];                                     // 0x02B0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGhostDownloader*                       m_ghostDownloader;                                 // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UGhostDownloader*                       m_ghostDownloader;                                 // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_2E0[0xA8];                                     // 0x02E0(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -1998,7 +2008,7 @@ public:
 DUMPER7_ASSERTS_UGhostResultUploader;
 
 // Class UnionSystem.GhostSubSystem
-// 0x01E0 (0x0210 - 0x0030)
+// 0x01D0 (0x0200 - 0x0030)
 class UGhostSubSystem final : public UGameInstanceSubsystem
 {
 public:
@@ -2011,15 +2021,16 @@ public:
 	EStageId                                      m_CurrentStageId;                                  // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 m_CurrentDateTime;                                 // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1F8[0x18];                                     // 0x01F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CheckCachedGhostDataUserMatch(const class FString& InUserId, const ESpeedClassId InSpeedClass, const EStageId InStageId, const class FString& InDateTime);
-	void OnCompleteSanitize(bool bSuccess, const class FString& SanitizeMessage);
+	bool GetDownloadGhostData(struct FReplaySaveInfo* OutGhostData);
 	void ResetDownloadGhostData();
-	void SetDownloadGhostData(const class FString& InUserId, const ESpeedClassId InSpeedClass, const EStageId InStageId, const class FString& InDateTime, const struct FReplaySaveInfo& InGhostData);
+	void SetDownloadGhostData(const class FString& InUserId, const ESpeedClassId InSpeedClass, const EStageId InStageId, const class FString& InDateTime, const class FString& InRankingName, const struct FReplaySaveInfo& InGhostData);
 	void SetGhostRequestFailed(bool InFailed);
 
+	bool GetDebugEnableGhostUploadCancel() const;
 	bool IsGhostRequestFailed() const;
 
 public:
@@ -2128,31 +2139,41 @@ public:
 };
 DUMPER7_ASSERTS_UUIColorInfoDataAsset;
 
-// Class UnionSystem.HashHelper
-// 0x0000 (0x0028 - 0x0028)
-class UHashHelper final : public UBlueprintFunctionLibrary
+// Class UnionSystem.HonorTitleListDataAsset
+// 0x0058 (0x0088 - 0x0030)
+class UHonorTitleListDataAsset final : public UDataAsset
 {
 public:
-	static TArray<uint8> HashIntoByteArray(const class FString& Data);
-	static TArray<uint8> HashIntoByteArrayFromByteArray(const TArray<uint8>& Bytes);
-	static class FString HashIntoTextString(const class FString& Data);
-	static class FString HashIntoTextStringFromByteArray(const TArray<uint8>& Bytes);
+	class UDataTable*                             HonorTitleCompositeDataTable;                      // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, struct FHonorTitleListData>       HonorTitleTableDataMap;                            // 0x0038(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
+
+public:
+	void ClearData();
+	void Update();
+
+	TArray<struct FHonorTitleListData> GetAllHonorTitleAndIdWithRarity(int32 Rarity, TArray<int32>* outHonorTitleIdArray) const;
+	TArray<struct FHonorTitleListData> GetAllHonorTitleWithRarity(int32 Rarity) const;
+	void GetHonorTitleLegendCompeInfo(int32 HonorTitleIndex, bool* IsLegendCompe, int32* RoundNum) const;
+	TSoftObjectPtr<class UTexture2D> GetHonorTitlePlate(int32 HonorTitleId) const;
+	int32 GetHonorTitleRarity(int32 HonorTitleId) const;
+	class FText GetHonorTitleVBName(int32 HonorTitleId, bool* IsValid) const;
+	bool GetIsHonorTitleDLC(int32 HonorTitleIndex) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("HashHelper")
+		STATIC_CLASS_IMPL("HonorTitleListDataAsset")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"HashHelper")
+		STATIC_NAME_IMPL(L"HonorTitleListDataAsset")
 	}
-	static class UHashHelper* GetDefaultObj()
+	static class UHonorTitleListDataAsset* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHashHelper>();
+		return GetDefaultObjImpl<UHonorTitleListDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UHashHelper;
+DUMPER7_ASSERTS_UHonorTitleListDataAsset;
 
 // Class UnionSystem.HttpHelper
 // 0x0000 (0x0028 - 0x0028)
@@ -2169,6 +2190,9 @@ public:
 	static void Parse_CntReplayGetSignedUrl(const class FString& OutData, int32* ResCode, struct FCntReplayGetSignedUrlResponse* Response);
 	static void Parse_CompensationGetCompensations(const class FString& OutData, int32* ResCode, struct FCompensationGetCompensationsResponse* Response);
 	static void Parse_DebugChangeFairPlayPoint(const class FString& OutData, int32* ResCode, struct FDebugChangeFairPlayPointResponse* Response);
+	static void Parse_DebugChangeFestaLastOrder(const class FString& OutData, int32* ResCode, struct FDebugChangeFestaLastOrderResponse* Response);
+	static void Parse_DebugChangeLegendCompeLastOrder(const class FString& OutData, int32* ResCode, struct FDebugChangeLegendCompeLastOrderResponse* Response);
+	static void Parse_DebugChangeLegendCompeRate(const class FString& OutData, int32* ResCode, struct FDebugChangeLegendCompeRateResponse* Response);
 	static void Parse_DebugChangeRankMatchRate(const class FString& OutData, int32* ResCode, struct FDebugChangeRankMatchRateResponse* Response);
 	static void Parse_DebugConnectTest(const class FString& OutData, int32* ResCode, struct FDebugConnectTestResponse* Response);
 	static void Parse_DebugMatchmakingSubscribeFesta(const class FString& OutData, int32* ResCode, struct FDebugMatchmakingSubscribeFestaResponse* Response);
@@ -2243,6 +2267,9 @@ public:
 	static bool Receive_CntReplayGetSignedUrl(int32 Handle, bool* OutError, int32* ResCode, struct FCntReplayGetSignedUrlResponse* Response);
 	static bool Receive_CompensationGetCompensations(int32 Handle, bool* OutError, int32* ResCode, struct FCompensationGetCompensationsResponse* Response);
 	static bool Receive_DebugChangeFairPlayPoint(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeFairPlayPointResponse* Response);
+	static bool Receive_DebugChangeFestaLastOrder(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeFestaLastOrderResponse* Response);
+	static bool Receive_DebugChangeLegendCompeLastOrder(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeLegendCompeLastOrderResponse* Response);
+	static bool Receive_DebugChangeLegendCompeRate(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeLegendCompeRateResponse* Response);
 	static bool Receive_DebugChangeRankMatchRate(int32 Handle, bool* OutError, int32* ResCode, struct FDebugChangeRankMatchRateResponse* Response);
 	static bool Receive_DebugConnectTest(int32 Handle, bool* OutError, int32* ResCode, struct FDebugConnectTestResponse* Response);
 	static bool Receive_DebugMatchmakingSubscribeFesta(int32 Handle, bool* OutError, int32* ResCode, struct FDebugMatchmakingSubscribeFestaResponse* Response);
@@ -2325,6 +2352,18 @@ public:
 	static void Send_DebugChangeFairPlayPoint_Callbacked(const struct FDebugChangeFairPlayPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_DebugChangeFairPlayPoint_Callbacked_NoResend(const struct FDebugChangeFairPlayPointRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static int32 Send_DebugChangeFairPlayPoint_NoResend(const struct FDebugChangeFairPlayPointRequest& Request);
+	static int32 Send_DebugChangeFestaLastOrder(const struct FDebugChangeFestaLastOrderRequest& Request);
+	static void Send_DebugChangeFestaLastOrder_Callbacked(const struct FDebugChangeFestaLastOrderRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeFestaLastOrder_Callbacked_NoResend(const struct FDebugChangeFestaLastOrderRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeFestaLastOrder_NoResend(const struct FDebugChangeFestaLastOrderRequest& Request);
+	static int32 Send_DebugChangeLegendCompeLastOrder(const struct FDebugChangeLegendCompeLastOrderRequest& Request);
+	static void Send_DebugChangeLegendCompeLastOrder_Callbacked(const struct FDebugChangeLegendCompeLastOrderRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeLegendCompeLastOrder_Callbacked_NoResend(const struct FDebugChangeLegendCompeLastOrderRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeLegendCompeLastOrder_NoResend(const struct FDebugChangeLegendCompeLastOrderRequest& Request);
+	static int32 Send_DebugChangeLegendCompeRate(const struct FDebugChangeLegendCompeRateRequest& Request);
+	static void Send_DebugChangeLegendCompeRate_Callbacked(const struct FDebugChangeLegendCompeRateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static void Send_DebugChangeLegendCompeRate_Callbacked_NoResend(const struct FDebugChangeLegendCompeRateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
+	static int32 Send_DebugChangeLegendCompeRate_NoResend(const struct FDebugChangeLegendCompeRateRequest& Request);
 	static int32 Send_DebugChangeRankMatchRate(const struct FDebugChangeRankMatchRateRequest& Request);
 	static void Send_DebugChangeRankMatchRate_Callbacked(const struct FDebugChangeRankMatchRateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
 	static void Send_DebugChangeRankMatchRate_Callbacked_NoResend(const struct FDebugChangeRankMatchRateRequest& Request, TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback);
@@ -2738,37 +2777,28 @@ public:
 };
 DUMPER7_ASSERTS_IInputProcessInterface;
 
-// Class UnionSystem.JukeboxDataAsset
-// 0x00B0 (0x00E0 - 0x0030)
-class UJukeboxDataAsset final : public UDataAsset
+// Class UnionSystem.ControllerButtonData
+// 0x0050 (0x0080 - 0x0030)
+class UControllerButtonData final : public UDataAsset
 {
 public:
-	class UDataTable*                             JukeboxAlbumCompositeDataTable;                    // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             JukeboxTrackCompositeDataTable;                    // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, struct FAlbumData>                AlbumDataMap;                                      // 0x0040(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
-	TMap<int32, struct FTrackData>                TrackDataMap;                                      // 0x0090(0x0050)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
-
-public:
-	void ClearData();
-	struct FAlbumData GetAlbumData(int32 AlbumID);
-	struct FTrackData GetTrackData(int32 TrackID);
-	void Update();
+	TMap<struct FKey, EControllerButtonTextureIndex> KeyConfig;                                      // 0x0030(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("JukeboxDataAsset")
+		STATIC_CLASS_IMPL("ControllerButtonData")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"JukeboxDataAsset")
+		STATIC_NAME_IMPL(L"ControllerButtonData")
 	}
-	static class UJukeboxDataAsset* GetDefaultObj()
+	static class UControllerButtonData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UJukeboxDataAsset>();
+		return GetDefaultObjImpl<UControllerButtonData>();
 	}
 };
-DUMPER7_ASSERTS_UJukeboxDataAsset;
+DUMPER7_ASSERTS_UControllerButtonData;
 
 // Class UnionSystem.KeyConfigItem
 // 0x00E8 (0x0110 - 0x0028)
@@ -2879,7 +2909,7 @@ public:
 DUMPER7_ASSERTS_UKeyConfigPressAnyKey;
 
 // Class UnionSystem.LobbyContextBase
-// 0x01F0 (0x0218 - 0x0028)
+// 0x0258 (0x0280 - 0x0028)
 class ULobbyContextBase : public UObject
 {
 public:
@@ -2893,10 +2923,10 @@ public:
 	TDelegate<void(class ULobbyContextBase* LobbyContext, class ULobbyMemberContextBase* MemberContext)> LobbyContextOnMemberPromoteDelegate; // 0x00B4(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_C4[0x24];                                      // 0x00C4(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class ULobbyMemberContextBase>    LobbyMemberContextClass;                           // 0x00E8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ULobbyTransactionParam*                 TransactionParam;                                  // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ULobbyTransactionParam*                 TransactionParam;                                  // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_F8[0x58];                                      // 0x00F8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class ULobbyMemberContextBase*>   Members;                                           // 0x0150(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1A0[0x78];                                     // 0x01A0(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<int32, class ULobbyMemberContextBase*>   Members;                                           // 0x0150(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_1A0[0xE0];                                     // 0x01A0(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool BeginTransaction();
@@ -2915,6 +2945,7 @@ public:
 	class ULobbyMemberContextBase* GetLocalMemberDefaultDummy();
 	void Initialize(int32 LocalUserNum, const struct FUniqueNetIdRepl& UserId, const struct FUniqueNetIdRepl& OwnerUserId, const struct FLobbyId& LobbyId);
 	void InitializeNoLobbyInfo(int32 LocalUserNum);
+	bool IsSetShortLobbyId();
 	void Join(const struct FLobbyId& LobbyId, const class FString& Password);
 	void KeepAliveShortLobbyId();
 	void KickMember(class ULobbyMemberContextBase* MemberContext, TDelegate<void(bool bSuccessful, const struct FLobbyOperationResult& Result)> OnComplete);
@@ -2993,7 +3024,7 @@ public:
 DUMPER7_ASSERTS_ULobbyContextBase;
 
 // Class UnionSystem.LobbySubsystem
-// 0x19C0 (0x19F0 - 0x0030)
+// 0x19E0 (0x1A10 - 0x0030)
 class ULobbySubsystem final : public UGameInstanceSubsystem
 {
 public:
@@ -3006,7 +3037,7 @@ public:
 	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, const struct FLobbyId& LobbyId, const struct FUniqueNetIdRepl& MemberId)> MemberPromotedMulticastDelegate; // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, class ULobbyJoinInfo* Invite)> InvitationReceivedMulticastDelegate; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void()>              PlatformInviteReceivedMulticastDelegate;           // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_B8[0x1938];                                    // 0x00B8(0x1938)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x1958];                                    // 0x00B8(0x1958)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CallInvitationReceivedDelegates(int32 LocalUserNum, const struct FLobbyId& LobbyId);
@@ -3310,65 +3341,66 @@ public:
 DUMPER7_ASSERTS_UMachineIdUtilityLibrary;
 
 // Class UnionSystem.MasterDataHelper
-// 0x01B8 (0x01E0 - 0x0028)
+// 0x01C0 (0x01E8 - 0x0028)
 class UMasterDataHelper : public UObject
 {
 public:
-	class UDataTable*                             DriverData;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             DriverCustomParamData;                             // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineCockpitDataTable;                           // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachinePartsDataTable;                             // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineTypeDataTable;                              // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             DefaultMachineCustomizeDataTable;                  // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MonsterTruckCockpitDataTable;                      // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineColorDataTable;                             // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineSurfaceDataTable;                           // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineGlowDataTable;                              // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineColorPresetDataTable;                       // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             GroupColorIdToMachineColorPresetIdDataTable;       // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineOffsetDataTable;                            // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineOtherNameDataTable;                         // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineBakeAsset;                                  // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineHornDataTable;                              // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             MachineAuraDataTable;                              // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             StageDataTable;                                    // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             GadgetDataTable;                                   // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             GadgetPlateDataTable;                              // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             DefaultGadgetPresetDataTable;                      // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             GadgetLayoutDataTable;                             // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             GadgetCustomCategoryColorDataTable;                // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             StickerDataTable;                                  // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RaceItemDataTable;                                 // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             FooterTextDataTable;                               // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RivalTeamDataTable;                                // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             PartyRaceMissionDataTable;                         // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             PartyRacePresetSettingDataTable;                   // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RewardRivalLevelDataTable;                         // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RateRankUpExpDataTable;                            // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             UIResultParamTable;                                // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RewardTimeTrialDataTable;                          // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             OnlineErrorTextLabelTable;                         // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             ServerErrorTextLabelTable;                         // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             CompensationTitleTextLabelTable;                   // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             CompensationBodyTextLabelTable;                    // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             SaveDataTextTable;                                 // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGrandPrixCommonData*                   GrandPrixCommonData;                               // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             GrandPrixStages;                                   // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             UIColorInfoDataAsset;                              // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             FestaUIDataAsset;                                  // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             HonorTitleDataAsset;                               // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             JukeboxDataAsset;                                  // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             ContentDataAsset;                                  // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             ChallengeDataTable;                                // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             ChallengeProgressRewardTable;                      // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RewardAchievementDataTable;                        // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RewardGrandPrixRivalWinHonorDataTable;             // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             IgnoreWidgetDataAsset;                             // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             PlatformPresence;                                  // 0x01B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataAsset*                             PlatformStoreMessageDataAsset;                     // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             PlayerInteractionData;                             // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             RivalInteractionData;                              // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             CueSheetIdTable;                                   // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             DriverData;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DriverCustomParamData;                             // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DriverEffectData;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineCockpitDataTable;                           // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachinePartsDataTable;                             // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineTypeDataTable;                              // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DefaultMachineCustomizeDataTable;                  // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MonsterTruckCockpitDataTable;                      // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineColorDataTable;                             // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineSurfaceDataTable;                           // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineGlowDataTable;                              // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineColorPresetDataTable;                       // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GroupColorIdToMachineColorPresetIdDataTable;       // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineOffsetDataTable;                            // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineOtherNameDataTable;                         // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineBakeAsset;                                  // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineHornDataTable;                              // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             MachineAuraDataTable;                              // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             StageDataTable;                                    // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetDataTable;                                   // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetPlateDataTable;                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             DefaultGadgetPresetDataTable;                      // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetLayoutDataTable;                             // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GadgetCustomCategoryColorDataTable;                // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             StickerDataTable;                                  // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RaceItemDataTable;                                 // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             FooterTextDataTable;                               // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalTeamDataTable;                                // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PartyRaceMissionDataTable;                         // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PartyRacePresetSettingDataTable;                   // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardRivalLevelDataTable;                         // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RateRankUpExpDataTable;                            // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             UIResultParamTable;                                // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardTimeTrialDataTable;                          // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             OnlineErrorTextLabelTable;                         // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             ServerErrorTextLabelTable;                         // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             CompensationTitleTextLabelTable;                   // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             CompensationBodyTextLabelTable;                    // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             SaveDataTextTable;                                 // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UGrandPrixCommonData*                   GrandPrixCommonData;                               // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             GrandPrixStages;                                   // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             UIColorInfoDataAsset;                              // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             FestaUIDataAsset;                                  // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             HonorTitleDataAsset;                               // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             JukeboxDataAsset;                                  // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             ContentDataAsset;                                  // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             ChallengeDataTable;                                // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             ChallengeProgressRewardTable;                      // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardAchievementDataTable;                        // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RewardGrandPrixRivalWinHonorDataTable;             // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             IgnoreWidgetDataAsset;                             // 0x01B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PlatformPresence;                                  // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataAsset*                             PlatformStoreMessageDataAsset;                     // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             PlayerInteractionData;                             // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             RivalInteractionData;                              // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UDataTable*                             CueSheetIdTable;                                   // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -3391,8 +3423,8 @@ DUMPER7_ASSERTS_UMasterDataHelper;
 class UMasterDataManageSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	class UMasterDataHelper*                      MasterDataHelper;                                  // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URaceMasterDataAccessor*                RaceMasterDataAccessor;                            // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMasterDataHelper*                      MasterDataHelper;                                  // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class URaceMasterDataAccessor*                RaceMasterDataAccessor;                            // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -3412,11 +3444,11 @@ public:
 DUMPER7_ASSERTS_UMasterDataManageSubsystem;
 
 // Class UnionSystem.MatchmakingRequestContext
-// 0x0028 (0x0240 - 0x0218)
+// 0x0028 (0x02A8 - 0x0280)
 class UMatchmakingRequestContext : public ULobbyContextBase
 {
 public:
-	uint8                                         Pad_218[0x28];                                     // 0x0218(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_280[0x28];                                     // 0x0280(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetNoTriggerMatchmakingComplete(bool bNewValue);
@@ -3440,12 +3472,12 @@ public:
 DUMPER7_ASSERTS_UMatchmakingRequestContext;
 
 // Class UnionSystem.MatchmakingContext_WithFlexMatch
-// 0x0018 (0x0258 - 0x0240)
+// 0x0018 (0x02C0 - 0x02A8)
 class UMatchmakingContext_WithFlexMatch : public UMatchmakingRequestContext
 {
 public:
-	float                                         DefaultMatchmakingDescribeTimeSpan;                // 0x0240(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_244[0x14];                                     // 0x0244(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         DefaultMatchmakingDescribeTimeSpan;                // 0x02A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2AC[0x14];                                     // 0x02AC(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitializeFlexMatch(int32 LocalUserNum);
@@ -3472,7 +3504,7 @@ class UMatchmakingSubsystem final : public UGameInstanceSubsystem
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMatchmakingRequestContext*             MatchmakingRequestContext;                         // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMatchmakingRequestContext*             MatchmakingRequestContext;                         // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	TDelegate<void(EGameMatchmakingCompleteStatus Status, const struct FCreateOrConnectLobbyResult& Result)> OnMatchmakingComplete; // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -3552,7 +3584,7 @@ class UMaterialPlayerComponent final : public UActorComponent
 public:
 	bool                                          bManualUpdate;                                     // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialPlayer*>                MaterialPlayers;                                   // 0x00A8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMaterialPlayer*>                MaterialPlayers;                                   // 0x00A8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	int32 BindCurves(class UCurveTable* CurveTable, class FName TargetTag);
@@ -3748,57 +3780,77 @@ public:
 };
 DUMPER7_ASSERTS_AMenuPlayerController;
 
-// Class UnionSystem.MenuPopupWindowInterface
-// 0x0000 (0x0000 - 0x0000)
-class IMenuPopupWindowInterface final
+// Class UnionSystem.MilestoneUtil
+// 0x0000 (0x0028 - 0x0028)
+class UMilestoneUtil final : public UBlueprintFunctionLibrary
 {
 public:
-	class UWidgetAnimation* GetAnimationIn();
-	class UWidgetAnimation* GetAnimationLoop();
-	class UWidgetAnimation* GetAnimationOut();
-	EPopupWindowButtonType GetPopupWindowButtonType();
-	EPopupWindowType GetPopupWindowType();
-	void InitParam(EPopupWindowButtonType ButtonType);
-	void PlayAnimationIn();
-	void SetButtonControlDelayTime(float InTime);
-	void SetButtonText(const TArray<class FText>& BtnTextArray);
-	void SetDisplayFooterButton(const bool InDisplay);
-	void SetDonpaTicketCount(int32 CurrentCount, int32 AfterCount);
-	void SetEnableInput(bool InEnable);
-	void SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType, const class FText& BtnText);
-	void SetFooterTextMessege(const class FText& Text);
-	void SetImageButtonSelectText(const class FText& InText);
-	void SetImageTexture(const class UTexture2D* Texture2D);
-	void SetInitialFocusButtonIndex(const int32 InButtonIndex);
-	void SetPopupInfoDisplayIndex(int32 Index_0);
-	void SetPopupInfoMainMenuButtonIconIndex(int32 Btn01IconIndex, int32 Btn02IconIndex);
-	void SetTextMessege(const class FText& Text);
-	void SetTextTitle(const class FText& Text, bool Attension);
+	static EMilestoneVersion GetEnablePrelaunchAnotherStageLotteryMilestoneVersion();
+	static const TArray<EDriverId> GetGrandPrixRivalDriverIds();
+	static EDriverId GetRivalByMilestoneVersion();
+	static bool IsAlreadyGrandPrixLeast1Play();
+	static bool IsCharaIconLockCover(EDriverId DriverId);
+	static bool IsCloseCourseInRaceParkCustomMatchMilestoneVersion();
+	static bool IsDisableDecisionInRaceParkMilestoneVersion();
+	static bool IsDisableEtceteraChallengeMilestoneVersion();
+	static bool IsDisableEtceteraHintMilestoneVersion();
+	static bool IsDisableEtceteraOthersMilestoneVersion();
+	static bool IsDisableEtceteraStoreMilestoneVersion();
+	static bool IsDisableEtceteraTitleMilestoneVersion();
+	static bool IsDisableFestaMilestoneVersion();
+	static bool IsDisableFriendlistMilestoneVersion();
+	static bool IsDisableGrandPrixCourse2MilestoneVersion();
+	static bool IsDisableGrandPrixCourse3MilestoneVersion();
+	static bool IsDisableGrandPrixCourseMilestoneVersion();
+	static bool IsDisableGrandPrixMilestoneVersion();
+	static bool IsDisableHornAuraTabMilestoneVersion();
+	static bool IsDisableRaceParkMilestoneVersion();
+	static bool IsDisableRaceParkRivalOnOffMilestoneVersion();
+	static bool IsDisableSelectTimeTrialMilestoneVersion();
+	static bool IsDisableTimeTrialMilestoneVersion();
+	static bool IsDisableTopMenuFestaRuleMilestoneVersion();
+	static bool IsDisableTopMenuNewsMilestoneVersion();
+	static bool IsDisableTrialMilestoneVersion();
+	static bool IsEnableAdvertiseRatingMilestoneVersion();
+	static bool IsEnableEtceteraFullGameStoreMilestoneVersion();
+	static bool IsEnableResetSaveDataMilestoneVersion();
+	static bool IsEnableSpecificTitleDebugCommandMilestoneVersion();
+	static bool IsEnableThumbnailCollaboRaceMilestoneVersion();
+	static bool IsEnableTitleDemoMilestoneVersion();
+	static bool IsEnableTitleStoreMilestoneVersion();
+	static bool IsEnableTopMenuStoreMilestoneVersion();
+	static bool IsEnableTopMenuStorePopupAutoMilestoneVersion();
+	static bool IsExclusionGhostUpDownloadEventMilestoneVersion();
+	static bool IsForceEnableTopMenuNewsMilestoneVersion();
+	static bool IsHiddenCharacter(EDriverId DriverId);
+	static bool IsHiddenMachineParts(EMachineId MachineId);
+	static bool IsHiddenRomVerMilestoneVersion();
+	static bool IsHiddenWebManualQRcodeMilestoneVersion();
+	static bool IsInitialMachineParts(EMachineId MachineId, int32 FrontPrice, int32 RearPrice, int32 TirePrice);
+	static bool IsLimitDonpaTicketMilestoneVersion();
+	static bool IsLimitRewardInRaceParkMilestoneVersion();
+	static bool IsOfflineMilestoneVersion();
+	static bool IsRaceUnLockedMilestoneVersion(const EGameModeId InGameModeId, const EStageId InStageId);
+	static bool IsSkipDodonpaEventMilestoneVersion();
+	static bool IsSkipSelectPlayNumMilestoneVersion();
+	static bool IsTopMenuAccessLoginSuccessOnly();
+	static bool IsVisibleCompanyNameMilestoneVersion();
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MenuPopupWindowInterface")
+		STATIC_CLASS_IMPL("MilestoneUtil")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MenuPopupWindowInterface")
+		STATIC_NAME_IMPL(L"MilestoneUtil")
 	}
-	static class IMenuPopupWindowInterface* GetDefaultObj()
+	static class UMilestoneUtil* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IMenuPopupWindowInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
+		return GetDefaultObjImpl<UMilestoneUtil>();
 	}
 };
-DUMPER7_ASSERTS_IMenuPopupWindowInterface;
+DUMPER7_ASSERTS_UMilestoneUtil;
 
 // Class UnionSystem.MovieFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -3824,11 +3876,11 @@ public:
 DUMPER7_ASSERTS_UMovieFunctionLibrary;
 
 // Class UnionSystem.NetMasterDataManageSubsystem
-// 0x0370 (0x03A0 - 0x0030)
+// 0x0410 (0x0440 - 0x0030)
 class UNetMasterDataManageSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x370];                                     // 0x0030(0x0370)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x410];                                     // 0x0030(0x0410)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	const struct FMasterDataGetMasterDataResponse_MstFestaData GetCurrentFestaData(bool* bResult);
@@ -3889,14 +3941,14 @@ public:
 DUMPER7_ASSERTS_UNetPingSubsystem;
 
 // Class UnionSystem.NetSaveGame
-// 0x02E0 (0x0308 - 0x0028)
+// 0x02F0 (0x0318 - 0x0028)
 class UNetSaveGame final : public USaveGame
 {
 public:
 	struct FSaveDataHeader                        _Header;                                           // 0x0028(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FNetMasterDataVersionData              _LocalNetMasterDataVersion;                        // 0x0038(0x0010)(NativeAccessSpecifierPublic)
-	struct FAppLocalNetMasterData                 _LocalNetMasterData;                               // 0x0048(0x02C0)(NativeAccessSpecifierPublic)
+	struct FAppLocalNetMasterData                 _LocalNetMasterData;                               // 0x0048(0x02D0)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -4032,13 +4084,13 @@ public:
 DUMPER7_ASSERTS_UOnlineActivitySubsystem;
 
 // Class UnionSystem.OnlineMatchSubsystem
-// 0x0228 (0x0258 - 0x0030)
+// 0x0230 (0x0260 - 0x0030)
 class UOnlineMatchSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x210];                                     // 0x0030(0x0210)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bIsConnecting)> PeerChangeStatusClosedDelegate; // 0x0240(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	class UFont*                                  FontObject;                                        // 0x0250(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_30[0x218];                                     // 0x0030(0x0218)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bIsConnecting)> PeerChangeStatusClosedDelegate; // 0x0248(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	class UFont*                                  FontObject;                                        // 0x0258(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static bool IsEnableOnlineSinglePlay();
@@ -4167,13 +4219,13 @@ public:
 DUMPER7_ASSERTS_UOutOfContentButton;
 
 // Class UnionSystem.P2PConnectionSubsystem
-// 0x0210 (0x0240 - 0x0030)
+// 0x02C0 (0x02F0 - 0x0030)
 class UP2PConnectionSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x1D8];                                     // 0x0030(0x01D8)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULobbyContextBase*                      SquadLobby;                                        // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_210[0x30];                                     // 0x0210(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x1E8];                                     // 0x0030(0x01E8)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULobbyContextBase*                      SquadLobby;                                        // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_220[0xD0];                                     // 0x0220(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientTimeoutCheckStart();
@@ -4348,6 +4400,7 @@ public:
 	static bool CRM_PutConnectionError(const struct FCRM_ConnectionError& Data);
 	static bool CRM_PutCustomMachineParts(const struct FCRM_CustomMachineParts& Data);
 	static bool CRM_PutCustomMachinePartsSpot(const struct FCRM_CustomMachinePartsSpot& Data);
+	static bool CRM_PutDebugOnlineP2PConnect(const struct FCRM_DebugOnlineP2PConnect& Data);
 	static bool CRM_PutDlc(const struct FCRM_Dlc& Data);
 	static bool CRM_PutEventFesta(const struct FCRM_EventFesta& Data);
 	static bool CRM_PutEventLegend(const struct FCRM_EventLegend& Data);
@@ -4364,6 +4417,7 @@ public:
 	static bool CRM_PutMatchingRaceStart(const struct FCRM_MatchingRaceStart& Data);
 	static bool CRM_PutMatchingRegistration(const struct FCRM_MatchingRegistration& Data);
 	static bool CRM_PutMatchingResult(const struct FCRM_MatchingResult& Data);
+	static bool CRM_PutOnlineMatch(const struct FCRM_OnlineMatch& Data);
 	static bool CRM_PutParty(const struct FCRM_Party& Data);
 	static bool CRM_PutProgressGrandprix(const struct FCRM_ProgressGrandprix& Data);
 	static bool CRM_PutProgressParty(const struct FCRM_ProgressParty& Data);
@@ -4473,14 +4527,14 @@ public:
 DUMPER7_ASSERTS_UPlaylogHelper;
 
 // Class UnionSystem.PlaylogManager
-// 0x0178 (0x01A8 - 0x0030)
+// 0x0168 (0x0198 - 0x0030)
 class UPlaylogManager final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x158];                                     // 0x0030(0x0158)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CrmWidget;                                         // 0x0188(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TDelegate<void(bool Success)>                 SetupCompleteDelegate;                             // 0x0190(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1A0[0x8];                                      // 0x01A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x148];                                     // 0x0030(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CrmWidget;                                         // 0x0178(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TDelegate<void(bool Success)>                 SetupCompleteDelegate;                             // 0x0180(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_190[0x8];                                      // 0x0190(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnId(const class FString& AccountID);
@@ -4679,11 +4733,11 @@ public:
 DUMPER7_ASSERTS_IRaceInputRecieveInterface;
 
 // Class UnionSystem.RaceMasterDataAccessor
-// 0x0120 (0x0148 - 0x0028)
+// 0x0130 (0x0158 - 0x0028)
 class URaceMasterDataAccessor : public UObject
 {
 public:
-	class UObject*                                RunData[0x24];                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                RunData[0x26];                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	void Initialize();
@@ -4825,14 +4879,14 @@ public:
 	TMulticastInlineDelegate<void(ESaveDataStatus Status)> OnLoadComplete;                           // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(ESaveDataStatus Status)> OnSaveComplete;                           // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_58[0x20];                                      // 0x0058(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class USavingIcon*                            AutoSaveIconWidget;                                // 0x0078(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USavingIcon*                            AutoSaveIconWidget;                                // 0x0078(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, bool>                     LoadedMap;                                         // 0x0088(0x0050)(NativeAccessSpecifierPrivate)
-	class UAppSaveGame*                           _AppSaveGame;                                      // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayLogSaveGame*                       _PlayLogSaveGame;                                  // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UOptionConfigSaveGame*                  _OptionConfigSaveGame;                             // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UReplaySaveGame*                        _ReplaySaveGame;                                   // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNetSaveGame*                           _NetSaveGame;                                      // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAppSaveGame*                           _AppSaveGame;                                      // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UPlayLogSaveGame*                       _PlayLogSaveGame;                                  // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UOptionConfigSaveGame*                  _OptionConfigSaveGame;                             // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UReplaySaveGame*                        _ReplaySaveGame;                                   // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UNetSaveGame*                           _NetSaveGame;                                      // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_100[0x170];                                    // 0x0100(0x0170)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -4988,7 +5042,7 @@ class USequenceTriggerComponent final : public UActorComponent
 {
 public:
 	class FName                                   SequenceParameterLabel;                            // 0x00A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USoundAtomCue*                          soundAsset_;                                       // 0x00A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USoundAtomCue*                          soundAsset_;                                       // 0x00A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_B0[0x70];                                      // 0x00B0(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -5008,11 +5062,11 @@ public:
 DUMPER7_ASSERTS_USequenceTriggerComponent;
 
 // Class UnionSystem.SessionManager
-// 0x0118 (0x0148 - 0x0030)
+// 0x0128 (0x0158 - 0x0030)
 class USessionManager final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x118];                                     // 0x0030(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x128];                                     // 0x0030(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool GetDisplayCode(class FString* displayCode);
@@ -5068,6 +5122,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UShareConfig;
+
+// Class UnionSystem.SimpleAnimEventComponent
+// 0x0020 (0x0140 - 0x0120)
+class USimpleAnimEventComponent final : public USimpleAnimationComponent
+{
+public:
+	TArray<struct FUnionSimpleAnimEvent>          AnimEventSequence;                                 // 0x0120(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	uint8                                         Pad_130[0x10];                                     // 0x0130(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SimpleAnimEventComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleAnimEventComponent")
+	}
+	static class USimpleAnimEventComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USimpleAnimEventComponent>();
+	}
+};
+DUMPER7_ASSERTS_USimpleAnimEventComponent;
 
 // Class UnionSystem.UnionSpeedClassLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -5151,7 +5229,9 @@ DUMPER7_ASSERTS_UStageIdUtilityLibrary;
 class USwitchPlatformUtility final : public UBlueprintFunctionLibrary
 {
 public:
+	static bool IsSwitch2();
 	static void SetCPUBoostModeEnabled(bool bEnable);
+	static void ShowControllerStrapGuide();
 
 public:
 	static class UClass* StaticClass()
@@ -5174,6 +5254,8 @@ DUMPER7_ASSERTS_USwitchPlatformUtility;
 class UTimeTrialVariousLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static void AdjustTimeTrialByVersion(const EStageId InStageId, const ESpeedClassId InSpeedClassId);
+	static void AdjustUploadFlagByVersion(const EStageId InStageId, const ESpeedClassId InSpeedClassId, const int32 InCheckVersion);
 	static bool CheckForNewRecord(const int32 InClockCount, const EStageId InStageId, const ESpeedClassId InSpeedClassId, bool* OutMedalAcquistion);
 	static void CheckHashGhostResultMatch(const ESpeedClassId InSpeedClass, const EStageId InStageId, bool* OutResult);
 	static bool CheckIsTargetTimeClear(const int32 InClockCount, const EStageId InStageId, const ESpeedClassId InSpeedClassId, ETimeTrialClearRankId* OutClearRank);
@@ -5274,26 +5356,6 @@ public:
 };
 DUMPER7_ASSERTS_UUISubsystem;
 
-// Class UnionSystem.UnionAddOnBase
-// 0x0000 (0x0028 - 0x0028)
-class UUnionAddOnBase : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UnionAddOnBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UnionAddOnBase")
-	}
-	static class UUnionAddOnBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUnionAddOnBase>();
-	}
-};
-DUMPER7_ASSERTS_UUnionAddOnBase;
-
 // Class UnionSystem.UnionAddOnEpic
 // 0x0070 (0x0098 - 0x0028)
 class UUnionAddOnEpic final : public UUnionAddOnBase
@@ -5363,28 +5425,33 @@ public:
 };
 DUMPER7_ASSERTS_UUnionAddOnPS;
 
-// Class UnionSystem.UnionAddOnSteam
-// 0x0060 (0x0088 - 0x0028)
-class UUnionAddOnSteam final : public UUnionAddOnBase
+// Class UnionSystem.UnionStaticMeshComponent
+// 0x0000 (0x05E0 - 0x05E0)
+#pragma pack(push, 0x1)
+class alignas(0x10) UUnionStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	uint8                                         Pad_28[0x60];                                      // 0x0028(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	void ChangeMaterial(int32 MaterialID, bool bChange, class UMaterialInterface* InMaterial);
+	void ResetMaterialAll();
+
+	bool IsNotChangedMaterial(int32 MaterialID) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UnionAddOnSteam")
+		STATIC_CLASS_IMPL("UnionStaticMeshComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UnionAddOnSteam")
+		STATIC_NAME_IMPL(L"UnionStaticMeshComponent")
 	}
-	static class UUnionAddOnSteam* GetDefaultObj()
+	static class UUnionStaticMeshComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUnionAddOnSteam>();
+		return GetDefaultObjImpl<UUnionStaticMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UUnionAddOnSteam;
+#pragma pack(pop)
+DUMPER7_ASSERTS_UUnionStaticMeshComponent;
 
 // Class UnionSystem.UnionAOStaticMeshComponent
 // 0x0050 (0x0630 - 0x05E0)
@@ -5398,10 +5465,10 @@ public:
 	float                                         Intensity;                                         // 0x05EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DistanceShadow;                                    // 0x05F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RayLength;                                         // 0x05F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      MaterialInstance;                                  // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               DynamicMaterialInstance;                           // 0x0600(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Texture2D;                                         // 0x0608(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            StaticShadowMesh;                                  // 0x0610(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      MaterialInstance;                                  // 0x05F8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UMaterialInstanceDynamic*               DynamicMaterialInstance;                           // 0x0600(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UTexture2D*                             Texture2D;                                         // 0x0608(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UStaticMesh*                            StaticShadowMesh;                                  // 0x0610(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          IsSetUp;                                           // 0x0618(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_619[0xF];                                      // 0x0619(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUnionStaticMeshComponent*              ShadowMesh;                                        // 0x0628(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -5582,17 +5649,17 @@ public:
 DUMPER7_ASSERTS_UContentDebugMenu;
 
 // Class UnionSystem.UnionContentManager
-// 0x00A0 (0x00C8 - 0x0028)
+// 0x00B0 (0x00D8 - 0x0028)
 class UUnionContentManager final : public UObject
 {
 public:
-	class UUnionAddOnBase*                        m_addOn;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UContentDebugMenu*                      m_DebugMenu;                                       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UUnionAddOnBase*                        m_addOn;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UContentDebugMenu*                      m_DebugMenu;                                       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	TArray<int32>                                 m_packageIds;                                      // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<EDriverId>                             m_serverReleaseDriverList;                         // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<EMachineId>                            m_serverReleaseMachineList;                        // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<int32>                                 m_serverReleaseAlbumIdList;                        // 0x0068(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_78[0x50];                                      // 0x0078(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78[0x60];                                      // 0x0078(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -5984,15 +6051,20 @@ public:
 DUMPER7_ASSERTS_UUnionErrorDebugMenu;
 
 // Class UnionSystem.UnionErrorManager
-// 0x0098 (0x00C8 - 0x0030)
+// 0x00A8 (0x00D8 - 0x0030)
 class UUnionErrorManager final : public UGameInstanceSubsystem
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNetworkLastError*                      m_NetworkLastError;                                // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UUnionErrorDebugMenu*                   m_ErrorDebugMenu;                                  // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UUnionErrorViewer*                      m_ErrorViewer;                                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_50[0x78];                                      // 0x0050(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UUnionErrorViewer*                      m_ErrorViewer;                                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_50[0x88];                                      // 0x0050(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ResetShowTargetErrorWindowParam();
+
+	bool IsShowAppRestartErrorWindow() const;
 
 public:
 	static class UClass* StaticClass()
@@ -6019,10 +6091,10 @@ public:
 	static void DbgSetNetworkErrorWithString(EOnlineErrorId ErrorID, const class FString& BodyStr);
 	static void DbgSetNetworkErrorWithText(EOnlineErrorId ErrorID, const class FText& BodyText);
 	static EErrorLevel GetErrorLevel();
-	static class FText GetOnlineErrorBodyText(EOnlineErrorId ErrorID, int32 AppendId);
+	static class FText GetOnlineErrorBodyText(EOnlineErrorId ErrorID, int32 AppendId, int32 NetworkDelayLevel, EPopupWindowType WindowType);
 	static class FText GetOnlineErrorReturnMenuText(EOnlineErrorId ErrorID, int32 AppendId);
 	static const class FText GetOnlineErrorTitleText(EOnlineErrorId ErrorID);
-	static class FText GetServerErrorBodyText(EResponseCodeAbstract ResponseCode, int32 AppendId);
+	static class FText GetServerErrorBodyText(EResponseCodeAbstract ResponseCode, int32 AppendId, int32 NetworkDelayLevel);
 	static class FText GetServerErrorReturnMenuText(EResponseCodeAbstract ResponseCode, int32 AppendId);
 	static const class FText GetServerErrorTitleText(EResponseCodeAbstract ResponseCode);
 	static bool HasRaceFatalError();
@@ -6446,11 +6518,11 @@ public:
 DUMPER7_ASSERTS_UUnionNetUtils;
 
 // Class UnionSystem.NetworkLastError
-// 0x0148 (0x0170 - 0x0028)
+// 0x0188 (0x01B0 - 0x0028)
 class UNetworkLastError final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x148];                                     // 0x0028(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x188];                                     // 0x0028(0x0188)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -6489,11 +6561,11 @@ public:
 DUMPER7_ASSERTS_UUnionNiagaraComponents;
 
 // Class UnionSystem.UnionPlatformDebugMenu
-// 0x0090 (0x00B8 - 0x0028)
+// 0x0080 (0x00A8 - 0x0028)
 class UUnionPlatformDebugMenu final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x90];                                      // 0x0028(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x80];                                      // 0x0028(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnGetAChievementEnd(float InValue);
@@ -6521,11 +6593,11 @@ class UUnionPlatformManager final : public UGameInstanceSubsystem
 {
 public:
 	uint8                                         Pad_30[0x28];                                      // 0x0030(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionPlatformDebugMenu*                m_DebugMenu;                                       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UUnionDeviceSelector*                   m_XboxDeviceSelector;                              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UUnionPlatformSoftwareKeyboardBase*     m_SoftwareKeyboard;                                // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UUnionPlatformDebugMenu*                m_DebugMenu;                                       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UUnionDeviceSelector*                   m_XboxDeviceSelector;                              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	class UUnionPlatformSoftwareKeyboardBase*     m_SoftwareKeyboard;                                // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_70[0x118];                                     // 0x0070(0x0118)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionContentManager*                   m_ContentManager;                                  // 0x0188(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UUnionContentManager*                   m_ContentManager;                                  // 0x0188(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_190[0x20];                                     // 0x0190(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -6968,6 +7040,7 @@ public:
 
 public:
 	void SetEnableBlur(bool Enable);
+	void SetEnableGFur(bool Enable);
 	void SetMinLoDBias(int32 Bias);
 	void SetRenderingScale(float Scale);
 
@@ -7129,6 +7202,7 @@ public:
 	int32 GetCharacterStatsEventValue(const EStatsEventId StatsEventId, const EDriverId DriverId);
 	void GetCharacterStatsEventValueTopThree(TArray<EDriverId>* TopThreeIds, TArray<int32>* TopThreeCounts);
 	int32 GetMachineStatsEventValue(const EStatsEventId StatsEventId, const EMachineId MachineId);
+	int32 GetMachineUsedType(const EDriverType machineType);
 	void GetResultHonorList(int32 RacerIndex, TArray<struct FHonorCommendationData>* OutDataList);
 	TArray<bool> GetSaveRedStarRings();
 	int32 GetStatsEventValue(const EStatsEventId StatsEventId);
@@ -7201,6 +7275,7 @@ public:
 	static struct FSoundHandle Play(const struct FSoundHandle& Handle, class USoundAtomCue* Sound);
 	static struct FSoundHandle PlayFFB(const struct FSoundHandle& Handle, class USoundAtomCue* Sound, ESoundPan Pan, bool Aduio, int32 FFBPlayerBit);
 	static bool RemoveLevel(class ULevelStreamingDynamic* StreamingLevel);
+	static void RemoveLevelByNameContain(const class FString& Name_0);
 	static void ResetGameSettings();
 	static void ResetLevelFlagsForPSDCache();
 	static bool SaveGameToSlot(class USaveGame* SaveGameObject, const class FString& SlotName, const int32 UserIndex);
@@ -7565,7 +7640,7 @@ public:
 	struct FUnionWidgetTransform                  _WidgetTransform;                                  // 0x05D8(0x00B8)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
 	TArray<class USceneComponent*>                _ParentComponents;                                 // 0x0690(0x0010)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	struct FLinearColor                           _TintColorAndOpacity;                              // 0x06A0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             _BrushImageTexture;                                // 0x06B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             _BrushImageTexture;                                // 0x06B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_6B8[0x8];                                      // 0x06B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

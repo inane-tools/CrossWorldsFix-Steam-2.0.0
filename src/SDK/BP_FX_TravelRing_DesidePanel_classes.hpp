@@ -28,9 +28,9 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetNoHidden();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_FX_TravelRing_DesidePanel(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SetNoHidden();
 
 public:
 	static class UClass* StaticClass()

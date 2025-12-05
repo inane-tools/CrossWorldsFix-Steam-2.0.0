@@ -26,7 +26,7 @@ public:
 
 public:
 	void Create(class FName InRowName, EUnionControllerType InType, EUnionPlatform InPlatform);
-	void CreateController(EUnionControllerType InType, EUnionPlatform InPlatform, class UCommonUIController** NewParam);
+	void CreateController(EUnionControllerType InType, EUnionPlatform InPlatform, class UCommonUIController** newParam);
 	void CreateHintID(EHintId InHintId, bool bIsKeyboard);
 	void CreateTutorialAction(ETutorialAction InTutorialAction);
 	void CreateTutorialActionKeyboard(ETutorialAction tutorialAction);

@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BPFL_ResultReward.BPFL_ResultReward_C.MakeResultRewardItemInfos
-// 0x0730 (0x0730 - 0x0000)
+// 0x07A0 (0x07A0 - 0x0000)
 struct BPFL_ResultReward_C_MakeResultRewardItemInfos final
 {
 public:
@@ -84,17 +84,17 @@ public:
 	struct FResultRewardItemInfo                  K2Node_MakeStruct_ResultRewardItemInfo_4;          // 0x01F8(0x0020)()
 	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAppRaceConfigData                     CallFunc_GetAppRaceConfigData_OutData;             // 0x0220(0x0490)()
-	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue_2;      // 0x06B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x06B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6B2[0x2];                                      // 0x06B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetRSRDonpaTicket_ReturnValue;            // 0x06B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRewardRedStarRingHonorTableRow        CallFunc_GetMultiPlayBonusRacerAwardData_OutRewardHonor; // 0x06B8(0x0020)()
-	struct FResultRewardItemInfo                  K2Node_MakeStruct_ResultRewardItemInfo_5;          // 0x06D8(0x0020)()
-	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x06F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6FC[0x4];                                      // 0x06FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FResultRewardItemInfo                  K2Node_MakeStruct_ResultRewardItemInfo_6;          // 0x0700(0x0020)()
-	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x0720(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAppRaceConfigData                     CallFunc_GetAppRaceConfigData_OutData;             // 0x0220(0x0500)()
+	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue_2;      // 0x0720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0721(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_722[0x2];                                      // 0x0722(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetRSRDonpaTicket_ReturnValue;            // 0x0724(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRewardRedStarRingHonorTableRow        CallFunc_GetMultiPlayBonusRacerAwardData_OutRewardHonor; // 0x0728(0x0020)()
+	struct FResultRewardItemInfo                  K2Node_MakeStruct_ResultRewardItemInfo_5;          // 0x0748(0x0020)()
+	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x0768(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76C[0x4];                                      // 0x076C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FResultRewardItemInfo                  K2Node_MakeStruct_ResultRewardItemInfo_6;          // 0x0770(0x0020)()
+	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x0790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPFL_ResultReward_C_MakeResultRewardItemInfos;
 

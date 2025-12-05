@@ -59,12 +59,13 @@ public:
 DUMPER7_ASSERTS_BP_HoldItemVAT_C_ExecuteUbergraph_BP_HoldItemVAT;
 
 // Function BP_HoldItemVAT.BP_HoldItemVAT_C.PlayRareItemEffect
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct BP_HoldItemVAT_C_PlayRareItemEffect final
 {
 public:
 	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_HoldItemVAT_C_PlayRareItemEffect;
 

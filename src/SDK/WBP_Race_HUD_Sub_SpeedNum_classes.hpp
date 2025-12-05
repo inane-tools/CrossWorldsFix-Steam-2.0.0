@@ -46,7 +46,7 @@ public:
 	void SetIntNum(class UImage* Image, int32 Num);
 	void SetRingNum(int32 RingNum);
 	void SetSpeedKMPH(int32 SpeedKMPH);
-	void SetSpeedScale(int32 Speed, int32* NewParam);
+	void SetSpeedScale(int32 Speed, int32* newParam);
 
 public:
 	static class UClass* StaticClass()

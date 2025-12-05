@@ -115,26 +115,6 @@ void UWBP_Popup_Info_C::SetButtonText(const TArray<class FText>& InTextArray)
 }
 
 
-// Function WBP_Popup_Info.WBP_Popup_Info_C.SetFooterMessageText
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_Popup_Info_C::SetFooterMessageText(const class FText& InText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "SetFooterMessageText");
-
-	Params::WBP_Popup_Info_C_SetFooterMessageText Parms{};
-
-	Parms.InText = std::move(InText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Popup_Info.WBP_Popup_Info_C.SetImageButtonSelectText
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

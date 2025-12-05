@@ -39,8 +39,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x03E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x03E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x03E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E7[0x1];                                      // 0x03E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E6[0x2];                                      // 0x03E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_SceneDriver_C_ExecuteUbergraph_BP_SceneDriver;
@@ -54,14 +53,31 @@ public:
 };
 DUMPER7_ASSERTS_BP_SceneDriver_C_ReceiveTick;
 
-// Function BP_SceneDriver.BP_SceneDriver_C.SetEnableGfur
+// Function BP_SceneDriver.BP_SceneDriver_C.SetEnableGFur
 // 0x0001 (0x0001 - 0x0000)
-struct BP_SceneDriver_C_SetEnableGfur final
+struct BP_SceneDriver_C_SetEnableGFur final
 {
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_SceneDriver_C_SetEnableGfur;
+DUMPER7_ASSERTS_BP_SceneDriver_C_SetEnableGFur;
+
+// Function BP_SceneDriver.BP_SceneDriver_C.SetupCharacterById
+// 0x0018 (0x0018 - 0x0000)
+struct BP_SceneDriver_C_SetupCharacterById final
+{
+public:
+	EDriverId                                     In_DriverId;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UUnionSettings*                   CallFunc_GetGameSettings_ReturnValue;              // 0x0008(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetGFurEnable_ReturnValue;                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SceneDriver_C_SetupCharacterById;
 
 // Function BP_SceneDriver.BP_SceneDriver_C.UserConstructionScript
 // 0x0001 (0x0001 - 0x0000)

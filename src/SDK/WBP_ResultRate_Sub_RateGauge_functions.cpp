@@ -74,9 +74,9 @@ void UWBP_ResultRate_Sub_RateGauge_C::PreConstruct(bool IsDesignTime)
 // Function WBP_ResultRate_Sub_RateGauge.WBP_ResultRate_Sub_RateGauge_C.Set Now Rate Impl
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  newParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ResultRate_Sub_RateGauge_C::Set_Now_Rate_Impl(double NewParam)
+void UWBP_ResultRate_Sub_RateGauge_C::Set_Now_Rate_Impl(double newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -85,7 +85,7 @@ void UWBP_ResultRate_Sub_RateGauge_C::Set_Now_Rate_Impl(double NewParam)
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_Set_Now_Rate_Impl Parms{};
 
-	Parms.NewParam = NewParam;
+	Parms.newParam = newParam;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

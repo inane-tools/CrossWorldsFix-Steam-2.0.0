@@ -118,9 +118,9 @@ void UWBP_Race_HUD_Sub_Festa_TeamHUD_RingGauge_C::PlayEffBase()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  ChargePer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isSingle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Race_HUD_Sub_Festa_TeamHUD_RingGauge_C::PlayGroupChargeEffect(double ChargePer, bool IsSingle)
+void UWBP_Race_HUD_Sub_Festa_TeamHUD_RingGauge_C::PlayGroupChargeEffect(double ChargePer, bool isSingle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -130,7 +130,7 @@ void UWBP_Race_HUD_Sub_Festa_TeamHUD_RingGauge_C::PlayGroupChargeEffect(double C
 	Params::WBP_Race_HUD_Sub_Festa_TeamHUD_RingGauge_C_PlayGroupChargeEffect Parms{};
 
 	Parms.ChargePer = ChargePer;
-	Parms.IsSingle = IsSingle;
+	Parms.isSingle = isSingle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

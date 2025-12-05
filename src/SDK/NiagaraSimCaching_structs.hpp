@@ -43,7 +43,7 @@ struct FMovieSceneNiagaraCacheParams final : public FMovieSceneBaseCacheParams
 {
 public:
 	struct FNiagaraSimCacheCreateParameters       CacheParameters;                                   // 0x0020(0x0058)(Edit, NativeAccessSpecifierPublic)
-	class UNiagaraSimCache*                       SimCache;                                          // 0x0078(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UNiagaraSimCache*                       SimCache;                                          // 0x0078(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bLockCacheToReadOnly;                              // 0x0080(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideQualityLevel;                             // 0x0081(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPerQualityLevels                             RecordQualityLevel;                                // 0x0082(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

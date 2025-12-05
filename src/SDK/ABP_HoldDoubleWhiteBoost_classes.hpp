@@ -23,7 +23,7 @@ class UABP_HoldDoubleWhiteBoost_C final : public UABPT_HoldItem_C
 public:
 	void IsSkipInState(int32 In_RemainingUses, bool* Out_Valid);
 
-	void GetBlendTime(double* NewParam) const;
+	void GetBlendTime(double* newParam) const;
 	void IsValidOutState(bool* Out_Valid) const;
 
 public:

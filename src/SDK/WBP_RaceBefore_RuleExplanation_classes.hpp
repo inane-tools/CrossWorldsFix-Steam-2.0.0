@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_RaceBefore_RuleExplanation.WBP_RaceBefore_RuleExplanation_C
-// 0x0228 (0x0530 - 0x0308)
+// 0x0230 (0x0538 - 0x0308)
 class UWBP_RaceBefore_RuleExplanation_C final : public UBeforeRaceRuleExplanationWidget
 {
 public:
@@ -69,6 +69,7 @@ public:
 	bool                                          bIsExtreme;                                        // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMenuGroupRaceRuleData                 Out_Row;                                           // 0x0450(0x00E0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bCunstomSingle;                                    // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CallAnimFinishEvent();
@@ -79,6 +80,8 @@ public:
 	void OnFestaHidePeople();
 	void OnOutFinished();
 	void PreConstruct(bool IsDesignTime);
+	void SequenceEvent();
+	void SequenceEvent__ENTRYPOINTWBP_RaceBefore_RuleExplanation();
 	void SetRuleDetail(const class FString& RuleDetail);
 	void UpdateMatchFormatText();
 	void UpdateWithRuleVisible();

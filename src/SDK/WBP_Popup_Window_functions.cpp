@@ -1608,26 +1608,6 @@ void UWBP_Popup_Window_C::SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType
 }
 
 
-// Function WBP_Popup_Window.WBP_Popup_Window_C.SetFooterTextMessege
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_Popup_Window_C::SetFooterTextMessege(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetFooterTextMessege");
-
-	Params::WBP_Popup_Window_C_SetFooterTextMessege Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Popup_Window.WBP_Popup_Window_C.SetImageButtonSelectText
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1863,7 +1843,7 @@ void UWBP_Popup_Window_C::UnregisterMainMenu()
 
 
 // Function WBP_Popup_Window.WBP_Popup_Window_C.UpdateButtonControlDelay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -23,29 +23,6 @@
 namespace SDK::Params
 {
 
-// Function UnionSystem.UnionStaticMeshComponent.ChangeMaterial
-// 0x0010 (0x0010 - 0x0000)
-struct UnionStaticMeshComponent_ChangeMaterial final
-{
-public:
-	int32                                         MaterialID;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bChange;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     InMaterial;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionStaticMeshComponent_ChangeMaterial;
-
-// Function UnionSystem.UnionStaticMeshComponent.IsNotChangedMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct UnionStaticMeshComponent_IsNotChangedMaterial final
-{
-public:
-	int32                                         MaterialID;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionStaticMeshComponent_IsNotChangedMaterial;
-
 // Function UnionSystem.AppControllerInputManager.GetMenuPlayerController
 // 0x0010 (0x0010 - 0x0000)
 struct AppControllerInputManager_GetMenuPlayerController final
@@ -358,6 +335,16 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AppFunctionLibrary_IsPre2ndRom;
+
+// Function UnionSystem.AppFunctionLibrary.IsReachedTargetVersion
+// 0x0002 (0x0002 - 0x0000)
+struct AppFunctionLibrary_IsReachedTargetVersion final
+{
+public:
+	EUnionRomVersion                              TargetVersion;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AppFunctionLibrary_IsReachedTargetVersion;
 
 // Function UnionSystem.AppFunctionLibrary.IsShippingBuild
 // 0x0001 (0x0001 - 0x0000)
@@ -682,494 +669,182 @@ public:
 };
 DUMPER7_ASSERTS_ChallengeStatsUtility_SetChallengeStats;
 
-// Function UnionSystem.MilestoneUtil.GetEnablePrelaunchAnotherStageLotteryMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_GetEnablePrelaunchAnotherStageLotteryMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.GetAnimationIn
+// 0x0008 (0x0008 - 0x0000)
+struct MenuPopupWindowInterface_GetAnimationIn final
 {
 public:
-	EMilestoneVersion                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_GetEnablePrelaunchAnotherStageLotteryMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_GetAnimationIn;
 
-// Function UnionSystem.MilestoneUtil.GetGrandPrixRivalDriverIds
+// Function UnionSystem.MenuPopupWindowInterface.GetAnimationLoop
+// 0x0008 (0x0008 - 0x0000)
+struct MenuPopupWindowInterface_GetAnimationLoop final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuPopupWindowInterface_GetAnimationLoop;
+
+// Function UnionSystem.MenuPopupWindowInterface.GetAnimationOut
+// 0x0008 (0x0008 - 0x0000)
+struct MenuPopupWindowInterface_GetAnimationOut final
+{
+public:
+	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuPopupWindowInterface_GetAnimationOut;
+
+// Function UnionSystem.MenuPopupWindowInterface.GetPopupWindowButtonType
+// 0x0001 (0x0001 - 0x0000)
+struct MenuPopupWindowInterface_GetPopupWindowButtonType final
+{
+public:
+	EPopupWindowButtonType                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuPopupWindowInterface_GetPopupWindowButtonType;
+
+// Function UnionSystem.MenuPopupWindowInterface.GetPopupWindowType
+// 0x0001 (0x0001 - 0x0000)
+struct MenuPopupWindowInterface_GetPopupWindowType final
+{
+public:
+	EPopupWindowType                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuPopupWindowInterface_GetPopupWindowType;
+
+// Function UnionSystem.MenuPopupWindowInterface.InitParam
+// 0x0001 (0x0001 - 0x0000)
+struct MenuPopupWindowInterface_InitParam final
+{
+public:
+	EPopupWindowButtonType                        ButtonType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuPopupWindowInterface_InitParam;
+
+// Function UnionSystem.MenuPopupWindowInterface.SetButtonControlDelayTime
+// 0x0004 (0x0004 - 0x0000)
+struct MenuPopupWindowInterface_SetButtonControlDelayTime final
+{
+public:
+	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetButtonControlDelayTime;
+
+// Function UnionSystem.MenuPopupWindowInterface.SetButtonText
 // 0x0010 (0x0010 - 0x0000)
-struct MilestoneUtil_GetGrandPrixRivalDriverIds final
+struct MenuPopupWindowInterface_SetButtonText final
 {
 public:
-	TArray<EDriverId>                             ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	TArray<class FText>                           BtnTextArray;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_GetGrandPrixRivalDriverIds;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetButtonText;
 
-// Function UnionSystem.MilestoneUtil.GetRivalByMilestoneVersion
+// Function UnionSystem.MenuPopupWindowInterface.SetDisplayFooterButton
 // 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_GetRivalByMilestoneVersion final
+struct MenuPopupWindowInterface_SetDisplayFooterButton final
 {
 public:
-	EDriverId                                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InDisplay;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_GetRivalByMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetDisplayFooterButton;
 
-// Function UnionSystem.MilestoneUtil.IsAlreadyGrandPrixLeast1Play
+// Function UnionSystem.MenuPopupWindowInterface.SetDonpaTicketCount
+// 0x0008 (0x0008 - 0x0000)
+struct MenuPopupWindowInterface_SetDonpaTicketCount final
+{
+public:
+	int32                                         CurrentCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AfterCount;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetDonpaTicketCount;
+
+// Function UnionSystem.MenuPopupWindowInterface.SetEnableInput
 // 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsAlreadyGrandPrixLeast1Play final
+struct MenuPopupWindowInterface_SetEnableInput final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InEnable;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsAlreadyGrandPrixLeast1Play;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetEnableInput;
 
-// Function UnionSystem.MilestoneUtil.IsCharaIconLockCover
-// 0x0002 (0x0002 - 0x0000)
-struct MilestoneUtil_IsCharaIconLockCover final
+// Function UnionSystem.MenuPopupWindowInterface.SetFooterMenuBtn
+// 0x0018 (0x0018 - 0x0000)
+struct MenuPopupWindowInterface_SetFooterMenuBtn final
 {
 public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BtnIconIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BtnIconType;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   BtnText;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsCharaIconLockCover;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetFooterMenuBtn;
 
-// Function UnionSystem.MilestoneUtil.IsCloseCourseInRaceParkCustomMatchMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsCloseCourseInRaceParkCustomMatchMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.SetImageButtonSelectText
+// 0x0010 (0x0010 - 0x0000)
+struct MenuPopupWindowInterface_SetImageButtonSelectText final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   InText;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsCloseCourseInRaceParkCustomMatchMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetImageButtonSelectText;
 
-// Function UnionSystem.MilestoneUtil.IsDisableDecisionInRaceParkMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableDecisionInRaceParkMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.SetImageTexture
+// 0x0008 (0x0008 - 0x0000)
+struct MenuPopupWindowInterface_SetImageTexture final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UTexture2D*                       Texture2D;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableDecisionInRaceParkMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetImageTexture;
 
-// Function UnionSystem.MilestoneUtil.IsDisableEtceteraChallengeMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableEtceteraChallengeMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.SetInitialFocusButtonIndex
+// 0x0004 (0x0004 - 0x0000)
+struct MenuPopupWindowInterface_SetInitialFocusButtonIndex final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InButtonIndex;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraChallengeMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetInitialFocusButtonIndex;
 
-// Function UnionSystem.MilestoneUtil.IsDisableEtceteraHintMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableEtceteraHintMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.SetPopupInfoDisplayIndex
+// 0x0004 (0x0004 - 0x0000)
+struct MenuPopupWindowInterface_SetPopupInfoDisplayIndex final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraHintMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetPopupInfoDisplayIndex;
 
-// Function UnionSystem.MilestoneUtil.IsDisableEtceteraOthersMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableEtceteraOthersMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.SetPopupInfoMainMenuButtonIconIndex
+// 0x0008 (0x0008 - 0x0000)
+struct MenuPopupWindowInterface_SetPopupInfoMainMenuButtonIconIndex final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Btn01IconIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Btn02IconIndex;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraOthersMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetPopupInfoMainMenuButtonIconIndex;
 
-// Function UnionSystem.MilestoneUtil.IsDisableEtceteraStoreMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableEtceteraStoreMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.SetTextMessege
+// 0x0010 (0x0010 - 0x0000)
+struct MenuPopupWindowInterface_SetTextMessege final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraStoreMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetTextMessege;
 
-// Function UnionSystem.MilestoneUtil.IsDisableEtceteraTitleMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableEtceteraTitleMilestoneVersion final
+// Function UnionSystem.MenuPopupWindowInterface.SetTextTitle
+// 0x0018 (0x0018 - 0x0000)
+struct MenuPopupWindowInterface_SetTextTitle final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          Attension;                                         // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraTitleMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableFestaMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableFestaMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableFestaMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableFriendlistMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableFriendlistMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableFriendlistMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableGetAchievement
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableGetAchievement final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableGetAchievement;
-
-// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixCourse2MilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableGrandPrixCourse2MilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixCourse2MilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixCourse3MilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableGrandPrixCourse3MilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixCourse3MilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixCourseMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableGrandPrixCourseMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixCourseMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableGrandPrixMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableHornAuraTabMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableHornAuraTabMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableHornAuraTabMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableRaceParkMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableRaceParkMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableRaceParkMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableRaceParkRivalOnOffMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableRaceParkRivalOnOffMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableRaceParkRivalOnOffMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableSelectTimeTrialMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableSelectTimeTrialMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableSelectTimeTrialMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableTimeTrialMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableTimeTrialMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableTimeTrialMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableTopMenuFestaRuleMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableTopMenuFestaRuleMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableTopMenuFestaRuleMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableTopMenuNewsMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableTopMenuNewsMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableTopMenuNewsMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsDisableTrialMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsDisableTrialMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsDisableTrialMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableAdvertiseRatingMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableAdvertiseRatingMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableAdvertiseRatingMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableEtceteraFullGameStoreMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableEtceteraFullGameStoreMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableEtceteraFullGameStoreMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableResetSaveDataMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableResetSaveDataMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableResetSaveDataMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableSpecificTitleDebugCommandMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableSpecificTitleDebugCommandMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableSpecificTitleDebugCommandMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableThumbnailCollaboRaceMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableThumbnailCollaboRaceMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableThumbnailCollaboRaceMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableTitleDemoMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableTitleDemoMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableTitleDemoMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableTitleStoreMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableTitleStoreMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableTitleStoreMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableTopMenuStoreMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableTopMenuStoreMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableTopMenuStoreMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsEnableTopMenuStorePopupAutoMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsEnableTopMenuStorePopupAutoMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsEnableTopMenuStorePopupAutoMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsExclusionGhostUpDownloadEventMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsExclusionGhostUpDownloadEventMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsExclusionGhostUpDownloadEventMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsForceEnableTopMenuNewsMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsForceEnableTopMenuNewsMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsForceEnableTopMenuNewsMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsHiddenCharacter
-// 0x0002 (0x0002 - 0x0000)
-struct MilestoneUtil_IsHiddenCharacter final
-{
-public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsHiddenCharacter;
-
-// Function UnionSystem.MilestoneUtil.IsHiddenMachineParts
-// 0x0002 (0x0002 - 0x0000)
-struct MilestoneUtil_IsHiddenMachineParts final
-{
-public:
-	EMachineId                                    MachineId;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsHiddenMachineParts;
-
-// Function UnionSystem.MilestoneUtil.IsHiddenRomVerMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsHiddenRomVerMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsHiddenRomVerMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsHiddenWebManualQRcodeMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsHiddenWebManualQRcodeMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsHiddenWebManualQRcodeMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsHideTipsInPreLaunchHide
-// 0x0002 (0x0002 - 0x0000)
-struct MilestoneUtil_IsHideTipsInPreLaunchHide final
-{
-public:
-	EHintId                                       InHintId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsHideTipsInPreLaunchHide;
-
-// Function UnionSystem.MilestoneUtil.IsIgnoreTypeDashInGarage
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsIgnoreTypeDashInGarage final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsIgnoreTypeDashInGarage;
-
-// Function UnionSystem.MilestoneUtil.IsInitialMachineParts
-// 0x0014 (0x0014 - 0x0000)
-struct MilestoneUtil_IsInitialMachineParts final
-{
-public:
-	EMachineId                                    MachineId;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         FrontPrice;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RearPrice;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TirePrice;                                         // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsInitialMachineParts;
-
-// Function UnionSystem.MilestoneUtil.IsLimitDonpaTicketMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsLimitDonpaTicketMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsLimitDonpaTicketMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsLimitRewardInRaceParkMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsLimitRewardInRaceParkMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsLimitRewardInRaceParkMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsOfflineMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsOfflineMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsOfflineMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsRaceUnLockedMilestoneVersion
-// 0x0003 (0x0003 - 0x0000)
-struct MilestoneUtil_IsRaceUnLockedMilestoneVersion final
-{
-public:
-	EGameModeId                                   InGameModeId;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EStageId                                      InStageId;                                         // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsRaceUnLockedMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsSkipDodonpaEventMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsSkipDodonpaEventMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsSkipDodonpaEventMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsSkipSelectPlayNumMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsSkipSelectPlayNumMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsSkipSelectPlayNumMilestoneVersion;
-
-// Function UnionSystem.MilestoneUtil.IsTopMenuAccessLoginSuccessOnly
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsTopMenuAccessLoginSuccessOnly final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsTopMenuAccessLoginSuccessOnly;
-
-// Function UnionSystem.MilestoneUtil.IsVisibleCompanyNameMilestoneVersion
-// 0x0001 (0x0001 - 0x0000)
-struct MilestoneUtil_IsVisibleCompanyNameMilestoneVersion final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MilestoneUtil_IsVisibleCompanyNameMilestoneVersion;
+DUMPER7_ASSERTS_MenuPopupWindowInterface_SetTextTitle;
 
 // Function UnionSystem.AppGameInstance.Set2ndRom
 // 0x0001 (0x0001 - 0x0000)
@@ -1198,72 +873,67 @@ public:
 };
 DUMPER7_ASSERTS_AppGameInstance_GetVCSRevisionStr;
 
-// Function UnionSystem.HonorTitleListDataAsset.GetAllHonorTitleAndIdWithRarity
-// 0x0028 (0x0028 - 0x0000)
-struct HonorTitleListDataAsset_GetAllHonorTitleAndIdWithRarity final
+// Function UnionSystem.HashHelper.HashIntoByteArray
+// 0x0020 (0x0020 - 0x0000)
+struct HashHelper_HashIntoByteArray final
 {
 public:
-	int32                                         Rarity;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Data;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HashHelper_HashIntoByteArray;
+
+// Function UnionSystem.HashHelper.HashIntoByteArrayFromByteArray
+// 0x0020 (0x0020 - 0x0000)
+struct HashHelper_HashIntoByteArrayFromByteArray final
+{
+public:
+	TArray<uint8>                                 Bytes;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HashHelper_HashIntoByteArrayFromByteArray;
+
+// Function UnionSystem.HashHelper.HashIntoTextString
+// 0x0020 (0x0020 - 0x0000)
+struct HashHelper_HashIntoTextString final
+{
+public:
+	class FString                                 Data;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HashHelper_HashIntoTextString;
+
+// Function UnionSystem.HashHelper.HashIntoTextStringFromByteArray
+// 0x0020 (0x0020 - 0x0000)
+struct HashHelper_HashIntoTextStringFromByteArray final
+{
+public:
+	TArray<uint8>                                 Bytes;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HashHelper_HashIntoTextStringFromByteArray;
+
+// Function UnionSystem.JukeboxDataAsset.GetAlbumData
+// 0x0078 (0x0078 - 0x0000)
+struct JukeboxDataAsset_GetAlbumData final
+{
+public:
+	int32                                         AlbumID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 outHonorTitleIdArray;                              // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FHonorTitleListData>            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FAlbumData                             ReturnValue;                                       // 0x0008(0x0070)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HonorTitleListDataAsset_GetAllHonorTitleAndIdWithRarity;
+DUMPER7_ASSERTS_JukeboxDataAsset_GetAlbumData;
 
-// Function UnionSystem.HonorTitleListDataAsset.GetAllHonorTitleWithRarity
-// 0x0018 (0x0018 - 0x0000)
-struct HonorTitleListDataAsset_GetAllHonorTitleWithRarity final
+// Function UnionSystem.JukeboxDataAsset.GetTrackData
+// 0x00B0 (0x00B0 - 0x0000)
+struct JukeboxDataAsset_GetTrackData final
 {
 public:
-	int32                                         Rarity;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TrackID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FHonorTitleListData>            ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FTrackData                             ReturnValue;                                       // 0x0008(0x00A8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HonorTitleListDataAsset_GetAllHonorTitleWithRarity;
-
-// Function UnionSystem.HonorTitleListDataAsset.GetHonorTitlePlate
-// 0x0030 (0x0030 - 0x0000)
-struct HonorTitleListDataAsset_GetHonorTitlePlate final
-{
-public:
-	int32                                         HonorTitleId;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HonorTitleListDataAsset_GetHonorTitlePlate;
-
-// Function UnionSystem.HonorTitleListDataAsset.GetHonorTitleRarity
-// 0x0008 (0x0008 - 0x0000)
-struct HonorTitleListDataAsset_GetHonorTitleRarity final
-{
-public:
-	int32                                         HonorTitleId;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HonorTitleListDataAsset_GetHonorTitleRarity;
-
-// Function UnionSystem.HonorTitleListDataAsset.GetHonorTitleVBName
-// 0x0018 (0x0018 - 0x0000)
-struct HonorTitleListDataAsset_GetHonorTitleVBName final
-{
-public:
-	int32                                         HonorTitleId;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsValid;                                           // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_HonorTitleListDataAsset_GetHonorTitleVBName;
-
-// Function UnionSystem.HonorTitleListDataAsset.GetIsHonorTitleDLC
-// 0x0008 (0x0008 - 0x0000)
-struct HonorTitleListDataAsset_GetIsHonorTitleDLC final
-{
-public:
-	int32                                         HonorTitleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_HonorTitleListDataAsset_GetIsHonorTitleDLC;
+DUMPER7_ASSERTS_JukeboxDataAsset_GetTrackData;
 
 // Function UnionSystem.AtomListenerFocusPointForCamera.SetCamera
 // 0x0008 (0x0008 - 0x0000)
@@ -1977,24 +1647,6 @@ public:
 };
 DUMPER7_ASSERTS_AppPlayerControllerSubsystem_GetControllerTextureIndexFromFKey;
 
-// Function UnionSystem.AppPlayerControllerSubsystem.GetCurrentButtonTextureType
-// 0x0001 (0x0001 - 0x0000)
-struct AppPlayerControllerSubsystem_GetCurrentButtonTextureType final
-{
-public:
-	EControllerButtonTextureType                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AppPlayerControllerSubsystem_GetCurrentButtonTextureType;
-
-// Function UnionSystem.AppPlayerControllerSubsystem.GetCurrentDeviceTexture
-// 0x0008 (0x0008 - 0x0000)
-struct AppPlayerControllerSubsystem_GetCurrentDeviceTexture final
-{
-public:
-	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AppPlayerControllerSubsystem_GetCurrentDeviceTexture;
-
 // Function UnionSystem.AppPlayerControllerSubsystem.GetMenuKeyboardButtonTexture
 // 0x0008 (0x0008 - 0x0000)
 struct AppPlayerControllerSubsystem_GetMenuKeyboardButtonTexture final
@@ -2074,6 +1726,24 @@ public:
 };
 DUMPER7_ASSERTS_AppPlayerControllerSubsystem_UpdateButtonMaterialByDeviceType;
 
+// Function UnionSystem.AppPlayerControllerSubsystem.GetCurrentButtonTextureType
+// 0x0001 (0x0001 - 0x0000)
+struct AppPlayerControllerSubsystem_GetCurrentButtonTextureType final
+{
+public:
+	EControllerButtonTextureType                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AppPlayerControllerSubsystem_GetCurrentButtonTextureType;
+
+// Function UnionSystem.AppPlayerControllerSubsystem.GetCurrentDeviceTexture
+// 0x0008 (0x0008 - 0x0000)
+struct AppPlayerControllerSubsystem_GetCurrentDeviceTexture final
+{
+public:
+	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AppPlayerControllerSubsystem_GetCurrentDeviceTexture;
+
 // Function UnionSystem.AppPlayerControllerSubsystem.GetCurrentDisplayKeytopPattern
 // 0x0008 (0x0008 - 0x0000)
 struct AppPlayerControllerSubsystem_GetCurrentDisplayKeytopPattern final
@@ -2103,6 +1773,26 @@ public:
 };
 DUMPER7_ASSERTS_AppSaveGameHelper_AddCompensationData;
 
+// Function UnionSystem.AppSaveGameHelper.AddLegendCompeEnteredSeason
+// 0x0008 (0x0008 - 0x0000)
+struct AppSaveGameHelper_AddLegendCompeEnteredSeason final
+{
+public:
+	int32                                         InSeason;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AppSaveGameHelper_AddLegendCompeEnteredSeason;
+
+// Function UnionSystem.AppSaveGameHelper.AddLegendCompeRecievedFinalResultSeason
+// 0x0004 (0x0004 - 0x0000)
+struct AppSaveGameHelper_AddLegendCompeRecievedFinalResultSeason final
+{
+public:
+	int32                                         InSeason;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AppSaveGameHelper_AddLegendCompeRecievedFinalResultSeason;
+
 // Function UnionSystem.AppSaveGameHelper.AddRaceStatsValue
 // 0x0008 (0x0008 - 0x0000)
 struct AppSaveGameHelper_AddRaceStatsValue final
@@ -2131,6 +1821,15 @@ public:
 	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AppSaveGameHelper_AddRivalWinCount;
+
+// Function UnionSystem.AppSaveGameHelper.CalcLegendCompeNeedFinalResultSeason
+// 0x0010 (0x0010 - 0x0000)
+struct AppSaveGameHelper_CalcLegendCompeNeedFinalResultSeason final
+{
+public:
+	TArray<int32>                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AppSaveGameHelper_CalcLegendCompeNeedFinalResultSeason;
 
 // Function UnionSystem.AppSaveGameHelper.CheckRewardGetDisplayRequest
 // 0x0002 (0x0002 - 0x0000)
@@ -2368,11 +2067,11 @@ public:
 DUMPER7_ASSERTS_AppSaveGameHelper_GetHonorTitleIndex;
 
 // Function UnionSystem.AppSaveGameHelper.GetHonorTitleInfo
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct AppSaveGameHelper_GetHonorTitleInfo final
 {
 public:
-	struct FHonorTitleListData                    ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FHonorTitleListData                    ReturnValue;                                       // 0x0000(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AppSaveGameHelper_GetHonorTitleInfo;
 
@@ -2431,6 +2130,15 @@ public:
 	struct FItemSwitchSettingSave                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AppSaveGameHelper_GetItemSwitchSettingSave;
+
+// Function UnionSystem.AppSaveGameHelper.GetLegendCompeEnteredSeason
+// 0x0010 (0x0010 - 0x0000)
+struct AppSaveGameHelper_GetLegendCompeEnteredSeason final
+{
+public:
+	TArray<int32>                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AppSaveGameHelper_GetLegendCompeEnteredSeason;
 
 // Function UnionSystem.AppSaveGameHelper.GetMachineColorPresetAll
 // 0x0010 (0x0010 - 0x0000)
@@ -3799,6 +3507,18 @@ public:
 };
 DUMPER7_ASSERTS_AppTimeUtil_MakeDateTimeText;
 
+// Function UnionSystem.AppTimeUtil.ReplaceDateTimePlaceholder
+// 0x0030 (0x0030 - 0x0000)
+struct AppTimeUtil_ReplaceDateTimePlaceholder final
+{
+public:
+	class FText                                   BaseText;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FDateTime                              StartDateLocalTime;                                // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              EndDateLocalTime;                                  // 0x0018(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AppTimeUtil_ReplaceDateTimePlaceholder;
+
 // Function UnionSystem.AppTimeUtil.Sub_DateTimeDateTime
 // 0x0018 (0x0018 - 0x0000)
 struct AppTimeUtil_Sub_DateTimeDateTime final
@@ -3893,11 +3613,11 @@ public:
 DUMPER7_ASSERTS_AuthSubsystem_OnCompleteUserGetDataRequest;
 
 // Function UnionSystem.AuthSubsystem.SetCachedAppUserBaseData
-// 0x0100 (0x0100 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct AuthSubsystem_SetCachedAppUserBaseData final
 {
 public:
-	struct FUserGetDataResponse                   Response;                                          // 0x0000(0x0100)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FUserGetDataResponse                   Response;                                          // 0x0000(0x0108)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AuthSubsystem_SetCachedAppUserBaseData;
 
@@ -4427,6 +4147,15 @@ public:
 };
 DUMPER7_ASSERTS_DebugOnlineAutoPlaySetting_GetDebugAutoPlayMode;
 
+// Function UnionSystem.DebugOnlineAutoPlaySetting.GetMaxDebugAutoPlayModeNum
+// 0x0004 (0x0004 - 0x0000)
+struct DebugOnlineAutoPlaySetting_GetMaxDebugAutoPlayModeNum final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DebugOnlineAutoPlaySetting_GetMaxDebugAutoPlayModeNum;
+
 // Function UnionSystem.DebugOnlineAutoPlaySetting.IsDebugAutoPlay
 // 0x0001 (0x0001 - 0x0000)
 struct DebugOnlineAutoPlaySetting_IsDebugAutoPlay final
@@ -4435,6 +4164,15 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DebugOnlineAutoPlaySetting_IsDebugAutoPlay;
+
+// Function UnionSystem.DebugOnlineAutoPlaySetting.IsDebugAutoPlayMonkeyTest
+// 0x0001 (0x0001 - 0x0000)
+struct DebugOnlineAutoPlaySetting_IsDebugAutoPlayMonkeyTest final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DebugOnlineAutoPlaySetting_IsDebugAutoPlayMonkeyTest;
 
 // Function UnionSystem.DebugOnlineAutoPlaySetting.IsDebugAutoPlayShortRace
 // 0x0001 (0x0001 - 0x0000)
@@ -4462,6 +4200,15 @@ public:
 	int32                                         Mode;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DebugOnlineAutoPlaySetting_SetDebugAutoPlayMode;
+
+// Function UnionSystem.DebugOnlineAutoPlaySetting.SetDebugAutoPlayMonkeyTest
+// 0x0001 (0x0001 - 0x0000)
+struct DebugOnlineAutoPlaySetting_SetDebugAutoPlayMonkeyTest final
+{
+public:
+	bool                                          flg;                                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DebugOnlineAutoPlaySetting_SetDebugAutoPlayMonkeyTest;
 
 // Function UnionSystem.DebugOnlineAutoPlaySetting.SetDebugAutoPlayShortRace
 // 0x0001 (0x0001 - 0x0000)
@@ -5633,16 +5380,56 @@ public:
 DUMPER7_ASSERTS_FriendSubsystem_GetReceivedLobbyInvitationCount;
 
 // Function UnionSystem.FriendSubsystem.GetUserSearchDataByProductUserId
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct FriendSubsystem_GetUserSearchDataByProductUserId final
 {
 public:
 	class FString                                 ProductUserId;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCommon_UserSearchData                 OutUserSearchData;                                 // 0x0010(0x00D8)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00E8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCommon_UserSearchData                 OutUserSearchData;                                 // 0x0010(0x00E0)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FriendSubsystem_GetUserSearchDataByProductUserId;
+
+// Function UnionSystem.GadgetSettingData.GadgetMenuCategory
+// 0x0002 (0x0002 - 0x0000)
+struct GadgetSettingData_GadgetMenuCategory final
+{
+public:
+	EGadgetId                                     gadgetId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGadgetMenuCategory                           ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GadgetSettingData_GadgetMenuCategory;
+
+// Function UnionSystem.GadgetSettingData.IsEquippable
+// 0x0002 (0x0002 - 0x0000)
+struct GadgetSettingData_IsEquippable final
+{
+public:
+	EGadgetId                                     gadgetId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GadgetSettingData_IsEquippable;
+
+// Function UnionSystem.GadgetSettingData.IsGadgetKit
+// 0x0002 (0x0002 - 0x0000)
+struct GadgetSettingData_IsGadgetKit final
+{
+public:
+	EGadgetId                                     gadgetId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GadgetSettingData_IsGadgetKit;
+
+// Function UnionSystem.GadgetSettingData.IsHiddenGadget
+// 0x0002 (0x0002 - 0x0000)
+struct GadgetSettingData_IsHiddenGadget final
+{
+public:
+	EGadgetId                                     gadgetId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GadgetSettingData_IsHiddenGadget;
 
 // Function UnionSystem.GameActivitySubsystem.ChangeActivityAvailability
 // 0x0030 (0x0030 - 0x0000)
@@ -5981,19 +5768,19 @@ public:
 };
 DUMPER7_ASSERTS_GhostSubSystem_CheckCachedGhostDataUserMatch;
 
-// Function UnionSystem.GhostSubSystem.OnCompleteSanitize
-// 0x0018 (0x0018 - 0x0000)
-struct GhostSubSystem_OnCompleteSanitize final
+// Function UnionSystem.GhostSubSystem.GetDownloadGhostData
+// 0x0148 (0x0148 - 0x0000)
+struct GhostSubSystem_GetDownloadGhostData final
 {
 public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SanitizeMessage;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FReplaySaveInfo                        OutGhostData;                                      // 0x0000(0x0140)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0140(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_GhostSubSystem_OnCompleteSanitize;
+DUMPER7_ASSERTS_GhostSubSystem_GetDownloadGhostData;
 
 // Function UnionSystem.GhostSubSystem.SetDownloadGhostData
-// 0x0168 (0x0168 - 0x0000)
+// 0x0178 (0x0178 - 0x0000)
 struct GhostSubSystem_SetDownloadGhostData final
 {
 public:
@@ -6002,7 +5789,8 @@ public:
 	EStageId                                      InStageId;                                         // 0x0011(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 InDateTime;                                        // 0x0018(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FReplaySaveInfo                        InGhostData;                                       // 0x0028(0x0140)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 InRankingName;                                     // 0x0028(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FReplaySaveInfo                        InGhostData;                                       // 0x0038(0x0140)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GhostSubSystem_SetDownloadGhostData;
 
@@ -6014,6 +5802,15 @@ public:
 	bool                                          InFailed;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GhostSubSystem_SetGhostRequestFailed;
+
+// Function UnionSystem.GhostSubSystem.GetDebugEnableGhostUploadCancel
+// 0x0001 (0x0001 - 0x0000)
+struct GhostSubSystem_GetDebugEnableGhostUploadCancel final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GhostSubSystem_GetDebugEnableGhostUploadCancel;
 
 // Function UnionSystem.GhostSubSystem.IsGhostRequestFailed
 // 0x0001 (0x0001 - 0x0000)
@@ -6058,45 +5855,84 @@ public:
 };
 DUMPER7_ASSERTS_UIColorInfoDataAsset_GetUIColorInfo;
 
-// Function UnionSystem.HashHelper.HashIntoByteArray
-// 0x0020 (0x0020 - 0x0000)
-struct HashHelper_HashIntoByteArray final
+// Function UnionSystem.HonorTitleListDataAsset.GetAllHonorTitleAndIdWithRarity
+// 0x0028 (0x0028 - 0x0000)
+struct HonorTitleListDataAsset_GetAllHonorTitleAndIdWithRarity final
 {
 public:
-	class FString                                 Data;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	int32                                         Rarity;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 outHonorTitleIdArray;                              // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FHonorTitleListData>            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HashHelper_HashIntoByteArray;
+DUMPER7_ASSERTS_HonorTitleListDataAsset_GetAllHonorTitleAndIdWithRarity;
 
-// Function UnionSystem.HashHelper.HashIntoByteArrayFromByteArray
-// 0x0020 (0x0020 - 0x0000)
-struct HashHelper_HashIntoByteArrayFromByteArray final
+// Function UnionSystem.HonorTitleListDataAsset.GetAllHonorTitleWithRarity
+// 0x0018 (0x0018 - 0x0000)
+struct HonorTitleListDataAsset_GetAllHonorTitleWithRarity final
 {
 public:
-	TArray<uint8>                                 Bytes;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	int32                                         Rarity;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FHonorTitleListData>            ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HashHelper_HashIntoByteArrayFromByteArray;
+DUMPER7_ASSERTS_HonorTitleListDataAsset_GetAllHonorTitleWithRarity;
 
-// Function UnionSystem.HashHelper.HashIntoTextString
-// 0x0020 (0x0020 - 0x0000)
-struct HashHelper_HashIntoTextString final
+// Function UnionSystem.HonorTitleListDataAsset.GetHonorTitleLegendCompeInfo
+// 0x000C (0x000C - 0x0000)
+struct HonorTitleListDataAsset_GetHonorTitleLegendCompeInfo final
 {
 public:
-	class FString                                 Data;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HonorTitleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsLegendCompe;                                     // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RoundNum;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HashHelper_HashIntoTextString;
+DUMPER7_ASSERTS_HonorTitleListDataAsset_GetHonorTitleLegendCompeInfo;
 
-// Function UnionSystem.HashHelper.HashIntoTextStringFromByteArray
-// 0x0020 (0x0020 - 0x0000)
-struct HashHelper_HashIntoTextStringFromByteArray final
+// Function UnionSystem.HonorTitleListDataAsset.GetHonorTitlePlate
+// 0x0030 (0x0030 - 0x0000)
+struct HonorTitleListDataAsset_GetHonorTitlePlate final
 {
 public:
-	TArray<uint8>                                 Bytes;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HonorTitleId;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HashHelper_HashIntoTextStringFromByteArray;
+DUMPER7_ASSERTS_HonorTitleListDataAsset_GetHonorTitlePlate;
+
+// Function UnionSystem.HonorTitleListDataAsset.GetHonorTitleRarity
+// 0x0008 (0x0008 - 0x0000)
+struct HonorTitleListDataAsset_GetHonorTitleRarity final
+{
+public:
+	int32                                         HonorTitleId;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HonorTitleListDataAsset_GetHonorTitleRarity;
+
+// Function UnionSystem.HonorTitleListDataAsset.GetHonorTitleVBName
+// 0x0018 (0x0018 - 0x0000)
+struct HonorTitleListDataAsset_GetHonorTitleVBName final
+{
+public:
+	int32                                         HonorTitleId;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsValid;                                           // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HonorTitleListDataAsset_GetHonorTitleVBName;
+
+// Function UnionSystem.HonorTitleListDataAsset.GetIsHonorTitleDLC
+// 0x0008 (0x0008 - 0x0000)
+struct HonorTitleListDataAsset_GetIsHonorTitleDLC final
+{
+public:
+	int32                                         HonorTitleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HonorTitleListDataAsset_GetIsHonorTitleDLC;
 
 // Function UnionSystem.HttpHelper.GetCurrentUserId
 // 0x0018 (0x0018 - 0x0000)
@@ -6164,11 +6000,11 @@ public:
 DUMPER7_ASSERTS_HttpHelper_LoginContextInitializeForMaintenance;
 
 // Function UnionSystem.HttpHelper.LoginContextUpdate
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct HttpHelper_LoginContextUpdate final
 {
 public:
-	struct FLoginCheckResponse                    Response;                                          // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLoginCheckResponse                    Response;                                          // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_LoginContextUpdate;
 
@@ -6206,6 +6042,39 @@ public:
 	struct FDebugChangeFairPlayPointResponse      Response;                                          // 0x0014(0x0004)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_DebugChangeFairPlayPoint;
+
+// Function UnionSystem.HttpHelper.Parse_DebugChangeFestaLastOrder
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Parse_DebugChangeFestaLastOrder final
+{
+public:
+	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDebugChangeFestaLastOrderResponse     Response;                                          // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Parse_DebugChangeFestaLastOrder;
+
+// Function UnionSystem.HttpHelper.Parse_DebugChangeLegendCompeLastOrder
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Parse_DebugChangeLegendCompeLastOrder final
+{
+public:
+	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDebugChangeLegendCompeLastOrderResponse Response;                                        // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Parse_DebugChangeLegendCompeLastOrder;
+
+// Function UnionSystem.HttpHelper.Parse_DebugChangeLegendCompeRate
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Parse_DebugChangeLegendCompeRate final
+{
+public:
+	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDebugChangeLegendCompeRateResponse    Response;                                          // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Parse_DebugChangeLegendCompeRate;
 
 // Function UnionSystem.HttpHelper.Parse_DebugChangeRankMatchRate
 // 0x0018 (0x0018 - 0x0000)
@@ -6327,14 +6196,14 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Parse_FestaFestaTop;
 
 // Function UnionSystem.HttpHelper.Parse_FriendAcceptFriend
-// 0x0480 (0x0480 - 0x0000)
+// 0x0488 (0x0488 - 0x0000)
 struct HttpHelper_Parse_FriendAcceptFriend final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFriendAcceptFriendResponse            Response;                                          // 0x0018(0x0468)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FFriendAcceptFriendResponse            Response;                                          // 0x0018(0x0470)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_FriendAcceptFriend;
 
@@ -6411,14 +6280,14 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Parse_FriendRejectFriend;
 
 // Function UnionSystem.HttpHelper.Parse_FriendRequestFriend
-// 0x0480 (0x0480 - 0x0000)
+// 0x0488 (0x0488 - 0x0000)
 struct HttpHelper_Parse_FriendRequestFriend final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFriendRequestFriendResponse           Response;                                          // 0x0018(0x0468)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FFriendRequestFriendResponse           Response;                                          // 0x0018(0x0470)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_FriendRequestFriend;
 
@@ -6471,14 +6340,14 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Parse_HealthCheck;
 
 // Function UnionSystem.HttpHelper.Parse_LegendCompeCheckLegendCompeReward
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct HttpHelper_Parse_LegendCompeCheckLegendCompeReward final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLegendCompeCheckLegendCompeRewardResponse Response;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FLegendCompeCheckLegendCompeRewardResponse Response;                                      // 0x0018(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_LegendCompeCheckLegendCompeReward;
 
@@ -6531,14 +6400,14 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Parse_LobbyRemoveLobby;
 
 // Function UnionSystem.HttpHelper.Parse_LoginCheck
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct HttpHelper_Parse_LoginCheck final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLoginCheckResponse                    Response;                                          // 0x0018(0x0090)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FLoginCheckResponse                    Response;                                          // 0x0018(0x00A0)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_LoginCheck;
 
@@ -6555,14 +6424,14 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Parse_MasterDataGetMaintenanceSchedule;
 
 // Function UnionSystem.HttpHelper.Parse_MasterDataGetMasterData
-// 0x02D8 (0x02D8 - 0x0000)
+// 0x02E8 (0x02E8 - 0x0000)
 struct HttpHelper_Parse_MasterDataGetMasterData final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMasterDataGetMasterDataResponse       Response;                                          // 0x0018(0x02C0)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FMasterDataGetMasterDataResponse       Response;                                          // 0x0018(0x02D0)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_MasterDataGetMasterData;
 
@@ -6579,14 +6448,14 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Parse_MasterDataGetVersion;
 
 // Function UnionSystem.HttpHelper.Parse_MatchmakingDescribe
-// 0x0110 (0x0110 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct HttpHelper_Parse_MatchmakingDescribe final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchmakingDescribeResponse           Response;                                          // 0x0018(0x00F8)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FMatchmakingDescribeResponse           Response;                                          // 0x0018(0x0108)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_MatchmakingDescribe;
 
@@ -6939,25 +6808,25 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Parse_StartSaveRankMatchStart;
 
 // Function UnionSystem.HttpHelper.Parse_UserGetData
-// 0x0118 (0x0118 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct HttpHelper_Parse_UserGetData final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserGetDataResponse                   Response;                                          // 0x0018(0x0100)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FUserGetDataResponse                   Response;                                          // 0x0018(0x0108)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_UserGetData;
 
 // Function UnionSystem.HttpHelper.Parse_UserGetPartsData
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct HttpHelper_Parse_UserGetPartsData final
 {
 public:
 	class FString                                 OutData;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ResCode;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUserGetPartsDataResponse              Response;                                          // 0x0014(0x0004)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FUserGetPartsDataResponse              Response;                                          // 0x0014(0x000C)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Parse_UserGetPartsData;
 
@@ -7099,6 +6968,51 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_DebugChangeFairPlayPoint;
+
+// Function UnionSystem.HttpHelper.Receive_DebugChangeFestaLastOrder
+// 0x0014 (0x0014 - 0x0000)
+struct HttpHelper_Receive_DebugChangeFestaLastOrder final
+{
+public:
+	int32                                         Handle;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutError;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDebugChangeFestaLastOrderResponse     Response;                                          // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HttpHelper_Receive_DebugChangeFestaLastOrder;
+
+// Function UnionSystem.HttpHelper.Receive_DebugChangeLegendCompeLastOrder
+// 0x0014 (0x0014 - 0x0000)
+struct HttpHelper_Receive_DebugChangeLegendCompeLastOrder final
+{
+public:
+	int32                                         Handle;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutError;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDebugChangeLegendCompeLastOrderResponse Response;                                        // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HttpHelper_Receive_DebugChangeLegendCompeLastOrder;
+
+// Function UnionSystem.HttpHelper.Receive_DebugChangeLegendCompeRate
+// 0x0014 (0x0014 - 0x0000)
+struct HttpHelper_Receive_DebugChangeLegendCompeRate final
+{
+public:
+	int32                                         Handle;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutError;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDebugChangeLegendCompeRateResponse    Response;                                          // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_HttpHelper_Receive_DebugChangeLegendCompeRate;
 
 // Function UnionSystem.HttpHelper.Receive_DebugChangeRankMatchRate
 // 0x0014 (0x0014 - 0x0000)
@@ -7258,7 +7172,7 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Receive_FestaFestaTop;
 
 // Function UnionSystem.HttpHelper.Receive_FriendAcceptFriend
-// 0x0480 (0x0480 - 0x0000)
+// 0x0488 (0x0488 - 0x0000)
 struct HttpHelper_Receive_FriendAcceptFriend final
 {
 public:
@@ -7267,9 +7181,9 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFriendAcceptFriendResponse            Response;                                          // 0x0010(0x0468)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0478(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_479[0x7];                                      // 0x0479(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFriendAcceptFriendResponse            Response;                                          // 0x0010(0x0470)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0480(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_FriendAcceptFriend;
 
@@ -7367,7 +7281,7 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Receive_FriendRejectFriend;
 
 // Function UnionSystem.HttpHelper.Receive_FriendRequestFriend
-// 0x0480 (0x0480 - 0x0000)
+// 0x0488 (0x0488 - 0x0000)
 struct HttpHelper_Receive_FriendRequestFriend final
 {
 public:
@@ -7376,9 +7290,9 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFriendRequestFriendResponse           Response;                                          // 0x0010(0x0468)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0478(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_479[0x7];                                      // 0x0479(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFriendRequestFriendResponse           Response;                                          // 0x0010(0x0470)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0480(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_FriendRequestFriend;
 
@@ -7445,7 +7359,7 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Receive_HealthCheck;
 
 // Function UnionSystem.HttpHelper.Receive_LegendCompeCheckLegendCompeReward
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct HttpHelper_Receive_LegendCompeCheckLegendCompeReward final
 {
 public:
@@ -7454,9 +7368,9 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLegendCompeCheckLegendCompeRewardResponse Response;                                      // 0x0010(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FLegendCompeCheckLegendCompeRewardResponse Response;                                      // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_LegendCompeCheckLegendCompeReward;
 
@@ -7524,7 +7438,7 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Receive_LobbyRemoveLobby;
 
 // Function UnionSystem.HttpHelper.Receive_LoginCheck
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct HttpHelper_Receive_LoginCheck final
 {
 public:
@@ -7533,9 +7447,9 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLoginCheckResponse                    Response;                                          // 0x0010(0x0090)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FLoginCheckResponse                    Response;                                          // 0x0010(0x00A0)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00B0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_LoginCheck;
 
@@ -7555,7 +7469,7 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Receive_MasterDataGetMaintenanceSchedule;
 
 // Function UnionSystem.HttpHelper.Receive_MasterDataGetMasterData
-// 0x02D8 (0x02D8 - 0x0000)
+// 0x02E8 (0x02E8 - 0x0000)
 struct HttpHelper_Receive_MasterDataGetMasterData final
 {
 public:
@@ -7564,9 +7478,9 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMasterDataGetMasterDataResponse       Response;                                          // 0x0010(0x02C0)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x02D0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMasterDataGetMasterDataResponse       Response;                                          // 0x0010(0x02D0)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x02E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_MasterDataGetMasterData;
 
@@ -7587,7 +7501,7 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Receive_MasterDataGetVersion;
 
 // Function UnionSystem.HttpHelper.Receive_MatchmakingDescribe
-// 0x0110 (0x0110 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct HttpHelper_Receive_MatchmakingDescribe final
 {
 public:
@@ -7596,9 +7510,9 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchmakingDescribeResponse           Response;                                          // 0x0010(0x00F8)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0108(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMatchmakingDescribeResponse           Response;                                          // 0x0010(0x0108)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_MatchmakingDescribe;
 
@@ -8063,7 +7977,7 @@ public:
 DUMPER7_ASSERTS_HttpHelper_Receive_StartSaveRankMatchStart;
 
 // Function UnionSystem.HttpHelper.Receive_UserGetData
-// 0x0118 (0x0118 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct HttpHelper_Receive_UserGetData final
 {
 public:
@@ -8072,14 +7986,14 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserGetDataResponse                   Response;                                          // 0x0010(0x0100)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0110(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FUserGetDataResponse                   Response;                                          // 0x0010(0x0108)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_UserGetData;
 
 // Function UnionSystem.HttpHelper.Receive_UserGetPartsData
-// 0x0014 (0x0014 - 0x0000)
+// 0x001C (0x001C - 0x0000)
 struct HttpHelper_Receive_UserGetPartsData final
 {
 public:
@@ -8087,9 +8001,9 @@ public:
 	bool                                          OutError;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ResCode;                                           // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUserGetPartsDataResponse              Response;                                          // 0x000C(0x0004)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FUserGetPartsDataResponse              Response;                                          // 0x000C(0x000C)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_HttpHelper_Receive_UserGetPartsData;
 
@@ -8328,6 +8242,126 @@ public:
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeFairPlayPoint_NoResend;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeFestaLastOrder
+// 0x000C (0x000C - 0x0000)
+struct HttpHelper_Send_DebugChangeFestaLastOrder final
+{
+public:
+	struct FDebugChangeFestaLastOrderRequest      Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeFestaLastOrder;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeFestaLastOrder_Callbacked
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Send_DebugChangeFestaLastOrder_Callbacked final
+{
+public:
+	struct FDebugChangeFestaLastOrderRequest      Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback; // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeFestaLastOrder_Callbacked;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeFestaLastOrder_Callbacked_NoResend
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Send_DebugChangeFestaLastOrder_Callbacked_NoResend final
+{
+public:
+	struct FDebugChangeFestaLastOrderRequest      Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback; // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeFestaLastOrder_Callbacked_NoResend;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeFestaLastOrder_NoResend
+// 0x000C (0x000C - 0x0000)
+struct HttpHelper_Send_DebugChangeFestaLastOrder_NoResend final
+{
+public:
+	struct FDebugChangeFestaLastOrderRequest      Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeFestaLastOrder_NoResend;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeLastOrder
+// 0x000C (0x000C - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeLastOrder final
+{
+public:
+	struct FDebugChangeLegendCompeLastOrderRequest Request;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeLastOrder;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeLastOrder_Callbacked
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeLastOrder_Callbacked final
+{
+public:
+	struct FDebugChangeLegendCompeLastOrderRequest Request;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback; // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeLastOrder_Callbacked;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeLastOrder_Callbacked_NoResend
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeLastOrder_Callbacked_NoResend final
+{
+public:
+	struct FDebugChangeLegendCompeLastOrderRequest Request;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback; // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeLastOrder_Callbacked_NoResend;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeLastOrder_NoResend
+// 0x000C (0x000C - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeLastOrder_NoResend final
+{
+public:
+	struct FDebugChangeLegendCompeLastOrderRequest Request;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeLastOrder_NoResend;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeRate
+// 0x000C (0x000C - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeRate final
+{
+public:
+	struct FDebugChangeLegendCompeRateRequest     Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeRate;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeRate_Callbacked
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeRate_Callbacked final
+{
+public:
+	struct FDebugChangeLegendCompeRateRequest     Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback; // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeRate_Callbacked;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeRate_Callbacked_NoResend
+// 0x0018 (0x0018 - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeRate_Callbacked_NoResend final
+{
+public:
+	struct FDebugChangeLegendCompeRateRequest     Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)> Callback; // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeRate_Callbacked_NoResend;
+
+// Function UnionSystem.HttpHelper.Send_DebugChangeLegendCompeRate_NoResend
+// 0x000C (0x000C - 0x0000)
+struct HttpHelper_Send_DebugChangeLegendCompeRate_NoResend final
+{
+public:
+	struct FDebugChangeLegendCompeRateRequest     Request;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_HttpHelper_Send_DebugChangeLegendCompeRate_NoResend;
 
 // Function UnionSystem.HttpHelper.Send_DebugChangeRankMatchRate
 // 0x0008 (0x0008 - 0x0000)
@@ -11450,28 +11484,6 @@ public:
 };
 DUMPER7_ASSERTS_InformManager_InformAboutAbuse;
 
-// Function UnionSystem.JukeboxDataAsset.GetAlbumData
-// 0x0078 (0x0078 - 0x0000)
-struct JukeboxDataAsset_GetAlbumData final
-{
-public:
-	int32                                         AlbumID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAlbumData                             ReturnValue;                                       // 0x0008(0x0070)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_JukeboxDataAsset_GetAlbumData;
-
-// Function UnionSystem.JukeboxDataAsset.GetTrackData
-// 0x00B0 (0x00B0 - 0x0000)
-struct JukeboxDataAsset_GetTrackData final
-{
-public:
-	int32                                         TrackID;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTrackData                             ReturnValue;                                       // 0x0008(0x00A8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_JukeboxDataAsset_GetTrackData;
-
 // Function UnionSystem.KeyConfigItem.SetPrimaryKey
 // 0x0018 (0x0018 - 0x0000)
 struct KeyConfigItem_SetPrimaryKey final
@@ -11899,6 +11911,15 @@ public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_LobbyContextBase_InitializeNoLobbyInfo;
+
+// Function UnionSystem.LobbyContextBase.IsSetShortLobbyId
+// 0x0001 (0x0001 - 0x0000)
+struct LobbyContextBase_IsSetShortLobbyId final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LobbyContextBase_IsSetShortLobbyId;
 
 // Function UnionSystem.LobbyContextBase.Join
 // 0x0020 (0x0020 - 0x0000)
@@ -14093,191 +14114,466 @@ public:
 };
 DUMPER7_ASSERTS_MenuPlayerController_GetMenuDirectionKeyEnable;
 
-// Function UnionSystem.MenuPopupWindowInterface.GetAnimationIn
-// 0x0008 (0x0008 - 0x0000)
-struct MenuPopupWindowInterface_GetAnimationIn final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuPopupWindowInterface_GetAnimationIn;
-
-// Function UnionSystem.MenuPopupWindowInterface.GetAnimationLoop
-// 0x0008 (0x0008 - 0x0000)
-struct MenuPopupWindowInterface_GetAnimationLoop final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuPopupWindowInterface_GetAnimationLoop;
-
-// Function UnionSystem.MenuPopupWindowInterface.GetAnimationOut
-// 0x0008 (0x0008 - 0x0000)
-struct MenuPopupWindowInterface_GetAnimationOut final
-{
-public:
-	class UWidgetAnimation*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuPopupWindowInterface_GetAnimationOut;
-
-// Function UnionSystem.MenuPopupWindowInterface.GetPopupWindowButtonType
+// Function UnionSystem.MilestoneUtil.GetEnablePrelaunchAnotherStageLotteryMilestoneVersion
 // 0x0001 (0x0001 - 0x0000)
-struct MenuPopupWindowInterface_GetPopupWindowButtonType final
+struct MilestoneUtil_GetEnablePrelaunchAnotherStageLotteryMilestoneVersion final
 {
 public:
-	EPopupWindowButtonType                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMilestoneVersion                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_GetPopupWindowButtonType;
+DUMPER7_ASSERTS_MilestoneUtil_GetEnablePrelaunchAnotherStageLotteryMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.GetPopupWindowType
-// 0x0001 (0x0001 - 0x0000)
-struct MenuPopupWindowInterface_GetPopupWindowType final
-{
-public:
-	EPopupWindowType                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuPopupWindowInterface_GetPopupWindowType;
-
-// Function UnionSystem.MenuPopupWindowInterface.InitParam
-// 0x0001 (0x0001 - 0x0000)
-struct MenuPopupWindowInterface_InitParam final
-{
-public:
-	EPopupWindowButtonType                        ButtonType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuPopupWindowInterface_InitParam;
-
-// Function UnionSystem.MenuPopupWindowInterface.SetButtonControlDelayTime
-// 0x0004 (0x0004 - 0x0000)
-struct MenuPopupWindowInterface_SetButtonControlDelayTime final
-{
-public:
-	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetButtonControlDelayTime;
-
-// Function UnionSystem.MenuPopupWindowInterface.SetButtonText
+// Function UnionSystem.MilestoneUtil.GetGrandPrixRivalDriverIds
 // 0x0010 (0x0010 - 0x0000)
-struct MenuPopupWindowInterface_SetButtonText final
+struct MilestoneUtil_GetGrandPrixRivalDriverIds final
 {
 public:
-	TArray<class FText>                           BtnTextArray;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<EDriverId>                             ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetButtonText;
+DUMPER7_ASSERTS_MilestoneUtil_GetGrandPrixRivalDriverIds;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetDisplayFooterButton
+// Function UnionSystem.MilestoneUtil.GetRivalByMilestoneVersion
 // 0x0001 (0x0001 - 0x0000)
-struct MenuPopupWindowInterface_SetDisplayFooterButton final
+struct MilestoneUtil_GetRivalByMilestoneVersion final
 {
 public:
-	bool                                          InDisplay;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetDisplayFooterButton;
+DUMPER7_ASSERTS_MilestoneUtil_GetRivalByMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetDonpaTicketCount
-// 0x0008 (0x0008 - 0x0000)
-struct MenuPopupWindowInterface_SetDonpaTicketCount final
-{
-public:
-	int32                                         CurrentCount;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AfterCount;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetDonpaTicketCount;
-
-// Function UnionSystem.MenuPopupWindowInterface.SetEnableInput
+// Function UnionSystem.MilestoneUtil.IsAlreadyGrandPrixLeast1Play
 // 0x0001 (0x0001 - 0x0000)
-struct MenuPopupWindowInterface_SetEnableInput final
+struct MilestoneUtil_IsAlreadyGrandPrixLeast1Play final
 {
 public:
-	bool                                          InEnable;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetEnableInput;
+DUMPER7_ASSERTS_MilestoneUtil_IsAlreadyGrandPrixLeast1Play;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetFooterMenuBtn
-// 0x0018 (0x0018 - 0x0000)
-struct MenuPopupWindowInterface_SetFooterMenuBtn final
+// Function UnionSystem.MilestoneUtil.IsCharaIconLockCover
+// 0x0002 (0x0002 - 0x0000)
+struct MilestoneUtil_IsCharaIconLockCover final
 {
 public:
-	int32                                         BtnIconIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BtnIconType;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   BtnText;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetFooterMenuBtn;
+DUMPER7_ASSERTS_MilestoneUtil_IsCharaIconLockCover;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetFooterTextMessege
-// 0x0010 (0x0010 - 0x0000)
-struct MenuPopupWindowInterface_SetFooterTextMessege final
+// Function UnionSystem.MilestoneUtil.IsCloseCourseInRaceParkCustomMatchMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsCloseCourseInRaceParkCustomMatchMilestoneVersion final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetFooterTextMessege;
+DUMPER7_ASSERTS_MilestoneUtil_IsCloseCourseInRaceParkCustomMatchMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetImageButtonSelectText
-// 0x0010 (0x0010 - 0x0000)
-struct MenuPopupWindowInterface_SetImageButtonSelectText final
+// Function UnionSystem.MilestoneUtil.IsDisableDecisionInRaceParkMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableDecisionInRaceParkMilestoneVersion final
 {
 public:
-	class FText                                   InText;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetImageButtonSelectText;
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableDecisionInRaceParkMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetImageTexture
-// 0x0008 (0x0008 - 0x0000)
-struct MenuPopupWindowInterface_SetImageTexture final
+// Function UnionSystem.MilestoneUtil.IsDisableEtceteraChallengeMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableEtceteraChallengeMilestoneVersion final
 {
 public:
-	const class UTexture2D*                       Texture2D;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetImageTexture;
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraChallengeMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetInitialFocusButtonIndex
-// 0x0004 (0x0004 - 0x0000)
-struct MenuPopupWindowInterface_SetInitialFocusButtonIndex final
+// Function UnionSystem.MilestoneUtil.IsDisableEtceteraHintMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableEtceteraHintMilestoneVersion final
 {
 public:
-	int32                                         InButtonIndex;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetInitialFocusButtonIndex;
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraHintMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetPopupInfoDisplayIndex
-// 0x0004 (0x0004 - 0x0000)
-struct MenuPopupWindowInterface_SetPopupInfoDisplayIndex final
+// Function UnionSystem.MilestoneUtil.IsDisableEtceteraOthersMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableEtceteraOthersMilestoneVersion final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetPopupInfoDisplayIndex;
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraOthersMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetPopupInfoMainMenuButtonIconIndex
-// 0x0008 (0x0008 - 0x0000)
-struct MenuPopupWindowInterface_SetPopupInfoMainMenuButtonIconIndex final
+// Function UnionSystem.MilestoneUtil.IsDisableEtceteraStoreMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableEtceteraStoreMilestoneVersion final
 {
 public:
-	int32                                         Btn01IconIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Btn02IconIndex;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetPopupInfoMainMenuButtonIconIndex;
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraStoreMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetTextMessege
-// 0x0010 (0x0010 - 0x0000)
-struct MenuPopupWindowInterface_SetTextMessege final
+// Function UnionSystem.MilestoneUtil.IsDisableEtceteraTitleMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableEtceteraTitleMilestoneVersion final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetTextMessege;
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableEtceteraTitleMilestoneVersion;
 
-// Function UnionSystem.MenuPopupWindowInterface.SetTextTitle
-// 0x0018 (0x0018 - 0x0000)
-struct MenuPopupWindowInterface_SetTextTitle final
+// Function UnionSystem.MilestoneUtil.IsDisableFestaMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableFestaMilestoneVersion final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          Attension;                                         // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MenuPopupWindowInterface_SetTextTitle;
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableFestaMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableFriendlistMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableFriendlistMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableFriendlistMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixCourse2MilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableGrandPrixCourse2MilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixCourse2MilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixCourse3MilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableGrandPrixCourse3MilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixCourse3MilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixCourseMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableGrandPrixCourseMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixCourseMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableGrandPrixMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableGrandPrixMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableGrandPrixMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableHornAuraTabMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableHornAuraTabMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableHornAuraTabMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableRaceParkMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableRaceParkMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableRaceParkMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableRaceParkRivalOnOffMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableRaceParkRivalOnOffMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableRaceParkRivalOnOffMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableSelectTimeTrialMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableSelectTimeTrialMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableSelectTimeTrialMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableTimeTrialMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableTimeTrialMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableTimeTrialMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableTopMenuFestaRuleMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableTopMenuFestaRuleMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableTopMenuFestaRuleMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableTopMenuNewsMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableTopMenuNewsMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableTopMenuNewsMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsDisableTrialMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsDisableTrialMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsDisableTrialMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableAdvertiseRatingMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableAdvertiseRatingMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableAdvertiseRatingMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableEtceteraFullGameStoreMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableEtceteraFullGameStoreMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableEtceteraFullGameStoreMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableResetSaveDataMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableResetSaveDataMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableResetSaveDataMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableSpecificTitleDebugCommandMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableSpecificTitleDebugCommandMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableSpecificTitleDebugCommandMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableThumbnailCollaboRaceMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableThumbnailCollaboRaceMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableThumbnailCollaboRaceMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableTitleDemoMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableTitleDemoMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableTitleDemoMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableTitleStoreMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableTitleStoreMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableTitleStoreMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableTopMenuStoreMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableTopMenuStoreMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableTopMenuStoreMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsEnableTopMenuStorePopupAutoMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsEnableTopMenuStorePopupAutoMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsEnableTopMenuStorePopupAutoMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsExclusionGhostUpDownloadEventMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsExclusionGhostUpDownloadEventMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsExclusionGhostUpDownloadEventMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsForceEnableTopMenuNewsMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsForceEnableTopMenuNewsMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsForceEnableTopMenuNewsMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsHiddenCharacter
+// 0x0002 (0x0002 - 0x0000)
+struct MilestoneUtil_IsHiddenCharacter final
+{
+public:
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsHiddenCharacter;
+
+// Function UnionSystem.MilestoneUtil.IsHiddenMachineParts
+// 0x0002 (0x0002 - 0x0000)
+struct MilestoneUtil_IsHiddenMachineParts final
+{
+public:
+	EMachineId                                    MachineId;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsHiddenMachineParts;
+
+// Function UnionSystem.MilestoneUtil.IsHiddenRomVerMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsHiddenRomVerMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsHiddenRomVerMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsHiddenWebManualQRcodeMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsHiddenWebManualQRcodeMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsHiddenWebManualQRcodeMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsInitialMachineParts
+// 0x0014 (0x0014 - 0x0000)
+struct MilestoneUtil_IsInitialMachineParts final
+{
+public:
+	EMachineId                                    MachineId;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FrontPrice;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RearPrice;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TirePrice;                                         // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsInitialMachineParts;
+
+// Function UnionSystem.MilestoneUtil.IsLimitDonpaTicketMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsLimitDonpaTicketMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsLimitDonpaTicketMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsLimitRewardInRaceParkMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsLimitRewardInRaceParkMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsLimitRewardInRaceParkMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsOfflineMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsOfflineMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsOfflineMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsRaceUnLockedMilestoneVersion
+// 0x0003 (0x0003 - 0x0000)
+struct MilestoneUtil_IsRaceUnLockedMilestoneVersion final
+{
+public:
+	EGameModeId                                   InGameModeId;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStageId                                      InStageId;                                         // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsRaceUnLockedMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsSkipDodonpaEventMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsSkipDodonpaEventMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsSkipDodonpaEventMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsSkipSelectPlayNumMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsSkipSelectPlayNumMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsSkipSelectPlayNumMilestoneVersion;
+
+// Function UnionSystem.MilestoneUtil.IsTopMenuAccessLoginSuccessOnly
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsTopMenuAccessLoginSuccessOnly final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsTopMenuAccessLoginSuccessOnly;
+
+// Function UnionSystem.MilestoneUtil.IsVisibleCompanyNameMilestoneVersion
+// 0x0001 (0x0001 - 0x0000)
+struct MilestoneUtil_IsVisibleCompanyNameMilestoneVersion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MilestoneUtil_IsVisibleCompanyNameMilestoneVersion;
 
 // Function UnionSystem.MovieFunctionLibrary.GetMovieList
 // 0x0008 (0x0008 - 0x0000)
@@ -14327,11 +14623,11 @@ public:
 DUMPER7_ASSERTS_NetMasterDataManageSubsystem_GetGeneralizedParamData;
 
 // Function UnionSystem.NetMasterDataManageSubsystem.GetMasterData
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x02D0 (0x02D0 - 0x0000)
 struct NetMasterDataManageSubsystem_GetMasterData final
 {
 public:
-	struct FMasterDataGetMasterDataResponse       ReturnValue;                                       // 0x0000(0x02C0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FMasterDataGetMasterDataResponse       ReturnValue;                                       // 0x0000(0x02D0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_NetMasterDataManageSubsystem_GetMasterData;
 
@@ -14899,13 +15195,13 @@ public:
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutConnection;
 
 // Function UnionSystem.PlaylogHelper.CRM_PutConnectionError
-// 0x0098 (0x0098 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct PlaylogHelper_CRM_PutConnectionError final
 {
 public:
-	struct FCRM_ConnectionError                   Data;                                              // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCRM_ConnectionError                   Data;                                              // 0x0000(0x00C8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00C8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutConnectionError;
 
@@ -14930,6 +15226,17 @@ public:
 	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutCustomMachinePartsSpot;
+
+// Function UnionSystem.PlaylogHelper.CRM_PutDebugOnlineP2PConnect
+// 0x0058 (0x0058 - 0x0000)
+struct PlaylogHelper_CRM_PutDebugOnlineP2PConnect final
+{
+public:
+	struct FCRM_DebugOnlineP2PConnect             Data;                                              // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PlaylogHelper_CRM_PutDebugOnlineP2PConnect;
 
 // Function UnionSystem.PlaylogHelper.CRM_PutDlc
 // 0x0028 (0x0028 - 0x0000)
@@ -15086,26 +15393,37 @@ public:
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutMatchingRaceStart;
 
 // Function UnionSystem.PlaylogHelper.CRM_PutMatchingRegistration
-// 0x0078 (0x0078 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct PlaylogHelper_CRM_PutMatchingRegistration final
 {
 public:
-	struct FCRM_MatchingRegistration              Data;                                              // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCRM_MatchingRegistration              Data;                                              // 0x0000(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0078(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutMatchingRegistration;
 
 // Function UnionSystem.PlaylogHelper.CRM_PutMatchingResult
-// 0x0090 (0x0090 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct PlaylogHelper_CRM_PutMatchingResult final
 {
 public:
-	struct FCRM_MatchingResult                    Data;                                              // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCRM_MatchingResult                    Data;                                              // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutMatchingResult;
+
+// Function UnionSystem.PlaylogHelper.CRM_PutOnlineMatch
+// 0x00A8 (0x00A8 - 0x0000)
+struct PlaylogHelper_CRM_PutOnlineMatch final
+{
+public:
+	struct FCRM_OnlineMatch                       Data;                                              // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PlaylogHelper_CRM_PutOnlineMatch;
 
 // Function UnionSystem.PlaylogHelper.CRM_PutParty
 // 0x0070 (0x0070 - 0x0000)
@@ -15163,13 +15481,13 @@ public:
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutProgressRivalTeam;
 
 // Function UnionSystem.PlaylogHelper.CRM_PutRaceLog
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct PlaylogHelper_CRM_PutRaceLog final
 {
 public:
-	struct FCRM_RaceLog                           Data;                                              // 0x0000(0x00D8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCRM_RaceLog                           Data;                                              // 0x0000(0x0138)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0138(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_PlaylogHelper_CRM_PutRaceLog;
 
@@ -17464,6 +17782,15 @@ public:
 };
 DUMPER7_ASSERTS_StageIdUtilityLibrary_StringToStageId;
 
+// Function UnionSystem.SwitchPlatformUtility.IsSwitch2
+// 0x0001 (0x0001 - 0x0000)
+struct SwitchPlatformUtility_IsSwitch2 final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SwitchPlatformUtility_IsSwitch2;
+
 // Function UnionSystem.SwitchPlatformUtility.SetCPUBoostModeEnabled
 // 0x0001 (0x0001 - 0x0000)
 struct SwitchPlatformUtility_SetCPUBoostModeEnabled final
@@ -17472,6 +17799,28 @@ public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SwitchPlatformUtility_SetCPUBoostModeEnabled;
+
+// Function UnionSystem.TimeTrialVariousLibrary.AdjustTimeTrialByVersion
+// 0x0002 (0x0002 - 0x0000)
+struct TimeTrialVariousLibrary_AdjustTimeTrialByVersion final
+{
+public:
+	EStageId                                      InStageId;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESpeedClassId                                 InSpeedClassId;                                    // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimeTrialVariousLibrary_AdjustTimeTrialByVersion;
+
+// Function UnionSystem.TimeTrialVariousLibrary.AdjustUploadFlagByVersion
+// 0x0008 (0x0008 - 0x0000)
+struct TimeTrialVariousLibrary_AdjustUploadFlagByVersion final
+{
+public:
+	EStageId                                      InStageId;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESpeedClassId                                 InSpeedClassId;                                    // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InCheckVersion;                                    // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimeTrialVariousLibrary_AdjustUploadFlagByVersion;
 
 // Function UnionSystem.TimeTrialVariousLibrary.CheckForNewRecord
 // 0x0008 (0x0008 - 0x0000)
@@ -17758,6 +18107,29 @@ public:
 	class UUserWidget*                            ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UISubsystem_GetRewardDisplayWidget;
+
+// Function UnionSystem.UnionStaticMeshComponent.ChangeMaterial
+// 0x0010 (0x0010 - 0x0000)
+struct UnionStaticMeshComponent_ChangeMaterial final
+{
+public:
+	int32                                         MaterialID;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bChange;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     InMaterial;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionStaticMeshComponent_ChangeMaterial;
+
+// Function UnionSystem.UnionStaticMeshComponent.IsNotChangedMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct UnionStaticMeshComponent_IsNotChangedMaterial final
+{
+public:
+	int32                                         MaterialID;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionStaticMeshComponent_IsNotChangedMaterial;
 
 // Function UnionSystem.UnionAtomComponent.OnStatusChangedFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -18151,6 +18523,15 @@ public:
 };
 DUMPER7_ASSERTS_DebugViewBlueprintFunctionLibrary_ToggleEffects;
 
+// Function UnionSystem.UnionErrorManager.IsShowAppRestartErrorWindow
+// 0x0001 (0x0001 - 0x0000)
+struct UnionErrorManager_IsShowAppRestartErrorWindow final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionErrorManager_IsShowAppRestartErrorWindow;
+
 // Function UnionSystem.UnionErrorUtils.CheckReturnTitleError
 // 0x0002 (0x0002 - 0x0000)
 struct UnionErrorUtils_CheckReturnTitleError final
@@ -18193,14 +18574,17 @@ public:
 DUMPER7_ASSERTS_UnionErrorUtils_GetErrorLevel;
 
 // Function UnionSystem.UnionErrorUtils.GetOnlineErrorBodyText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct UnionErrorUtils_GetOnlineErrorBodyText final
 {
 public:
 	EOnlineErrorId                                ErrorID;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AppendId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	int32                                         NetworkDelayLevel;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPopupWindowType                              WindowType;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionErrorUtils_GetOnlineErrorBodyText;
 
@@ -18228,14 +18612,16 @@ public:
 DUMPER7_ASSERTS_UnionErrorUtils_GetOnlineErrorTitleText;
 
 // Function UnionSystem.UnionErrorUtils.GetServerErrorBodyText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct UnionErrorUtils_GetServerErrorBodyText final
 {
 public:
 	EResponseCodeAbstract                         ResponseCode;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AppendId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	int32                                         NetworkDelayLevel;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionErrorUtils_GetServerErrorBodyText;
 
@@ -20046,6 +20432,15 @@ public:
 };
 DUMPER7_ASSERTS_UnionSettings_SetEnableBlur;
 
+// Function UnionSystem.UnionSettings.SetEnableGFur
+// 0x0001 (0x0001 - 0x0000)
+struct UnionSettings_SetEnableGFur final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionSettings_SetEnableGFur;
+
 // Function UnionSystem.UnionSettings.SetMinLoDBias
 // 0x0004 (0x0004 - 0x0000)
 struct UnionSettings_SetMinLoDBias final
@@ -20287,6 +20682,17 @@ public:
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionStatsManager_GetMachineStatsEventValue;
+
+// Function UnionSystem.UnionStatsManager.GetMachineUsedType
+// 0x0008 (0x0008 - 0x0000)
+struct UnionStatsManager_GetMachineUsedType final
+{
+public:
+	EDriverType                                   machineType;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionStatsManager_GetMachineUsedType;
 
 // Function UnionSystem.UnionStatsManager.GetResultHonorList
 // 0x0018 (0x0018 - 0x0000)
@@ -20804,6 +21210,15 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_UnionSystemBP_RemoveLevel;
+
+// Function UnionSystem.UnionSystemBP.RemoveLevelByNameContain
+// 0x0010 (0x0010 - 0x0000)
+struct UnionSystemBP_RemoveLevelByNameContain final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionSystemBP_RemoveLevelByNameContain;
 
 // Function UnionSystem.UnionSystemBP.SaveGameToSlot
 // 0x0020 (0x0020 - 0x0000)

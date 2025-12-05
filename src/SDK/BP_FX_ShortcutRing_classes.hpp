@@ -27,12 +27,12 @@ public:
 	class UStaticMeshComponent*                   Gate;                                              // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void SetupFunc();
-	void SetRingSize(double Radius);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_FX_ShortcutRing(int32 EntryPoint);
 	void Evt_SetRingSize(double Radius);
+	void ExecuteUbergraph_BP_FX_ShortcutRing(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SetRingSize(double Radius);
+	void SetupFunc();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

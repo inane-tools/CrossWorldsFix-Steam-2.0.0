@@ -117,7 +117,7 @@ class UEditableGameplayTagQuery final : public UObject
 public:
 	class FString                                 UserDescription;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEditableGameplayTagQueryExpression*    RootExpression;                                    // 0x0048(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEditableGameplayTagQueryExpression*    RootExpression;                                    // 0x0048(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	struct FGameplayTagQuery                      TagQueryExportText_Helper;                         // 0x0050(0x0048)(NativeAccessSpecifierPrivate)
 
 public:
@@ -230,7 +230,7 @@ DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoTagsMatch;
 class UEditableGameplayTagQueryExpression_AnyExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -253,7 +253,7 @@ DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyExprMatch;
 class UEditableGameplayTagQueryExpression_AllExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -276,7 +276,7 @@ DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllExprMatch;
 class UEditableGameplayTagQueryExpression_NoExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -302,7 +302,7 @@ public:
 	uint8                                         Pad_28[0x160];                                     // 0x0028(0x0160)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FGameplayTagSource>  TagSources;                                        // 0x0188(0x0050)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1D8[0xB8];                                     // 0x01D8(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x0290(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x0290(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

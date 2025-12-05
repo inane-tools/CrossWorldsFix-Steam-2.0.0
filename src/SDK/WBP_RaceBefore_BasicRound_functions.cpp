@@ -108,9 +108,9 @@ void UWBP_RaceBefore_BasicRound_C::PreConstruct(bool IsDesignTime)
 // Function WBP_RaceBefore_BasicRound.WBP_RaceBefore_BasicRound_C.SetGrandPrix
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EGrandPrixId                            NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGrandPrixId                            newParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_RaceBefore_BasicRound_C::SetGrandPrix(EGrandPrixId NewParam)
+void UWBP_RaceBefore_BasicRound_C::SetGrandPrix(EGrandPrixId newParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -119,7 +119,7 @@ void UWBP_RaceBefore_BasicRound_C::SetGrandPrix(EGrandPrixId NewParam)
 
 	Params::WBP_RaceBefore_BasicRound_C_SetGrandPrix Parms{};
 
-	Parms.NewParam = NewParam;
+	Parms.newParam = newParam;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

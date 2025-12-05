@@ -149,6 +149,26 @@ void UBPC_RaceSequenceStateResult_C::ReceiveBeginPlay()
 }
 
 
+// Function BPC_RaceSequenceStateResult.BPC_RaceSequenceStateResult_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateResult_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateResult_C", "ReceiveEndPlay");
+
+	Params::BPC_RaceSequenceStateResult_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_RaceSequenceStateResult.BPC_RaceSequenceStateResult_C.SaveDonpaTicket
 // (Public, BlueprintCallable, BlueprintEvent)
 

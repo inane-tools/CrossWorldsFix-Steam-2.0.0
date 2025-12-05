@@ -22,7 +22,7 @@ namespace SDK
 class UInterchangeFactoryBase : public UObject
 {
 public:
-	class UInterchangeResultsContainer*           Results;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeResultsContainer*           Results;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	class UClass* GetFactoryClass() const;
@@ -98,7 +98,7 @@ class UInterchangePipelineBase : public UObject
 {
 public:
 	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeResultsContainer*           Results;                                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInterchangeResultsContainer*           Results;                                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	TMap<class FName, struct FInterchangePipelinePropertyStates> PropertiesStates;                   // 0x0048(0x0050)(Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_98[0x70];                                      // 0x0098(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -137,7 +137,7 @@ public:
 	class FString                                 SourceAssetName;                                   // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DestinationAssetName;                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AssetFriendlyName;                                 // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UObject>                    AssetType;                                         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    AssetType;                                         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	class FString                                 InterchangeKey;                                    // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -311,7 +311,7 @@ class UInterchangeResultsContainer final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x28];                                      // 0x0028(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInterchangeResult*>             Results;                                           // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UInterchangeResult*>             Results;                                           // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -354,8 +354,8 @@ DUMPER7_ASSERTS_UInterchangeTranslatorSettings;
 class UInterchangeTranslatorBase : public UObject
 {
 public:
-	class UInterchangeResultsContainer*           Results;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeSourceData*                 SourceData;                                        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeResultsContainer*           Results;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeSourceData*                 SourceData;                                        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -436,7 +436,7 @@ DUMPER7_ASSERTS_UInterchangeBaseNode;
 class UInterchangeBaseNodeContainer final : public UObject
 {
 public:
-	TMap<class FString, class UInterchangeBaseNode*> Nodes;                                          // 0x0028(0x0050)(Edit, EditConst, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class FString, class UInterchangeBaseNode*> Nodes;                                          // 0x0028(0x0050)(Edit, EditConst, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_78[0x50];                                      // 0x0078(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

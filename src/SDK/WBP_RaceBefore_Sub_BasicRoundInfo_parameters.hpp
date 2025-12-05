@@ -21,7 +21,7 @@ namespace SDK::Params
 struct WBP_RaceBefore_Sub_BasicRoundInfo_C_SetGrandPrix final
 {
 public:
-	EGrandPrixId                                  NewParam;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGrandPrixId                                  newParam;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_RaceBefore_Sub_BasicRoundInfo_C_SetGrandPrix;
 

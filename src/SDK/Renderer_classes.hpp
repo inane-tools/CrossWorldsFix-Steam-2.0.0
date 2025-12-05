@@ -22,7 +22,7 @@ namespace SDK
 class USparseVolumeTextureViewerComponent final : public UPrimitiveComponent
 {
 public:
-	class USparseVolumeTexture*                   SparseVolumeTexturePreview;                        // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USparseVolumeTexture*                   SparseVolumeTexturePreview;                        // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	float                                         Frame;                                             // 0x0520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FrameRate;                                         // 0x0524(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bPlaying : 1;                                      // 0x0528(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
@@ -60,7 +60,7 @@ DUMPER7_ASSERTS_USparseVolumeTextureViewerComponent;
 class ASparseVolumeTextureViewer final : public AInfo
 {
 public:
-	class USparseVolumeTextureViewerComponent*    SparseVolumeTextureViewerComponent;                // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USparseVolumeTextureViewerComponent*    SparseVolumeTextureViewerComponent;                // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

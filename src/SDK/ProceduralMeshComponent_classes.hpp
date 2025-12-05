@@ -60,11 +60,11 @@ public:
 	bool                                          bUseComplexAsSimpleCollision;                      // 0x0558(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseAsyncCooking;                                  // 0x0559(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_55A[0x6];                                      // 0x055A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             ProcMeshBodySetup;                                 // 0x0560(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBodySetup*                             ProcMeshBodySetup;                                 // 0x0560(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<struct FProcMeshSection>               ProcMeshSections;                                  // 0x0568(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<struct FKConvexElem>                   CollisionConvexElems;                              // 0x0578(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	struct FBoxSphereBounds                       LocalBounds;                                       // 0x0588(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
-	TArray<class UBodySetup*>                     AsyncBodySetupQueue;                               // 0x05C0(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UBodySetup*>                     AsyncBodySetupQueue;                               // 0x05C0(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	void AddCollisionConvexMesh(const TArray<struct FVector>& ConvexVerts);

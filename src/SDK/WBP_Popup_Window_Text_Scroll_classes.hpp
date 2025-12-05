@@ -10,16 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UnionUI_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Popup_Window_Text_Scroll.WBP_Popup_Window_Text_Scroll_C
-// 0x00D8 (0x04C8 - 0x03F0)
+// 0x00E0 (0x04D0 - 0x03F0)
 class UWBP_Popup_Window_Text_Scroll_C final : public UUnionUIPopupWindowBase
 {
 public:
@@ -53,6 +54,7 @@ public:
 	bool                                          DownKeyInput;                                      // 0x04B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4BA[0x6];                                      // 0x04BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ScrollOffset;                                      // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPressing;                                        // 0x04C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -80,6 +82,7 @@ public:
 	void OnDownKeyPressedWithPlayerId(const int32& PlayerControllerIndex_0);
 	void OnDownKeyReleased();
 	void OnDownKeyReleasedWithPlayerId(const int32& PlayerControllerIndex_0);
+	class UWidget* OnDownNavigation(EUINavigation Navigation_0);
 	void OnFaceButtonLeftPressed();
 	void OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerControllerIndex_0);
 	void OnFaceButtonLeftReleased();
@@ -89,6 +92,7 @@ public:
 	void OnFaceButtonTopReleased();
 	void OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerControllerIndex_0);
 	void OnFinishedOutAnimation();
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	void OnLeftKeyPressed();
 	void OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerIndex_0);
 	void OnLeftKeyReleased();
@@ -126,6 +130,7 @@ public:
 	void OnUpKeyPressedWithPlayerId(const int32& PlayerControllerIndex_0);
 	void OnUpKeyReleased();
 	void OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIndex_0);
+	class UWidget* OnUpNavigation(EUINavigation Navigation_0);
 	void PlayAnimationIn();
 	void SetButtonControlDelayTime(float InTime);
 	void SetButtonText(const TArray<class FText>& BtnTextArray);
@@ -133,7 +138,6 @@ public:
 	void SetDonpaTicketCount(int32 CurrentCount, int32 AfterCount);
 	void SetEnableInput(bool InEnable);
 	void SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType, const class FText& BtnText);
-	void SetFooterTextMessege(const class FText& Text);
 	void SetImageButtonSelectText(const class FText& InText);
 	void SetImageTexture(const class UTexture2D* Texture2D);
 	void SetInitialFocusButtonIndex(const int32 InButtonIndex);

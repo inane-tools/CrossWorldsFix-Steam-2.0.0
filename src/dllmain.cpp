@@ -47,7 +47,6 @@ float fHUDHeight = 1080.0f;
 float fHUDHeightOffset = 0.0f;
 
 // Ini settings
-bool bEnableConsole = false;
 bool bFixAspect = false;
 bool bFixHUD = false;
 bool bSpanRaceHUD = false;
@@ -55,7 +54,6 @@ bool bSpanRaceHUD = false;
 // Variables
 int iCurrentResX = 0;
 int iCurrentResY = 0;
-SDK::UEngine* Engine = nullptr;
 SDK::UObject* WidgetObject = nullptr;
 std::string sWidgetName;
 
@@ -158,7 +156,6 @@ void Configuration()
     ini.strip_trailing_comments();
     
     // Read ini
-    bEnableConsole = GetConfigAndLog(ini, "Developer Console", "Enabled", false);
     bFixAspect = GetConfigAndLog(ini, "Fix Aspect Ratio", "Enabled", false);
     bFixHUD = GetConfigAndLog(ini, "Fix HUD", "Enabled", false);
     bSpanRaceHUD = GetConfigAndLog(ini, "Span Racing HUD", "Enabled", false);
@@ -278,14 +275,14 @@ void HUD()
             static SafetyHookMid ProjectWorldToScreenWidthMidHook{};
             ProjectWorldToScreenWidthMidHook = safetyhook::create_mid(ProjectWorldToScreenScanResult,
                 [](SafetyHookContext& ctx) {
-                    if (fAspectRatio > fNativeAspect)
+                    if (!bSpanRaceHUD && fAspectRatio > fNativeAspect)
                         ctx.xmm0.f64[0] = fHUDWidthOffset;
                 });
 
             static SafetyHookMid ProjectWorldToScreenHeightMidHook{};
             ProjectWorldToScreenHeightMidHook = safetyhook::create_mid(ProjectWorldToScreenScanResult + 0x10,
                 [](SafetyHookContext& ctx) {
-                    if (fAspectRatio < fNativeAspect)
+                    if (!bSpanRaceHUD && fAspectRatio < fNativeAspect)
                         ctx.xmm0.f64[0] = fHUDHeightOffset;
                 });
         }
@@ -293,6 +290,34 @@ void HUD()
             SPDLOG_ERROR("HUD: Project World To Screen: Pattern scan failed.");
         }
 
+        // Fades
+        std::uint8_t* FadesScanResult = Memory::PatternScan(exeModule, "49 8B ?? 41 0F ?? ?? 0F ?? ?? 48 8B ?? 48 85 ?? 0F 84 ?? ?? ?? ?? 8B ?? ?? C1 ?? ?? F6 ??");
+        if (FadesScanResult) {
+            SPDLOG_INFO("HUD: Fades: Address is {:s}+{:x}", sExeName.c_str(), FadesScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+            static SafetyHookMid FadesMidHook{};
+            FadesMidHook = safetyhook::create_mid(FadesScanResult,
+                [](SafetyHookContext& ctx) {
+                    if (!ctx.rax) return;
+
+                    auto transition = reinterpret_cast<SDK::UUserWidget*>(ctx.rax);
+                    if (transition->WidgetTree && transition->WidgetTree->RootWidget) {
+                        auto panel = static_cast<SDK::UCanvasPanel*>(transition->WidgetTree->RootWidget);
+                        auto panelSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[0]);
+
+                        if (fAspectRatio > fNativeAspect)
+                            panelSlot->SetOffsets(SDK::FMargin(0.0f, 0.0f, 2160.0f * fAspectRatio, 2160.0f));
+                        else
+                            panelSlot->SetOffsets(SDK::FMargin(0.0f, 0.0f, 3840.0f, 3840.0f / fAspectRatio));
+                    }
+                });
+        }
+        else {
+            SPDLOG_ERROR("HUD: Fades: Pattern scan failed.");
+        }
+    }
+
+    if (bFixHUD || bSpanRaceHUD) 
+    {
         // Popup Window
         std::uint8_t* CreatePopupWindowScanResult = Memory::PatternScan(exeModule, "49 8B ?? ?? 48 89 ?? ?? 41 ?? ?? ?? 00 7E ?? 49 ?? ?? ?? 41 0F ?? ?? E8 ?? ?? ?? ?? 48 8B ?? ?? 48 85 ?? 74 ??");
         if (CreatePopupWindowScanResult) {
@@ -308,27 +333,44 @@ void HUD()
                         auto popupWidget = static_cast<SDK::UWBP_Popup_Window_C*>(widget);
                         auto panel = static_cast<SDK::UCanvasPanel*>(popupWidget->WidgetTree->RootWidget);      
 
-                        if (panel->Slots.IsValidIndex(2)) {
+                        float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
+                        float heightOffset = (3840.0f / fAspectRatio - 2160.0f) / 2.0f;
+
+                        if (bFixHUD && panel->Slots.IsValidIndex(2)) {
                             auto backgroundBlurSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[2]);
 
-                            float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
-                            float heightOffset = (3840.0f / fAspectRatio - 2160.0f) / 2.0f;
+                            if (bFixHUD) {
+                                if (fAspectRatio > fNativeAspect)
+                                    backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f - widthOffset, -1080.0f, 2160.0f * fAspectRatio, 2160.0f));
+                                else
+                                    backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f, -1080.0f - heightOffset, 3840.0f, 3840.0f / fAspectRatio));
+                            }
+
+                            if (bSpanRaceHUD) {
+                                if (fAspectRatio > fNativeAspect)
+                                    backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f, -1080.0f, 2160.0f * fAspectRatio, 2160.0f));
+                                else
+                                    backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f, -1080.0f, 3840.0f, 3840.0f / fAspectRatio));
+                            }
+                        }
+                        
+                        if (bSpanRaceHUD && panel->Slots.IsValidIndex(3)) {
+                            auto safeZone = static_cast<SDK::USafeZone*>(panel->Slots[3]->Content);
+                            auto panel = static_cast<SDK::UCanvasPanel*>(safeZone->Slots[0]->Content);
+                            auto panelSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[0]);
 
                             if (fAspectRatio > fNativeAspect)
-                                backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f - widthOffset, -1080.0f, 2160.0f * fAspectRatio, 2160.0f));
-                            else if (fAspectRatio < fNativeAspect)
-                                backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f, -1080.0f - heightOffset, 3840.0f, 3840.0f / fAspectRatio));
-                        }     
+                                panelSlot->SetOffsets(SDK::FMargin(widthOffset, 0.0f, 3200.0f, 1000.0f));
+                            else
+                                panelSlot->SetOffsets(SDK::FMargin(0.0f, heightOffset, 3200.0f, 1000.0f));
+                        }
                     }
                 });
         }
         else {
             SPDLOG_ERROR("HUD: Create Popup Window: Pattern scan failed.");
         }
-    }
 
-    if (bFixHUD || bSpanRaceHUD) 
-    {
         // Widgets
         std::uint8_t* UWidgetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 8B ?? ?? 48 8B ?? 48 85 ?? 40 0F ?? ?? 48 ?? ?? 48 89 ?? ?? 48 8B ?? 8B ?? ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
         if (UWidgetAddToViewportScanResult) {
@@ -354,22 +396,42 @@ void HUD()
 
                     if (sWidgetName.contains("WBP_Race_HUD_Player01_C")) {
                         auto hud = static_cast<SDK::UWBP_Race_HUD_Player01_C*>(WidgetObject);
-                        if (hud->WidgetTree->RootWidget->IsA(SDK::UScaleBox::StaticClass())) {
-                            // Fix HUD issues
-                            if (bFixHUD) {
-                                auto scaleBox = static_cast<SDK::UScaleBox*>(hud->WidgetTree->RootWidget);
-                                auto sizeBox = static_cast<SDK::USizeBox*>(scaleBox->Slots[0]->Content);
 
+                        if (hud->WidgetTree->RootWidget->IsA(SDK::UScaleBox::StaticClass())) {
+                            auto scaleBox = static_cast<SDK::UScaleBox*>(hud->WidgetTree->RootWidget);
+                            auto sizeBox = static_cast<SDK::USizeBox*>(scaleBox->Slots[0]->Content);
+
+                            if (bSpanRaceHUD) {
+                                if (fAspectRatio > fNativeAspect) {
+                                    sizeBox->SetWidthOverride(2160.0f * fAspectRatio);
+                                    sizeBox->SetHeightOverride(2160.0f);
+                                }
+                                else {
+                                    sizeBox->SetWidthOverride(3840.0f);
+                                    sizeBox->SetHeightOverride(3840.0f / fAspectRatio);
+                                }
+
+                                if (hud->CLIP_TextDirection && hud->CLIP_TextDirection->Slot) {
+                                    auto clippingPanel = static_cast<SDK::UCanvasPanelSlot*>(hud->CLIP_TextDirection->Slot);
+
+                                    if (fAspectRatio > fNativeAspect)
+                                        clippingPanel->SetOffsets(SDK::FMargin(0.0f, 0.0f, 2160.0f * fAspectRatio, 2160.0f));
+                                    else
+                                        clippingPanel->SetOffsets(SDK::FMargin(0.0f, 0.0f, 3840.0f, 3840.0f / fAspectRatio));
+                                }
+                            }
+
+                            if (bFixHUD) {
                                 // Disable clipping so that player markers don't disappear outside 16:9 bounds
                                 sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
 
                                 // Span background of pause menu
                                 if (hud->WBP_PauseMenu) {
                                     auto pauseMenu = static_cast<SDK::UWBP_PauseMenu_C*>(hud->WBP_PauseMenu);
-                                    auto scaleBox = static_cast<SDK::UScaleBox*>(pauseMenu->WidgetTree->RootWidget);
+                                    auto pauseScaleBox = static_cast<SDK::UScaleBox*>(pauseMenu->WidgetTree->RootWidget);
 
-                                    if (scaleBox->Slots[0] && scaleBox->Slots[0]->Content) {
-                                        auto panel = static_cast<SDK::UCanvasPanel*>(scaleBox->Slots[0]->Content);
+                                    if (pauseScaleBox->Slots[0] && pauseScaleBox->Slots[0]->Content) {
+                                        auto panel = static_cast<SDK::UCanvasPanel*>(pauseScaleBox->Slots[0]->Content);
                                         panel->SetClipping(SDK::EWidgetClipping::Inherit);
 
                                         if (panel->Slots.IsValidIndex(3)) {
@@ -380,78 +442,12 @@ void HUD()
                                                 backgroundBlurSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
                                                 bgBlackSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
                                             }
-                                            else if (fAspectRatio < fNativeAspect) {
+                                            else {
                                                 backgroundBlurSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
                                                 bgBlackSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
                                             }
                                         }  
                                     }
-                                }
-                            }
-
-                            // Span racing HUD
-                            if (bSpanRaceHUD) {
-                                auto speed = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_SpeedNum;
-                                auto speedSlot = static_cast<SDK::UCanvasPanelSlot*>(speed->Slot);
-                                //(Left=40.000000,Top=0.000000,Right=100.000000,Bottom=30.000000)
-
-                                auto rank = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_Rank;
-                                auto rankSlot = static_cast<SDK::UCanvasPanelSlot*>(rank->Slot);
-                                //(Left=-20.000000,Top=40.000000,Right=100.000000,Bottom=30.000000)
-
-                                auto rsr_5rings = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_RSR_5rings_Simple;
-                                auto rsr_5ringsSlot = static_cast<SDK::UCanvasPanelSlot*>(rsr_5rings->Slot);
-                                //(Left=60.000000,Top=-20.000000,Right=100.000000,Bottom=30.000000)
-
-                                auto courseMap = (SDK::UUserWidget*)hud->WBP_Race_HUD_CourseMap;
-                                auto courseMapSlot = static_cast<SDK::UCanvasPanelSlot*>(courseMap->Slot);
-                                //(Left=200.000000,Top=-20.000000,Right=1024.000000,Bottom=1024.000000)
-
-                                auto laps = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_LAP;
-                                auto lapsSlot = static_cast<SDK::UCanvasPanelSlot*>(laps->Slot);
-                                //(Left=400.000000,Top=0.000000,Right=330.000000,Bottom=120.000000)
-
-                                auto gadgetIcons = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_GadgetIcon_Simple;
-                                auto gadgetIconsSlot = static_cast<SDK::UCanvasPanelSlot*>(gadgetIcons->Slot);
-                                //(Left=-50.000000,Top=180.000000,Right=100.000000,Bottom=30.000000)
-
-                                auto itemIcons = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_ItemIconSet_Simple;
-                                auto itemIconsSlot = static_cast<SDK::UCanvasPanelSlot*>(itemIcons->Slot);
-                                //(Left=-50.000000,Top=-100.000000,Right=100.000000,Bottom=30.000000)
-                                
-                                auto coins = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_Coin;
-                                auto coinsSlot = static_cast<SDK::UCanvasPanelSlot*>(coins->Slot);
-                                //(Left=48.000000,Top=-304.000000,Right=468.000000,Bottom=160.000000)
-
-                                auto timeTrial = (SDK::UUserWidget*)hud->WBP_Race_HUD_Sub_TimeTrial_Time;
-                                auto timeTrialSlot = static_cast<SDK::UVerticalBoxSlot*>(timeTrial->Slot);
-
-                                if (fAspectRatio > fNativeAspect) {
-                                    // Left
-                                    lapsSlot->SetOffsets(SDK::FMargin(400.0f - widthOffset, 0.0f, 330.0f, 120.0f));
-                                    rankSlot->SetOffsets(SDK::FMargin(-20.0f - widthOffset, 40.0f, 100.0f, 30.0f));
-                                    gadgetIconsSlot->SetOffsets(SDK::FMargin(-50.0f - widthOffset, 180.0f, 100.0f, 30.0f));
-                                    itemIconsSlot->SetOffsets(SDK::FMargin(-50.0f - widthOffset, -100.0f, 100.0f, 30.0f));
-
-                                    // Right
-                                    speedSlot->SetOffsets(SDK::FMargin(40.0f + widthOffset, 0.0f, 100.0f, 30.0f));
-                                    rsr_5ringsSlot->SetOffsets(SDK::FMargin(60.0f + widthOffset, -20.0f, 100.0f, 30.0f));
-                                    courseMapSlot->SetOffsets(SDK::FMargin(200.0f + widthOffset, -20.0f, 1024.0f, 1024.0f));
-                                    coinsSlot->SetOffsets(SDK::FMargin(48.0f + widthOffset, -304.0f, 468.0f, 160.0f));
-                                    timeTrialSlot->SetHorizontalAlignment(SDK::EHorizontalAlignment::HAlign_Right);
-                                }
-                                else if (fAspectRatio < fNativeAspect) {
-                                    // Top
-                                    itemIconsSlot->SetOffsets(SDK::FMargin(-50.0f, -100.0f - heightOffset, 100.0f, 30.0f));
-                                    rsr_5ringsSlot->SetOffsets(SDK::FMargin(60.0f, -20.0f - heightOffset, 100.0f, 30.0f));
-
-                                    // Bottom
-                                    courseMapSlot->SetOffsets(SDK::FMargin(200.0f, -20.0f + heightOffset, 1024.0f, 1024.0f));
-                                    coinsSlot->SetOffsets(SDK::FMargin(48.0f, -304.0f + heightOffset, 468.0f, 160.0f));
-                                    gadgetIconsSlot->SetOffsets(SDK::FMargin(-50.0f, 180.0f + heightOffset, 100.0f, 30.0f));
-                                    lapsSlot->SetOffsets(SDK::FMargin(400.0f, 0.0f + heightOffset, 330.0f, 120.0f));
-                                    rankSlot->SetOffsets(SDK::FMargin(-20.0f, 40.0f + heightOffset, 100.0f, 30.0f));
-                                    speedSlot->SetOffsets(SDK::FMargin(40.0f, 0.0f + heightOffset, 100.0f, 30.0f));
                                 }
                             }
                         }
@@ -464,50 +460,6 @@ void HUD()
     }
 }
 
-void EnableConsole()
-{
-    if (bEnableConsole) 
-    {
-        // Get GEngine
-        for (int i = 0; i < 200; ++i) { // 20s
-            Engine = SDK::UEngine::GetEngine();
-
-            if (Engine && Engine->ConsoleClass && Engine->GameViewport)
-                break;
-
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        }
-
-        if (!Engine || !Engine->ConsoleClass || !Engine->GameViewport) {
-            SPDLOG_ERROR("Enable Console: Failed to find GEngine address after 20 seconds.");
-            return;
-        }
-
-        // Construct console
-        SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
-        if (NewObject) {
-            Engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
-            SPDLOG_INFO("Enable Console: Console object constructed.");
-        }
-        else {
-            SPDLOG_ERROR("Enable Console: Failed to construct console object.");
-            return;
-        }
-
-        // Get input settings
-        SDK::UInputSettings* InputSettings = SDK::UInputSettings::GetDefaultObj();
-        if (InputSettings) {
-            if (InputSettings->ConsoleKeys && InputSettings->ConsoleKeys.Num() > 0)
-                SPDLOG_INFO("Enable Console: Console enabled - access it using the '{}' key.", InputSettings->ConsoleKeys[0].KeyName.ToString());
-            else
-                SPDLOG_ERROR("Enable Console: Console enabled but no console key is bound.");
-        }
-        else {
-            SPDLOG_ERROR("Enable Console: Failed to retreive input settings.");
-        }
-    }
-}
-
 DWORD __stdcall Main(void*)
 {
     Logging();
@@ -516,7 +468,6 @@ DWORD __stdcall Main(void*)
     CurrentResolution();
     AspectRatioFOV();
     HUD();
-    EnableConsole();
     return true;
 }
 

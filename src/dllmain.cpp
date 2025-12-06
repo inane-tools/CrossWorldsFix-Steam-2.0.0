@@ -251,7 +251,7 @@ void AspectRatioFOV()
         // bConstrainAspectRatio
         std::uint8_t* ConstrainAspectRatioScanResult = Memory::PatternScan(exeModule, "89 ?? ?? 0F B6 ?? ?? ?? ?? ?? D1 ?? 33 ?? 83 ?? 02 33 ?? 89 ?? ??");
         if (ConstrainAspectRatioScanResult) {
-            SPDLOG_INFO("Aspect Ratio: Cutscenes: Address is {:s}+{:x}", sExeName.c_str(), ConstrainAspectRatioScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
+            SPDLOG_INFO("Aspect Ratio: Constrain Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), ConstrainAspectRatioScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
             static SafetyHookMid ConstrainAspectRatioMidHook{};
             ConstrainAspectRatioMidHook = safetyhook::create_mid(ConstrainAspectRatioScanResult,
                 [](SafetyHookContext& ctx) {
@@ -372,15 +372,15 @@ void HUD()
         }
 
         // Widgets
-        std::uint8_t* UWidgetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 8B ?? ?? 48 8B ?? 48 85 ?? 40 0F ?? ?? 48 ?? ?? 48 89 ?? ?? 48 8B ?? 8B ?? ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
+        std::uint8_t* UWidgetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 83 ?? ?? 4D 8B ?? 45 33 ?? E8 ?? ?? ?? ?? 48 83 ?? ?? C3");
         if (UWidgetAddToViewportScanResult) {
             SPDLOG_INFO("HUD: Widgets: Address is {:s}+{:x}", sExeName.c_str(), UWidgetAddToViewportScanResult - reinterpret_cast<std::uint8_t*>(exeModule));
             static SafetyHookMid UWidgetAddToViewportMidHook{};
             UWidgetAddToViewportMidHook = safetyhook::create_mid(UWidgetAddToViewportScanResult,
                 [](SafetyHookContext& ctx) {
-                    if (!ctx.rsi) return;
+                    if (!ctx.rdx) return;
 
-                    auto obj = reinterpret_cast<SDK::UObject*>(ctx.rsi);
+                    auto obj = reinterpret_cast<SDK::UObject*>(ctx.rdx);
 
                     if (!obj->Class || !obj->Class->Class) 
                         return;

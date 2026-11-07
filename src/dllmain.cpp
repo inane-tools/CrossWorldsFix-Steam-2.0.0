@@ -17,10 +17,6 @@
 #include "SDK/Engine_classes.hpp"
 #include "SDK/UMG_classes.hpp"
 
-#include "SDK/WBP_Race_HUD_Player01_classes.hpp"
-#include "SDK/WBP_PauseMenu_classes.hpp"
-#include "SDK/WBP_Popup_Window_classes.hpp"
-
 HMODULE exeModule = GetModuleHandle(NULL);
 HMODULE thisModule;
 
@@ -54,8 +50,6 @@ bool bSpanRaceHUD = false;
 // Variables
 int iCurrentResX = 0;
 int iCurrentResY = 0;
-SDK::UObject* WidgetObject = nullptr;
-std::string sWidgetName;
 
 template<typename T>
 T GetConfigAndLog(inipp::Ini<char>& ini, const std::string& section, const std::string& key, T defaultValue)
@@ -163,7 +157,7 @@ void Configuration()
     SPDLOG_INFO("----------");
 }
 
-void UpdateOffsets()
+bool UpdateOffsets()
 {
     // GObjects
     std::uint8_t* GObjectsScanResult = Memory::PatternScan(exeModule, "48 8B ?? ?? ?? ?? ?? 48 8B ?? ?? 48 8D ?? ?? EB ?? 33 ?? 8B ?? ?? C1 ??");
@@ -201,6 +195,7 @@ void UpdateOffsets()
     }
 
     SPDLOG_INFO("----------");
+    return GObjectsScanResult && AppendStringScanResult && ProcessEventScanResult;
 }
 
 void CurrentResolution() 
@@ -264,6 +259,51 @@ void AspectRatioFOV()
     }
 }
 
+template<typename T>
+T* WidgetCast(SDK::UObject* object)
+{
+    auto type = T::StaticClass();
+    return object && type && object->IsA(type) ? static_cast<T*>(object) : nullptr;
+}
+
+SDK::UWidget* RootWidget(SDK::UUserWidget* widget)
+{
+    return widget && widget->WidgetTree ? widget->WidgetTree->RootWidget : nullptr;
+}
+
+SDK::UPanelSlot* PanelSlot(SDK::UPanelWidget* panel, int index)
+{
+    return panel && panel->Slots.IsValidIndex(index) ? panel->Slots[index] : nullptr;
+}
+
+SDK::UWidget* PanelChild(SDK::UPanelWidget* panel, int index)
+{
+    auto slot = PanelSlot(panel, index);
+    return slot ? slot->Content : nullptr;
+}
+
+// Blueprint members can move when the game's HUD is rebuilt. Look up the
+// live property rather than reading the offsets from the bundled SDK dump.
+SDK::UWidget* FindWidgetProperty(SDK::UUserWidget* widget, std::string_view name)
+{
+    for (auto type = static_cast<SDK::UStruct*>(widget->Class); type; type = type->Super) {
+        for (auto field = type->ChildProperties; field; field = field->Next) {
+            if (field->Name.ToString() != name)
+                continue;
+
+            auto property = static_cast<SDK::FProperty*>(field);
+            if (property->ElementSize != sizeof(void*) || property->ArrayDim != 1 ||
+                property->Offset < sizeof(SDK::UUserWidget) ||
+                property->Offset > widget->Class->Size - static_cast<int>(sizeof(void*)))
+                return nullptr;
+
+            auto address = reinterpret_cast<std::uint8_t*>(widget) + property->Offset;
+            return WidgetCast<SDK::UWidget>(*reinterpret_cast<SDK::UObject**>(address));
+        }
+    }
+    return nullptr;
+}
+
 void HUD()
 {
     if (bFixHUD) 
@@ -299,10 +339,9 @@ void HUD()
                 [](SafetyHookContext& ctx) {
                     if (!ctx.rax) return;
 
-                    auto transition = reinterpret_cast<SDK::UUserWidget*>(ctx.rax);
-                    if (transition->WidgetTree && transition->WidgetTree->RootWidget) {
-                        auto panel = static_cast<SDK::UCanvasPanel*>(transition->WidgetTree->RootWidget);
-                        auto panelSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[0]);
+                    auto transition = WidgetCast<SDK::UUserWidget>(reinterpret_cast<SDK::UObject*>(ctx.rax));
+                    auto panel = WidgetCast<SDK::UCanvasPanel>(RootWidget(transition));
+                    if (auto panelSlot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(panel, 0))) {
 
                         if (fAspectRatio > fNativeAspect)
                             panelSlot->SetOffsets(SDK::FMargin(0.0f, 0.0f, 2160.0f * fAspectRatio, 2160.0f));
@@ -329,15 +368,14 @@ void HUD()
 
                     auto widget = reinterpret_cast<SDK::UUserWidget*>(ctx.rsi);
 
-                    if (widget->IsA(SDK::UWBP_Popup_Window_C::StaticClass())) {
-                        auto popupWidget = static_cast<SDK::UWBP_Popup_Window_C*>(widget);
-                        auto panel = static_cast<SDK::UCanvasPanel*>(popupWidget->WidgetTree->RootWidget);      
+                    if (widget->Class && widget->Class->GetName() == "WBP_Popup_Window_C") {
+                        auto panel = WidgetCast<SDK::UCanvasPanel>(RootWidget(widget));
 
                         float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
                         float heightOffset = (3840.0f / fAspectRatio - 2160.0f) / 2.0f;
 
-                        if (bFixHUD && panel->Slots.IsValidIndex(2)) {
-                            auto backgroundBlurSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[2]);
+                        if (auto backgroundBlurSlot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(panel, 2));
+                            bFixHUD && backgroundBlurSlot) {
 
                             if (bFixHUD) {
                                 if (fAspectRatio > fNativeAspect)
@@ -354,10 +392,11 @@ void HUD()
                             }
                         }
                         
-                        if (bSpanRaceHUD && panel->Slots.IsValidIndex(3)) {
-                            auto safeZone = static_cast<SDK::USafeZone*>(panel->Slots[3]->Content);
-                            auto panel = static_cast<SDK::UCanvasPanel*>(safeZone->Slots[0]->Content);
-                            auto panelSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[0]);
+                        if (bSpanRaceHUD) {
+                            auto safeZone = WidgetCast<SDK::USafeZone>(PanelChild(panel, 3));
+                            auto innerPanel = WidgetCast<SDK::UCanvasPanel>(PanelChild(safeZone, 0));
+                            auto panelSlot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(innerPanel, 0));
+                            if (!panelSlot) return;
 
                             if (fAspectRatio > fNativeAspect)
                                 panelSlot->SetOffsets(SDK::FMargin(widthOffset, 0.0f, 3200.0f, 1000.0f));
@@ -385,68 +424,58 @@ void HUD()
                     if (!obj->Class || !obj->Class->Class) 
                         return;
 
-                    if (WidgetObject != obj) {
-                        WidgetObject = obj;
-                        sWidgetName = WidgetObject->GetName();
-                        SPDLOG_DEBUG("HUD: Widgets: {} @ 0x{:x}", sWidgetName, reinterpret_cast<uintptr_t>(WidgetObject));
-                    }
+                    if (obj->Class->GetName() != "WBP_Race_HUD_Player01_C")
+                        return;
 
                     float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
                     float heightOffset = (3840.0f / fAspectRatio - 2160.0f) / 2.0f;
 
-                    if (sWidgetName.contains("WBP_Race_HUD_Player01_C")) {
-                        auto hud = static_cast<SDK::UWBP_Race_HUD_Player01_C*>(WidgetObject);
+                    auto hud = static_cast<SDK::UUserWidget*>(obj);
+                    auto scaleBox = WidgetCast<SDK::UScaleBox>(RootWidget(hud));
+                    if (auto sizeBox = WidgetCast<SDK::USizeBox>(PanelChild(scaleBox, 0))) {
 
-                        if (hud->WidgetTree->RootWidget->IsA(SDK::UScaleBox::StaticClass())) {
-                            auto scaleBox = static_cast<SDK::UScaleBox*>(hud->WidgetTree->RootWidget);
-                            auto sizeBox = static_cast<SDK::USizeBox*>(scaleBox->Slots[0]->Content);
-
-                            if (bSpanRaceHUD) {
-                                if (fAspectRatio > fNativeAspect) {
-                                    sizeBox->SetWidthOverride(2160.0f * fAspectRatio);
-                                    sizeBox->SetHeightOverride(2160.0f);
-                                }
-                                else {
-                                    sizeBox->SetWidthOverride(3840.0f);
-                                    sizeBox->SetHeightOverride(3840.0f / fAspectRatio);
-                                }
-
-                                if (hud->CLIP_TextDirection && hud->CLIP_TextDirection->Slot) {
-                                    auto clippingPanel = static_cast<SDK::UCanvasPanelSlot*>(hud->CLIP_TextDirection->Slot);
-
-                                    if (fAspectRatio > fNativeAspect)
-                                        clippingPanel->SetOffsets(SDK::FMargin(0.0f, 0.0f, 2160.0f * fAspectRatio, 2160.0f));
-                                    else
-                                        clippingPanel->SetOffsets(SDK::FMargin(0.0f, 0.0f, 3840.0f, 3840.0f / fAspectRatio));
-                                }
+                        if (bSpanRaceHUD) {
+                            if (fAspectRatio > fNativeAspect) {
+                                sizeBox->SetWidthOverride(2160.0f * fAspectRatio);
+                                sizeBox->SetHeightOverride(2160.0f);
+                            }
+                            else {
+                                sizeBox->SetWidthOverride(3840.0f);
+                                sizeBox->SetHeightOverride(3840.0f / fAspectRatio);
                             }
 
-                            if (bFixHUD) {
-                                // Disable clipping so that player markers don't disappear outside 16:9 bounds
-                                sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
+                            auto textDirection = FindWidgetProperty(hud, "CLIP_TextDirection");
+                            if (auto clippingPanel = WidgetCast<SDK::UCanvasPanelSlot>(
+                                textDirection ? textDirection->Slot : nullptr)) {
 
-                                // Span background of pause menu
-                                if (hud->WBP_PauseMenu) {
-                                    auto pauseMenu = static_cast<SDK::UWBP_PauseMenu_C*>(hud->WBP_PauseMenu);
-                                    auto pauseScaleBox = static_cast<SDK::UScaleBox*>(pauseMenu->WidgetTree->RootWidget);
+                                if (fAspectRatio > fNativeAspect)
+                                    clippingPanel->SetOffsets(SDK::FMargin(0.0f, 0.0f, 2160.0f * fAspectRatio, 2160.0f));
+                                else
+                                    clippingPanel->SetOffsets(SDK::FMargin(0.0f, 0.0f, 3840.0f, 3840.0f / fAspectRatio));
+                            }
+                        }
 
-                                    if (pauseScaleBox->Slots[0] && pauseScaleBox->Slots[0]->Content) {
-                                        auto panel = static_cast<SDK::UCanvasPanel*>(pauseScaleBox->Slots[0]->Content);
-                                        panel->SetClipping(SDK::EWidgetClipping::Inherit);
+                        if (bFixHUD) {
+                            // Disable clipping so that player markers don't disappear outside 16:9 bounds
+                            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
 
-                                        if (panel->Slots.IsValidIndex(3)) {
-                                            auto backgroundBlurSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[2]);
-                                            auto bgBlackSlot = static_cast<SDK::UCanvasPanelSlot*>(panel->Slots[3]);
+                            // Span background of pause menu
+                            auto pauseMenu = WidgetCast<SDK::UUserWidget>(FindWidgetProperty(hud, "WBP_PauseMenu"));
+                            auto pauseScaleBox = WidgetCast<SDK::UScaleBox>(RootWidget(pauseMenu));
+                            if (auto panel = WidgetCast<SDK::UCanvasPanel>(PanelChild(pauseScaleBox, 0))) {
+                                panel->SetClipping(SDK::EWidgetClipping::Inherit);
 
-                                            if (fAspectRatio > fNativeAspect) {
-                                                backgroundBlurSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
-                                                bgBlackSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
-                                            }
-                                            else {
-                                                backgroundBlurSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
-                                                bgBlackSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
-                                            }
-                                        }  
+                                auto backgroundBlurSlot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(panel, 2));
+                                auto bgBlackSlot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(panel, 3));
+                                if (backgroundBlurSlot && bgBlackSlot) {
+
+                                    if (fAspectRatio > fNativeAspect) {
+                                        backgroundBlurSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
+                                        bgBlackSlot->SetOffsets(SDK::FMargin(-widthOffset, 0.0f, -widthOffset, 0.0f));
+                                    }
+                                    else {
+                                        backgroundBlurSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
+                                        bgBlackSlot->SetOffsets(SDK::FMargin(0.0f, -heightOffset, 0.0f, -heightOffset));
                                     }
                                 }
                             }
@@ -464,10 +493,10 @@ DWORD __stdcall Main(void*)
 {
     Logging();
     Configuration();
-    UpdateOffsets();
     CurrentResolution();
     AspectRatioFOV();
-    HUD();
+    if ((bFixHUD || bSpanRaceHUD) && UpdateOffsets())
+        HUD();
     return true;
 }
 

@@ -46,6 +46,7 @@ float fHUDHeightOffset = 0.0f;
 bool bFixAspect = false;
 bool bFixHUD = false;
 bool bSpanRaceHUD = false;
+bool bSpanMenus = false;
 
 // Variables
 int iCurrentResX = 0;
@@ -153,6 +154,7 @@ void Configuration()
     bFixAspect = GetConfigAndLog(ini, "Fix Aspect Ratio", "Enabled", false);
     bFixHUD = GetConfigAndLog(ini, "Fix HUD", "Enabled", false);
     bSpanRaceHUD = GetConfigAndLog(ini, "Span Racing HUD", "Enabled", false);
+    bSpanMenus = GetConfigAndLog(ini, "Span Menus", "Enabled", false);
     
     SPDLOG_INFO("----------");
 }
@@ -304,6 +306,220 @@ SDK::UWidget* FindWidgetProperty(SDK::UUserWidget* widget, std::string_view name
     return nullptr;
 }
 
+void WidenMenuCanvas(SDK::UWidget* widget)
+{
+    auto slot = WidgetCast<SDK::UCanvasPanelSlot>(widget ? widget->Slot : nullptr);
+    if (!slot || slot->GetAutoSize())
+        return;
+
+    const auto anchors = slot->GetAnchors();
+    auto offsets = slot->GetOffsets();
+    // With a fixed horizontal anchor, Right is the width. With stretched
+    // anchors it is a margin, so leave that layout to the canvas.
+    if (anchors.Minimum.X != anchors.Maximum.X ||
+        !((offsets.Right >= 3840.0f && offsets.Right < 3848.0f && offsets.Bottom >= 2160.0f && offsets.Bottom < 2168.0f) ||
+          (offsets.Right == 1920.0f && offsets.Bottom == 1080.0f)))
+        return;
+
+    const float extraWidth = offsets.Bottom * fAspectRatio - offsets.Right;
+    offsets.Left -= static_cast<float>(0.5 - slot->GetAlignment().X) * extraWidth;
+    offsets.Right += extraWidth;
+    slot->SetOffsets(offsets);
+    SPDLOG_INFO("Span Menus: widened {}", widget->GetName());
+}
+
+void ReanchorMenuSlot(SDK::UCanvasPanelSlot* slot, float designWidth, double leftAnchor, double rightAnchor)
+{
+    auto anchors = slot->GetAnchors();
+    auto offsets = slot->GetOffsets();
+    const float left = static_cast<float>(anchors.Minimum.X) * designWidth + offsets.Left -
+        static_cast<float>(slot->GetAlignment().X) * offsets.Right;
+    if (leftAnchor != rightAnchor) {
+        offsets.Left = left;
+        offsets.Right = designWidth - left - offsets.Right;
+    }
+    else {
+        offsets.Left += static_cast<float>(anchors.Minimum.X - leftAnchor) * designWidth;
+    }
+    anchors.Minimum.X = leftAnchor;
+    anchors.Maximum.X = rightAnchor;
+    slot->SetAnchors(anchors);
+    slot->SetOffsets(offsets);
+}
+
+void AnchorHeaderControls(SDK::UPanelWidget* panel, float designWidth)
+{
+    if (!panel)
+        return;
+
+    for (int index = 0; index < panel->Slots.Num(); ++index) {
+        auto slot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(panel, index));
+        if (!slot || !slot->Content)
+            continue;
+
+        const auto anchors = slot->GetAnchors();
+        const auto offsets = slot->GetOffsets();
+        if (anchors.Minimum.X != 0.5 || anchors.Maximum.X != 0.5 ||
+            offsets.Right > designWidth * 0.5f)
+            continue;
+
+        const double center = offsets.Left + (0.5 - slot->GetAlignment().X) * offsets.Right;
+        const auto name = slot->Content->GetName();
+        const bool schedule = name.contains("TimeTable") || name.contains("FestaSchedule");
+        if (schedule || center < -designWidth * 0.25f || center > designWidth * 0.25f) {
+            const double edge = !schedule && center < 0.0 ? 0.0 : 1.0;
+            ReanchorMenuSlot(slot, designWidth, edge, edge);
+            SPDLOG_INFO("Span Menus: moved header control {} toward the edge", slot->Content->GetName());
+        }
+    }
+}
+
+void SpanMenuBackgrounds(SDK::UPanelWidget* panel, float designWidth)
+{
+    if (!panel)
+        return;
+
+    for (int index = 0; index < panel->Slots.Num(); ++index) {
+        auto slot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(panel, index));
+        if (!slot || !slot->Content)
+            continue;
+
+        const auto name = slot->Content->GetName();
+        if (name != "Panel" && name != "Black" && name != "DSP_RacePark_BG" &&
+            name != "WidgetSwitcher_BG" && name != "DSP_BackgroundBlur" &&
+            name != "BackgroundBlur_57" && name != "BackgroundBlur_45" &&
+            name != "DMY_Banner" && name != "Filter" &&
+            name != "BG_Black")
+            continue;
+
+        const auto anchors = slot->GetAnchors();
+        const auto offsets = slot->GetOffsets();
+        if (anchors.Minimum.X == anchors.Maximum.X && offsets.Right >= designWidth * 0.9f &&
+            offsets.Right <= designWidth * 1.01f) {
+            slot->SetAutoSize(false);
+            ReanchorMenuSlot(slot, designWidth, 0.0, 1.0);
+            SPDLOG_INFO("Span Menus: stretched background layer {}", name);
+        }
+    }
+}
+
+void SpanMenuControls(SDK::UPanelWidget* panel, float designWidth, bool header = false)
+{
+    if (!panel)
+        return;
+
+    for (int index = 0; index < panel->Slots.Num(); ++index) {
+        auto child = PanelChild(panel, index);
+        auto safeZone = WidgetCast<SDK::USafeZone>(child);
+        auto slot = WidgetCast<SDK::UCanvasPanelSlot>(safeZone ? safeZone->Slot : nullptr);
+        if (!slot || slot->GetAutoSize())
+            continue;
+
+        const auto anchors = slot->GetAnchors();
+        const auto offsets = slot->GetOffsets();
+        if (anchors.Minimum.X != 0.5 || anchors.Maximum.X != 0.5 ||
+            offsets.Right < designWidth * 0.75f || offsets.Right > designWidth)
+            continue;
+
+        // Preserve the original edge margins and let the controls inside the
+        // safe zone follow their existing left, center, and right anchors.
+        ReanchorMenuSlot(slot, designWidth, 0.0, 1.0);
+        if (header)
+            AnchorHeaderControls(WidgetCast<SDK::UCanvasPanel>(PanelChild(safeZone, 0)), offsets.Right);
+        SPDLOG_INFO("Span Menus: reanchored {}", safeZone->GetName());
+    }
+}
+
+void CoverSelectionArtwork(SDK::UWidget* widget, int depth)
+{
+    if (!widget || depth > 6)
+        return;
+
+    const auto name = widget->GetName();
+    if (name == "WBP_SelectBG_M1" || name == "WBP_CMN_BG_01") {
+        if (auto root = RootWidget(WidgetCast<SDK::UUserWidget>(widget))) {
+            widget->SetClipping(SDK::EWidgetClipping::Inherit);
+            root->SetClipping(SDK::EWidgetClipping::Inherit);
+            root->SetRenderTransformPivot(SDK::FVector2D{0.5, 0.5});
+            root->SetRenderScale(SDK::FVector2D{fAspectMultiplier, fAspectMultiplier});
+            SPDLOG_INFO("Span Menus: uniformly scaled selection artwork {}", name);
+        }
+        return;
+    }
+
+    if (auto panel = WidgetCast<SDK::UPanelWidget>(widget)) {
+        for (int index = 0; index < panel->Slots.Num(); ++index)
+            CoverSelectionArtwork(PanelChild(panel, index), depth + 1);
+    }
+}
+
+void SpanMenu(SDK::UUserWidget* menu, const std::string& className)
+{
+    if (className != "WBP_TopMenu_C" && className != "WBP_MachineCharaSelect_M1_C" &&
+        className != "WBP_CourseSelect_C" && className != "WBP_Ready_M1_C" &&
+        className != "WBP_HeaderMenu_C" && className != "WBP_FooterMenu_C" &&
+        className != "WBP_ClassSelect_C" &&
+        className != "WBP_CMN_SubMenu_C")
+        return;
+
+    auto rootWidget = RootWidget(menu);
+    if (!rootWidget)
+        return;
+
+    rootWidget->SetClipping(SDK::EWidgetClipping::Inherit);
+    if (className == "WBP_CourseSelect_C" || className == "WBP_MachineCharaSelect_M1_C")
+        CoverSelectionArtwork(rootWidget, 0);
+
+    if (className == "WBP_TopMenu_C") {
+        auto scaleBox = WidgetCast<SDK::UScaleBox>(rootWidget);
+        if (auto sizeBox = WidgetCast<SDK::USizeBox>(PanelChild(scaleBox, 0))) {
+            sizeBox->SetClipping(SDK::EWidgetClipping::Inherit);
+            if (sizeBox->HeightOverride > 0.0f) {
+                sizeBox->SetWidthOverride(sizeBox->HeightOverride * fAspectRatio);
+                auto canvas = WidgetCast<SDK::UCanvasPanel>(PanelChild(sizeBox, 0));
+                SpanMenuControls(canvas, sizeBox->HeightOverride * fNativeAspect);
+                SpanMenuBackgrounds(canvas, sizeBox->HeightOverride * fNativeAspect);
+                SPDLOG_INFO("Span Menus: main menu size {}x{}", sizeBox->HeightOverride * fAspectRatio, sizeBox->HeightOverride);
+            }
+        }
+        return;
+    }
+
+    auto root = WidgetCast<SDK::UCanvasPanel>(rootWidget);
+    if (!root)
+        return;
+
+    if (className == "WBP_MachineCharaSelect_M1_C")
+        SpanMenuControls(root, 3840.0f);
+    SpanMenuBackgrounds(root, 3840.0f);
+
+    for (int index = 0; index < root->Slots.Num(); ++index) {
+        auto child = PanelChild(root, index);
+        if (child) {
+            WidenMenuCanvas(child);
+            if (auto canvas = WidgetCast<SDK::UCanvasPanel>(child)) {
+                canvas->SetClipping(SDK::EWidgetClipping::Inherit);
+                if (className == "WBP_CMN_SubMenu_C") {
+                    auto buttons = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(canvas, 0));
+                    if (buttons && buttons->Content && buttons->Content->GetName() == "Overlay_0") {
+                        const auto anchors = buttons->GetAnchors();
+                        if (anchors.Minimum.X == 0.5 && anchors.Maximum.X == 0.5) {
+                            ReanchorMenuSlot(buttons, 3840.0f, 0.0, 0.0);
+                            SPDLOG_INFO("Span Menus: moved the customization buttons to the left");
+                        }
+                    }
+                }
+                if (className == "WBP_CourseSelect_C" || className == "WBP_HeaderMenu_C" ||
+                    className == "WBP_FooterMenu_C")
+                    SpanMenuControls(canvas, 3840.0f, className == "WBP_HeaderMenu_C");
+                if (className == "WBP_HeaderMenu_C")
+                    AnchorHeaderControls(canvas, 3840.0f);
+                SpanMenuBackgrounds(canvas, 3840.0f);
+            }
+        }
+    }
+}
+
 void HUD()
 {
     if (bFixHUD) 
@@ -384,7 +600,7 @@ void HUD()
                                     backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f, -1080.0f - heightOffset, 3840.0f, 3840.0f / fAspectRatio));
                             }
 
-                            if (bSpanRaceHUD) {
+                            if (bSpanRaceHUD && !bSpanMenus) {
                                 if (fAspectRatio > fNativeAspect)
                                     backgroundBlurSlot->SetOffsets(SDK::FMargin(-1920.0f, -1080.0f, 2160.0f * fAspectRatio, 2160.0f));
                                 else
@@ -392,7 +608,7 @@ void HUD()
                             }
                         }
                         
-                        if (bSpanRaceHUD) {
+                        if (bSpanRaceHUD && !bSpanMenus) {
                             auto safeZone = WidgetCast<SDK::USafeZone>(PanelChild(panel, 3));
                             auto innerPanel = WidgetCast<SDK::UCanvasPanel>(PanelChild(safeZone, 0));
                             auto panelSlot = WidgetCast<SDK::UCanvasPanelSlot>(PanelSlot(innerPanel, 0));
@@ -410,6 +626,10 @@ void HUD()
             SPDLOG_ERROR("HUD: Create Popup Window: Pattern scan failed.");
         }
 
+    }
+
+    if (bFixHUD || bSpanRaceHUD || bSpanMenus)
+    {
         // Widgets
         std::uint8_t* UWidgetAddToViewportScanResult = Memory::PatternScan(exeModule, "48 83 ?? ?? 4D 8B ?? 45 33 ?? E8 ?? ?? ?? ?? 48 83 ?? ?? C3");
         if (UWidgetAddToViewportScanResult) {
@@ -424,7 +644,13 @@ void HUD()
                     if (!obj->Class || !obj->Class->Class) 
                         return;
 
-                    if (obj->Class->GetName() != "WBP_Race_HUD_Player01_C")
+                    auto className = obj->Class->GetName();
+                    if (bSpanMenus && fAspectRatio > fNativeAspect) {
+                        if (auto widget = WidgetCast<SDK::UUserWidget>(obj))
+                            SpanMenu(widget, className);
+                    }
+
+                    if ((!bFixHUD && !bSpanRaceHUD) || className != "WBP_Race_HUD_Player01_C")
                         return;
 
                     float widthOffset = (2160.0f * fAspectRatio - 3840.0f) / 2.0f;
@@ -495,7 +721,7 @@ DWORD __stdcall Main(void*)
     Configuration();
     CurrentResolution();
     AspectRatioFOV();
-    if ((bFixHUD || bSpanRaceHUD) && UpdateOffsets())
+    if ((bFixHUD || bSpanRaceHUD || bSpanMenus) && UpdateOffsets())
         HUD();
     return true;
 }

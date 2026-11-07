@@ -10,29 +10,40 @@ The Patreon and Ko-fi links below support **Lyall, the original developer of Cro
 
 **CrossWorldsFix** is an ASI plugin for **Sonic Racing: CrossWorlds** that adds ultrawide/narrower support.
 
-## Features
+## Choose a build
 
-### Ultrawide/Narrower
-- Support for ultrawide/narrower aspect ratios.
-- Fix HUD issues (like offset markers).
-- Span racing HUD.
+| Build | What it includes |
+| --- | --- |
+| [Steam 2.0.0 compatibility fix](../../releases/tag/steam-2.0.0-fix.1) | Fixes the race-entry crash and retains the original ultrawide and narrower-aspect-ratio options. Racing HUD spanning is available and defaults to off. |
+| [Experimental menu and HUD layout](../../releases/tag/steam-2.0.0-layout-exp.1) | Includes the compatibility fix and enables single-player racing HUD spanning and menu spanning by default. It moves selected menu controls toward the edges, scales character and course selection artwork proportionally, and corrects the popup offset when menu spanning is enabled. |
 
-## Installation  
-- Download `CrossWorldsFix-Steam-2.0.0.zip` from this fork’s [Releases](../../releases).
-- Extract the contents of the release zip in to the game's binaries folder. (e.g. "**steamapps\common\SonicRacingCrossWorlds\UNION\Binaries\Win64**" for Steam)
-- If you already have the mod installed, replace `CrossWorldsFix.asi` and keep your existing `CrossWorldsFix.ini` to retain your settings.
+The experimental build was tried on an ultrawide display with Windows Steam 2.0.0. Some screens and effects may still use 16:9, and proportionally scaled artwork may crop vertically. The title effects keep their game-authored layout.
 
-### Steam Deck/Linux Additional Instructions
-🚩**You do not need to do this if you are using Windows!**  
-- Open up the game properties in your launcher and add `WINEDLLOVERRIDES="winmm=n,b" %command%` to the launch options.
+## Install on Windows (Steam)
 
-## Configuration
-- Open **`CrossWorldsFix.ini`** to adjust settings.
+1. Close the game and download the ZIP from the build you chose above.
+2. In Steam, right-click **Sonic Racing: CrossWorlds**, then choose **Manage → Browse local files**. Open `UNION\Binaries\Win64`.
+3. For a fresh install, copy `CrossWorldsFix.asi`, `CrossWorldsFix.ini`, and `winmm.dll` from the ZIP into that folder.
+4. If the mod is already installed, back up your existing files and replace `CrossWorldsFix.asi`. Keep your existing INI to retain your settings. To match the experimental screenshots, set `Enabled = true` under both `[Span Menus]` and `[Span Racing HUD]`. Add the `[Span Menus]` section if your INI predates this build.
+5. Launch the game. To switch back, close it and replace the ASI with the one from the compatibility ZIP.
 
-## Screenshots
-| ![crossworlds-21by9](.github/images/crossworlds_21by9.jpg) |
-|:--------------------------:|
-| 21:9 Gameplay |
+### Steam Deck and Linux
+
+The original mod uses `WINEDLLOVERRIDES="winmm=n,b" %command%` in Steam’s launch options under Proton. The experimental layout was tested on Windows.
+
+## Experimental layout screenshots
+
+**Main menu**
+
+![Ultrawide main menu with customization controls on the left and festival schedule on the right](.github/images/experimental-main-menu.png)
+
+**Course selection**
+
+![Ultrawide Grand Prix course selection with a full-width background](.github/images/experimental-course-selection.png)
+
+**Single-player racing HUD**
+
+![Ultrawide racing HUD with controls and indicators near the screen edges](.github/images/experimental-race-hud.png)
 
 ## Credits
 **Lyall** created [CrossWorldsFix](https://codeberg.org/Lyall/CrossWorldsFix) and credits **Volf** for helping make it happen. <br />

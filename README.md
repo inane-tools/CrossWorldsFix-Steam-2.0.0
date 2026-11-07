@@ -4,6 +4,8 @@
 
 This fork addresses a race-entry crash on the Windows Steam 2.0.0 build. It looks up the race HUD’s Blueprint widgets by name so changes to their memory offsets no longer break the pause-menu and HUD adjustments. Race entry was verified in-game on Windows Steam 2.0.0.
 
+The Patreon and Ko-fi links below support **Lyall, the original developer of CrossWorldsFix**.
+
 [![Patreon-Button](.github/images/Patreon-Button.png)](https://www.patreon.com/Wintermance) [![ko-fi](.github/images/Kofi-Button.svg)](https://ko-fi.com/W7W01UAI9)
 
 **CrossWorldsFix** is an ASI plugin for **Sonic Racing: CrossWorlds** that adds ultrawide/narrower support.
